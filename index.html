@@ -190,6 +190,20 @@ input,select{font:inherit}
 .alert.ok{background:#26c28115;border:1px solid #26c28144;color:#8ff0c2}
 #alerts:empty{display:none}
 
+/* ============ CHAT ============ */
+#chat{flex-shrink:0;border-top:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column}
+#chatlog{height:66px;overflow-y:auto;padding:5px 10px;display:flex;flex-direction:column;gap:2px;overscroll-behavior:contain}
+.cmsg{font-size:11.5px;line-height:1.45;color:var(--txt);word-break:break-word}
+.cmsg .cwho{font-weight:800;color:var(--dim);margin-right:5px}
+.cmsg.me .cwho{color:#79c0ff}
+.cmsg .cts{font-size:9px;color:var(--dim2);margin-left:5px}
+#chatrow{display:flex;gap:6px;padding:5px 8px 7px;border-top:1px solid #1c2431}
+#chatin{flex:1;height:26px;padding:0 10px;border-radius:6px;border:1px solid var(--line2);background:var(--bg);color:var(--txt);font-size:12px;outline:none;min-width:0}
+#chatin:focus{border-color:var(--blue)}
+#chatsend{padding:0 11px;height:26px;border-radius:6px;background:var(--panel2);border:1px solid var(--line2);font-size:11px;font-weight:800;color:var(--dim)}
+#chatsend:hover{color:var(--txt);border-color:#4a5770}
+#chatlog:empty:before{content:"League chat — say something";color:var(--dim2);font-size:10.5px;padding-top:2px}
+
 /* ============ MODAL / TOAST ============ */
 #modal{position:fixed;inset:0;background:#000000aa;display:none;align-items:center;justify-content:center;z-index:50;backdrop-filter:blur(2px)}
 #modal.on{display:flex}
@@ -303,6 +317,10 @@ input,select{font:inherit}
     <div class="colhead"><span id="rosterttl">My Lineup</span><select id="viewteam" title="View a roster"></select></div>
     <div id="alerts"></div>
     <div class="scroll"><div id="roster"></div></div>
+    <div id="chat">
+      <div id="chatlog"></div>
+      <div id="chatrow"><input id="chatin" maxlength="200" placeholder="message…" autocomplete="off"><button id="chatsend">Send</button></div>
+    </div>
   </div>
 </div>
 <div id="tabs">
@@ -930,6 +948,7 @@ const BROKERS=[
 ];
 const TOPIC_STATE=`snakepit/v2/${ROOM}/state`;
 const TOPIC_PRES =`snakepit/v2/${ROOM}/presence`;
+const TOPIC_CHAT =`snakepit/v2/${ROOM}/chat`;
 const enc=new TextEncoder(), dec=new TextDecoder();
 function mqStr(s){ const b=enc.encode(s); const o=new Uint8Array(b.length+2); o[0]=b.length>>8; o[1]=b.length&255; o.set(b,2); return o; }
 function mqLen(n){ const o=[]; do{ let d=n%128; n=Math.floor(n/128); if(n>0) d|=128; o.push(d);}while(n>0); return o; }
@@ -965,7 +984,7 @@ class MiniMQTT{
   handle(type,flags,body){
     if(type===2){ // CONNACK
       if(body[1]===0){ this.ok=true; this.retry=1500; this.onState(this,true);
-        this.ws.send(mqPacket(0x82, Uint8Array.from([this.pid>>8,this.pid&255]), mqStr(TOPIC_STATE), Uint8Array.from([0]), mqStr(TOPIC_PRES), Uint8Array.from([0]))); this.pid++;
+        this.ws.send(mqPacket(0x82, Uint8Array.from([this.pid>>8,this.pid&255]), mqStr(TOPIC_STATE), Uint8Array.from([0]), mqStr(TOPIC_PRES), Uint8Array.from([0]), mqStr(TOPIC_CHAT), Uint8Array.from([0]))); this.pid++;
         this.ping=setInterval(()=>{ try{ this.ws.send(Uint8Array.from([0xC0,0])); }catch(e){} }, 30000);
       } else { this.dead=true; this.onState(this,false); }
     } else if(type===3){ // PUBLISH
@@ -980,6 +999,51 @@ class MiniMQTT{
 }
 
 const clients=[]; let applying=false; const peers=new Map();
+
+/* ---- chat ----
+   Deliberately NOT part of the shared state document: chat must never bump the
+   draft's version counter or lose a race with a pick. Messages are fire-and-forget
+   on their own topic; we publish to every broker and dedupe on message id, since
+   each broker echoes our own message back and delivers one copy per connection.
+   History is local-only (last 60, per room) — a late joiner starts from silence,
+   which is fine for a two-person draft chat. */
+const CHAT={msgs:[], seen:new Set()};
+try{ CHAT.msgs=JSON.parse(localStorage.getItem('snakepit.chat.'+ROOM)||'[]');
+     for(const m of CHAT.msgs) CHAT.seen.add(m.id); }catch(e){}
+function chatSave(){ try{ localStorage.setItem('snakepit.chat.'+ROOM, JSON.stringify(CHAT.msgs.slice(-60))); }catch(e){} }
+function chatRender(scroll=true){
+  const el=$('chatlog'); if(!el) return;
+  el.innerHTML=CHAT.msgs.slice(-60).map(m=>{
+    const mine=m.from===ME_ID;
+    const hh=new Date(m.ts); const ts=String(hh.getHours()).padStart(2,'0')+':'+String(hh.getMinutes()).padStart(2,'0');
+    return `<div class="cmsg ${mine?'me':''}"><span class="cwho">${esc(m.name||'?')}</span>${esc(m.text)}<span class="cts">${ts}</span></div>`;
+  }).join('');
+  if(scroll) el.scrollTop=el.scrollHeight;
+}
+function chatAdd(m){
+  if(!m||!m.id||CHAT.seen.has(m.id)) return false;
+  if(typeof m.text!=='string'||!m.text.trim()) return false;
+  CHAT.seen.add(m.id);
+  CHAT.msgs.push({id:m.id,from:m.from||'',name:String(m.name||'').slice(0,24),text:String(m.text).slice(0,200),ts:m.ts||Date.now()});
+  CHAT.msgs=CHAT.msgs.slice(-60);
+  chatSave(); chatRender();
+  return true;
+}
+function chatSend(){
+  const inp=$('chatin'); const text=inp.value.trim(); if(!text) return;
+  const m={id:ME_ID+'-'+Date.now()+'-'+Math.floor(Math.random()*1e4),
+           from:ME_ID, name:(S.myName||tname(ME())), text:text.slice(0,200), ts:Date.now()};
+  inp.value='';
+  chatAdd(m);
+  let n=0; for(const c of clients) if(c.publish(TOPIC_CHAT,m,false)) n++;
+  if(n===0) toast('Not connected — message only visible here');
+}
+// soft low blip for incoming chat, quieter and lower than any pick ping
+function sndChat(){
+  if(!SND.on) return; const ctx=audioCtx(); if(!ctx) return;
+  try{ voice(ctx,{freq:329.63,start:0,dur:0.09,type:'sine',gain:0.07});
+       voice(ctx,{freq:392.00,start:0.07,dur:0.11,type:'sine',gain:0.06}); }catch(e){}
+}
 function sharedState(){ return {v:S.v,ts:S.ts,by:S.by,picks:S.picks,teamNames:S.teamNames,hidden:S.hidden,room:ROOM}; }
 function publish(){
   if(applying) return;
@@ -989,6 +1053,7 @@ function publish(){
 }
 function presence(){ const p={id:ME_ID,name:S.myName||('Team '+S.mySlot),slot:S.mySlot,ts:Date.now()}; for(const c of clients) c.publish(TOPIC_PRES,p,false); }
 function onMsg(topic,payload,retained){
+  if(topic===TOPIC_CHAT){ if(payload&&payload.from!==ME_ID){ if(chatAdd(payload)) sndChat(); } return; }
   if(topic===TOPIC_PRES){ if(payload&&payload.id&&payload.id!==ME_ID){ peers.set(payload.id,{...payload,seen:Date.now()}); syncUI(); } return; }
   if(topic!==TOPIC_STATE||!payload||typeof payload.v!=='number') return;
   if(payload.by===ME_ID && payload.v<=S.v) return;                  // my own echo
@@ -1029,6 +1094,8 @@ $('btnundo').onclick=undo;
 $('btnsettings').onclick=openSettings;
 $('btnshare').onclick=openShare;
 $('btnsound').onclick=toggleSound;
+$('chatsend').onclick=chatSend;
+$('chatin').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); chatSend(); } e.stopPropagation(); });
 $('live').onclick=openShare;
 $('modal').onclick=e=>{ if(e.target.id==='modal') closeModal(); };
 document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{
@@ -1046,10 +1113,10 @@ document.addEventListener('keydown',e=>{
 });
 window.addEventListener('storage',e=>{ if(e.key===LS){ load(); render(); } });
 
-load(); sndIcon(); render(); startSync();
+load(); sndIcon(); render(); chatRender(false); startSync();
 
 /* expose for the test harness */
-window.__DW={S,DATA,scorePlayers,draftPlayer,undo,hidePlayer,teamAt,leagueOpen,openSlots,dynamicReplacement,vonaBaselines,rosterOf,BY_ID,TOTAL,TEAMS,ROOM,clients,publish,MiniMQTT};
+window.__DW={S,DATA,scorePlayers,draftPlayer,undo,hidePlayer,teamAt,leagueOpen,openSlots,dynamicReplacement,vonaBaselines,rosterOf,BY_ID,TOTAL,TEAMS,ROOM,clients,publish,MiniMQTT,CHAT,chatSend,chatAdd};
 </script>
 </body>
 </html>
