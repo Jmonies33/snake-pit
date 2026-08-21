@@ -592,7 +592,13 @@ function scorePlayers(){
     // starter is worth nothing, which is correct — you would stream that slot.
     let raw;
     if(needOpen){
-      raw=0.88*vona*squeeze[pool]+0.10*Math.max(vor,0)-bye-conc;
+      // The VOR anchor only applies when waiting actually costs something (vona>0)
+      // or the pool is objectively running dry (squeeze). A player whose equal
+      // survives every gap has zero urgency — his score must say "later", not
+      // "slightly now". Without this gate DST1 held a permanent +3 and ranked
+      // 15th overall at pick 1, which reads as "draft a defense in round 2".
+      const anchor=(vona>0.5||squeeze[pool]>1)?0.10*Math.max(vor,0):0;
+      raw=0.88*vona*squeeze[pool]+anchor-bye-conc;
     } else {
       const nStart=SLOTS[pool]||0;
       const held=myRoster.filter(x=>POOL_OF(x)===pool).sort((a,b)=>b.pts-a.pts);
@@ -605,7 +611,12 @@ function scorePlayers(){
     const score=depth>0?raw*depth:-999;
     rows.push({p,vor,vona,bye,conc,needOpen,depth,score,run:runs[pool]>=1.25});
   }
-  if(S.sort==='value')     rows.sort((a,b)=>b.score-a.score||a.p.mkt-b.p.mkt);
+  if(S.sort==='value')     rows.sort((a,b)=>{
+    const ta=(a.needOpen||a.depth>0)&&a.score>2, tb=(b.needOpen||b.depth>0)&&b.score>2;
+    if(ta!==tb) return ta?-1:1;                  // act-now tier first
+    if(ta&&tb)  return b.score-a.score||a.p.mkt-b.p.mkt;
+    return a.p.mkt-b.p.mkt||b.score-a.score;     // the rest reads in market order
+  });
   else if(S.sort==='proj') rows.sort((a,b)=>b.p.pts-a.p.pts||a.p.mkt-b.p.mkt);
   else                     rows.sort((a,b)=>a.p.mkt-b.p.mkt||b.p.pts-a.p.pts);
   return {rows,gap,nxt,isMe,onClockTeam,open,rep,left,lgOpen,runs};
@@ -643,10 +654,12 @@ function renderTop(st){
 function renderRec(st){
   const box=$('rec');
   if(S.picks.length>=TOTAL){ box.className=''; box.innerHTML=`<div class="lbl">Draft complete</div><div class="nm">Good luck out there</div>`; return; }
-  const top=st.rows.filter(r=>r.needOpen||r.depth>0).sort((a,b)=>b.score-a.score)[0];
+  // The card and the list must agree — a card recommending one player while the
+  // top row shows another reads as a bug. rows are already in display order.
+  const top=st.rows.find(r=>r.needOpen||r.depth>0);
   if(!top){ box.className=''; box.innerHTML='<div class="lbl">Your lineup is full</div><div class="nm">Nothing left to draft</div>'; return; }
   const p=top.p, pool=POOL_OF(p);
-  const alt=st.rows.filter(r=>(r.needOpen||r.depth>0)&&POOL_OF(r.p)!==pool).sort((a,b)=>b.score-a.score)[0];
+  const alt=st.rows.find(r=>(r.needOpen||r.depth>0)&&POOL_OF(r.p)!==pool);
   const bits=[];
   bits.push(`draft value <b>${top.score>0?'+':''}${top.score.toFixed(0)}</b>`);
   bits.push(`<b>${top.vona>0?'+':''}${top.vona.toFixed(0)} pts</b> over the best ${labelPool(pool)} likely left at your next pick`);
