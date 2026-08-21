@@ -500,7 +500,7 @@ function vonaBaselines(currentOverall, teamIdx){
   let flexDemand=demand._flex||0;
   let benchDemand=Math.max(0, (TOTAL-S.picks.length)
     - Object.keys(SLOTS).reduce((a,k)=>a+(demand[k]||0),0) - flexDemand);
-  const consumed={}; for(const k in SLOTS) consumed[k]=0;
+  const consumed={}, consumedIds=new Set(); for(const k in SLOTS) consumed[k]=0;
   let spent=0,i=0;
   while(spent<gap && i<avail.length){
     const pl=avail[i], pool=POOL_OF(pl); i++;
@@ -509,12 +509,17 @@ function vonaBaselines(currentOverall, teamIdx){
     else if(flexDemand>0 && flexOk(pl.pos)){ flexDemand--; taken=true; }
     else if(benchDemand>0){ benchDemand--; taken=true; }
     if(!taken) continue;            // nobody needs this body; the market skips him
-    consumed[pool]+=1; spent+=1/(runs[pool]||1);
+    consumedIds.add(pl.id); consumed[pool]+=1; spent+=1/(runs[pool]||1);
   }
+  // The survivor is the BEST-BY-POINTS player left after removing exactly the
+  // players the market took — not the next player in market order. Market order
+  // and quality order diverge in real ADP (the room's first defense off the board
+  // is often not the best one), and conflating them manufactures phantom urgency:
+  // "DST1 is disappearing" when nothing of his quality was ever going anywhere.
   for(const pool in SLOTS){
-    const inPool=avail.filter(p=>POOL_OF(p)===pool);
-    const surv=inPool[Math.min(consumed[pool], inPool.length-1)];
-    base[pool]=surv?surv.pts:0;
+    let best=null;
+    for(const q of avail) if(POOL_OF(q)===pool && !consumedIds.has(q.id) && (best===null||q.pts>best)) best=q.pts;
+    base[pool]=best===null?0:best;
   }
   return {base,gap,nxt,runs};
 }
