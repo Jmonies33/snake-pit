@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0e15">
+<title>__BRAND_NAME__ — __BRAND_TAG__</title>
+<link rel="icon" href="__FAVICON__">
+<style>
+:root{
+  --bg:#0b0e15; --bg2:#0f131c; --panel:#141925; --panel2:#1a2130; --line:#232b3b; --line2:#2d3749;
+  --txt:#f2f5fa; --dim:#93a0b4; --dim2:#5c687b;
+  --red:#e0102f; --red2:#ff3b57; --gold:#ffb81c; --good:#26c281; --bad:#ff4d5e; --warn:#ffb81c; --blue:#3d8bff;
+  --qb:#ff6b57; --rb:#38d17c; --wr:#4da3ff; --te:#ffb020; --k:#c084fc; --dst:#9fb3c8;
+  --hd:"Avenir Next Condensed","Bahnschrift","Roboto Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --top:60px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--txt);font:13px/1.4 var(--ui);overflow:hidden;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+input,select{font:inherit}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:#2b3446;border-radius:6px;border:2px solid var(--bg)}
+::-webkit-scrollbar-track{background:transparent}
+.hd{font-family:var(--hd);font-weight:800;text-transform:uppercase;letter-spacing:.4px}
+
+/* ============ TOP BAR ============ */
+#top{height:var(--top);display:flex;align-items:center;gap:12px;padding:0 14px 0 12px;flex-shrink:0;
+  background:linear-gradient(180deg,#151b28 0%,#0f131c 100%);border-bottom:2px solid var(--red);
+  box-shadow:0 2px 14px #0009;position:relative;z-index:5}
+#top:after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;
+  background:linear-gradient(90deg,var(--red) 0%,var(--red) 55%,var(--gold) 55%,var(--gold) 60%,transparent 60%)}
+#brand{display:flex;align-items:center;gap:11px;padding-right:14px;border-right:1px solid var(--line2);height:40px}
+#brand .mark{height:34px;width:auto;display:block;filter:drop-shadow(0 2px 5px #0009)}
+#brand .t1{font-family:var(--hd);font-weight:900;font-size:21px;letter-spacing:.8px;line-height:1;text-transform:uppercase;white-space:nowrap;
+  background:linear-gradient(180deg,#fff,#cfd6e2);-webkit-background-clip:text;background-clip:text;color:transparent}
+#brand .t2{font-size:9.5px;font-weight:800;letter-spacing:2px;color:var(--gold);text-transform:uppercase;line-height:1;margin-top:3px}
+.stat{display:flex;flex-direction:column;line-height:1.1;min-width:64px}
+.stat b{font-family:var(--hd);font-size:20px;font-weight:800;letter-spacing:.3px;white-space:nowrap}
+.stat span{font-size:9.5px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-top:2px;white-space:nowrap}
+#onclock{padding:0 16px;height:38px;display:flex;align-items:center;gap:9px;border-radius:6px;background:var(--panel2);
+  border:1px solid var(--line2);font-family:var(--hd);font-weight:800;font-size:16px;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap}
+#onclock .dot{width:8px;height:8px;border-radius:50%;background:var(--dim2)}
+#onclock.me{background:linear-gradient(135deg,#7a0d1c,#c8102e);border-color:#ff6b7c;color:#fff;
+  animation:pulse 1.1s ease-in-out infinite;box-shadow:0 0 0 0 #ff3b5766}
+#onclock.me .dot{background:#fff;box-shadow:0 0 8px #fff}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #ff3b5766}50%{box-shadow:0 0 0 9px #ff3b5700}}
+.oc-short{display:none}
+.spacer{flex:1}
+.tbtn{padding:0 13px;height:34px;border:1px solid var(--line2);border-radius:6px;background:var(--panel2);
+  font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;transition:border-color .12s,background .12s}
+.tbtn:hover{border-color:#4a5770;background:#202839}
+.tbtn:active{transform:translateY(1px)}
+.tbtn.danger:hover{border-color:var(--bad);color:var(--bad)}
+.tbtn.pri{background:var(--red);border-color:var(--red);color:#fff}
+.tbtn.pri:hover{background:#f0213f}
+.tbtn.gold{background:var(--gold);border-color:var(--gold);color:#1a1200}
+.tbtn svg{width:14px;height:14px}
+#live{display:inline-flex;align-items:center;gap:7px;padding:0 12px;height:34px;border-radius:999px;border:1px solid var(--line2);
+  background:var(--panel2);font-size:11.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase}
+#live .ld{width:8px;height:8px;border-radius:50%;background:var(--dim2)}
+#live.on .ld{background:var(--good);box-shadow:0 0 8px var(--good);animation:blink 1.6s infinite}
+#live.err .ld{background:var(--bad)}
+#live.on{border-color:#1e6a49;color:#8ff0c2}
+@keyframes blink{50%{opacity:.45}}
+
+/* ============ LAYOUT ============ */
+#main{display:grid;grid-template-columns:minmax(330px,1.32fr) minmax(420px,1.42fr) minmax(290px,.9fr);
+  gap:1px;background:var(--line);height:calc(100% - var(--top))}
+.col{background:var(--bg);display:flex;flex-direction:column;min-height:0;min-width:0}
+.colhead{height:38px;padding:0 12px;background:var(--panel);border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:9px;flex-shrink:0;font-family:var(--hd);font-size:14px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.colhead:before{content:"";width:4px;height:16px;background:var(--red);border-radius:2px}
+.colhead .sub{font-family:var(--ui);font-weight:600;letter-spacing:0;text-transform:none;color:var(--dim2);font-size:11px}
+.colhead select{margin-left:auto;background:var(--panel2);color:var(--txt);border:1px solid var(--line2);border-radius:5px;padding:3px 6px;font-size:11.5px;font-weight:700}
+.scroll{overflow-y:auto;flex:1;min-height:0;overscroll-behavior:contain}
+
+/* ============ POS COLORS ============ */
+.p-QB{color:var(--qb)} .p-RB{color:var(--rb)} .p-WR{color:var(--wr)} .p-TE{color:var(--te)} .p-K{color:var(--k)} .p-DST{color:var(--dst)}
+.bg-QB{background:var(--qb)} .bg-RB{background:var(--rb)} .bg-WR{background:var(--wr)} .bg-TE{background:var(--te)} .bg-K{background:var(--k)} .bg-DST{background:var(--dst)}
+.pill{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:18px;padding:0 5px;border-radius:3px;
+  font-family:var(--hd);font-size:11px;font-weight:900;color:#0b0e15;letter-spacing:.5px}
+
+/* ============ REC CARD ============ */
+#rec{margin:10px 12px 8px;padding:12px 14px;border-radius:10px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#1c2436 0%,#141925 100%);border:1px solid var(--line2)}
+#rec:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--dim2)}
+#rec.hot{background:linear-gradient(135deg,#3a0f18 0%,#1a1220 55%,#141925 100%);border-color:#7a1f30}
+#rec.hot:before{background:var(--red)}
+#rec .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.4px;color:var(--dim);font-weight:800}
+#rec.hot .lbl{color:#ff8a9a}
+#rec .nm{font-family:var(--hd);font-size:24px;font-weight:800;letter-spacing:.3px;margin:4px 0 3px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;line-height:1.1}
+#rec .nm small{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--dim);letter-spacing:0}
+#rec .why{font-size:12px;color:var(--dim);line-height:1.5}
+#rec .why b{color:var(--txt)}
+#rec .need{margin-top:6px;font-size:11px;color:var(--dim2)}
+#rec .need b{color:var(--dim)}
+#rec .go{position:absolute;right:12px;top:12px}
+.tagbye{color:var(--bad);font-weight:800}
+.taghot{color:var(--warn);font-weight:800}
+
+/* ============ FILTERS ============ */
+#filters{display:flex;gap:5px;padding:4px 12px 6px;flex-wrap:wrap;align-items:center;flex-shrink:0}
+.fbtn{padding:0 8px;height:26px;border-radius:999px;border:1px solid var(--line2);background:var(--panel2);
+  font-size:11px;font-weight:800;color:var(--dim);letter-spacing:.2px;transition:all .1s}
+.fbtn:hover{color:var(--txt);border-color:#4a5770}
+.fbtn.on{background:var(--txt);color:#0b0e15;border-color:var(--txt)}
+.fbtn .n{opacity:.55;font-weight:700;margin-left:3px;font-size:10px}
+.fbtn kbd{display:none}
+#srch{flex:1 1 100%;min-width:110px;height:27px;padding:0 11px;border-radius:999px;border:1px solid var(--line2);
+  background:var(--bg2);color:var(--txt);font-size:12px;outline:none}
+#srch:focus{border-color:var(--blue)}
+#sortbar{display:flex;align-items:center;gap:6px;padding:0 12px 6px;font-size:10.5px;color:var(--dim2);flex-shrink:0}
+#sortbar .sb{padding:2px 8px;border-radius:4px;border:1px solid transparent;color:var(--dim);font-weight:700;font-size:10.5px}
+#sortbar .sb.on{border-color:var(--line2);background:var(--panel2);color:var(--txt)}
+
+/* ============ PLAYER LIST ============ */
+.lhead{display:grid;grid-template-columns:30px 36px 1fr 46px 46px 56px 22px;gap:8px;align-items:center;padding:5px 12px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);font-size:9.5px;font-weight:800;
+  letter-spacing:.9px;text-transform:uppercase;color:var(--dim2);position:sticky;top:0;z-index:2}
+.lhead .r{text-align:right}
+.prow{display:grid;grid-template-columns:30px 36px 1fr 46px 46px 56px 22px;gap:8px;align-items:center;
+  padding:6px 12px;border-bottom:1px solid #161c28;cursor:pointer;transition:background .08s;position:relative}
+.prow:hover{background:#1b2333}
+.prow:active{background:#233047}
+.prow.need{box-shadow:inset 3px 0 0 var(--good)}
+.prow.full{opacity:.32}
+.prow.top1{background:linear-gradient(90deg,#3a0f1833,transparent)}
+.prow .rk{font-family:var(--hd);font-size:14px;font-weight:800;color:var(--dim);text-align:center}
+.prow.top1 .rk,.prow.top3 .rk{color:var(--gold)}
+.prow .nm{font-weight:700;font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.prow .meta{font-size:10.5px;color:var(--dim2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prow .num{text-align:right;font-variant-numeric:tabular-nums;font-size:12px;color:var(--dim)}
+.prow .val{font-family:var(--hd);font-weight:800;font-size:15px;text-align:right;letter-spacing:.2px}
+.v-hi{color:var(--good)} .v-md{color:var(--txt)} .v-lo{color:var(--dim2)} .v-neg{color:var(--dim2)}
+.prow .hide{width:20px;height:20px;border-radius:50%;color:var(--dim2);font-size:13px;line-height:20px;text-align:center;opacity:0}
+.prow:hover .hide{opacity:.7}
+.prow .hide:hover{background:#ff4d5e33;color:var(--bad);opacity:1}
+.empty{padding:30px 14px;text-align:center;color:var(--dim2);font-size:12px}
+.tag{display:inline-block;padding:0 5px;border-radius:3px;font-size:9.5px;font-weight:800;letter-spacing:.3px;vertical-align:1px}
+.tag.need{background:#26c28122;color:var(--good)} .tag.full{background:#5c687b33;color:var(--dim)} .tag.bye{background:#ff4d5e22;color:var(--bad)}
+.tag.run{background:#ffb81c22;color:var(--warn)}
+
+/* ============ BOARD ============ */
+#board{padding:8px 6px 20px;font-size:10.5px;width:100%}
+#colboard .scroll{overflow-x:auto}
+.bhead{display:grid;gap:2px;margin-bottom:5px;position:sticky;top:0;background:var(--bg);padding:2px 0 4px;z-index:2}
+.bhead div{font-family:var(--hd);font-size:10.5px;text-align:center;color:var(--dim);font-weight:800;letter-spacing:.3px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:3px 2px;border-radius:3px;background:var(--panel)}
+.bhead div.meteam{color:#fff;background:var(--red)}
+.bhead div.onclk{outline:1px solid var(--gold)}
+.brow{display:grid;gap:2px;margin-bottom:3px;position:relative}
+.bcell{padding:3px 3px 2px;border-radius:3px;background:var(--panel);border:1px solid #1c2331;
+  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-height:30px;line-height:1.15;position:relative}
+.bcell.pk{color:#0b0e15;border-color:transparent}
+.bcell.pk.bg-QB{background:var(--qb)} .bcell.pk.bg-RB{background:var(--rb)} .bcell.pk.bg-WR{background:var(--wr)}
+.bcell.pk.bg-TE{background:var(--te)} .bcell.pk.bg-K{background:var(--k)} .bcell.pk.bg-DST{background:var(--dst)}
+.bcell.pk.mine{box-shadow:inset 0 0 0 2px #fff,0 0 0 1px #0008}
+.bcell.pk .bn{font-weight:800;display:block;overflow:hidden;text-overflow:ellipsis;font-size:10px;letter-spacing:-.15px}
+.bcell.pk .bp{font-size:8px;font-weight:900;letter-spacing:.2px;opacity:.75}
+.bcell.now{border-color:var(--gold);background:#3a2b00;animation:cellpulse 1.2s infinite}
+.bcell.now .bp{color:var(--gold);font-weight:900;font-size:9px}
+@keyframes cellpulse{50%{background:#5a4200}}
+.bcell.empty-mine{background:#1e1520;border-color:#4a1a26}
+.rlab{position:absolute;left:-1px;top:0;bottom:0;display:none}
+.rnd{font-family:var(--hd);font-size:10px;color:var(--dim2);font-weight:800;text-align:center;padding-top:8px}
+.brow.rowme .bcell.now{}
+
+/* ============ ROSTER ============ */
+#roster{padding:6px 12px 24px}
+.grouphd{display:flex;align-items:center;justify-content:space-between;font-family:var(--hd);font-size:12px;font-weight:800;
+  color:var(--dim);letter-spacing:1px;margin:10px 0 5px;text-transform:uppercase}
+.grouphd .cnt{font-family:var(--ui);font-size:10.5px;color:var(--dim2);letter-spacing:0}
+.slot{display:grid;grid-template-columns:36px 1fr auto;gap:9px;align-items:center;
+  padding:6px 8px;margin-bottom:4px;border-radius:6px;background:var(--panel);border:1px solid var(--line)}
+.slot.open{border-style:dashed;border-color:#2b3446;background:transparent}
+.slot .sl{font-family:var(--hd);font-size:11px;font-weight:800;color:var(--dim2);letter-spacing:.5px;text-align:center}
+.slot .pn{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12.5px}
+.slot .pm{font-size:10px;color:var(--dim2)}
+.slot .pts{font-family:var(--hd);font-size:14px;font-weight:800;color:var(--dim);font-variant-numeric:tabular-nums}
+.tot{margin:10px 0 2px;padding:10px 12px;border-radius:8px;background:linear-gradient(135deg,#1c2436,#141925);border:1px solid var(--line2);
+  display:flex;justify-content:space-between;align-items:center}
+.tot b{font-family:var(--hd);font-size:22px;font-weight:800}
+.tot span{font-size:10.5px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;font-weight:700}
+.alert{margin:8px 12px 0;padding:8px 10px;border-radius:7px;font-size:11.5px;line-height:1.45}
+.alert.bad{background:#ff4d5e18;border:1px solid #ff4d5e55;color:#ffb0b8}
+.alert.warn{background:#ffb81c18;border:1px solid #ffb81c55;color:#ffd47a}
+.alert.ok{background:#26c28115;border:1px solid #26c28144;color:#8ff0c2}
+#alerts:empty{display:none}
+
+/* ============ CHAT ============ */
+#chat{flex-shrink:0;border-top:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column}
+#chatlog{height:66px;overflow-y:auto;padding:5px 10px;display:flex;flex-direction:column;gap:2px;overscroll-behavior:contain}
+.cmsg{font-size:11.5px;line-height:1.45;color:var(--txt);word-break:break-word}
+.cmsg .cwho{font-weight:800;color:var(--dim);margin-right:5px}
+.cmsg.me .cwho{color:#79c0ff}
+.cmsg .cts{font-size:9px;color:var(--dim2);margin-left:5px}
+#chatrow{display:flex;gap:6px;padding:5px 8px 7px;border-top:1px solid #1c2431}
+#chatin{flex:1;height:26px;padding:0 10px;border-radius:6px;border:1px solid var(--line2);background:var(--bg);color:var(--txt);font-size:12px;outline:none;min-width:0}
+#chatin:focus{border-color:var(--blue)}
+#chatsend{padding:0 11px;height:26px;border-radius:6px;background:var(--panel2);border:1px solid var(--line2);font-size:11px;font-weight:800;color:var(--dim)}
+#chatsend:hover{color:var(--txt);border-color:#4a5770}
+#chatlog:empty:before{content:"League chat — say something";color:var(--dim2);font-size:10.5px;padding-top:2px}
+
+/* ============ MODAL / TOAST ============ */
+#modal{position:fixed;inset:0;background:#000000aa;display:none;align-items:center;justify-content:center;z-index:50;backdrop-filter:blur(2px)}
+#modal.on{display:flex}
+.mbox{background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:20px;
+  width:min(520px,94vw);max-height:88vh;overflow:auto;box-shadow:0 20px 60px #000c}
+.mbox h3{font-family:var(--hd);font-size:20px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px}
+.mbox p.hint{font-size:12px;color:var(--dim);margin-bottom:14px;line-height:1.55}
+.frow{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.frow label{font-size:10.5px;font-weight:800;color:var(--dim);text-transform:uppercase;letter-spacing:.8px}
+.frow input,.frow select,.frow textarea{padding:8px 10px;border-radius:6px;border:1px solid var(--line2);
+  background:var(--bg);color:var(--txt);font:inherit;outline:none}
+.frow input:focus,.frow select:focus{border-color:var(--blue)}
+.frow small{font-size:10.5px;color:var(--dim2);line-height:1.4}
+.linkbox{display:flex;gap:6px}
+.linkbox input{flex:1;font-size:11.5px}
+.mact{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chips .ch{padding:3px 8px;border-radius:4px;background:var(--panel2);border:1px solid var(--line2);font-size:11px}
+.chips .ch button{color:var(--bad);margin-left:5px;font-weight:800}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(6px);background:#1c2436;
+  border:1px solid var(--line2);padding:10px 18px;border-radius:8px;font-size:12.5px;font-weight:700;
+  opacity:0;pointer-events:none;transition:opacity .16s,transform .16s;z-index:60;box-shadow:0 8px 30px #000a;max-width:90vw}
+#toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+#toast.mine{border-color:var(--gold);color:var(--gold)}
+#toast.sync{border-color:var(--good);color:#8ff0c2}
+
+/* ============ MOBILE ============ */
+#tabs{display:none}
+@media(max-width:1000px){
+  :root{--top:50px}
+  body{overflow:hidden}
+  #top{gap:8px;padding:0 8px;flex-wrap:nowrap;overflow:hidden}
+  #brand>div{display:none}
+  #brand{padding-right:6px;gap:0;border-right:none}
+  #brand .mark{height:28px}
+  .stat{min-width:auto} .stat b{font-size:15px} .stat span{font-size:8.5px;letter-spacing:.5px}
+  #pickmeta{display:none}
+  #onclock{font-size:12px;padding:0 9px;height:30px;gap:6px;min-width:0;flex:1 1 auto;overflow:hidden}
+  #brand .mark{flex-shrink:0}
+  .stat{flex-shrink:0}
+  #brand .t2{display:none}
+  .oc-long{display:none} .oc-short{display:inline;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #onclock{flex:0 1 auto;min-width:84px;max-width:52vw}
+  #statpick b{font-size:14px}
+  .stat span .lg{display:none}
+  .stat span{letter-spacing:.4px;font-size:8px}
+  #onclocktxt{overflow:hidden;text-overflow:ellipsis}
+  #btnsettings span,#btnshare span,#btnundo span,#live span.lt{display:none}
+  #live{padding:0 8px;height:30px}
+  .tbtn{padding:0 8px;height:30px}
+  #btnshare{display:none}
+  .colhead .sub{display:none}
+  #sortbar span:last-child{display:none}
+  #toast{bottom:64px}
+  #main{grid-template-columns:1fr;height:calc(100% - var(--top) - 50px)}
+  .col{display:none} .col.act{display:flex}
+  #tabs{display:grid;grid-template-columns:1fr 1fr 1fr;height:50px;background:var(--panel);border-top:1px solid var(--line2);position:fixed;left:0;right:0;bottom:0;z-index:6;padding-bottom:env(safe-area-inset-bottom)}
+  #tabs button{font-family:var(--hd);font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--dim)}
+  #tabs button.on{color:#fff;box-shadow:inset 0 3px 0 var(--red)}
+  .prow{grid-template-columns:26px 34px 1fr 42px 52px 20px}
+  .prow .num.adp{display:none}
+  .lhead{grid-template-columns:26px 34px 1fr 42px 52px 20px}
+  .lhead .adp{display:none}
+  .prow .hide{opacity:.5}
+  #rec .nm{font-size:20px}
+  .bcell{font-size:9px;min-height:26px}
+}
+@media(max-width:1000px) and (min-width:700px){
+  #btnsettings span,#btnshare span,#btnundo span,#live span.lt{display:inline}
+  .oc-long{display:inline} .oc-short{display:none}
+  #brand .t2{display:block}
+}
+@media(max-width:400px){ #statnext{display:none} }
+@media(max-width:340px){ #brand{display:none} }
+</style>
+</head>
+<body>
+
+<div id="top">
+  <div id="brand" title="__BRAND_NAME__ — __BRAND_TAG__">
+    __BRAND_LOGO__
+    <div><div class="t1">__BRAND_NAME__</div><div class="t2">__BRAND_TAG__</div></div>
+  </div>
+  <div class="stat" id="statpick"><b id="pickno">Pick 1.01</b><span id="pickmeta">1 of 154</span></div>
+  <div id="onclock"><span class="dot"></span><span id="onclocktxt" class="oc-long">On the clock: —</span><span id="onclockshort" class="oc-short">—</span></div>
+  <div class="stat" id="statnext"><b id="untilnext">—</b><span><span class="lg">picks </span>til you</span></div>
+  <div class="spacer"></div>
+  <div id="live" title="Live sync status"><span class="ld"></span><span class="lt" id="livetxt">Connecting…</span></div>
+  <button class="tbtn" id="btnsound" title="Sound on/off (S)"><svg id="sndicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></svg></button>
+  <button class="tbtn" id="btnshare" title="Copy the invite link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span>Invite</span></button>
+  <button class="tbtn" id="btnsettings" title="Settings">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span>Setup</span></button>
+  <button class="tbtn danger" id="btnundo" title="Undo last pick (Ctrl/Cmd+Z)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg><span>Undo</span></button>
+</div>
+
+<div id="main">
+  <div class="col" id="colboard">
+    <div class="colhead">Draft Board <span class="sub" id="boardsub"></span></div>
+    <div class="scroll"><div id="board"></div></div>
+  </div>
+  <div class="col act" id="collist">
+    <div class="colhead">Best Available <span class="sub">tap a player to draft him to the team on the clock</span></div>
+    <div id="rec"></div>
+    <div id="filters"></div>
+    <div id="sortbar"></div>
+    <div class="scroll" id="listscroll"><div id="list"></div></div>
+  </div>
+  <div class="col" id="colroster">
+    <div class="colhead"><span id="rosterttl">My Lineup</span><select id="viewteam" title="View a roster"></select></div>
+    <div id="alerts"></div>
+    <div class="scroll"><div id="roster"></div></div>
+    <div id="chat">
+      <div id="chatlog"></div>
+      <div id="chatrow"><input id="chatin" maxlength="200" placeholder="message…" autocomplete="off"><button id="chatsend">Send</button></div>
+    </div>
+  </div>
+</div>
+<div id="tabs">
+  <button data-t="colboard">Board</button>
+  <button data-t="collist" class="on">Players</button>
+  <button data-t="colroster">Lineup</button>
+</div>
+
+<div id="modal"><div class="mbox" id="mbox"></div></div>
+<div id="toast"></div>
+
+<script id="playerdata" type="application/json">__PLAYERDATA__</script>
+<script>
+"use strict";
+/* ================================================================
+   __BRAND_NAME__ — __BRAND_TAG__
+   Every league-specific fact (teams, slots, flex pools, scoring, bench) lives in
+   the embedded META block below. Nothing about the format is hardcoded here.
+   Sync: MQTT over WebSocket through public brokers, no account, no keys.
+   ================================================================ */
+
+const DATA   = JSON.parse(document.getElementById('playerdata').textContent);
+const META   = DATA.meta;
+const TEAMS  = META.teams;
+const ROUNDS = META.rounds;
+const TOTAL  = META.totalPicks;
+const SLOTS  = META.slots;          // starters per pool, e.g. {QB:2,RB:3,WRTE:5,DST:2,K:2}
+const BENCH  = META.bench || 0;     // bench slots per team (0 = no bench)
+// A shared flex belongs to several pools at once, so it cannot be pool membership.
+// {slots:1, eligible:['RB','WR','TE']} — dedicated slots fill first, then the flex.
+const FLEX   = META.flex || null;
+const flexOk = pos => !!(FLEX && FLEX.eligible.includes(pos));
+// META.pools maps a pool key -> positions competing for it. A flex is just a pool
+// with >1 position; superflex is {SFLEX:['QB','RB','WR','TE']}. Pools decide
+// replacement level, so getting this right IS getting the valuation right.
+const POOL_MAP = (()=>{ const m={}; for(const k in META.pools) for(const pos of META.pools[k]) m[pos]=k; return m; })();
+const POOL   = pos => POOL_MAP[pos] || pos;
+const POOL_OF= pl => POOL(pl.pos);
+const BY_ID  = new Map(DATA.players.map(p=>[p.id,p]));
+const GROUPS = META.groups.map(g=>[g[0],g[1],SLOTS[g[0]]]);
+const POS_PRESENT = (()=>{ const order=['QB','RB','WR','TE','DST','K'], s=new Set(DATA.players.map(p=>p.pos));
+  return [...order.filter(p=>s.has(p)), ...[...s].filter(p=>!order.includes(p)).sort()]; })();
+const FILTER_DEFS = (()=>{
+  const d=[['ALL','All'], ...POS_PRESENT.map(p=>[p,p])];
+  for(const k in META.pools) if(META.pools[k].length>1) d.push([k, META.pools[k].join('+')]);
+  return d;
+})();
+const $ = id => document.getElementById(id);
+
+/* ---------------- room + identity ---------------- */
+const qs = new URLSearchParams(location.search);
+function randCode(){ const a='bcdfghjkmnpqrstvwxyz23456789'; let s=''; for(let i=0;i<8;i++) s+=a[Math.floor(Math.random()*a.length)]; return s; }
+let ROOM = (qs.get('room')||'').toLowerCase().replace(/[^a-z0-9-]/g,'').slice(0,40);
+if(!ROOM){
+  ROOM = localStorage.getItem('snakepit.lastroom') || randCode();
+  try{ const u=new URL(location.href); u.searchParams.set('room',ROOM); history.replaceState(null,'',u.toString()); }catch(e){}
+}
+localStorage.setItem('snakepit.lastroom', ROOM);
+const ME_ID = (()=>{ let v=localStorage.getItem('snakepit.me'); if(!v){ v=randCode(); localStorage.setItem('snakepit.me',v);} return v; })();
+
+/* ---------------- state ----------------
+   shared (synced): picks, teamNames, hidden, v, ts, by
+   local: mySlot, filter, sort, search, view                          */
+const S = {
+  v:0, ts:0, by:'',
+  picks:[],                          // [{pid, team(0-based), overall}]
+  teamNames: Array.from({length:TEAMS},(_,i)=>'Team '+(i+1)),
+  hidden: [],                        // player ids removed from the pool (injury etc.)
+  mySlot: 1, filter:'ALL', sort:'value', search:'', view:null, myName:''
+};
+// A build can carry the league's real draft order; it seeds the board until a
+// saved or synced copy (which the user may have edited) takes precedence.
+if(Array.isArray(META.teamNames)&&META.teamNames.length===TEAMS) S.teamNames=META.teamNames.slice();
+const LS = 'snakepit.room.'+ROOM;
+function save(){
+  try{ localStorage.setItem(LS, JSON.stringify({v:S.v,ts:S.ts,by:S.by,picks:S.picks,teamNames:S.teamNames,hidden:S.hidden}));
+       localStorage.setItem('snakepit.local', JSON.stringify({mySlot:S.mySlot,sort:S.sort,myName:S.myName})); }catch(e){}
+}
+function load(){
+  try{ const r=JSON.parse(localStorage.getItem(LS)||'null');
+    if(r){ S.v=r.v||0; S.ts=r.ts||0; S.by=r.by||''; S.picks=r.picks||[]; S.hidden=r.hidden||[];
+      if(Array.isArray(r.teamNames)&&r.teamNames.length===TEAMS) S.teamNames=r.teamNames; } }catch(e){}
+  try{ const l=JSON.parse(localStorage.getItem('snakepit.local')||'null');
+    if(l){ S.mySlot=l.mySlot||1; S.sort=l.sort||'value'; S.myName=l.myName||''; } }catch(e){}
+  const t=parseInt(qs.get('team')||'',10); if(t>=1&&t<=TEAMS) S.mySlot=t;
+}
+
+/* ---------------- snake math ---------------- */
+function teamAt(overall){ const r=Math.floor(overall/TEAMS), i=overall%TEAMS; return (r%2===0)?i:(TEAMS-1-i); }
+function nextPickOf(teamIdx, from){ for(let i=from;i<TOTAL;i++) if(teamAt(i)===teamIdx) return i; return null; }
+const ME = () => S.mySlot-1;
+
+/* ---------------- derived ---------------- */
+function takenSet(){ const s=new Set(S.picks.map(p=>p.pid)); for(const h of S.hidden) s.add(h); return s; }
+function rosterOf(t){ return S.picks.filter(p=>p.team===t).map(p=>BY_ID.get(p.pid)).filter(Boolean); }
+// Dedicated slots fill first; anyone left over takes a flex slot if eligible, and
+// only then counts against the bench. `_flex` rides along on the returned object.
+function allocate(t){
+  const o={...SLOTS}; let flex=FLEX?FLEX.slots:0, bench=0;
+  for(const pl of rosterOf(t)){
+    const k=POOL_OF(pl);
+    if(o[k]>0) o[k]--;
+    else if(flex>0 && flexOk(pl.pos)) flex--;
+    else bench++;
+  }
+  o._flex=flex; o._bench=bench; return o;
+}
+function openSlots(t){ return allocate(t); }
+function benchUsed(t){ return allocate(t)._bench; }
+// can this team still start another body from `pool`?
+function hasRoom(t,pool,pos){ const o=allocate(t);
+  return (o[pool]||0)>0 || (o._flex>0 && flexOk(pos)); }
+function overflowAt(t,pool){ let n=0,left=SLOTS[pool]||0;
+  for(const pl of rosterOf(t)) if(POOL_OF(pl)===pool){ if(left>0) left--; else n++; } return n; }
+function leagueOpen(){ const tot={}; for(const k in SLOTS) tot[k]=SLOTS[k]*TEAMS;
+  let flex=FLEX?FLEX.slots*TEAMS:0;
+  for(const p of S.picks){ const pl=BY_ID.get(p.pid); if(!pl) continue; const k=POOL_OF(pl);
+    if(tot[k]>0) tot[k]--; else if(flex>0&&flexOk(pl.pos)) flex--; }
+  tot._flex=flex; return tot; }
+function availableByMarket(){ const t=takenSet(); return DATA.players.filter(p=>!t.has(p.id)).sort((a,b)=>a.mkt-b.mkt); }
+
+/* dynamic replacement level: the (open slots + 1)-th best player LEFT in each pool */
+function dynamicReplacement(){
+  const t=takenSet(), open=leagueOpen(), rep={}, ranked={}, idx={};
+  for(const pool in SLOTS){
+    ranked[pool]=DATA.players.filter(p=>!t.has(p.id)&&POOL_OF(p)===pool).sort((a,b)=>b.pts-a.pts);
+    idx[pool]=Math.max(0, open[pool]||0);
+  }
+  // Hand each still-unfilled flex slot to whichever eligible pool has the best
+  // player left — the same greedy resolution the real lineup will perform.
+  if(FLEX && open._flex>0){
+    const elig=[...new Set(FLEX.eligible.map(POOL))].filter(k=>k in SLOTS);
+    for(let n=0;n<open._flex;n++){
+      let bp=null,bv=-Infinity;
+      for(const k of elig){ const l=ranked[k];
+        if(idx[k]<l.length && l[idx[k]].pts>bv){ bv=l[idx[k]].pts; bp=k; } }
+      if(bp===null) break;
+      idx[bp]++;
+    }
+  }
+  for(const pool in SLOTS){
+    const l=ranked[pool];
+    rep[pool]=l.length?l[Math.min(idx[pool], l.length-1)].pts:0;
+  }
+  return rep;
+}
+/* run detection: how hard has the room hit each pool in the last 10 picks vs its expected share */
+function runFactors(){
+  const recent=S.picks.slice(-10).map(p=>BY_ID.get(p.pid)).filter(Boolean);
+  const f={}; for(const k in SLOTS) f[k]=1;
+  if(recent.length<5) return f;
+  const open=leagueOpen(); const totOpen=Object.values(open).reduce((a,b)=>a+b,0)||1;
+  for(const pool in SLOTS){
+    const hits=recent.filter(p=>POOL_OF(p)===pool).length/recent.length;
+    const norm=(open[pool]||0)/totOpen; if(norm<=0) continue;
+    f[pool]=Math.max(0.75,Math.min(1.8,0.55+0.45*(hits/norm)));
+  }
+  return f;
+}
+/* VONA baseline: walk the MARKET board forward through the picks before my next turn.
+   Kickers/DST sit late on that board so they survive long gaps; elite QB/TE do not. */
+function vonaBaselines(currentOverall, teamIdx){
+  // At the turn you pick back-to-back. Waiting one pick costs nothing, so the real
+  // horizon is the first pick after your consecutive run: gap = other teams' picks
+  // between now and then.
+  let nxt=nextPickOf(teamIdx, currentOverall+1), own=0;
+  while(nxt!==null && nxt===currentOverall+1+own){ own++; nxt=nextPickOf(teamIdx, nxt+1); }
+  const gap=nxt===null?0:(nxt-currentOverall-1-own);
+  const avail=availableByMarket(), runs=runFactors(), base={};
+  // Walk DEMAND, not raw supply. There are ~98 quarterbacks in a player pool and
+  // only 12 starting QB slots in a 1-QB league; if the walk lets the market
+  // "consume" the 86 nobody would ever draft, it burns the gap budget on bodies
+  // that were never going anywhere. Every pool's survivor then looks barely worse
+  // than the best available, VONA collapses league-wide, and with every position
+  // looking equally worthless the tiebreak hands a premium pick to a kicker.
+  const demand=leagueOpen();
+  let flexDemand=demand._flex||0;
+  let benchDemand=Math.max(0, (TOTAL-S.picks.length)
+    - Object.keys(SLOTS).reduce((a,k)=>a+(demand[k]||0),0) - flexDemand);
+  const consumed={}; for(const k in SLOTS) consumed[k]=0;
+  let spent=0,i=0;
+  while(spent<gap && i<avail.length){
+    const pl=avail[i], pool=POOL_OF(pl); i++;
+    let taken=false;
+    if((demand[pool]||0)>0){ demand[pool]--; taken=true; }
+    else if(flexDemand>0 && flexOk(pl.pos)){ flexDemand--; taken=true; }
+    else if(benchDemand>0){ benchDemand--; taken=true; }
+    if(!taken) continue;            // nobody needs this body; the market skips him
+    consumed[pool]+=1; spent+=1/(runs[pool]||1);
+  }
+  for(const pool in SLOTS){
+    const inPool=avail.filter(p=>POOL_OF(p)===pool);
+    const surv=inPool[Math.min(consumed[pool], inPool.length-1)];
+    base[pool]=surv?surv.pts:0;
+  }
+  return {base,gap,nxt,runs};
+}
+/* no bench: a shared bye inside a pool is a guaranteed zero that week */
+function byeCost(pl, teamIdx){
+  if(!pl.bye) return 0;
+  const pool=POOL_OF(pl);
+  const mates=rosterOf(teamIdx).filter(p=>POOL_OF(p)===pool&&p.bye===pl.bye).length;
+  if(mates<1) return 0;
+  return (pl.pts/17)*0.85*mates;
+}
+function scorePlayers(){
+  const cur=S.picks.length;
+  const onClockTeam=cur<TOTAL?teamAt(cur):null;
+  const me=ME(), isMe=onClockTeam===me;
+  const rep=dynamicReplacement();
+  const {base,gap,nxt,runs}=vonaBaselines(cur, me);
+  const open=openSlots(me), t=takenSet(), lgOpen=leagueOpen();
+  const benchLeft=Math.max(0, BENCH-benchUsed(me));
+  // One rule or a list of them: real leagues often need to cap two positions at
+  // once (a TE-premium edge worth taking AND a steep QB curve worth resisting).
+  const CONC=(()=>{ const c=META.concentration; return !c?[]:(Array.isArray(c)?c:[c]); })();
+  const myRoster=rosterOf(me);
+  const concHeld=CONC.map(r=>myRoster.filter(p=>r.pos?p.pos===r.pos:POOL_OF(p)===r.pool).length);
+  const squeeze={}, left={};
+  for(const pool in SLOTS){
+    left[pool]=DATA.players.filter(p=>!t.has(p.id)&&POOL_OF(p)===pool).length;
+    const need=lgOpen[pool]||0;
+    squeeze[pool]=(need>0&&left[pool]<=need*1.25)?1.35:1.0;
+  }
+  const rows=[];
+  for(const p of DATA.players){
+    if(t.has(p.id)) continue;
+    const pool=POOL_OF(p);
+    const dedicatedOpen=(open[pool]??0)>0;
+    const flexOnly=!dedicatedOpen && open._flex>0 && flexOk(p.pos);
+    const needOpen=dedicatedOpen || flexOnly;
+    const vor=p.pts-(rep[pool]??0), bye=byeCost(p,me);
+    // A player headed for the FLEX competes with every flex-eligible position, so
+    // his "what do I lose by waiting" is measured against the best flex-eligible
+    // survivor — not his own position's survivor. Judged intra-pool, a mediocre
+    // TE's +18 "beats" a better WR's +5 and the flex goes to the worse player.
+    let vona=p.pts-(base[pool]??0);
+    if(flexOnly){
+      let fb=-Infinity;
+      for(const pos of FLEX.eligible){ const k=POOL(pos); if((base[k]??-Infinity)>fb) fb=base[k]; }
+      vona=p.pts-fb;
+    }
+    // Concentration penalty: loading one position is an edge right up until it is a
+    // single point of failure you cannot absorb. Each body past `from` costs `step`.
+    let conc=0;
+    CONC.forEach((r,ri)=>{
+      const hit=r.pos?p.pos===r.pos:POOL_OF(p)===r.pool;
+      if(hit&&concHeld[ri]>=r.from) conc+=r.step*(concHeld[ri]-r.from+1);
+    });
+    // A filled starting slot is worth literally nothing with no bench. With a bench it
+    // is worth real but sharply decaying value — depth you can actually start later.
+    const over=needOpen?0:overflowAt(me,pool)+1-(FLEX?FLEX.slots:0);
+    const depth=needOpen?1:(benchLeft>0?Math.pow(0.42,over):0);
+    // Starters are chosen on VONA — "what do I lose by waiting". A bench body cannot
+    // be priced in that currency, and pricing him on VOR is worse still: VOR for a
+    // good backup runs to +90 while a starter's VONA is +30, so bench candidates
+    // systematically outbid starters and you draft a TE2 who can never play instead
+    // of the QB2 you are required to start.
+    // What a backup is actually worth is the UPGRADE he provides over the man he
+    // would replace, times how rarely that happens. A backup worse than your current
+    // starter is worth nothing, which is correct — you would stream that slot.
+    let raw;
+    if(needOpen){
+      // The VOR anchor only applies when waiting actually costs something (vona>0)
+      // or the pool is objectively running dry (squeeze). A player whose equal
+      // survives every gap has zero urgency — his score must say "later", not
+      // "slightly now". Without this gate DST1 held a permanent +3 and ranked
+      // 15th overall at pick 1, which reads as "draft a defense in round 2".
+      const anchor=(vona>0.5||squeeze[pool]>1)?0.10*Math.max(vor,0):0;
+      raw=0.88*vona*squeeze[pool]+anchor-bye-conc;
+    } else {
+      const nStart=SLOTS[pool]||0;
+      const held=myRoster.filter(x=>POOL_OF(x)===pool).sort((a,b)=>b.pts-a.pts);
+      const incumbent=(nStart>0&&held.length>=nStart)?held[nStart-1].pts:(rep[pool]??0);
+      // upgrade over the man he'd replace, plus a small insurance term: a
+      // near-starter backup pays off when a starter misses time, so he is worth
+      // a slice of his value over replacement even while he sits.
+      raw=Math.max(p.pts-incumbent,0)+0.12*Math.max(vor,0)-bye-conc;
+    }
+    const score=depth>0?raw*depth:-999;
+    rows.push({p,vor,vona,bye,conc,needOpen,depth,score,run:runs[pool]>=1.25});
+  }
+  if(S.sort==='value')     rows.sort((a,b)=>{
+    const ta=(a.needOpen||a.depth>0)&&a.score>2, tb=(b.needOpen||b.depth>0)&&b.score>2;
+    if(ta!==tb) return ta?-1:1;                  // act-now tier first
+    if(ta&&tb)  return b.score-a.score||a.p.mkt-b.p.mkt;
+    return a.p.mkt-b.p.mkt||b.score-a.score;     // the rest reads in market order
+  });
+  else if(S.sort==='proj') rows.sort((a,b)=>b.p.pts-a.p.pts||a.p.mkt-b.p.mkt);
+  else                     rows.sort((a,b)=>a.p.mkt-b.p.mkt||b.p.pts-a.p.pts);
+  return {rows,gap,nxt,isMe,onClockTeam,open,rep,left,lgOpen,runs};
+}
+
+/* ================================================================ RENDER */
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function labelPool(k){ const ps=META.pools[k]; return (ps&&ps.length>1)?ps.join('/'):k; }
+function tname(i){ return S.teamNames[i]||('Team '+(i+1)); }
+function shortName(i){ const n=tname(i); return n.replace(/^Team /,'T'); }
+function lastName(n){ const parts=n.split(' ').filter(w=>!/^(Jr\.?|Sr\.?|II|III|IV|V)$/i.test(w)); return parts.length?parts[parts.length-1]:n; }
+
+let lastIsMe=null;
+function render(){
+  const st=scorePlayers();
+  renderTop(st); renderRec(st); renderFilters(st); renderList(st); renderBoard(); renderRoster(st);
+  save();
+  if(st.isMe && lastIsMe===false && S.picks.length<TOTAL){ toast("★ You're on the clock",'mine'); sndTurn(); }
+  lastIsMe=st.isMe;
+}
+function renderTop(st){
+  const cur=S.picks.length;
+  if(cur>=TOTAL){ $('pickno').textContent='Final'; $('pickmeta').textContent=TOTAL+' picks made';
+    $('onclocktxt').textContent='Draft complete'; $('onclockshort').textContent='Done';
+    $('onclock').className=''; $('untilnext').textContent='—'; return; }
+  const rnd=Math.floor(cur/TEAMS)+1, inr=(cur%TEAMS)+1;
+  $('pickno').textContent=`Pick ${rnd}.${String(inr).padStart(2,'0')}`;
+  $('pickmeta').textContent=`${cur+1} of ${TOTAL} · Rd ${rnd}`;
+  $('onclocktxt').textContent=st.isMe?'★ YOUR PICK':'On the clock: '+tname(st.onClockTeam);
+  $('onclockshort').textContent=st.isMe?'★ YOU':tname(st.onClockTeam);
+  $('onclock').className=st.isMe?'me':'';
+  $('untilnext').textContent=st.isMe?'NOW':(st.nxt===null?'—':st.gap);
+  document.title=(st.isMe?'★ YOUR PICK · ':'')+`Pick ${rnd}.${String(inr).padStart(2,'0')} · __BRAND_NAME__`;
+}
+function renderRec(st){
+  const box=$('rec');
+  if(S.picks.length>=TOTAL){ box.className=''; box.innerHTML=`<div class="lbl">Draft complete</div><div class="nm">Good luck out there</div>`; return; }
+  // The card and the list must agree — a card recommending one player while the
+  // top row shows another reads as a bug. rows are already in display order.
+  const top=st.rows.find(r=>r.needOpen||r.depth>0);
+  if(!top){ box.className=''; box.innerHTML='<div class="lbl">Your lineup is full</div><div class="nm">Nothing left to draft</div>'; return; }
+  const p=top.p, pool=POOL_OF(p);
+  const alt=st.rows.find(r=>(r.needOpen||r.depth>0)&&POOL_OF(r.p)!==pool);
+  const bits=[];
+  bits.push(`draft value <b>${top.score>0?'+':''}${top.score.toFixed(0)}</b>`);
+  bits.push(`<b>${top.vona>0?'+':''}${top.vona.toFixed(0)} pts</b> over the best ${labelPool(pool)} likely left at your next pick`);
+  if(st.gap>0) bits.push(`<b>${st.gap}</b> picks until you're back up`);
+  if(top.run) bits.push(`<span class="taghot">${labelPool(pool)} run in progress</span>`);
+  if(top.bye>0.5) bits.push(`<span class="tagbye">bye ${p.bye} conflict −${top.bye.toFixed(0)}</span>`);
+  if(top.conc) bits.push(`still worth it after the −${top.conc.toFixed(0)} stacking haircut`);
+  if(alt&&(top.score-alt.score)<6) bits.push(`close call vs <b>${esc(alt.p.name)}</b> (${alt.p.pos})`);
+  // what the team on the clock still needs (useful when it isn't you)
+  let needLine='';
+  if(!st.isMe && st.onClockTeam!==null){
+    const o=openSlots(st.onClockTeam);
+    const needs=GROUPS.filter(([k])=>o[k]>0).map(([k])=>`${labelPool(k)}×${o[k]}`).join(' · ');
+    needLine=`<div class="need"><b>${esc(tname(st.onClockTeam))}</b> still needs ${needs||'nothing'}</div>`;
+  }
+  box.className=st.isMe?'hot':'';
+  box.innerHTML=`<div class="lbl">${st.isMe?'★ Take him now':'If this pick were yours'}</div>
+    <div class="nm"><span class="pill bg-${p.pos}">${p.pos}</span>${esc(p.name)}<small>${p.team} · ${p.pos}${p.posRank} · bye ${p.bye||'—'} · ${p.pts.toFixed(0)} proj</small></div>
+    <div class="why">${bits.join(' · ')}</div>${needLine}
+    ${st.isMe?`<button class="tbtn gold go" data-id="${p.id}">Draft</button>`:''}`;
+  const g=box.querySelector('.go'); if(g) g.onclick=()=>draftPlayer(g.dataset.id);
+}
+function renderFilters(st){
+  const counts={}; for(const r of st.rows) counts[r.p.pos]=(counts[r.p.pos]||0)+1;
+  // Filters derive from the league, not a hardcoded list: one per position that
+  // actually exists in the pool, plus one per multi-position pool (the flex view).
+  // A "WR+TE" button in a league with no WR/TE flex is just noise.
+  const defs=FILTER_DEFS;
+  const el=$('filters');
+  el.innerHTML=defs.map(([k,lab],i)=>{
+    const n=k==='ALL' ? st.rows.length
+      : (META.pools[k] ? META.pools[k].reduce((a,pos)=>a+(counts[pos]||0),0) : (counts[k]||0));
+    return `<button class="fbtn ${S.filter===k?'on':''}" data-f="${k}" title="key ${i+1}">${lab}<span class="n">${n}</span></button>`;
+  }).join('')+`<input id="srch" placeholder="search  ( / )" value="${esc(S.search)}" autocomplete="off">`;
+  el.querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{S.filter=b.dataset.f;render();$('listscroll').scrollTop=0;});
+  const s=$('srch'); s.oninput=e=>{S.search=e.target.value;renderList(scorePlayers());};
+  if(document.activeElement && document.activeElement.id==='srch'){ s.focus(); s.setSelectionRange(s.value.length,s.value.length); }
+  const sorts=[['value','Draft value'],['proj','Projected pts'],['adp','Market ADP']];
+  $('sortbar').innerHTML=`<span>Ranked by</span>`+sorts.map(([k,l])=>`<button class="sb ${S.sort===k?'on':''}" data-s="${k}">${l}</button>`).join('')+
+    `<span style="margin-left:auto">${st.gap>0?`board walks ${st.gap} picks ahead`:''}</span>`;
+  $('sortbar').querySelectorAll('.sb').forEach(b=>b.onclick=()=>{S.sort=b.dataset.s;render();});
+}
+function renderList(st){
+  let rows=st.rows;
+  if(S.filter!=='ALL') rows=rows.filter(r=>META.pools[S.filter]
+    ? META.pools[S.filter].includes(r.p.pos) : r.p.pos===S.filter);
+  if(S.search){ const q=S.search.toLowerCase(); rows=rows.filter(r=>r.p.name.toLowerCase().includes(q)||r.p.team.toLowerCase()===q); }
+  // rank: needed players first (already sorted), full-slot players sink to the bottom in value sort
+  rows=rows.slice(0,180);
+  const el=$('list');
+  if(!rows.length){ el.innerHTML='<div class="empty">Nobody left matching that.</div>'; return; }
+  let h=`<div class="lhead"><span>Rk</span><span>Pos</span><span>Player</span><span class="r">Proj</span><span class="r adp">ADP</span><span class="r" title="Draft value: points over what will still be there at your next pick, adjusted for runs, scarcity and bye clashes">Value</span><span></span></div>`;
+  h+=rows.map((r,i)=>{
+    const p=r.p, v=r.score;
+    const live=r.needOpen||r.depth>0;
+    const vc=!live?'v-neg':(v>=25?'v-hi':(v>=6?'v-md':'v-lo'));
+    const tip=`${esc(p.name)} — ${r.vona>0?'+':''}${r.vona.toFixed(0)} vs best ${labelPool(POOL_OF(p))} likely left at your next pick · ${r.vor>0?'+':''}${r.vor.toFixed(0)} over replacement${r.bye>0.5?` · bye clash −${r.bye.toFixed(0)}`:''}${r.conc?` · stack −${r.conc.toFixed(0)}`:''}`;
+    const tags=[];
+    if(r.bye>0.5) tags.push(`<span class="tag bye">BYE ${p.bye} clash</span>`);
+    if(r.run&&r.needOpen) tags.push(`<span class="tag run">RUN</span>`);
+    if(!r.needOpen) tags.push(`<span class="tag full">${r.depth>0?'bench':'slot full'}</span>`);
+    return `<div class="prow ${live?'need':'full'} ${i===0?'top1':(i<3?'top3':'')}" data-id="${p.id}" title="${tip}">
+      <span class="rk">${i+1}</span>
+      <span class="pill bg-${p.pos}">${p.pos}</span>
+      <div><div class="nm">${esc(p.name)}</div>
+        <div class="meta">${p.team} · ${p.pos}${p.posRank} · bye ${p.bye||'—'} ${tags.join(' ')}</div></div>
+      <div class="num">${p.pts.toFixed(0)}</div>
+      <div class="num adp">${p.mkt<400?p.mkt:'—'}</div>
+      <div class="val ${vc}">${live?((v>0?'+':'')+v.toFixed(0)):'—'}</div>
+      <button class="hide" data-hide="${p.id}" title="Remove from pool (injured / not playing)">×</button>
+    </div>`;
+  }).join('');
+  el.innerHTML=h;
+  el.querySelectorAll('.prow').forEach(row=>{ row.onclick=e=>{ if(e.target.closest('.hide')) return; draftPlayer(row.dataset.id); }; });
+  el.querySelectorAll('.hide').forEach(b=>{ b.onclick=e=>{ e.stopPropagation(); hidePlayer(b.dataset.hide); }; });
+}
+function renderBoard(){
+  const el=$('board'), cur=S.picks.length;
+  // Min column width is deliberately small: a clipped final column is invisible and
+// looks like the league simply has fewer teams. The panel also scrolls horizontally
+// as a backstop for very large leagues.
+const cols=`grid-template-columns:16px repeat(${TEAMS},minmax(30px,1fr))`;
+  const onClk=cur<TOTAL?teamAt(cur):-1;
+  let h=`<div class="bhead" style="${cols}"><div style="background:transparent"></div>`+
+    S.teamNames.map((n,i)=>`<div class="${i===ME()?'meteam':''} ${i===onClk?'onclk':''}" title="${esc(n)}">${i===ME()?'YOU':esc(shortName(i))}</div>`).join('')+`</div>`;
+  for(let r=0;r<ROUNDS;r++){
+    h+=`<div class="brow" style="${cols}"><div class="rnd">${r+1}</div>`;
+    for(let c=0;c<TEAMS;c++){
+      const idx=(r%2===0)?r*TEAMS+c:r*TEAMS+(TEAMS-1-c);
+      const pk=S.picks[idx], mine=c===ME(), now=idx===cur;
+      if(pk){ const p=BY_ID.get(pk.pid);
+        h+=`<div class="bcell pk bg-${p?p.pos:''} ${mine?'mine':''}" title="${p?esc(p.name):''} · ${idx+1} overall"><span class="bn">${p?esc(lastName(p.name)):'?'}</span><span class="bp">${p?p.pos+' · '+p.team:''}</span></div>`;
+      } else {
+        h+=`<div class="bcell ${mine?'empty-mine':''} ${now?'now':''}">${now?'<span class="bp">ON CLOCK</span>':''}</div>`;
+      }
+    }
+    h+=`</div>`;
+  }
+  el.innerHTML=h;
+  $('boardsub').textContent=`${S.picks.length}/${TOTAL} picks · room ${ROOM}`;
+}
+function renderRoster(st){
+  const sel=$('viewteam');
+  const view=(S.view===null||S.view===undefined)?ME():S.view;
+  sel.innerHTML=S.teamNames.map((n,i)=>`<option value="${i}" ${i===view?'selected':''}>${i===ME()?'★ ':''}${esc(n)}</option>`).join('');
+  sel.onchange=()=>{ S.view=+sel.value; renderRoster(scorePlayers()); };
+  const isMine=view===ME();
+  $('rosterttl').textContent=isMine?'My Lineup':esc(tname(view));
+  const mine=rosterOf(view);
+  const buckets={}; for(const k in SLOTS) buckets[k]=[];
+  for(const p of mine){ const k=POOL_OF(p); (buckets[k]=buckets[k]||[]).push(p); }
+  let h='', totalPts=0;
+  const starters=new Set();
+  for(const [k,label,n] of GROUPS){
+    h+=`<div class="grouphd"><span>${label}</span><span class="cnt">${(buckets[k]||[]).length}/${n}</span></div>`;
+    for(let i=0;i<n;i++){
+      const p=(buckets[k]||[])[i];
+      if(p){ totalPts+=p.pts; starters.add(p.id);
+        h+=`<div class="slot"><span class="pill bg-${p.pos}">${p.pos}</span><div><div class="pn">${esc(p.name)}</div><div class="pm">${p.team} · bye ${p.bye||'—'} · ${p.pos}${p.posRank}</div></div><div class="pts">${p.pts.toFixed(0)}</div></div>`;
+      } else {
+        h+=`<div class="slot open"><span class="sl">${labelPool(k)}</span><div class="pm">open</div><div></div></div>`;
+      }
+    }
+  }
+  if(FLEX){
+    const spare=mine.filter(p=>!starters.has(p.id)&&flexOk(p.pos)).slice(0,FLEX.slots);
+    h+=`<div class="grouphd"><span>Flex</span><span class="cnt">${spare.length}/${FLEX.slots}</span></div>`;
+    for(let i=0;i<FLEX.slots;i++){ const p=spare[i];
+      if(p){ totalPts+=p.pts; starters.add(p.id);
+        h+=`<div class="slot"><span class="pill bg-${p.pos}">${p.pos}</span><div><div class="pn">${esc(p.name)}</div><div class="pm">${p.team} · bye ${p.bye||'—'} · ${p.pos}${p.posRank}</div></div><div class="pts">${p.pts.toFixed(0)}</div></div>`;
+      } else h+=`<div class="slot open"><span class="sl">${FLEX.eligible.join('/')}</span><div class="pm">open</div><div></div></div>`;
+    }
+  }
+  if(BENCH>0){
+    const bench=mine.filter(p=>!starters.has(p.id));
+    h+=`<div class="grouphd"><span>Bench</span><span class="cnt">${bench.length}/${BENCH}</span></div>`;
+    for(let i=0;i<BENCH;i++){ const p=bench[i];
+      h+= p ? `<div class="slot"><span class="pill bg-${p.pos}">${p.pos}</span><div><div class="pn">${esc(p.name)}</div><div class="pm">${p.team} · bye ${p.bye||'—'} · ${p.pos}${p.posRank}</div></div><div class="pts">${p.pts.toFixed(0)}</div></div>`
+                : `<div class="slot open"><span class="sl">BN</span><div class="pm">open</div><div></div></div>`; }
+  }
+  h=`<div class="tot"><span>${isMine?(BENCH>0?'Projected starters':'Projected total'):'Projected'}</span><b>${totalPts.toFixed(0)}</b></div>`+h;
+  $('roster').innerHTML=h;
+  // alerts (for the viewed team)
+  const al=[];
+  for(const [k,label,n] of GROUPS){
+    const byes={}; for(const p of (buckets[k]||[])) if(p.bye) byes[p.bye]=(byes[p.bye]||0)+1;
+    for(const wk in byes) if(byes[wk]>=2) al.push(`<div class="alert bad"><b>Week ${wk} hole:</b> ${byes[wk]} of the ${n} ${label} slots share a bye. No bench = a zero that week.</div>`);
+  }
+  if(isMine){
+    for(const [k,label] of GROUPS){
+      const need=st.open[k]||0;
+      if(need>0 && st.lgOpen[k]>0 && st.left[k]<=st.lgOpen[k]+2)
+        al.push(`<div class="alert warn"><b>${label} squeeze:</b> ${st.left[k]} left for ${st.lgOpen[k]} league slots. You still need ${need}.</div>`);
+    }
+    if(!al.length&&mine.length) al.push(`<div class="alert ok">No bye conflicts. Lineup is clean.</div>`);
+  }
+  $('alerts').innerHTML=al.join('');
+}
+
+/* ================================================================ ACTIONS (all mutate shared state → bump version → sync) */
+function bump(){ S.v=(S.v||0)+1; S.ts=Date.now(); S.by=ME_ID; }
+function draftPlayer(pid){
+  if(S.picks.length>=TOTAL) return toast('Draft is already full');
+  if(takenSet().has(pid)) return toast('Already off the board');
+  const overall=S.picks.length, team=teamAt(overall), p=BY_ID.get(pid);
+  if(!p) return;
+  S.picks.push({pid,team,overall}); bump();
+  sndPick(p.pos);
+  toast(`${p.name} → ${team===ME()?'YOU':tname(team)}`);
+  render(); publish();
+}
+function undo(){
+  if(!S.picks.length) return toast('Nothing to undo');
+  const last=S.picks.pop(); bump();
+  const p=BY_ID.get(last.pid); toast(`Undid ${p?p.name:'pick'}`);
+  render(); publish();
+}
+function hidePlayer(pid){
+  const p=BY_ID.get(pid); if(!p) return;
+  if(!S.hidden.includes(pid)) S.hidden.push(pid); bump();
+  toast(`${p.name} removed from pool (restore in Setup)`);
+  render(); publish();
+}
+function unhidePlayer(pid){ S.hidden=S.hidden.filter(x=>x!==pid); bump(); render(); publish(); }
+function resetDraft(){ S.picks=[]; bump(); render(); publish(); }
+
+let toastT;
+function toast(m,cls){ const e=$('toast'); e.textContent=m; e.className='on '+(cls||''); clearTimeout(toastT); toastT=setTimeout(()=>e.className='',1700); }
+
+/* ================================================================ SOUND
+   Everything here is synthesised from oscillators at runtime — no audio files,
+   nothing sampled from anyone's broadcast, no external request. Keeps the file
+   self-contained and keeps us clear of somebody else's copyrighted sting.
+   A sound failure must never block a pick, so every entry point swallows errors. */
+const SND={on:true, ctx:null};
+try{ SND.on = localStorage.getItem('snakepit.sound') !== '0'; }catch(e){}
+
+function audioCtx(){
+  try{
+    if(!SND.ctx){ const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return null; SND.ctx=new AC(); }
+    if(SND.ctx.state==='suspended') SND.ctx.resume();
+    return SND.ctx;
+  }catch(e){ return null; }
+}
+// one voice: oscillator -> optional lowpass -> gain envelope -> out
+function voice(ctx,{freq,start=0,dur=0.2,type='sine',gain=0.15,detune=0,cutoff=null}){
+  const t0=ctx.currentTime+start;
+  const o=ctx.createOscillator(), g=ctx.createGain();
+  o.type=type; o.frequency.setValueAtTime(freq,t0);
+  if(detune) o.detune.setValueAtTime(detune,t0);
+  let node=o;
+  if(cutoff){ const f=ctx.createBiquadFilter(); f.type='lowpass'; f.frequency.setValueAtTime(cutoff,t0); o.connect(f); node=f; }
+  node.connect(g); g.connect(ctx.destination);
+  g.gain.setValueAtTime(0.0001,t0);
+  g.gain.exponentialRampToValueAtTime(Math.max(gain,0.0002),t0+0.012);
+  g.gain.exponentialRampToValueAtTime(0.0001,t0+dur);
+  o.start(t0); o.stop(t0+dur+0.03);
+}
+// "dun-a-DUNN" — a three-note brass sting for your turn. Sawtooth pairs detuned
+// against each other through a lowpass read as brass; the third note lands high
+// and holds, which is what makes it carry from across a room.
+function sndTurn(){
+  if(!SND.on) return; const ctx=audioCtx(); if(!ctx) return;
+  try{
+    const brass=(f,s,d,g)=>{
+      voice(ctx,{freq:f,start:s,dur:d,type:'sawtooth',gain:g,cutoff:2600});
+      voice(ctx,{freq:f,start:s,dur:d,type:'sawtooth',gain:g*0.55,detune:-9,cutoff:2100});
+    };
+    brass(523.25,0.00,0.14,0.15);   // DUN
+    brass(392.00,0.15,0.10,0.11);   // a
+    brass(783.99,0.27,0.52,0.19);   // DUNN
+    voice(ctx,{freq:1567.98,start:0.27,dur:0.34,type:'triangle',gain:0.045});
+  }catch(e){}
+}
+// A short ping per pick, pitched by position — so you can hear that a QB went off
+// the board without looking up. Descending pitch roughly tracks positional value.
+const PING={QB:880.00,RB:783.99,WR:698.46,TE:622.25,DST:523.25,K:466.16};
+function sndPick(pos){
+  if(!SND.on) return; const ctx=audioCtx(); if(!ctx) return;
+  try{
+    const f=PING[pos]||700;
+    voice(ctx,{freq:f,start:0,dur:0.17,type:'sine',gain:0.12});
+    voice(ctx,{freq:f*2,start:0,dur:0.085,type:'sine',gain:0.04});
+  }catch(e){}
+}
+function sndIcon(){
+  const on=SND.on;
+  $('sndicon').innerHTML = on
+    ? '<path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/>'
+    : '<path d="M11 5 6 9H2v6h4l5 4z"/><path d="m17 9 5 6M22 9l-5 6"/>';
+  $('btnsound').style.color = on ? '' : 'var(--dim2)';
+  $('btnsound').title = on ? 'Sound on — click to mute (S)' : 'Muted — click for sound (S)';
+}
+function toggleSound(){
+  SND.on=!SND.on;
+  try{ localStorage.setItem('snakepit.sound', SND.on?'1':'0'); }catch(e){}
+  sndIcon();
+  if(SND.on) sndTurn();     // unmuting doubles as a preview and unlocks audio
+  else toast('Sound off');
+}
+// Browsers refuse to start audio without a gesture. The first interaction of any
+// kind arms it, so the first real alert is not the one that gets swallowed.
+['pointerdown','keydown'].forEach(ev=>window.addEventListener(ev,function armAudio(){
+  audioCtx(); window.removeEventListener(ev,armAudio);
+},{once:true}));
+
+/* ---------------- share / settings ---------------- */
+function inviteUrl(team){ try{ const u=new URL(location.href); u.searchParams.set('room',ROOM); if(team) u.searchParams.set('team',team); else u.searchParams.delete('team'); return u.toString(); }catch(e){ return location.href; } }
+function openShare(){
+  const url=inviteUrl();
+  $('mbox').innerHTML=`<h3>Invite your co-drafter</h3>
+    <p class="hint">Send him this link. He opens it, picks which team is his in <b>Setup</b>, and from then on every pick, undo and team-name edit either of you makes shows up on both screens live. Room code: <b>${ROOM}</b>.</p>
+    <div class="frow"><label>Invite link</label><div class="linkbox"><input id="sh_url" readonly value="${esc(url)}"><button class="tbtn pri" id="sh_copy">Copy</button></div>
+    <small>${location.protocol==='file:'?'You opened this from a file, so the link only works on this computer. Send him the .html file itself (AirDrop / text / email) — he opens it, taps Setup → Room, and types <b>'+ROOM+'</b>. Or host the file at a URL and this link works as-is.':'Anyone with the link can see and make picks in this room. Keep it between the two of you.'}</small></div>
+    <div class="mact"><button class="tbtn" id="sh_close">Done</button></div>`;
+  $('modal').classList.add('on');
+  $('sh_close').onclick=closeModal;
+  $('sh_copy').onclick=async()=>{ try{ await navigator.clipboard.writeText(url); toast('Link copied'); }catch(e){ $('sh_url').select(); document.execCommand('copy'); toast('Link copied'); } };
+}
+function openSettings(){
+  const teamOpts=Array.from({length:TEAMS},(_,i)=>`<option value="${i+1}" ${S.mySlot===i+1?'selected':''}>${i+1}. ${esc(tname(i))}</option>`).join('');
+  const hiddenChips=S.hidden.map(id=>{const p=BY_ID.get(id);return p?`<span class="ch">${esc(p.name)} <button data-un="${id}" title="restore">×</button></span>`:'';}).join('')||'<span style="color:var(--dim2);font-size:11px">none</span>';
+  $('mbox').innerHTML=`<h3>Setup</h3>
+    <p class="hint">${esc(META.leagueLine)}. Values are ${esc(META.source)} (${esc(META.scrapeDate)}) recomputed for this league's scoring: ${esc(META.scoringLine)}.${META.draftDate?` Draft is <b>${esc(META.draftDate)}</b> — refresh rankings the week of.`:''}</p>
+    <div class="frow"><label>My team (this screen only — your partner sets his own)</label><select id="f_slot">${teamOpts}</select>
+      <small>Draft slot is assigned the day of. Set it here as soon as you know it — picks-until-you, value and needs all key off it. Two people running one team both pick the same team.</small></div>
+    <div class="frow"><label>Team names, in draft order (shared)</label>
+      <textarea id="f_names" rows="4" style="resize:vertical">${esc(S.teamNames.join('\n'))}</textarea><small>One per line, ${TEAMS} lines, pick 1 first.</small></div>
+    <div class="frow"><label>Room code (shared board)</label><div class="linkbox"><input id="f_room" value="${ROOM}"><button class="tbtn" id="f_join">Switch</button></div>
+      <small>Both screens must be in the same room. Switching rooms reloads.</small></div>
+    <div class="frow"><label>Removed from pool</label><div class="chips">${hiddenChips}</div></div>
+    <p class="hint" style="margin:0;font-size:10.5px;color:var(--dim2)">Rankings: ${esc(META.source)} (${esc(META.scrapeDate)}) · values recomputed for this league are modeled estimates, not sourced projections. Personal tool. Not affiliated with, endorsed by, or sponsored by the NFL or NFLPA. Team names appear as plain text only.</p>
+    <div class="mact">
+      <button class="tbtn danger" id="f_reset">Reset draft</button>
+      <span class="spacer"></span>
+      <button class="tbtn" id="f_close">Cancel</button>
+      <button class="tbtn pri" id="f_save">Save</button>
+    </div>`;
+  $('modal').classList.add('on');
+  $('f_close').onclick=closeModal;
+  $('f_save').onclick=()=>{
+    S.mySlot=+$('f_slot').value; S.view=null;
+    const nm=$('f_names').value.split('\n').map(s=>s.trim()).filter(Boolean);
+    let changed=false;
+    if(nm.length===TEAMS && nm.join('|')!==S.teamNames.join('|')){ S.teamNames=nm; changed=true; }
+    else if(nm.length!==TEAMS) toast(`Need exactly ${TEAMS} team names — kept the old ones`);
+    if(changed) bump();
+    closeModal(); render(); if(changed) publish();
+  };
+  $('f_join').onclick=()=>{ const r=$('f_room').value.trim().toLowerCase().replace(/[^a-z0-9-]/g,''); if(!r) return;
+    const u=new URL(location.href); u.searchParams.set('room',r); localStorage.setItem('snakepit.lastroom',r); location.href=u.toString(); };
+  $('f_reset').onclick=()=>{ if(confirm('Clear all '+S.picks.length+' picks for BOTH of you?')){ resetDraft(); closeModal(); } };
+  $('mbox').querySelectorAll('[data-un]').forEach(b=>b.onclick=()=>{ unhidePlayer(b.dataset.un); openSettings(); });
+}
+function closeModal(){ $('modal').classList.remove('on'); }
+
+/* ================================================================ LIVE SYNC
+   Minimal MQTT 3.1.1 client over WebSocket. Publishes the whole shared state
+   (retained) to every public broker it can reach; accepts the newest version
+   from any of them. Late joiners get the retained state instantly.        */
+const BROKERS=[
+  'wss://broker.emqx.io:8084/mqtt',
+  'wss://mqtt-dashboard.com:8884/mqtt',
+  'wss://broker.hivemq.com:8884/mqtt'
+];
+const TOPIC_STATE=`snakepit/v2/${ROOM}/state`;
+const TOPIC_PRES =`snakepit/v2/${ROOM}/presence`;
+const TOPIC_CHAT =`snakepit/v2/${ROOM}/chat`;
+const enc=new TextEncoder(), dec=new TextDecoder();
+function mqStr(s){ const b=enc.encode(s); const o=new Uint8Array(b.length+2); o[0]=b.length>>8; o[1]=b.length&255; o.set(b,2); return o; }
+function mqLen(n){ const o=[]; do{ let d=n%128; n=Math.floor(n/128); if(n>0) d|=128; o.push(d);}while(n>0); return o; }
+function mqPacket(type, ...parts){ const body=concat(parts); return concat([Uint8Array.from([type,...mqLen(body.length)]), body]); }
+function concat(arrs){ let n=0; for(const a of arrs) n+=a.length; const o=new Uint8Array(n); let i=0; for(const a of arrs){ o.set(a,i); i+=a.length; } return o; }
+
+class MiniMQTT{
+  constructor(url, onMsg, onState){ this.url=url; this.onMsg=onMsg; this.onState=onState; this.ws=null; this.buf=new Uint8Array(0); this.ok=false; this.pid=1; this.dead=false; this.retry=1500; this.connect(); }
+  connect(){
+    if(this.dead) return;
+    try{ this.ws=new WebSocket(this.url,'mqtt'); }catch(e){ this.schedule(); return; }
+    this.ws.binaryType='arraybuffer';
+    this.ws.onopen=()=>{ const cid='sp-'+ME_ID+'-'+Math.floor(Math.random()*1e6);
+      const vh=concat([mqStr('MQTT'),Uint8Array.from([4,0x02,0,60])]);
+      this.ws.send(mqPacket(0x10, vh, mqStr(cid))); };
+    this.ws.onmessage=e=>this.feed(new Uint8Array(e.data));
+    this.ws.onclose=()=>{ this.ok=false; this.onState(this,false); clearInterval(this.ping); this.schedule(); };
+    this.ws.onerror=()=>{};
+  }
+  schedule(){ if(this.dead) return; clearTimeout(this.rt); this.rt=setTimeout(()=>this.connect(), this.retry); this.retry=Math.min(this.retry*1.7, 45000); }
+  feed(chunk){
+    this.buf=concat([this.buf,chunk]);
+    for(;;){
+      if(this.buf.length<2) return;
+      let mult=1,len=0,i=1,b;
+      do{ if(i>=this.buf.length) return; b=this.buf[i++]; len+=(b&127)*mult; mult*=128; }while(b&128);
+      if(this.buf.length<i+len) return;
+      const type=this.buf[0]>>4, flags=this.buf[0]&15, body=this.buf.slice(i,i+len);
+      this.buf=this.buf.slice(i+len);
+      this.handle(type,flags,body);
+    }
+  }
+  handle(type,flags,body){
+    if(type===2){ // CONNACK
+      if(body[1]===0){ this.ok=true; this.retry=1500; this.onState(this,true);
+        this.ws.send(mqPacket(0x82, Uint8Array.from([this.pid>>8,this.pid&255]), mqStr(TOPIC_STATE), Uint8Array.from([0]), mqStr(TOPIC_PRES), Uint8Array.from([0]), mqStr(TOPIC_CHAT), Uint8Array.from([0]))); this.pid++;
+        this.ping=setInterval(()=>{ try{ this.ws.send(Uint8Array.from([0xC0,0])); }catch(e){} }, 30000);
+      } else { this.dead=true; this.onState(this,false); }
+    } else if(type===3){ // PUBLISH
+      const tl=(body[0]<<8)|body[1]; const topic=dec.decode(body.slice(2,2+tl)); let off=2+tl;
+      const qos=(flags>>1)&3; if(qos>0) off+=2;
+      const retained=!!(flags&1);
+      let payload=null; try{ payload=JSON.parse(dec.decode(body.slice(off))); }catch(e){ return; }
+      this.onMsg(topic,payload,retained);
+    }
+  }
+  publish(topic,obj,retain){ if(!this.ok) return false; try{ this.ws.send(mqPacket(0x30|(retain?1:0), mqStr(topic), enc.encode(JSON.stringify(obj)))); return true; }catch(e){ return false; } }
+}
+
+const clients=[]; let applying=false; const peers=new Map();
+
+/* ---- chat ----
+   Deliberately NOT part of the shared state document: chat must never bump the
+   draft's version counter or lose a race with a pick. Messages are fire-and-forget
+   on their own topic; we publish to every broker and dedupe on message id, since
+   each broker echoes our own message back and delivers one copy per connection.
+   History is local-only (last 60, per room) — a late joiner starts from silence,
+   which is fine for a two-person draft chat. */
+const CHAT={msgs:[], seen:new Set()};
+try{ CHAT.msgs=JSON.parse(localStorage.getItem('snakepit.chat.'+ROOM)||'[]');
+     for(const m of CHAT.msgs) CHAT.seen.add(m.id); }catch(e){}
+function chatSave(){ try{ localStorage.setItem('snakepit.chat.'+ROOM, JSON.stringify(CHAT.msgs.slice(-60))); }catch(e){} }
+function chatRender(scroll=true){
+  const el=$('chatlog'); if(!el) return;
+  el.innerHTML=CHAT.msgs.slice(-60).map(m=>{
+    const mine=m.from===ME_ID;
+    const hh=new Date(m.ts); const ts=String(hh.getHours()).padStart(2,'0')+':'+String(hh.getMinutes()).padStart(2,'0');
+    return `<div class="cmsg ${mine?'me':''}"><span class="cwho">${esc(m.name||'?')}</span>${esc(m.text)}<span class="cts">${ts}</span></div>`;
+  }).join('');
+  if(scroll) el.scrollTop=el.scrollHeight;
+}
+function chatAdd(m){
+  if(!m||!m.id||CHAT.seen.has(m.id)) return false;
+  if(typeof m.text!=='string'||!m.text.trim()) return false;
+  CHAT.seen.add(m.id);
+  CHAT.msgs.push({id:m.id,from:m.from||'',name:String(m.name||'').slice(0,24),text:String(m.text).slice(0,200),ts:m.ts||Date.now()});
+  CHAT.msgs=CHAT.msgs.slice(-60);
+  chatSave(); chatRender();
+  return true;
+}
+function chatSend(){
+  const inp=$('chatin'); const text=inp.value.trim(); if(!text) return;
+  const m={id:ME_ID+'-'+Date.now()+'-'+Math.floor(Math.random()*1e4),
+           from:ME_ID, name:(S.myName||tname(ME())), text:text.slice(0,200), ts:Date.now()};
+  inp.value='';
+  chatAdd(m);
+  let n=0; for(const c of clients) if(c.publish(TOPIC_CHAT,m,false)) n++;
+  if(n===0) toast('Not connected — message only visible here');
+}
+// soft low blip for incoming chat, quieter and lower than any pick ping
+function sndChat(){
+  if(!SND.on) return; const ctx=audioCtx(); if(!ctx) return;
+  try{ voice(ctx,{freq:329.63,start:0,dur:0.09,type:'sine',gain:0.07});
+       voice(ctx,{freq:392.00,start:0.07,dur:0.11,type:'sine',gain:0.06}); }catch(e){}
+}
+function sharedState(){ return {v:S.v,ts:S.ts,by:S.by,picks:S.picks,teamNames:S.teamNames,hidden:S.hidden,room:ROOM}; }
+function publish(){
+  if(applying) return;
+  const st=sharedState(); let n=0;
+  for(const c of clients) if(c.publish(TOPIC_STATE,st,true)) n++;
+  return n;
+}
+function presence(){ const p={id:ME_ID,name:S.myName||('Team '+S.mySlot),slot:S.mySlot,ts:Date.now()}; for(const c of clients) c.publish(TOPIC_PRES,p,false); }
+function onMsg(topic,payload,retained){
+  if(topic===TOPIC_CHAT){ if(payload&&payload.from!==ME_ID){ if(chatAdd(payload)) sndChat(); } return; }
+  if(topic===TOPIC_PRES){ if(payload&&payload.id&&payload.id!==ME_ID){ peers.set(payload.id,{...payload,seen:Date.now()}); syncUI(); } return; }
+  if(topic!==TOPIC_STATE||!payload||typeof payload.v!=='number') return;
+  if(payload.by===ME_ID && payload.v<=S.v) return;                  // my own echo
+  const newer = payload.v>S.v || (payload.v===S.v && (payload.ts||0)>(S.ts||0) && payload.by!==S.by);
+  if(newer){
+    applying=true;
+    const before=S.picks.length;
+    S.v=payload.v; S.ts=payload.ts||0; S.by=payload.by||'';
+    S.picks=Array.isArray(payload.picks)?payload.picks:[]; S.hidden=Array.isArray(payload.hidden)?payload.hidden:[];
+    if(Array.isArray(payload.teamNames)&&payload.teamNames.length===TEAMS) S.teamNames=payload.teamNames;
+    applying=false;
+    render();
+    const d=S.picks.length-before;
+    if(d>0){ const p=BY_ID.get(S.picks[S.picks.length-1].pid); if(p) sndPick(p.pos);
+      toast(`Partner: ${p?p.name:'pick'} → ${tname(S.picks[S.picks.length-1].team)}`,'sync'); }
+    else if(d<0) toast('Partner undid a pick','sync'); else toast('Synced','sync');
+  } else if(payload.v<S.v){
+    // stale retained copy on this broker: overwrite it with ours
+    publish();
+  }
+}
+function onState(){ syncUI(); if(clients.some(c=>c.ok)){ presence(); setTimeout(()=>{ if(S.v>0) publish(); },1200); } }
+function syncUI(){
+  const up=clients.filter(c=>c.ok).length;
+  const now=Date.now(); let online=0; for(const [id,p] of peers){ if(now-p.seen<50000) online++; else peers.delete(id); }
+  const el=$('live');
+  if(up>0){ el.className='on'; $('livetxt').textContent=online>0?`Live · ${online+1} online`:'Live · waiting for partner'; }
+  else { el.className=clients.length?'err':''; $('livetxt').textContent=navigator.onLine?'Reconnecting…':'Offline'; }
+}
+function startSync(){
+  for(const url of BROKERS) clients.push(new MiniMQTT(url,onMsg,onState));
+  setInterval(()=>{ presence(); syncUI(); }, 15000);
+  window.addEventListener('online',()=>{ for(const c of clients) if(!c.ok){ c.retry=1000; c.schedule(); } });
+}
+
+/* ================================================================ WIRE UP */
+$('btnundo').onclick=undo;
+$('btnsettings').onclick=openSettings;
+$('btnshare').onclick=openShare;
+$('btnsound').onclick=toggleSound;
+$('chatsend').onclick=chatSend;
+$('chatin').addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); chatSend(); } e.stopPropagation(); });
+$('live').onclick=openShare;
+$('modal').onclick=e=>{ if(e.target.id==='modal') closeModal(); };
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.col').forEach(c=>c.classList.toggle('act',c.id===b.dataset.t));
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){ closeModal(); if(document.activeElement&&document.activeElement.id==='srch'){ S.search=''; document.activeElement.blur(); render(); } return; }
+  if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT'||e.target.tagName==='TEXTAREA') return;
+  if(e.key==='z'&&(e.metaKey||e.ctrlKey)){ e.preventDefault(); undo(); return; }
+  if(e.key==='/'){ e.preventDefault(); $('srch').focus(); return; }
+  if(e.key==='s'||e.key==='S'){ toggleSound(); return; }
+  const i=parseInt(e.key,10);   // number keys walk the same derived filter list
+  if(i>=1&&i<=9&&FILTER_DEFS[i-1]){ S.filter=FILTER_DEFS[i-1][0]; render(); }
+});
+window.addEventListener('storage',e=>{ if(e.key===LS){ load(); render(); } });
+
+load(); sndIcon(); render(); chatRender(false); startSync();
+
+/* expose for the test harness */
+window.__DW={S,DATA,scorePlayers,draftPlayer,undo,hidePlayer,teamAt,leagueOpen,openSlots,dynamicReplacement,vonaBaselines,rosterOf,BY_ID,TOTAL,TEAMS,ROOM,clients,publish,MiniMQTT,CHAT,chatSend,chatAdd};
+</script>
+</body>
+</html>

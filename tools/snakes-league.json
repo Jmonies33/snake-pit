@@ -1,0 +1,109 @@
+{
+ "brandName": "The Snakes",
+ "brandTag": "Live Draft HQ",
+ "teams": 12,
+ "bench": 6,
+ "slots": {
+  "QB": 1,
+  "RB": 2,
+  "WR": 2,
+  "TE": 1,
+  "DST": 1,
+  "K": 1
+ },
+ "pools": {
+  "QB": [
+   "QB"
+  ],
+  "RB": [
+   "RB"
+  ],
+  "WR": [
+   "WR"
+  ],
+  "TE": [
+   "TE"
+  ],
+  "DST": [
+   "DST"
+  ],
+  "K": [
+   "K"
+  ]
+ },
+ "flex": {
+  "slots": 1,
+  "eligible": [
+   "RB",
+   "WR",
+   "TE"
+  ]
+ },
+ "groups": [
+  [
+   "QB",
+   "Quarterback"
+  ],
+  [
+   "RB",
+   "Running Back"
+  ],
+  [
+   "WR",
+   "Wide Receiver"
+  ],
+  [
+   "TE",
+   "Tight End"
+  ],
+  [
+   "DST",
+   "Defense"
+  ],
+  [
+   "K",
+   "Kicker"
+  ]
+ ],
+ "concentration": [
+  {
+   "pos": "QB",
+   "from": 2,
+   "step": 25
+  },
+  {
+   "pos": "TE",
+   "from": 2,
+   "step": 18
+  },
+  {
+   "pos": "DST",
+   "from": 1,
+   "step": 30
+  },
+  {
+   "pos": "K",
+   "from": 1,
+   "step": 45
+  }
+ ],
+ "teamNames": [
+  "CAB's Are Here",
+  "OCHU CINCO!!",
+  "San Francisco 3000ers",
+  "Curt Dawg",
+  "SD PainTrain",
+  "Whitney's Mercilus",
+  "Torninabers",
+  "BananaHammock PrncsConsuela",
+  "Bass to Mouth",
+  "Turd Ferguson",
+  "Gsheff",
+  "CeeDeez Huevos"
+ ],
+ "source": "FantasyPros consensus re-valued for The Snakes (ESPN league 306392)",
+ "scrapeDate": "ADP 2026-08-20 \u00b7 projections ESPN 2026-08-20",
+ "leagueLine": "12 teams \u00b7 full PPR \u00b7 QB1/RB2/WR2/TE1/FLEX/DST1/K1 + 6 bench \u00b7 15 rounds",
+ "scoringLine": "1.0 PPR, 4-pt pass TD @ 0.05/yd, 40-yd TD + 100-yd game bonuses, strong D/ST",
+ "draftDate": "Sun Sep 6 \u00b7 4:00 PM"
+}

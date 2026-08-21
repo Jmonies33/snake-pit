@@ -1,0 +1,63 @@
+{
+ "brandName": "Desert League",
+ "brandTag": "Live Draft HQ",
+ "teams": 11,
+ "bench": 0,
+ "slots": {
+  "QB": 2,
+  "RB": 3,
+  "WRTE": 5,
+  "DST": 2,
+  "K": 2
+ },
+ "pools": {
+  "QB": [
+   "QB"
+  ],
+  "RB": [
+   "RB"
+  ],
+  "WRTE": [
+   "WR",
+   "TE"
+  ],
+  "DST": [
+   "DST"
+  ],
+  "K": [
+   "K"
+  ]
+ },
+ "groups": [
+  [
+   "QB",
+   "Quarterback"
+  ],
+  [
+   "RB",
+   "Running Back"
+  ],
+  [
+   "WRTE",
+   "WR / TE Flex"
+  ],
+  [
+   "DST",
+   "Defense"
+  ],
+  [
+   "K",
+   "Kicker"
+  ]
+ ],
+ "concentration": {
+  "pos": "TE",
+  "from": 3,
+  "step": 15
+ },
+ "source": "FantasyPros consensus",
+ "scrapeDate": "ADP 2026-08-20 \u00b7 projections ESPN 2026-08-20",
+ "leagueLine": "11 teams \u00b7 no bench \u00b7 14 rounds \u00b7 QB2/RB3/WR-TE5/DST2/K2",
+ "scoringLine": "RB 0 PPR, WR 1.0, TE 1.5, 6-pt passing TD",
+ "draftDate": "Sept 23"
+}

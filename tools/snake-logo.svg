@@ -1,0 +1,9 @@
+<svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+  <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff3b57"/><stop offset="1" stop-color="#b30b24"/></linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#ffd7dc"/></linearGradient></defs>
+  <path d="M32 3 58 12v20c0 15-11 25-26 29C17 57 6 47 6 32V12z" fill="url(#g1)"/>
+  <path d="M32 6.5 55 14.5v17.5c0 13-9.5 22-23 25.8C18.5 54 9 45 9 32V14.5z" fill="none" stroke="#ffffff33" stroke-width="1.5"/>
+  <path d="M22 21c0-6.5 20-6.5 20 0 0 5.5-20 4.5-20 10.5S42 37 42 43c0 6.5-20 6.5-20 0" fill="none" stroke="url(#g2)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="41" cy="20.5" r="2.2" fill="#0b0e15"/>
+  <path d="M44.5 21.5 49 20l-4.5 3.2z" fill="#ffb81c"/>
+</svg>
