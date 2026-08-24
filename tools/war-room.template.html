@@ -190,6 +190,13 @@ input,select{font:inherit}
 .alert.ok{background:#26c28115;border:1px solid #26c28144;color:#8ff0c2}
 #alerts:empty{display:none}
 
+/* ============ COACH GATE ============ */
+.nocoach #rec{display:none}
+.nocoach .prow,.nocoach .lhead{grid-template-columns:30px 36px 1fr 46px 46px 22px}
+.nocoach .prow .val,.nocoach .lhead .val-h{display:none}
+.nocoach .tag.run{display:none}
+.nocoach #sortbar span:last-child{display:none}
+
 /* ============ CHAT ============ */
 #chat{flex-shrink:0;border-top:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column}
 #chatlog{height:66px;overflow-y:auto;padding:5px 10px;display:flex;flex-direction:column;gap:2px;overscroll-behavior:contain}
@@ -385,6 +392,31 @@ if(!ROOM){
 }
 localStorage.setItem('snakepit.lastroom', ROOM);
 const ME_ID = (()=>{ let v=localStorage.getItem('snakepit.me'); if(!v){ v=randCode(); localStorage.setItem('snakepit.me',v);} return v; })();
+
+/* ---- coach mode ----
+   The engine's OUTPUT (recommendation card, draft-value column, run tags, the
+   "still needs" intel) is the owner's edge; the shared link should be a plain
+   board. A build may carry META.coachKeyHash — when present, strategy UI only
+   renders for a browser that has presented ?key=<master key> once (cached in
+   localStorage, stripped from the URL so screen-shares and the Invite button
+   never leak it). Local files (file://) are always coach mode — that is the
+   owner's machine and the test harness. This is client-side hiding, not
+   cryptography: it keeps league-mates honest, nothing more. */
+function djb2(s){ let h=5381; for(let i=0;i<s.length;i++){ h=((h*33)^s.charCodeAt(i))>>>0; } return h.toString(16); }
+const COACH=(()=>{
+  if(!META.coachKeyHash) return true;
+  if(location.protocol==='file:') return true;
+  const cached=localStorage.getItem('snakepit.coach');
+  if(cached && djb2(cached)===META.coachKeyHash) return true;
+  const k=qs.get('key');
+  if(k && djb2(k)===META.coachKeyHash){
+    localStorage.setItem('snakepit.coach',k);
+    try{ const u=new URL(location.href); u.searchParams.delete('key'); history.replaceState(null,'',u.toString()); }catch(e){}
+    return true;
+  }
+  return false;
+})();
+if(!COACH) document.documentElement.classList.add('nocoach');
 
 /* ---------------- state ----------------
    shared (synced): picks, teamNames, hidden, v, ts, by
@@ -702,7 +734,8 @@ function renderFilters(st){
   el.querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{S.filter=b.dataset.f;render();$('listscroll').scrollTop=0;});
   const s=$('srch'); s.oninput=e=>{S.search=e.target.value;renderList(scorePlayers());};
   if(document.activeElement && document.activeElement.id==='srch'){ s.focus(); s.setSelectionRange(s.value.length,s.value.length); }
-  const sorts=[['value','Draft value'],['proj','Projected pts'],['adp','Market ADP']];
+  const sorts=COACH?[['value','Draft value'],['proj','Projected pts'],['adp','Market ADP']]
+                   :[['adp','Market ADP'],['proj','Projected pts']];
   $('sortbar').innerHTML=`<span>Ranked by</span>`+sorts.map(([k,l])=>`<button class="sb ${S.sort===k?'on':''}" data-s="${k}">${l}</button>`).join('')+
     `<span style="margin-left:auto">${st.gap>0?`board walks ${st.gap} picks ahead`:''}</span>`;
   $('sortbar').querySelectorAll('.sb').forEach(b=>b.onclick=()=>{S.sort=b.dataset.s;render();});
@@ -716,7 +749,7 @@ function renderList(st){
   rows=rows.slice(0,180);
   const el=$('list');
   if(!rows.length){ el.innerHTML='<div class="empty">Nobody left matching that.</div>'; return; }
-  let h=`<div class="lhead"><span>Rk</span><span>Pos</span><span>Player</span><span class="r">Proj</span><span class="r adp">ADP</span><span class="r" title="Draft value: points over what will still be there at your next pick, adjusted for runs, scarcity and bye clashes">Value</span><span></span></div>`;
+  let h=`<div class="lhead"><span>Rk</span><span>Pos</span><span>Player</span><span class="r">Proj</span><span class="r adp">ADP</span><span class="r val-h" title="Draft value: points over what will still be there at your next pick, adjusted for runs, scarcity and bye clashes">Value</span><span></span></div>`;
   h+=rows.map((r,i)=>{
     const p=r.p, v=r.score;
     const live=r.needOpen||r.depth>0;
@@ -726,7 +759,7 @@ function renderList(st){
     if(r.bye>0.5) tags.push(`<span class="tag bye">BYE ${p.bye} clash</span>`);
     if(r.run&&r.needOpen) tags.push(`<span class="tag run">RUN</span>`);
     if(!r.needOpen) tags.push(`<span class="tag full">${r.depth>0?'bench':'slot full'}</span>`);
-    return `<div class="prow ${live?'need':'full'} ${i===0?'top1':(i<3?'top3':'')}" data-id="${p.id}" title="${tip}">
+    return `<div class="prow ${live?'need':'full'} ${i===0?'top1':(i<3?'top3':'')}" data-id="${p.id}" title="${COACH?tip:esc(p.name)}">
       <span class="rk">${i+1}</span>
       <span class="pill bg-${p.pos}">${p.pos}</span>
       <div><div class="nm">${esc(p.name)}</div>
@@ -932,7 +965,7 @@ function toggleSound(){
 },{once:true}));
 
 /* ---------------- share / settings ---------------- */
-function inviteUrl(team){ try{ const u=new URL(location.href); u.searchParams.set('room',ROOM); if(team) u.searchParams.set('team',team); else u.searchParams.delete('team'); return u.toString(); }catch(e){ return location.href; } }
+function inviteUrl(team){ try{ const u=new URL(location.href); u.searchParams.set('room',ROOM); u.searchParams.delete('key'); if(team) u.searchParams.set('team',team); else u.searchParams.delete('team'); return u.toString(); }catch(e){ return location.href; } }
 function openShare(){
   const url=inviteUrl();
   $('mbox').innerHTML=`<h3>Invite your co-drafter</h3>
@@ -1161,7 +1194,8 @@ document.addEventListener('keydown',e=>{
 });
 window.addEventListener('storage',e=>{ if(e.key===LS){ load(); render(); } });
 
-load(); sndIcon(); render(); chatRender(false); startSync();
+if(!COACH && S.sort==='value') S.sort='adp';
+load(); sndIcon(); if(!COACH && S.sort==='value') S.sort='adp'; render(); chatRender(false); startSync();
 
 /* expose for the test harness */
 window.__DW={S,DATA,scorePlayers,draftPlayer,undo,hidePlayer,teamAt,leagueOpen,openSlots,dynamicReplacement,vonaBaselines,rosterOf,BY_ID,TOTAL,TEAMS,ROOM,clients,publish,MiniMQTT,CHAT,chatSend,chatAdd};
