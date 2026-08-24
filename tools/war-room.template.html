@@ -101,6 +101,24 @@ input,select{font:inherit}
 .tagbye{color:var(--bad);font-weight:800}
 .taghot{color:var(--warn);font-weight:800}
 
+/* ============ SELECTION CARD ============ */
+#sel{margin:10px 12px 8px;padding:12px 14px;border-radius:10px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#10233a 0%,#141925 100%);border:1px solid #2b4a74}
+#sel:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blue)}
+#sel .lbl{font-size:10px;text-transform:uppercase;letter-spacing:1.4px;color:#79b8ff;font-weight:800}
+#sel .nm{font-family:var(--hd);font-size:24px;font-weight:800;letter-spacing:.3px;margin:4px 0 3px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;line-height:1.1}
+#sel .nm small{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--dim);letter-spacing:0}
+#sel .stats{font-size:12px;color:var(--txt);margin:3px 0 2px;line-height:1.5}
+#sel .stats b{font-variant-numeric:tabular-nums}
+#sel .why{font-size:11.5px;color:var(--dim);line-height:1.5}
+#sel .why b{color:var(--txt)}
+#sel .inj{display:inline-block;padding:1px 7px;border-radius:4px;background:#ff4d5e22;color:var(--bad);font-size:10px;font-weight:800;letter-spacing:.5px;vertical-align:2px}
+#sel .acts{display:flex;gap:8px;margin-top:9px}
+#sel .acts .go{background:var(--gold);border-color:var(--gold);color:#1a1200;font-weight:800}
+#sel .acts .go:hover{background:#ffc94d}
+#sel .selx{position:absolute;right:8px;top:8px;width:24px;height:24px;border-radius:50%;color:var(--dim);font-size:15px}
+#sel .selx:hover{background:#ffffff14;color:var(--txt)}
+
 /* ============ FILTERS ============ */
 #filters{display:flex;gap:5px;padding:4px 12px 6px;flex-wrap:wrap;align-items:center;flex-shrink:0}
 .fbtn{padding:0 8px;height:26px;border-radius:999px;border:1px solid var(--line2);background:var(--panel2);
@@ -318,8 +336,9 @@ input,select{font:inherit}
     <div class="scroll"><div id="board"></div></div>
   </div>
   <div class="col act" id="collist">
-    <div class="colhead">Best Available <span class="sub">tap a player to draft him to the team on the clock</span></div>
+    <div class="colhead">Best Available <span class="sub">tap a player for his card · Draft commits the pick</span></div>
     <div id="rec"></div>
+    <div id="sel" style="display:none"></div>
     <div id="filters"></div>
     <div id="sortbar"></div>
     <div class="scroll" id="listscroll"><div id="list"></div></div>
@@ -668,9 +687,48 @@ function shortName(i){ const n=tname(i); return n.replace(/^Team /,'T'); }
 function lastName(n){ const parts=n.split(' ').filter(w=>!/^(Jr\.?|Sr\.?|II|III|IV|V)$/i.test(w)); return parts.length?parts[parts.length-1]:n; }
 
 let lastIsMe=null;
+let SEL=null;   // selected player id — local, never synced, never persisted
+function selectPlayer(id){ SEL=(SEL===id)?null:id; render(); }
+function renderSel(st){
+  const box=$('sel'), rec=$('rec');
+  if(!SEL){ box.style.display='none'; rec.style.display=''; return; }
+  const r=st.rows.find(x=>x.p.id===SEL);
+  if(!r){ SEL=null; box.style.display='none'; rec.style.display=''; toast('That player is off the board'); return; }
+  rec.style.display='none'; box.style.display='';
+  const p=r.p, s=p.stats||{};
+  const fmt=n=>Math.round(n).toLocaleString('en-US');
+  const bits=[];
+  if(s.passYd) bits.push(`<b>${fmt(s.passYd)}</b> pass yds · <b>${s.passTD||0}</b> pass TD · <b>${s.int||0}</b> INT`);
+  if(s.rushYd>=25) bits.push(`<b>${fmt(s.rushYd)}</b> rush yds · <b>${s.rushTD||0}</b> rush TD`);
+  if(s.rec) bits.push(`<b>${s.rec}</b> rec · <b>${fmt(s.recYd||0)}</b> yds · <b>${s.recTD||0}</b> TD`);
+  const statLine=bits.length?`<div class="stats">${bits.join(' &nbsp;|&nbsp; ')} <span style="color:var(--dim2);font-size:10px">(ESPN season projection)</span></div>`:'';
+  const why=[];
+  if(COACH){
+    why.push(`draft value <b>${r.score>0?'+':''}${r.score.toFixed(0)}</b>`);
+    why.push(`<b>${r.vona>0?'+':''}${r.vona.toFixed(0)} pts</b> vs the best ${labelPool(POOL_OF(p))} likely left at your next pick`);
+    why.push(`${r.vor>0?'+':''}${r.vor.toFixed(0)} over replacement`);
+    if(r.run) why.push(`<span class="taghot">${labelPool(POOL_OF(p))} run in progress</span>`);
+    if(!r.needOpen&&r.depth>0) why.push('would be a bench pick');
+    if(!r.needOpen&&r.depth<=0) why.push('<span class="tagbye">no slot left for him on your roster</span>');
+  }
+  const cur=S.picks.length;
+  const onClock=cur<TOTAL?tname(teamAt(cur)):null;
+  box.innerHTML=`<button class="selx" title="Close (Esc)">×</button>
+    <div class="lbl">Player card</div>
+    <div class="nm"><span class="pill bg-${p.pos}">${p.pos}</span>${esc(p.name)}${p.inj?` <span class="inj">${esc(p.inj.replace(/_/g,' '))}</span>`:''}<small>${p.team} · ${p.pos}${p.posRank} · bye ${p.bye||'—'} · proj <b>${p.pts.toFixed(0)}</b> · ADP ${p.mkt<900?p.mkt:'—'}</small></div>
+    ${statLine}
+    ${why.length?`<div class="why">${why.join(' · ')}</div>`:''}
+    <div class="acts">
+      ${onClock?`<button class="tbtn go" id="selgo">Draft → ${esc(onClock)}</button>`:''}
+      <button class="tbtn" id="selclose">Close</button>
+    </div>`;
+  box.querySelector('.selx').onclick=()=>{ SEL=null; render(); };
+  $('selclose').onclick=()=>{ SEL=null; render(); };
+  const g=$('selgo'); if(g) g.onclick=()=>{ const id=SEL; SEL=null; draftPlayer(id); };
+}
 function render(){
   const st=scorePlayers();
-  renderTop(st); renderRec(st); renderFilters(st); renderList(st); renderBoard(); renderRoster(st);
+  renderTop(st); renderRec(st); renderSel(st); renderFilters(st); renderList(st); renderBoard(); renderRoster(st);
   save();
   if(st.isMe && lastIsMe===false && S.picks.length<TOTAL){ toast("★ You're on the clock",'mine'); sndTurn(); }
   lastIsMe=st.isMe;
@@ -775,7 +833,9 @@ function renderList(st){
     </div>`;
   }).join('');
   el.innerHTML=h;
-  el.querySelectorAll('.prow').forEach(row=>{ row.onclick=e=>{ if(e.target.closest('.hide')) return; draftPlayer(row.dataset.id); }; });
+  // First click opens the player card; the Draft button in the card commits.
+  // Two deliberate clicks — a mis-tap shows you a stat line instead of costing a pick.
+  el.querySelectorAll('.prow').forEach(row=>{ row.onclick=e=>{ if(e.target.closest('.hide')) return; selectPlayer(row.dataset.id); }; });
   el.querySelectorAll('.hide').forEach(b=>{ b.onclick=e=>{ e.stopPropagation(); hidePlayer(b.dataset.hide); }; });
 }
 function renderBoard(){
@@ -1188,7 +1248,7 @@ document.querySelectorAll('#tabs button[data-t]').forEach(b=>b.onclick=()=>{
 // header icon (or think the only fix is resetting the draft).
 $('tabundo').onclick=undo;
 document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'){ closeModal(); if(document.activeElement&&document.activeElement.id==='srch'){ S.search=''; document.activeElement.blur(); render(); } return; }
+  if(e.key==='Escape'){ if(SEL){ SEL=null; render(); return; } closeModal(); if(document.activeElement&&document.activeElement.id==='srch'){ S.search=''; document.activeElement.blur(); render(); } return; }
   if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT'||e.target.tagName==='TEXTAREA') return;
   if(e.key==='z'&&(e.metaKey||e.ctrlKey)){ e.preventDefault(); undo(); return; }
   if(e.key==='/'){ e.preventDefault(); $('srch').focus(); return; }

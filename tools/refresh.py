@@ -134,9 +134,19 @@ def build_pool(scoring):
     players = []
     for p in out:
         key = ('DST-' + p['team']) if p['pos'] == 'DST' else slug(p['name'])
-        players.append({'name': p['name'], 'pos': p['pos'], 'team': p['team'],
-                        'bye': p['bye'], 'pts': round(p['base'], 1),
-                        'adp': adp[kind].get(key, 9999)})
+        e = {'name': p['name'], 'pos': p['pos'], 'team': p['team'],
+             'bye': p['bye'], 'pts': round(p['base'], 1),
+             'adp': adp[kind].get(key, 9999)}
+        # per-player stat line for the detail card (skill players only; K/DST
+        # projections are single numbers, there is nothing to break out)
+        if p['pos'] not in ('K', 'DST'):
+            stt = {k: round(p[k]) for k in
+                   ('passYd', 'passTD', 'int', 'rushYd', 'rushTD', 'rec', 'recYd', 'recTD')
+                   if p.get(k, 0) >= 0.5}
+            if stt: e['stats'] = stt
+        if p.get('inj') and p['inj'] not in ('', 'ACTIVE'):
+            e['inj'] = p['inj']
+        players.append(e)
     players.sort(key=lambda p: (p['adp'], -p['pts']))
     return players
 

@@ -142,12 +142,15 @@ def main():
             n = used.get(base, 0)
             used[base] = n + 1
             pid = base if n == 0 else f'{base}-{n + 1}'
-        out.append({
+        entry = {
             'id': pid, 'name': p['name'], 'pos': pos, 'team': team,
             'bye': int(p.get('bye') or 0),
             'pts': float(pts),
             'adp': float(p.get('adp') or p.get('mkt') or 9999),
-        })
+        }
+        if p.get('stats'): entry['stats'] = p['stats']
+        if p.get('inj'): entry['inj'] = p['inj']
+        out.append(entry)
 
     if len({p['id'] for p in out}) != len(out):
         seen, dupes = set(), set()
