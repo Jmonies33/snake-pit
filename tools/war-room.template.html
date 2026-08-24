@@ -562,11 +562,15 @@ function vonaBaselines(currentOverall, teamIdx){
 }
 /* no bench: a shared bye inside a pool is a guaranteed zero that week */
 function byeCost(pl, teamIdx){
-  if(!pl.bye) return 0;
+  // META.byeWeight scales how much bye clashes steer the rankings. 0 = show the
+  // red alert but never move a pick for it — the owner's stated philosophy is
+  // that byes are an in-season problem solved with trades and waiver moves.
+  const w=META.byeWeight===undefined?1:META.byeWeight;
+  if(!w||!pl.bye) return 0;
   const pool=POOL_OF(pl);
   const mates=rosterOf(teamIdx).filter(p=>POOL_OF(p)===pool&&p.bye===pl.bye).length;
   if(mates<1) return 0;
-  return (pl.pts/17)*0.85*mates;
+  return (pl.pts/17)*0.85*mates*w;
 }
 function scorePlayers(){
   const cur=S.picks.length;
