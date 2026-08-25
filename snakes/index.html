@@ -319,6 +319,7 @@ input,select{font:inherit}
   .prow .hide{opacity:.5}
   #rec .nm{font-size:20px}
   .bcell{font-size:9px;min-height:26px}
+  #board{--bcmin:0px}
 }
 @media(max-width:1000px) and (min-width:700px){
   #btnsettings span,#btnshare span,#btnundo span,#live span.lt{display:inline}
@@ -912,7 +913,7 @@ function renderBoard(){
   // Min column width is deliberately small: a clipped final column is invisible and
 // looks like the league simply has fewer teams. The panel also scrolls horizontally
 // as a backstop for very large leagues.
-const cols=`grid-template-columns:18px repeat(${TEAMS},minmax(34px,1fr))`;
+const cols=`grid-template-columns:18px repeat(${TEAMS},minmax(var(--bcmin,34px),1fr))`;
   const onClk=cur<TOTAL?teamAt(cur):-1;
   let h=`<div class="bhead" style="${cols}"><div style="background:transparent"></div>`+
     S.teamNames.map((n,i)=>`<div class="${i===ME()?'meteam':''} ${i===onClk?'onclk':''}" title="${esc(n)}">${i===ME()?'YOU':esc(shortName(i))}</div>`).join('')+`</div>`;
