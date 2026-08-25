@@ -206,6 +206,14 @@ input,select{font:inherit}
 .rnd{font-family:var(--hd);font-size:10px;color:var(--dim2);font-weight:800;text-align:center;padding-top:8px}
 .brow.rowme .bcell.now{}
 
+/* ============ BOARD NAME TIP ============ */
+#btip{position:fixed;z-index:70;pointer-events:none;background:#1c2436f2;border:1px solid var(--line2);
+  border-radius:7px;padding:6px 10px;box-shadow:0 6px 24px #000b;opacity:0;transform:translateY(3px);
+  transition:opacity .12s,transform .12s;max-width:240px}
+#btip.on{opacity:1;transform:translateY(0)}
+#btip .tn{font-weight:800;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#btip .tm{font-size:10.5px;color:var(--dim);margin-top:1px}
+
 /* ============ ROSTER ============ */
 #roster{padding:6px 12px 24px}
 .grouphd{display:flex;align-items:center;justify-content:space-between;font-family:var(--hd);font-size:12px;font-weight:800;
@@ -382,6 +390,7 @@ input,select{font:inherit}
   <button id="tabundo" title="Undo the last pick">Undo<small id="tabundo-sub"></small></button>
 </div>
 
+<div id="btip"><div class="tn"></div><div class="tm"></div></div>
 <div id="modal"><div class="mbox" id="mbox"></div></div>
 <div id="toast"></div>
 
@@ -931,7 +940,7 @@ const cols=`grid-template-columns:18px repeat(${TEAMS},minmax(var(--bcmin,34px),
       const idx=(r%2===0)?r*TEAMS+c:r*TEAMS+(TEAMS-1-c);
       const pk=S.picks[idx], mine=c===ME(), now=idx===cur;
       if(pk){ const p=BY_ID.get(pk.pid);
-        h+=`<div class="bcell pk bg-${p?p.pos:''} ${mine?'mine':''}" title="${p?esc(p.name):''} · ${idx+1} overall"><span class="bn">${p?esc(lastName(p.name)):'?'}</span><span class="bp">${p?p.pos+' · '+p.team:''}</span></div>`;
+        h+=`<div class="bcell pk bg-${p?p.pos:''} ${mine?'mine':''}" data-n="${p?esc(p.name):''}" data-m="${p?`${p.pos} · ${p.team} · Rd ${r+1}, pick ${idx+1} overall`:''}"><span class="bn">${p?esc(lastName(p.name)):'?'}</span><span class="bp">${p?p.pos+' · '+p.team:''}</span></div>`;
       } else {
         h+=`<div class="bcell ${mine?'empty-mine':''} ${now?'now':''}">${now?'<span class="bp">ON CLOCK</span>':''}</div>`;
       }
@@ -1309,6 +1318,31 @@ function startSync(){
 }
 
 /* ================================================================ WIRE UP */
+/* Full-name tip on the draft board: last names stop being enough deep in a
+   draft full of rookies. Hover shows it instantly on desktop; a tap shows it
+   briefly on phones. Delegated on #board so re-renders never detach it. */
+(()=>{
+  const tip=$('btip'), board=$('board');
+  let hideT;
+  function show(cell){
+    const n=cell.dataset.n; if(!n) return;
+    tip.querySelector('.tn').textContent=n;
+    tip.querySelector('.tm').textContent=cell.dataset.m||'';
+    const r=cell.getBoundingClientRect();
+    tip.classList.add('on');
+    const tw=tip.offsetWidth, th=tip.offsetHeight;
+    let x=Math.min(Math.max(6, r.left+r.width/2-tw/2), innerWidth-tw-6);
+    let y=r.top-th-7; if(y<6) y=r.bottom+7;
+    tip.style.left=x+'px'; tip.style.top=y+'px';
+    clearTimeout(hideT);
+  }
+  function hide(){ tip.classList.remove('on'); }
+  board.addEventListener('mouseover',e=>{ const c=e.target.closest('.bcell.pk'); if(c) show(c); });
+  board.addEventListener('mouseout',e=>{ if(e.target.closest('.bcell.pk')) hide(); });
+  board.addEventListener('click',e=>{ const c=e.target.closest('.bcell.pk');
+    if(c){ show(c); clearTimeout(hideT); hideT=setTimeout(hide,1600); } });
+  document.querySelector('#colboard .scroll').addEventListener('scroll',hide,{passive:true});
+})();
 $('btnundo').onclick=undo;
 $('btnsettings').onclick=openSettings;
 $('btnshare').onclick=openShare;
