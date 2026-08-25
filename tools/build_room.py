@@ -229,6 +229,7 @@ def main():
         'concentration': lg.get('concentration'),
         'teamNames': lg.get('teamNames'),
         'coachKeyHash': lg.get('coachKeyHash'),
+        'helperKeyHash': lg.get('helperKeyHash'),
         'byeWeight': lg.get('byeWeight'),
         'leagueLine': lg.get('leagueLine',
             f"{teams} teams · {rounds} rounds · " + ' / '.join(f'{k}{v}' for k, v in slots.items())),

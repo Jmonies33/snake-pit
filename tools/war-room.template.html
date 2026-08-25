@@ -457,6 +457,22 @@ const COACH=(()=>{
   }
   return false;
 })();
+/* Helper tier: a second key that unlocks ONLY the next-pick preview (for the
+   holder's own selected team) — for the friend running the board at the live
+   draft. He gets "who's likely there at my turn"; the value column, rec card
+   and needs intel stay master-key only. */
+const HELPER=COACH||(()=>{
+  if(!META.helperKeyHash) return false;
+  const cached=localStorage.getItem('snakepit.helper');
+  if(cached && djb2(cached)===META.helperKeyHash) return true;
+  const k=qs.get('key');
+  if(k && djb2(k)===META.helperKeyHash){
+    localStorage.setItem('snakepit.helper',k);
+    try{ const u=new URL(location.href); u.searchParams.delete('key'); history.replaceState(null,'',u.toString()); }catch(e){}
+    return true;
+  }
+  return false;
+})();
 if(!COACH) document.documentElement.classList.add('nocoach');
 
 /* ---------------- state ----------------
@@ -762,7 +778,7 @@ let NEXTIDS=new Set();
 function renderNext(st){
   const box=$('next');
   NEXTIDS=new Set();
-  if(!COACH || st.nxt===null || S.picks.length>=TOTAL){ box.style.display='none'; return; }
+  if(!HELPER || st.nxt===null || S.picks.length>=TOTAL){ box.style.display='none'; return; }
   // Survivors of the market's projected picks between now and my next turn —
   // the engine already knows exactly whom it expects the room to take. When I'm
   // on the clock, my own current pick removes the top row too, so skip it.
@@ -780,7 +796,7 @@ function renderNext(st){
   const rnd=Math.floor(st.nxt/TEAMS)+1, inr=(st.nxt%TEAMS)+1;
   box.style.display='';
   box.innerHTML=`<span class="nlbl">Your next pick · ${rnd}.${String(inr).padStart(2,'0')} (#${st.nxt+1})${st.gap>0?` · in ${st.gap} picks`:''} — likely choosing from:</span>`+
-    pv.map(r=>`<span class="npill" data-id="${r.p.id}"><span class="pill bg-${r.p.pos}">${r.p.pos}</span>${TARGETS.has(r.p.id)?'<span class="nstar">★</span>':''}${esc(lastName(r.p.name))}<span style="color:var(--dim);font-size:11px">${r.p.pts.toFixed(0)}</span>${r.score>2?`<span class="nv">+${r.score.toFixed(0)}</span>`:''}</span>`).join('');
+    pv.map(r=>`<span class="npill" data-id="${r.p.id}"><span class="pill bg-${r.p.pos}">${r.p.pos}</span>${TARGETS.has(r.p.id)?'<span class="nstar">★</span>':''}${esc(lastName(r.p.name))}<span style="color:var(--dim);font-size:11px">${r.p.pts.toFixed(0)}</span>${COACH&&r.score>2?`<span class="nv">+${r.score.toFixed(0)}</span>`:''}</span>`).join('');
   box.querySelectorAll('.npill').forEach(el=>el.onclick=()=>selectPlayer(el.dataset.id));
 }
 function render(){

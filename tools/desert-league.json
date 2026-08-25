@@ -61,5 +61,6 @@
  "scoringLine": "RB 0 PPR, WR 1.0, TE 1.5, 6-pt passing TD",
  "draftDate": "Mon Aug 24 \u00b7 6:00 PM",
  "coachKeyHash": "b19f543f",
- "byeWeight": 0
+ "byeWeight": 0,
+ "helperKeyHash": "da5dbcd5"
 }
