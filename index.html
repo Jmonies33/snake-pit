@@ -119,6 +119,19 @@ input,select{font:inherit}
 #sel .selx{position:absolute;right:8px;top:8px;width:24px;height:24px;border-radius:50%;color:var(--dim);font-size:15px}
 #sel .selx:hover{background:#ffffff14;color:var(--txt)}
 
+/* ============ NEXT-PICK PREVIEW ============ */
+#next{margin:0 12px 8px;padding:8px 12px;border-radius:8px;background:#221a06;border:1px solid #5a4a14;
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#next .nlbl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:800;white-space:nowrap}
+#next .npill{display:inline-flex;align-items:center;gap:6px;padding:3px 9px 3px 5px;border-radius:6px;
+  background:var(--panel2);border:1px solid var(--line2);font-size:12px;font-weight:700;cursor:pointer}
+#next .npill:hover{border-color:var(--gold)}
+#next .npill .pill{min-width:26px;height:15px;font-size:9px}
+#next .npill .nv{color:var(--good);font-weight:800;font-size:11px}
+#next .npill .nstar{color:var(--gold);font-size:11px}
+.prow.nextpick{outline:1px dashed #ffb81c88;outline-offset:-2px}
+.tag.next{background:#ffb81c22;color:var(--gold)}
+
 /* ============ FILTERS ============ */
 #filters{display:flex;gap:5px;padding:4px 12px 6px;flex-wrap:wrap;align-items:center;flex-shrink:0}
 .fbtn{padding:0 8px;height:26px;border-radius:999px;border:1px solid var(--line2);background:var(--panel2);
@@ -342,6 +355,7 @@ input,select{font:inherit}
     <div class="colhead">Best Available <span class="sub">tap a player for his card · Draft commits the pick</span></div>
     <div id="rec"></div>
     <div id="sel" style="display:none"></div>
+    <div id="next" style="display:none"></div>
     <div id="filters"></div>
     <div id="sortbar"></div>
     <div class="scroll" id="listscroll"><div id="list"></div></div>
@@ -580,7 +594,7 @@ function vonaBaselines(currentOverall, teamIdx){
     for(const q of avail) if(POOL_OF(q)===pool && !consumedIds.has(q.id) && (best===null||q.pts>best)) best=q.pts;
     base[pool]=best===null?0:best;
   }
-  return {base,gap,nxt,runs};
+  return {base,gap,nxt,runs,consumedIds};
 }
 /* no bench: a shared bye inside a pool is a guaranteed zero that week */
 function byeCost(pl, teamIdx){
@@ -599,7 +613,7 @@ function scorePlayers(){
   const onClockTeam=cur<TOTAL?teamAt(cur):null;
   const me=ME(), isMe=onClockTeam===me;
   const rep=dynamicReplacement();
-  const {base,gap,nxt,runs}=vonaBaselines(cur, me);
+  const {base,gap,nxt,runs,consumedIds}=vonaBaselines(cur, me);
   const open=openSlots(me), t=takenSet(), lgOpen=leagueOpen();
   const benchLeft=Math.max(0, BENCH-benchUsed(me));
   // One rule or a list of them: real leagues often need to cap two positions at
@@ -679,7 +693,7 @@ function scorePlayers(){
   });
   else if(S.sort==='proj') rows.sort((a,b)=>b.p.pts-a.p.pts||a.p.mkt-b.p.mkt);
   else                     rows.sort((a,b)=>a.p.mkt-b.p.mkt||b.p.pts-a.p.pts);
-  return {rows,gap,nxt,isMe,onClockTeam,open,rep,left,lgOpen,runs};
+  return {rows,gap,nxt,isMe,onClockTeam,open,rep,left,lgOpen,runs,consumedIds};
 }
 
 /* ================================================================ RENDER */
@@ -739,9 +753,34 @@ function renderSel(st){
   $('selclose').onclick=()=>{ SEL=null; render(); };
   const g=$('selgo'); if(g) g.onclick=()=>{ const id=SEL; SEL=null; draftPlayer(id); };
 }
+let NEXTIDS=new Set();
+function renderNext(st){
+  const box=$('next');
+  NEXTIDS=new Set();
+  if(!COACH || st.nxt===null || S.picks.length>=TOTAL){ box.style.display='none'; return; }
+  // Survivors of the market's projected picks between now and my next turn —
+  // the engine already knows exactly whom it expects the room to take. When I'm
+  // on the clock, my own current pick removes the top row too, so skip it.
+  let rows=st.rows.filter(r=>(r.needOpen||r.depth>0)&&!st.consumedIds.has(r.p.id));
+  if(st.isMe&&rows.length) rows=rows.slice(1);
+  // Rank survivors the way the board itself ranks: real act-now value first,
+  // then market order. Sorting the remainder by raw score floats zero-score
+  // K/DST above negative-score stars — the exact units trap that once put a
+  // defense in round 2, resurfacing in miniature.
+  const hot=rows.filter(r=>r.score>2).sort((a,b)=>b.score-a.score);
+  const rest=rows.filter(r=>r.score<=2).sort((a,b)=>a.p.mkt-b.p.mkt);
+  const pv=[...hot,...rest].slice(0,4);
+  if(!pv.length){ box.style.display='none'; return; }
+  for(const r of pv) NEXTIDS.add(r.p.id);
+  const rnd=Math.floor(st.nxt/TEAMS)+1, inr=(st.nxt%TEAMS)+1;
+  box.style.display='';
+  box.innerHTML=`<span class="nlbl">Your next pick · ${rnd}.${String(inr).padStart(2,'0')} (#${st.nxt+1})${st.gap>0?` · in ${st.gap} picks`:''} — likely choosing from:</span>`+
+    pv.map(r=>`<span class="npill" data-id="${r.p.id}"><span class="pill bg-${r.p.pos}">${r.p.pos}</span>${TARGETS.has(r.p.id)?'<span class="nstar">★</span>':''}${esc(lastName(r.p.name))}<span style="color:var(--dim);font-size:11px">${r.p.pts.toFixed(0)}</span>${r.score>2?`<span class="nv">+${r.score.toFixed(0)}</span>`:''}</span>`).join('');
+  box.querySelectorAll('.npill').forEach(el=>el.onclick=()=>selectPlayer(el.dataset.id));
+}
 function render(){
   const st=scorePlayers();
-  renderTop(st); renderRec(st); renderSel(st); renderFilters(st); renderList(st); renderBoard(); renderRoster(st);
+  renderTop(st); renderRec(st); renderSel(st); renderNext(st); renderFilters(st); renderList(st); renderBoard(); renderRoster(st);
   save();
   if(st.isMe && lastIsMe===false && S.picks.length<TOTAL){ toast("★ You're on the clock",'mine'); sndTurn(); }
   lastIsMe=st.isMe;
@@ -833,10 +872,11 @@ function renderList(st){
     const vc=!live?'v-neg':(v>=25?'v-hi':(v>=6?'v-md':'v-lo'));
     const tip=`${esc(p.name)} — ${r.vona>0?'+':''}${r.vona.toFixed(0)} vs best ${labelPool(POOL_OF(p))} likely left at your next pick · ${r.vor>0?'+':''}${r.vor.toFixed(0)} over replacement${r.bye>0.5?` · bye clash −${r.bye.toFixed(0)}`:''}${r.conc?` · stack −${r.conc.toFixed(0)}`:''}`;
     const tags=[];
+    if(NEXTIDS.has(p.id)) tags.push(`<span class="tag next">≈ next pick</span>`);
     if(r.bye>0.5) tags.push(`<span class="tag bye">BYE ${p.bye} clash</span>`);
     if(r.run&&r.needOpen) tags.push(`<span class="tag run">RUN</span>`);
     if(!r.needOpen) tags.push(`<span class="tag full">${r.depth>0?'bench':'slot full'}</span>`);
-    return `<div class="prow ${live?'need':'full'} ${i===0?'top1':(i<3?'top3':'')}" data-id="${p.id}" title="${COACH?tip:esc(p.name)}">
+    return `<div class="prow ${live?'need':'full'} ${i===0?'top1':(i<3?'top3':'')} ${NEXTIDS.has(p.id)?'nextpick':''}" data-id="${p.id}" title="${COACH?tip:esc(p.name)}">
       <span class="rk">${i+1}</span>
       <span class="pill bg-${p.pos}">${p.pos}</span>
       <div><div class="nm">${esc(p.name)}</div>
