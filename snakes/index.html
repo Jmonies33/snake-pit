@@ -1351,6 +1351,32 @@ function startSync(){
     if(c){ show(c); clearTimeout(hideT); hideT=setTimeout(hide,1600); } });
   document.querySelector('#colboard .scroll').addEventListener('scroll',hide,{passive:true});
 })();
+/* Mobile: swipe left/right to slide between Board / Players / Lineup. A swipe
+   must never fight normal use — vertical scrolls, taps, chat, and open dialogs
+   all pass through untouched; only a fast, clearly horizontal drag switches. */
+(()=>{
+  const order=['colboard','collist','colroster'];
+  let sx=0,sy=0,st=0,live=false;
+  const main=$('main');
+  main.addEventListener('touchstart',e=>{
+    live=false;
+    if(getComputedStyle($('tabs')).display==='none') return;          // desktop
+    if(e.target.closest('input,textarea,select,button,#chat')) return;
+    const T=e.touches[0]; sx=T.clientX; sy=T.clientY; st=Date.now(); live=true;
+  },{passive:true});
+  main.addEventListener('touchend',e=>{
+    if(!live) return; live=false;
+    if($('modal').classList.contains('on')) return;
+    const T=e.changedTouches[0], dx=T.clientX-sx, dy=T.clientY-sy;
+    if(Math.abs(dx)<70 || Math.abs(dx)<Math.abs(dy)*1.6 || Date.now()-st>600) return;
+    const act=document.querySelector('.col.act'); if(!act) return;
+    const i=order.indexOf(act.id);
+    const ni=dx<0?Math.min(order.length-1,i+1):Math.max(0,i-1);
+    if(ni===i) return;
+    const btn=document.querySelector('#tabs button[data-t="'+order[ni]+'"]');
+    if(btn) btn.click();
+  },{passive:true});
+})();
 $('btnundo').onclick=undo;
 $('btnsettings').onclick=openSettings;
 $('btnshare').onclick=openShare;
