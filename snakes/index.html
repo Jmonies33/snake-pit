@@ -67,7 +67,7 @@ input,select{font:inherit}
 @keyframes blink{50%{opacity:.45}}
 
 /* ============ LAYOUT ============ */
-#main{display:grid;grid-template-columns:minmax(330px,1.32fr) minmax(420px,1.42fr) minmax(290px,.9fr);
+#main{display:grid;grid-template-columns:minmax(390px,1.8fr) minmax(420px,1.42fr) minmax(240px,.62fr);
   gap:1px;background:var(--line);height:calc(100% - var(--top))}
 .col{background:var(--bg);display:flex;flex-direction:column;min-height:0;min-width:0}
 .colhead{height:38px;padding:0 12px;background:var(--panel);border-bottom:1px solid var(--line);
@@ -178,7 +178,10 @@ input,select{font:inherit}
 .tag.run{background:#ffb81c22;color:var(--warn)}
 
 /* ============ BOARD ============ */
-#board{padding:8px 6px 20px;font-size:10.5px;width:100%}
+#colboard .scroll{display:flex;flex-direction:column}
+#board{padding:8px 8px 10px;font-size:10.5px;width:100%;flex:1;display:flex;flex-direction:column;min-height:0}
+#board .bhead{flex:none}
+#board .brow{flex:1;min-height:32px}
 #colboard .scroll{overflow-x:auto}
 .bhead{display:grid;gap:2px;margin-bottom:5px;position:sticky;top:0;background:var(--bg);padding:2px 0 4px;z-index:2}
 .bhead div{font-family:var(--hd);font-size:10.5px;text-align:center;color:var(--dim);font-weight:800;letter-spacing:.3px;
@@ -186,14 +189,15 @@ input,select{font:inherit}
 .bhead div.meteam{color:#fff;background:var(--red)}
 .bhead div.onclk{outline:1px solid var(--gold)}
 .brow{display:grid;gap:2px;margin-bottom:3px;position:relative}
-.bcell{padding:3px 3px 2px;border-radius:3px;background:var(--panel);border:1px solid #1c2331;
-  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-height:30px;line-height:1.15;position:relative}
+.bcell{padding:3px 4px 2px;border-radius:3px;background:var(--panel);border:1px solid #1c2331;
+  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-height:30px;height:100%;line-height:1.2;position:relative;
+  display:flex;flex-direction:column;justify-content:center}
 .bcell.pk{color:#0b0e15;border-color:transparent}
 .bcell.pk.bg-QB{background:var(--qb)} .bcell.pk.bg-RB{background:var(--rb)} .bcell.pk.bg-WR{background:var(--wr)}
 .bcell.pk.bg-TE{background:var(--te)} .bcell.pk.bg-K{background:var(--k)} .bcell.pk.bg-DST{background:var(--dst)}
 .bcell.pk.mine{box-shadow:inset 0 0 0 2px #fff,0 0 0 1px #0008}
-.bcell.pk .bn{font-weight:800;display:block;overflow:hidden;text-overflow:ellipsis;font-size:10px;letter-spacing:-.15px}
-.bcell.pk .bp{font-size:8px;font-weight:900;letter-spacing:.2px;opacity:.75}
+.bcell.pk .bn{font-weight:800;display:block;overflow:hidden;text-overflow:ellipsis;font-size:11px;letter-spacing:-.1px}
+.bcell.pk .bp{font-size:8.5px;font-weight:900;letter-spacing:.25px;opacity:.75}
 .bcell.now{border-color:var(--gold);background:#3a2b00;animation:cellpulse 1.2s infinite}
 .bcell.now .bp{color:var(--gold);font-weight:900;font-size:9px}
 @keyframes cellpulse{50%{background:#5a4200}}
@@ -908,7 +912,7 @@ function renderBoard(){
   // Min column width is deliberately small: a clipped final column is invisible and
 // looks like the league simply has fewer teams. The panel also scrolls horizontally
 // as a backstop for very large leagues.
-const cols=`grid-template-columns:16px repeat(${TEAMS},minmax(30px,1fr))`;
+const cols=`grid-template-columns:18px repeat(${TEAMS},minmax(34px,1fr))`;
   const onClk=cur<TOTAL?teamAt(cur):-1;
   let h=`<div class="bhead" style="${cols}"><div style="background:transparent"></div>`+
     S.teamNames.map((n,i)=>`<div class="${i===ME()?'meteam':''} ${i===onClk?'onclk':''}" title="${esc(n)}">${i===ME()?'YOU':esc(shortName(i))}</div>`).join('')+`</div>`;
