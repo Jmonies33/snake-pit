@@ -135,11 +135,11 @@ input,select{font:inherit}
 #sortbar .sb.on{border-color:var(--line2);background:var(--panel2);color:var(--txt)}
 
 /* ============ PLAYER LIST ============ */
-.lhead{display:grid;grid-template-columns:30px 36px 1fr 46px 46px 56px 22px;gap:8px;align-items:center;padding:5px 12px;
+.lhead{display:grid;grid-template-columns:30px 36px 1fr 46px 46px 56px 20px 22px;gap:8px;align-items:center;padding:5px 12px;
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);font-size:9.5px;font-weight:800;
   letter-spacing:.9px;text-transform:uppercase;color:var(--dim2);position:sticky;top:0;z-index:2}
 .lhead .r{text-align:right}
-.prow{display:grid;grid-template-columns:30px 36px 1fr 46px 46px 56px 22px;gap:8px;align-items:center;
+.prow{display:grid;grid-template-columns:30px 36px 1fr 46px 46px 56px 20px 22px;gap:8px;align-items:center;
   padding:6px 12px;border-bottom:1px solid #161c28;cursor:pointer;transition:background .08s;position:relative}
 .prow:hover{background:#1b2333}
 .prow:active{background:#233047}
@@ -153,6 +153,9 @@ input,select{font:inherit}
 .prow .num{text-align:right;font-variant-numeric:tabular-nums;font-size:12px;color:var(--dim)}
 .prow .val{font-family:var(--hd);font-weight:800;font-size:15px;text-align:right;letter-spacing:.2px}
 .v-hi{color:var(--good)} .v-md{color:var(--txt)} .v-lo{color:var(--dim2)} .v-neg{color:var(--dim2)}
+.prow .starb{width:20px;height:20px;font-size:14px;line-height:20px;text-align:center;color:var(--dim2);opacity:.45}
+.prow .starb:hover{opacity:1;color:var(--gold)}
+.prow .starb.on{color:var(--gold);opacity:1;text-shadow:0 0 6px #ffb81c66}
 .prow .hide{width:20px;height:20px;border-radius:50%;color:var(--dim2);font-size:13px;line-height:20px;text-align:center;opacity:0}
 .prow:hover .hide{opacity:.7}
 .prow .hide:hover{background:#ff4d5e33;color:var(--bad);opacity:1}
@@ -210,7 +213,7 @@ input,select{font:inherit}
 
 /* ============ COACH GATE ============ */
 .nocoach #rec{display:none}
-.nocoach .prow,.nocoach .lhead{grid-template-columns:30px 36px 1fr 46px 46px 22px}
+.nocoach .prow,.nocoach .lhead{grid-template-columns:30px 36px 1fr 46px 46px 20px 22px}
 .nocoach .prow .val,.nocoach .lhead .val-h{display:none}
 .nocoach .tag.run{display:none}
 .nocoach #sortbar span:last-child{display:none}
@@ -292,9 +295,9 @@ input,select{font:inherit}
   #tabundo small{font-family:var(--ui);font-size:9.5px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--dim);max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   #tabundo:disabled{color:var(--dim2)} #tabundo:disabled small{display:none}
   #tabundo:active{background:#ff4d5e22}
-  .prow{grid-template-columns:26px 34px 1fr 42px 52px 20px}
+  .prow{grid-template-columns:26px 34px 1fr 42px 52px 18px 20px}
   .prow .num.adp{display:none}
-  .lhead{grid-template-columns:26px 34px 1fr 42px 52px 20px}
+  .lhead{grid-template-columns:26px 34px 1fr 42px 52px 18px 20px}
   .lhead .adp{display:none}
   .prow .hide{opacity:.5}
   #rec .nm{font-size:20px}
@@ -395,7 +398,7 @@ const GROUPS = META.groups.map(g=>[g[0],g[1],SLOTS[g[0]]]);
 const POS_PRESENT = (()=>{ const order=['QB','RB','WR','TE','DST','K'], s=new Set(DATA.players.map(p=>p.pos));
   return [...order.filter(p=>s.has(p)), ...[...s].filter(p=>!order.includes(p)).sort()]; })();
 const FILTER_DEFS = (()=>{
-  const d=[['ALL','All'], ...POS_PRESENT.map(p=>[p,p])];
+  const d=[['ALL','All'],['STARS','★'], ...POS_PRESENT.map(p=>[p,p])];
   for(const k in META.pools) if(META.pools[k].length>1) d.push([k, META.pools[k].join('+')]);
   return d;
 })();
@@ -688,6 +691,14 @@ function lastName(n){ const parts=n.split(' ').filter(w=>!/^(Jr\.?|Sr\.?|II|III|
 
 let lastIsMe=null;
 let SEL=null;   // selected player id — local, never synced, never persisted
+// Target list: HIS board, so it lives on this device only — deliberately never
+// synced (the shared room state is visible to everyone in it).
+const TARGETS=(()=>{ try{ return new Set(JSON.parse(localStorage.getItem('snakepit.stars.'+ROOM)||'[]')); }catch(e){ return new Set(); } })();
+function toggleStar(id){
+  if(TARGETS.has(id)) TARGETS.delete(id); else TARGETS.add(id);
+  try{ localStorage.setItem('snakepit.stars.'+ROOM, JSON.stringify([...TARGETS])); }catch(e){}
+  render();
+}
 function selectPlayer(id){ SEL=(SEL===id)?null:id; render(); }
 function renderSel(st){
   const box=$('sel'), rec=$('rec');
@@ -720,9 +731,11 @@ function renderSel(st){
     ${why.length?`<div class="why">${why.join(' · ')}</div>`:''}
     <div class="acts">
       ${onClock?`<button class="tbtn go" id="selgo">Draft → ${esc(onClock)}</button>`:''}
+      <button class="tbtn" id="selstar">${TARGETS.has(p.id)?'★ Targeted':'☆ Target'}</button>
       <button class="tbtn" id="selclose">Close</button>
     </div>`;
   box.querySelector('.selx').onclick=()=>{ SEL=null; render(); };
+  $('selstar').onclick=()=>toggleStar(p.id);
   $('selclose').onclick=()=>{ SEL=null; render(); };
   const g=$('selgo'); if(g) g.onclick=()=>{ const id=SEL; SEL=null; draftPlayer(id); };
 }
@@ -790,6 +803,7 @@ function renderFilters(st){
   const el=$('filters');
   el.innerHTML=defs.map(([k,lab],i)=>{
     const n=k==='ALL' ? st.rows.length
+      : k==='STARS' ? st.rows.filter(r=>TARGETS.has(r.p.id)).length
       : (META.pools[k] ? META.pools[k].reduce((a,pos)=>a+(counts[pos]||0),0) : (counts[k]||0));
     return `<button class="fbtn ${S.filter===k?'on':''}" data-f="${k}" title="key ${i+1}">${lab}<span class="n">${n}</span></button>`;
   }).join('')+`<input id="srch" placeholder="search  ( / )" value="${esc(S.search)}" autocomplete="off">`;
@@ -804,14 +818,15 @@ function renderFilters(st){
 }
 function renderList(st){
   let rows=st.rows;
-  if(S.filter!=='ALL') rows=rows.filter(r=>META.pools[S.filter]
+  if(S.filter==='STARS') rows=rows.filter(r=>TARGETS.has(r.p.id));
+  else if(S.filter!=='ALL') rows=rows.filter(r=>META.pools[S.filter]
     ? META.pools[S.filter].includes(r.p.pos) : r.p.pos===S.filter);
   if(S.search){ const q=S.search.toLowerCase(); rows=rows.filter(r=>r.p.name.toLowerCase().includes(q)||r.p.team.toLowerCase()===q); }
   // rank: needed players first (already sorted), full-slot players sink to the bottom in value sort
   rows=rows.slice(0,180);
   const el=$('list');
   if(!rows.length){ el.innerHTML='<div class="empty">Nobody left matching that.</div>'; return; }
-  let h=`<div class="lhead"><span>Rk</span><span>Pos</span><span>Player</span><span class="r">Proj</span><span class="r adp">ADP</span><span class="r val-h" title="Draft value: points over what will still be there at your next pick, adjusted for runs, scarcity and bye clashes">Value</span><span></span></div>`;
+  let h=`<div class="lhead"><span>Rk</span><span>Pos</span><span>Player</span><span class="r">Proj</span><span class="r adp">ADP</span><span class="r val-h" title="Draft value: points over what will still be there at your next pick, adjusted for runs, scarcity and bye clashes">Value</span><span></span><span></span></div>`;
   h+=rows.map((r,i)=>{
     const p=r.p, v=r.score;
     const live=r.needOpen||r.depth>0;
@@ -829,13 +844,15 @@ function renderList(st){
       <div class="num">${p.pts.toFixed(0)}</div>
       <div class="num adp">${p.mkt<400?p.mkt:'—'}</div>
       <div class="val ${vc}">${live?((v>0?'+':'')+v.toFixed(0)):'—'}</div>
+      <button class="starb ${TARGETS.has(p.id)?'on':''}" data-star="${p.id}" title="${TARGETS.has(p.id)?'Remove from':'Add to'} my target list">${TARGETS.has(p.id)?'★':'☆'}</button>
       <button class="hide" data-hide="${p.id}" title="Remove from pool (injured / not playing)">×</button>
     </div>`;
   }).join('');
   el.innerHTML=h;
   // First click opens the player card; the Draft button in the card commits.
   // Two deliberate clicks — a mis-tap shows you a stat line instead of costing a pick.
-  el.querySelectorAll('.prow').forEach(row=>{ row.onclick=e=>{ if(e.target.closest('.hide')) return; selectPlayer(row.dataset.id); }; });
+  el.querySelectorAll('.prow').forEach(row=>{ row.onclick=e=>{ if(e.target.closest('.hide')||e.target.closest('.starb')) return; selectPlayer(row.dataset.id); }; });
+  el.querySelectorAll('.starb').forEach(b=>{ b.onclick=e=>{ e.stopPropagation(); toggleStar(b.dataset.star); }; });
   el.querySelectorAll('.hide').forEach(b=>{ b.onclick=e=>{ e.stopPropagation(); hidePlayer(b.dataset.hide); }; });
 }
 function renderBoard(){
