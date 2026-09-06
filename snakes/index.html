@@ -283,6 +283,21 @@ input,select{font:inherit}
 #toast.mine{border-color:var(--gold);color:var(--gold)}
 #toast.sync{border-color:var(--good);color:#8ff0c2}
 
+/* ============ TV MODE ============ */
+.tvmode #top,.tvmode #collist,.tvmode #colroster,.tvmode #tabs,.tvmode #chat,.tvmode .colhead{display:none !important}
+.tvmode #main{grid-template-columns:1fr;height:100%}
+.tvmode #colboard{display:flex !important}
+.tvmode #board{padding:1vh 0.8vw;font-size:1.2vw}
+.tvmode .bhead div{font-size:clamp(12px,1.15vw,24px);padding:0.55vh 0.3vw;white-space:normal;line-height:1.1;overflow-wrap:anywhere}
+.tvmode .bcell{border-radius:0.35vw}
+.tvmode .bcell.pk .bn{font-size:clamp(13px,1.35vw,28px)}
+.tvmode .bcell.pk .bp{font-size:clamp(9px,0.85vw,18px)}
+.tvmode .bcell.now .bp{font-size:clamp(10px,0.95vw,20px)}
+.tvmode .rnd{font-size:clamp(10px,0.95vw,20px);padding-top:1vh}
+.tvmode #btip .tn{font-size:clamp(14px,1.3vw,26px)}
+.tvmode #btip .tm{font-size:clamp(11px,0.95vw,18px)}
+.tvmode #toast{display:none}
+
 /* ============ MOBILE ============ */
 #tabs{display:none}
 @media(max-width:1000px){
@@ -490,7 +505,13 @@ const HELPER=COACH||(()=>{
   }
   return false;
 })();
-if(!COACH) document.documentElement.classList.add('nocoach');
+/* TV mode (?view=tv): the draft board and nothing else, 100% of the screen.
+   Read-only by construction (every control is hidden), and the coach console is
+   force-disabled no matter what keys this machine has cached — a TV faces the
+   whole room. Picks arrive by live sync from whoever runs the draft. */
+const TV=qs.get('view')==='tv';
+if(TV) document.documentElement.classList.add('tvmode');
+if(!COACH||TV) document.documentElement.classList.add('nocoach');
 
 /* ---------------- state ----------------
    shared (synced): picks, teamNames, hidden, v, ts, by
@@ -941,12 +962,12 @@ function renderBoard(){
 const cols=`grid-template-columns:18px repeat(${TEAMS},minmax(var(--bcmin,34px),1fr))`;
   const onClk=cur<TOTAL?teamAt(cur):-1;
   let h=`<div class="bhead" style="${cols}"><div style="background:transparent"></div>`+
-    S.teamNames.map((n,i)=>`<div class="${i===ME()?'meteam':''} ${i===onClk?'onclk':''}" title="${esc(n)}">${i===ME()?'YOU':esc(shortName(i))}</div>`).join('')+`</div>`;
+    S.teamNames.map((n,i)=>`<div class="${!TV&&i===ME()?'meteam':''} ${i===onClk?'onclk':''}" title="${esc(n)}">${!TV&&i===ME()?'YOU':esc(shortName(i))}</div>`).join('')+`</div>`;
   for(let r=0;r<ROUNDS;r++){
     h+=`<div class="brow" style="${cols}"><div class="rnd">${r+1}</div>`;
     for(let c=0;c<TEAMS;c++){
       const idx=(r%2===0)?r*TEAMS+c:r*TEAMS+(TEAMS-1-c);
-      const pk=S.picks[idx], mine=c===ME(), now=idx===cur;
+      const pk=S.picks[idx], mine=!TV&&c===ME(), now=idx===cur;
       if(pk){ const p=BY_ID.get(pk.pid);
         h+=`<div class="bcell pk bg-${p?p.pos:''} ${mine?'mine':''}" data-n="${p?esc(p.name):''}" data-m="${p?`${p.pos} · ${p.team} · Rd ${r+1}, pick ${idx+1} overall`:''}"><span class="bn">${p?esc(lastName(p.name)):'?'}</span><span class="bp">${p?p.pos+' · '+p.team:''}</span></div>`;
       } else {
