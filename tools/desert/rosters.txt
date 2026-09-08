@@ -1,0 +1,1262 @@
+Raiders of the Lost Title
+Desert League
+WEEK 1 · NFL WEEK 1
+REPORTS
+Rosters
+Desert League - 12 teams - Week 1
+Full
+Team
+Compare
+Grid
+WEEK
+Week 1
+Week 2
+Week 3
+Week 4
+Week 5
+Week 6
+Week 7
+Week 8
+Week 9
+Week 10
+Week 11
+Week 12
+Week 13
+Week 14
+Week 15
+Week 16
+Week 17
+Week 18
+Download PDF
+CSV
+TEAMS
+12
+Shown in this report
+PLAYERS
+154
+On active rosters
+AVG ROSTER
+12.8
+Players per team
+AVG PROJ
+166.53
+Starting lineup
+Bitch Mittens
+Mat Karr 0-0
+Capsule
+Email
+Trade
+186.72
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Matthew Stafford
+LAR
+Bye 11
+SF
+	Starter	-	Thu 7:35pm CT	26.75
+
+QB
+Caleb Williams
+CHI
+Bye 10
+@CAR
+	Starter	-	Sun 12:00pm CT	27.82
+
+RB
+Blake Corum
+LAR
+Bye 11
+SF
+	Starter	-	Thu 7:35pm CT	8.32
+
+RB
+Derrick Henry
+BAL
+Bye 13
+@IND
+	Starter	-	Sun 12:00pm CT	15.02
+
+RB
+Jordan Mason
+MIN
+Bye 6
+GB
+	Starter	-	Sun 3:25pm CT	8.14
+
+WR
+Puka Nacua
+LAR
+Bye 11
+SF
+	Starter	Q	Thu 7:35pm CT	19.44
+
+WR
+Rome Odunze
+CHI
+Bye 10
+@CAR
+	Starter	Q	Sun 12:00pm CT	12.46
+
+WR
+Chris Olave
+NO
+Bye 8
+@DET
+	Starter	-	Sun 12:00pm CT	15.38
+
+WR
+DeVonta Smith
+PHI
+Bye 10
+WAS
+	Starter	-	Sun 3:25pm CT	14.75
+
+TE
+George Kittle
+SF
+Bye 8
+@LAR
+	Starter	Q	Thu 7:35pm CT	11.88
+
+K
+Ka'imi Fairbairn
+HOU
+Bye 8
+BUF
+	Starter	-	Sun 12:00pm CT	8.72
+
+K
+Jason Myers
+SEA
+Bye 11
+NE
+	Starter	-	Wed 7:20pm CT	8.26
+
+D/ST
+San Francisco 49ers
+SF
+Bye 8
+@LAR
+	Starter	-	Thu 7:35pm CT	3.73
+
+D/ST
+Los Angeles Rams
+LAR
+Bye 11
+SF
+	Starter	-	Thu 7:35pm CT	6.06
+BOSSMAN
+David Garvey 0-0
+Capsule
+Email
+Trade
+182.64
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Jared Goff
+DET
+Bye 6
+NO
+	Starter	-	Sun 12:00pm CT	26.95
+
+QB
+Dak Prescott
+DAL
+Bye 14
+@NYG
+	Starter	-	Sun 7:20pm CT	27.26
+
+RB
+Chase Brown
+CIN
+Bye 6
+TB
+	Starter	-	Sun 12:00pm CT	13.06
+
+RB
+Tony Pollard
+TEN
+Bye 9
+NYJ
+	Starter	-	Sun 12:00pm CT	9.02
+
+RB
+Jonathan Taylor
+IND
+Bye 13
+BAL
+	Starter	-	Sun 12:00pm CT	15.20
+
+WR
+A.J. Brown
+NE
+Bye 11
+@SEA
+	Starter	-	Wed 7:20pm CT	14.87
+
+WR
+Chris Godwin
+TB
+Bye 10
+@CIN
+	Starter	-	Sun 12:00pm CT	10.68
+
+WR
+Drake London
+ATL
+Bye 11
+@PIT
+	Starter	-	Sun 12:00pm CT	16.54
+
+WR
+Michael Wilson
+ARI
+Bye 14
+@LAC
+	Starter	-	Sun 3:25pm CT	10.85
+
+TE
+Tucker Kraft
+GB
+Bye 11
+@MIN
+	Starter	Q	Sun 3:25pm CT	10.71
+
+K
+Chris Boswell
+PIT
+Bye 9
+ATL
+	Starter	-	Sun 12:00pm CT	7.57
+
+K
+Matt Gay
+LV
+Bye 13
+MIA
+	Starter	-	Sun 3:25pm CT	6.68
+
+D/ST
+Chicago Bears
+CHI
+Bye 10
+@CAR
+	Starter	-	Sun 12:00pm CT	6.53
+
+D/ST
+Denver Broncos
+DEN
+Bye 10
+@KC
+	Starter	-	Mon 7:15pm CT	6.72
+Can't stanzus
+Andy Midkiff 0-0
+Capsule
+Trade
+167.00
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Jordan Love
+GB
+Bye 11
+@MIN
+	Starter	-	Sun 3:25pm CT	23.70
+
+QB
+Malik Willis
+MIA
+Bye 6
+@LV
+	Starter	-	Sun 3:25pm CT	23.34
+
+RB
+Josh Jacobs
+GB
+Bye 11
+@MIN
+	Starter	NFI	Sun 3:25pm CT	0.00
+
+RB
+Bijan Robinson
+ATL
+Bye 11
+@PIT
+	Starter	-	Sun 12:00pm CT	16.42
+
+RB
+Bhayshul Tuten
+JAX
+Bye 7
+CLE
+	Starter	Q	Sun 12:00pm CT	9.88
+
+WR
+D.J. Moore
+BUF
+Bye 7
+@HOU
+	Starter	-	Sun 12:00pm CT	11.18
+
+WR
+Malik Nabers
+NYG
+Bye 8
+DAL
+	Starter	Q	Sun 7:20pm CT	13.54
+
+WR
+Parker Washington
+JAX
+Bye 7
+CLE
+	Starter	-	Sun 12:00pm CT	11.03
+
+TE
+Brock Bowers
+LV
+Bye 13
+MIA
+	Starter	-	Sun 3:25pm CT	17.87
+
+TE
+Tyler Warren
+IND
+Bye 13
+BAL
+	Starter	Q	Sun 12:00pm CT	14.29
+
+K
+Brandon Aubrey
+DAL
+Bye 14
+@NYG
+	Starter	-	Sun 7:20pm CT	8.67
+
+K
+Tyler Bass
+BUF
+Bye 7
+@HOU
+	Starter	-	Sun 12:00pm CT	6.73
+
+D/ST
+Indianapolis Colts
+IND
+Bye 13
+BAL
+	Starter	-	Sun 12:00pm CT	5.21
+
+D/ST
+Dallas Cowboys
+DAL
+Bye 14
+@NYG
+	Starter	-	Sun 7:20pm CT	5.15
+Ceedeez Nutz
+Dylan 0-0
+Capsule
+Trade
+181.68
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Kyler Murray
+MIN
+Bye 6
+GB
+	Starter	-	Sun 3:25pm CT	24.88
+
+QB
+Brock Purdy
+SF
+Bye 8
+@LAR
+	Starter	-	Thu 7:35pm CT	28.37
+
+RB
+Omarion Hampton
+LAC
+Bye 7
+ARI
+	Starter	-	Sun 3:25pm CT	13.18
+
+RB
+RJ Harvey
+DEN
+Bye 10
+@KC
+	Starter	-	Mon 7:15pm CT	6.56
+
+RB
+Kenneth Walker III
+KC
+Bye 5
+DEN
+	Starter	Q	Mon 7:15pm CT	11.86
+
+WR
+Ja'Marr Chase
+CIN
+Bye 6
+TB
+	Starter	Q	Sun 12:00pm CT	20.23
+
+WR
+Emeka Egbuka
+TB
+Bye 10
+@CIN
+	Starter	Q	Sun 12:00pm CT	12.63
+
+WR
+Mike Evans
+SF
+Bye 8
+@LAR
+	Starter	Q	Thu 7:35pm CT	11.31
+
+WR
+Ladd McConkey
+LAC
+Bye 7
+ARI
+	Starter	-	Sun 3:25pm CT	13.38
+
+WR
+Jaylen Waddle
+DEN
+Bye 10
+@KC
+	Starter	-	Mon 7:15pm CT	12.77
+
+K
+Cam Little
+JAX
+Bye 7
+CLE
+	Starter	-	Sun 12:00pm CT	7.71
+
+K
+Joey Slye
+TEN
+Bye 9
+NYJ
+	Starter	-	Sun 12:00pm CT	6.99
+
+D/ST
+New Orleans Saints
+NO
+Bye 8
+@DET
+	Starter	-	Sun 12:00pm CT	5.42
+
+D/ST
+Houston Texans
+HOU
+Bye 8
+BUF
+	Starter	-	Sun 12:00pm CT	6.39
+Drunk at the Draft
+jason twede 0-0
+Capsule
+Email
+Trade
+185.33
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Trevor Lawrence
+JAX
+Bye 7
+CLE
+	Starter	-	Sun 12:00pm CT	27.55
+
+QB
+Bo Nix
+DEN
+Bye 10
+@KC
+	Starter	-	Mon 7:15pm CT	26.71
+
+RB
+Saquon Barkley
+PHI
+Bye 10
+WAS
+	Starter	-	Sun 3:25pm CT	14.24
+
+RB
+Quinshon Judkins
+CLE
+Bye 11
+@JAX
+	Starter	-	Sun 12:00pm CT	9.50
+
+RB
+Christian McCaffrey
+SF
+Bye 8
+@LAR
+	Starter	-	Thu 7:35pm CT	14.84
+
+WR
+Nico Collins
+HOU
+Bye 8
+BUF
+	Starter	-	Sun 12:00pm CT	15.84
+
+WR
+Zay Flowers
+BAL
+Bye 13
+@IND
+	Starter	Q	Sun 12:00pm CT	14.19
+
+WR
+Michael Pittman Jr.
+PIT
+Bye 9
+ATL
+	Starter	Q	Sun 12:00pm CT	11.03
+
+WR
+Christian Watson
+GB
+Bye 11
+@MIN
+	Starter	-	Sun 3:25pm CT	12.28
+
+WR
+Jameson Williams
+DET
+Bye 6
+NO
+	Starter	-	Sun 12:00pm CT	12.24
+
+K
+Chase McLaughlin
+TB
+Bye 10
+@CIN
+	Starter	-	Sun 12:00pm CT	7.34
+
+K
+Cairo Santos
+CHI
+Bye 10
+@CAR
+	Starter	-	Sun 12:00pm CT	7.52
+
+D/ST
+Philadelphia Eagles
+PHI
+Bye 10
+WAS
+	Starter	-	Sun 3:25pm CT	6.09
+
+D/ST
+Minnesota Vikings
+MIN
+Bye 6
+GB
+	Starter	-	Sun 3:25pm CT	5.96
+DUKES OF EARL
+Earl The Duke Williams 0-0
+Capsule
+Trade
+0.00
+PROJ LINEUP
+0
+STARTERS
+0
+BENCH
+No players on roster.
+ELEVE11s
+Jason Lucas 0-0
+Capsule
+Trade
+179.68
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Drake Maye
+NE
+Bye 11
+@SEA
+	Starter	-	Wed 7:20pm CT	28.04
+
+QB
+Tyler Shough
+NO
+Bye 8
+@DET
+	Starter	-	Sun 12:00pm CT	25.45
+
+RB
+James Cook
+BUF
+Bye 7
+@HOU
+	Starter	-	Sun 12:00pm CT	14.36
+
+RB
+Bucky Irving
+TB
+Bye 10
+@CIN
+	Starter	-	Sun 12:00pm CT	10.14
+
+RB
+Jeremiyah Love
+ARI
+Bye 14
+@LAC
+	Starter	Q	Sun 3:25pm CT	9.74
+
+WR
+Luther Burden III
+CHI
+Bye 10
+@CAR
+	Starter	Q	Sun 12:00pm CT	12.24
+
+WR
+CeeDee Lamb
+DAL
+Bye 14
+@NYG
+	Starter	-	Sun 7:20pm CT	16.59
+
+WR
+Terry McLaurin
+WAS
+Bye 7
+@PHI
+	Starter	-	Sun 3:25pm CT	12.78
+
+WR
+Brian Thomas Jr.
+JAX
+Bye 7
+CLE
+	Starter	Q	Sun 12:00pm CT	10.16
+
+TE
+Kyle Pitts
+ATL
+Bye 11
+@PIT
+	Starter	-	Sun 12:00pm CT	12.73
+
+K
+Wil Lutz
+DEN
+Bye 10
+@KC
+	Starter	-	Mon 7:15pm CT	7.14
+
+K
+Eddy Pineiro
+SF
+Bye 8
+@LAR
+	Starter	-	Thu 7:35pm CT	7.40
+
+D/ST
+Jacksonville Jaguars
+JAX
+Bye 7
+CLE
+	Starter	-	Sun 12:00pm CT	6.89
+
+D/ST
+Detroit Lions
+DET
+Bye 6
+NO
+	Starter	-	Sun 12:00pm CT	6.02
+LONE STARR
+Anthony Ovalle 0-0
+Capsule
+Email
+Trade
+187.89
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Justin Herbert
+LAC
+Bye 7
+ARI
+	Starter	-	Sun 3:25pm CT	28.59
+
+QB
+Lamar Jackson
+BAL
+Bye 13
+@IND
+	Starter	-	Sun 12:00pm CT	29.52
+
+RB
+Breece Hall
+NYJ
+Bye 13
+@TEN
+	Starter	Q	Sun 12:00pm CT	10.98
+
+RB
+Cam Skattebo
+NYG
+Bye 8
+DAL
+	Starter	-	Sun 7:20pm CT	11.70
+
+RB
+Jaylen Warren
+PIT
+Bye 9
+ATL
+	Starter	-	Sun 12:00pm CT	8.96
+
+WR
+Marvin Harrison Jr.
+ARI
+Bye 14
+@LAC
+	Starter	-	Sun 3:25pm CT	10.77
+
+WR
+Rashee Rice
+KC
+Bye 5
+DEN
+	Starter	-	Mon 7:15pm CT	14.03
+
+WR
+Jaxon Smith-Njigba
+SEA
+Bye 11
+NE
+	Starter	-	Wed 7:20pm CT	18.60
+
+TE
+Sam LaPorta
+DET
+Bye 6
+NO
+	Starter	Q	Sun 12:00pm CT	14.05
+
+TE
+Isaiah Likely
+NYG
+Bye 8
+DAL
+	Starter	-	Sun 7:20pm CT	11.42
+
+K
+Tyler Loop
+BAL
+Bye 13
+@IND
+	Starter	-	Sun 12:00pm CT	8.15
+
+K
+Harrison Mevis
+LAR
+Bye 11
+SF
+	Starter	-	Thu 7:35pm CT	8.23
+
+D/ST
+Seattle Seahawks
+SEA
+Bye 11
+NE
+	Starter	-	Wed 7:20pm CT	6.33
+
+D/ST
+Pittsburgh Steelers
+PIT
+Bye 9
+ATL
+	Starter	-	Sun 12:00pm CT	6.56
+Raiders of the Lost Title
+Jerry Asencio 0-0
+Lineup
+Add/Drop
+Capsule
+Email
+Trade
+184.57
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Jalen Hurts
+PHI
+Bye 10
+WAS
+	Starter	-	Sun 3:25pm CT	29.72
+
+QB
+Daniel Jones
+IND
+Bye 13
+BAL
+	Starter	-	Sun 12:00pm CT	24.96
+
+RB
+J.K. Dobbins
+DEN
+Bye 10
+@KC
+	Starter	-	Mon 7:15pm CT	9.44
+
+RB
+Jadarian Price
+SEA
+Bye 11
+NE
+	Starter	-	Wed 7:20pm CT	10.40
+
+RB
+Javonte Williams
+DAL
+Bye 14
+@NYG
+	Starter	-	Sun 7:20pm CT	11.70
+
+WR
+Davante Adams
+LAR
+Bye 11
+SF
+	Starter	-	Thu 7:35pm CT	13.66
+
+WR
+Justin Jefferson
+MIN
+Bye 6
+GB
+	Starter	-	Sun 3:25pm CT	16.12
+
+WR
+Amon-Ra St. Brown
+DET
+Bye 6
+NO
+	Starter	-	Sun 12:00pm CT	18.68
+
+WR
+Carnell Tate
+TEN
+Bye 9
+NYJ
+	Starter	Q	Sun 12:00pm CT	12.23
+
+TE
+Dallas Goedert
+PHI
+Bye 10
+WAS
+	Starter	-	Sun 3:25pm CT	12.78
+
+K
+Andres Borregales
+NE
+Bye 11
+@SEA
+	Starter	-	Wed 7:20pm CT	6.47
+
+K
+Blake Grupe
+NYJ
+Bye 13
+@TEN
+	Starter	-	Sun 12:00pm CT	6.85
+
+D/ST
+Green Bay Packers
+GB
+Bye 11
+@MIN
+	Starter	-	Sun 3:25pm CT	5.72
+
+D/ST
+New England Patriots
+NE
+Bye 11
+@SEA
+	Starter	-	Wed 7:20pm CT	5.84
+Team Huevos
+Damien Gallardo 0-0
+Capsule
+Email
+Trade
+171.08
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Josh Allen
+BUF
+Bye 7
+@HOU
+	Starter	-	Sun 12:00pm CT	29.94
+
+QB
+Baker Mayfield
+TB
+Bye 10
+@CIN
+	Starter	-	Sun 12:00pm CT	25.75
+
+RB
+Devon Achane
+MIA
+Bye 6
+@LV
+	Starter	-	Sun 3:25pm CT	14.70
+
+RB
+Ashton Jeanty
+LV
+Bye 13
+MIA
+	Starter	Q	Sun 3:25pm CT	12.06
+
+RB
+D'Andre Swift
+CHI
+Bye 10
+@CAR
+	Starter	Q	Sun 12:00pm CT	11.04
+
+WR
+Denzel Boston
+CLE
+Bye 11
+@JAX
+	Starter	-	Sun 12:00pm CT	6.46
+
+WR
+George Pickens
+DAL
+Bye 14
+@NYG
+	Starter	-	Sun 7:20pm CT	15.87
+
+TE
+Greg Dulcich
+MIA
+Bye 6
+@LV
+	Starter	-	Sun 3:25pm CT	8.76
+
+TE
+Jake Ferguson
+DAL
+Bye 14
+@NYG
+	Starter	-	Sun 7:20pm CT	12.22
+
+TE
+Oronde Gadsden II
+LAC
+Bye 7
+ARI
+	Starter	-	Sun 3:25pm CT	7.47
+
+K
+Jake Bates
+DET
+Bye 6
+NO
+	Starter	-	Sun 12:00pm CT	8.51
+
+K
+Jake Elliott
+PHI
+Bye 10
+WAS
+	Starter	-	Sun 3:25pm CT	7.19
+
+D/ST
+Cleveland Browns
+CLE
+Bye 11
+@JAX
+	Starter	-	Sun 12:00pm CT	5.03
+
+D/ST
+Baltimore Ravens
+BAL
+Bye 13
+@IND
+	Starter	-	Sun 12:00pm CT	6.08
+TEAM NATRON
+jon karr 0-0
+Capsule
+Email
+Trade
+188.83
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Joe Burrow
+CIN
+Bye 6
+TB
+	Starter	-	Sun 12:00pm CT	28.70
+
+QB
+Patrick Mahomes
+KC
+Bye 5
+DEN
+	Starter	Q	Mon 7:15pm CT	26.59
+
+RB
+Travis Etienne
+NO
+Bye 8
+@DET
+	Starter	-	Sun 12:00pm CT	11.40
+
+RB
+Jahmyr Gibbs
+DET
+Bye 6
+NO
+	Starter	-	Sun 12:00pm CT	17.34
+
+RB
+Kyren Williams
+LAR
+Bye 11
+SF
+	Starter	-	Thu 7:35pm CT	12.30
+
+WR
+Tee Higgins
+CIN
+Bye 6
+TB
+	Starter	Q	Sun 12:00pm CT	14.18
+
+WR
+Tetairoa McMillan
+CAR
+Bye 5
+CHI
+	Starter	-	Sun 12:00pm CT	14.38
+
+WR
+Courtland Sutton
+DEN
+Bye 10
+@KC
+	Starter	-	Mon 7:15pm CT	11.00
+
+TE
+Mark Andrews
+BAL
+Bye 13
+@IND
+	Starter	-	Sun 12:00pm CT	11.79
+
+TE
+Travis Kelce
+KC
+Bye 5
+DEN
+	Starter	-	Mon 7:15pm CT	13.36
+
+K
+Harrison Butker
+KC
+Bye 5
+DEN
+	Starter	-	Mon 7:15pm CT	7.46
+
+K
+Evan McPherson
+CIN
+Bye 6
+TB
+	Starter	-	Sun 12:00pm CT	7.60
+
+D/ST
+Los Angeles Chargers
+LAC
+Bye 7
+ARI
+	Starter	-	Sun 3:25pm CT	7.50
+
+D/ST
+Kansas City Chiefs
+KC
+Bye 5
+DEN
+	Starter	-	Mon 7:15pm CT	5.24
+Two T's Matt
+Matt Silva 0-0
+Capsule
+Trade
+182.99
+PROJ LINEUP
+14
+STARTERS
+0
+BENCH
+PLAYER	STATUS	INJ	GAME	PROJ
+
+QB
+Jayden Daniels
+WAS
+Bye 7
+@PHI
+	Starter	-	Sun 3:25pm CT	27.58
+
+QB
+Jaxson Dart
+NYG
+Bye 8
+DAL
+	Starter	-	Sun 7:20pm CT	28.87
+
+RB
+TreVeyon Henderson
+NE
+Bye 11
+@SEA
+	Starter	Q	Wed 7:20pm CT	5.84
+
+RB
+David Montgomery
+HOU
+Bye 8
+BUF
+	Starter	-	Sun 12:00pm CT	10.34
+
+RB
+Rhamondre Stevenson
+NE
+Bye 11
+@SEA
+	Starter	-	Wed 7:20pm CT	10.40
+
+WR
+D.K. Metcalf
+PIT
+Bye 9
+ATL
+	Starter	Q	Sun 12:00pm CT	11.44
+
+WR
+Garrett Wilson
+NYJ
+Bye 13
+@TEN
+	Starter	-	Sun 12:00pm CT	14.02
+
+TE
+Harold Fannin Jr.
+CLE
+Bye 11
+@JAX
+	Starter	-	Sun 12:00pm CT	13.73
+
+TE
+Colston Loveland
+CHI
+Bye 10
+@CAR
+	Starter	-	Sun 12:00pm CT	15.28
+
+TE
+Trey McBride
+ARI
+Bye 14
+@LAC
+	Starter	-	Sun 3:25pm CT	18.18
+
+K
+Cameron Dicker
+LAC
+Bye 7
+ARI
+	Starter	Q	Sun 3:25pm CT	8.42
+
+K
+Will Reichard
+MIN
+Bye 6
+GB
+	Starter	-	Sun 3:25pm CT	8.07
+
+D/ST
+Buffalo Bills
+BUF
+Bye 7
+@HOU
+	Starter	-	Sun 12:00pm CT	5.69
+
+D/ST
+Tampa Bay Buccaneers
+TB
+Bye 10
+@CIN
+	Starter	-	Sun 12:00pm CT	5.12

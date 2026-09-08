@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Desert League</title>
+<style>
+:root{
+  --bg:#0b0e15; --bg2:#0f131c; --panel:#141925; --panel2:#1a2130; --line:#232b3b; --line2:#2d3749;
+  --txt:#f2f5fa; --dim:#93a0b4; --dim2:#5c687b;
+  --red:#e0102f; --red2:#ff3b57; --gold:#ffb81c; --good:#26c281; --bad:#ff4d5e; --warn:#ffb81c; --blue:#3d8bff;
+  --qb:#ff6b57; --rb:#38d17c; --wr:#4da3ff; --te:#ffb020; --k:#c084fc; --dst:#9fb3c8;
+  --hd:"Avenir Next Condensed","Bahnschrift","Roboto Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:dark}
+body{background:var(--bg);color:var(--txt);font:13px/1.4 var(--ui);-webkit-font-smoothing:antialiased;min-height:100vh}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+input,select{font:inherit}
+a{color:inherit}
+.hd{font-family:var(--hd);font-weight:800;text-transform:uppercase;letter-spacing:.4px}
+#top{height:58px;display:flex;align-items:center;gap:12px;padding:0 14px;position:sticky;top:0;z-index:5;
+  background:linear-gradient(180deg,#151b28 0%,#0f131c 100%);border-bottom:2px solid var(--red);box-shadow:0 2px 14px #0009}
+#top:after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;
+  background:linear-gradient(90deg,var(--red) 0%,var(--red) 55%,var(--gold) 55%,var(--gold) 60%,transparent 60%)}
+#brand{display:flex;align-items:center;gap:11px;padding-right:14px;border-right:1px solid var(--line2);height:40px}
+#brand .mark{height:32px;width:auto;display:block;filter:drop-shadow(0 2px 5px #0009)}
+#brand .t1{font-family:var(--hd);font-weight:900;font-size:20px;letter-spacing:.8px;line-height:1;text-transform:uppercase;white-space:nowrap;
+  background:linear-gradient(180deg,#fff,#cfd6e2);-webkit-background-clip:text;background-clip:text;color:transparent}
+#brand .t2{font-size:9.5px;font-weight:800;letter-spacing:2px;color:var(--gold);text-transform:uppercase;line-height:1;margin-top:3px}
+nav{display:flex;gap:4px}
+nav a{padding:0 13px;height:34px;display:inline-flex;align-items:center;border-radius:6px;border:1px solid transparent;
+  font-family:var(--hd);font-weight:800;font-size:14px;letter-spacing:.6px;text-transform:uppercase;text-decoration:none;color:var(--dim)}
+nav a:hover{color:var(--txt);border-color:var(--line2)}
+nav a.on{color:#fff;background:var(--red);border-color:var(--red)}
+.spacer{flex:1}
+#meta{font-size:11px;color:var(--dim);text-align:right;line-height:1.25}
+#meta b{color:var(--txt)}
+main{max-width:1240px;margin:0 auto;padding:16px 14px 60px}
+h1{font-family:var(--hd);font-weight:900;font-size:26px;letter-spacing:.6px;text-transform:uppercase;line-height:1}
+h1 small{font-size:12px;color:var(--dim);letter-spacing:1.5px;display:block;margin-top:5px;font-weight:800}
+h2{font-family:var(--hd);font-weight:800;font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:2fr 1fr}
+@media(max-width:860px){.g2,.g3{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;box-shadow:0 6px 20px #0006}
+.card.hot{border-color:#7a2a1a;background:linear-gradient(180deg,#1c1520,#141925)}
+.callout{border-left:4px solid var(--gold);background:#1a1a12;border-radius:8px;padding:12px 14px;margin:12px 0;font-size:13.5px;line-height:1.5}
+.callout b{color:var(--gold)}
+.callout.red{border-left-color:var(--red2);background:#1e1216}
+.callout.red b{color:var(--red2)}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--dim);font-weight:800;text-align:left;padding:6px 8px;border-bottom:1px solid var(--line2);white-space:nowrap}
+td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:middle;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tr.me td{background:#1d1b12}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.pos{display:inline-block;min-width:32px;text-align:center;font-family:var(--hd);font-weight:800;font-size:11px;letter-spacing:.5px;
+  padding:2px 5px;border-radius:4px;color:#0b0e15}
+.pos.QB{background:var(--qb)}.pos.RB{background:var(--rb)}.pos.WR{background:var(--wr)}.pos.TE{background:var(--te)}.pos.K{background:var(--k)}.pos.DST{background:var(--dst)}
+.tm{color:var(--dim);font-size:11px;margin-left:4px}
+.inj{color:var(--bad);font-size:10px;font-weight:800;margin-left:4px}
+.good{color:var(--good);font-weight:800}.bad{color:var(--bad);font-weight:800}.dim{color:var(--dim)}.gold{color:var(--gold);font-weight:800}
+.tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:2px 7px;border-radius:999px;border:1px solid var(--line2);color:var(--dim);margin-left:6px}
+.tag.fire{border-color:#a3341f;color:#ff8a6b;background:#2a1712}
+.tag.ok{border-color:#1e6a49;color:#8ff0c2}
+.tag.warn{border-color:#7a5c12;color:var(--gold)}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:var(--panel2);border:1px solid var(--line2);font-size:11.5px;font-weight:700}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{padding:0 12px;height:32px;border:1px solid var(--line2);border-radius:6px;background:var(--panel2);font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn:hover{border-color:#4a5770}
+.btn.on{background:var(--red);border-color:var(--red);color:#fff}
+input[type=search]{height:32px;padding:0 10px;border-radius:6px;border:1px solid var(--line2);background:var(--panel2);color:var(--txt);min-width:200px}
+input[type=range]{accent-color:var(--red)}
+.deal{display:grid;grid-template-columns:1fr auto 1fr auto;gap:10px;align-items:center;padding:9px 10px;border:1px solid var(--line);border-radius:8px;margin:6px 0;background:var(--bg2)}
+.deal .side .ln{display:block;font-size:13px;margin-top:4px}
+.deal .side .ln:first-child{margin-top:0}
+.deal .side .sub{display:block;font-size:11px;color:var(--dim)}
+.deal .arrow{font-family:var(--hd);font-weight:900;color:var(--gold);font-size:16px}
+.deal .num{text-align:right;line-height:1.2;min-width:96px}
+.deal .num b{font-family:var(--hd);font-size:18px;display:block}
+.deal .num small{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.8px;font-weight:800}
+.deal.top{border-color:#7a2a1a}
+.opp{margin-top:14px}
+.opp h3{font-family:var(--hd);font-weight:800;font-size:17px;letter-spacing:.5px;text-transform:uppercase;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.opp h3 span{font:12px var(--ui);color:var(--dim);text-transform:none;letter-spacing:0}
+.needs{font-size:12px;color:var(--dim);margin:4px 0 6px}
+.needs b{color:var(--txt)}
+.chk{display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border:1px solid var(--line2);border-radius:6px;margin:3px 3px 0 0;font-size:12px;cursor:pointer;user-select:none}
+.chk.off{opacity:.45;text-decoration:line-through}
+.plan li{list-style:none;display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;padding:8px 6px;border-bottom:1px solid var(--line)}
+.plan li:last-child{border-bottom:none}
+.plan .no{font-family:var(--hd);font-weight:900;font-size:20px;color:var(--gold);text-align:center}
+.plan .what .ln{font-size:13.5px}
+.plan .what .sub{display:block;font-size:11px;color:var(--dim);margin-top:2px}
+.plan .g{text-align:right;line-height:1.15}
+.plan .g b{font-family:var(--hd);font-size:18px;display:block}
+.plan .g small{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.8px;font-weight:800}
+.bye{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px}
+.bye div{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:11px}
+.bye div b{display:block;font-family:var(--hd);font-size:14px}
+.bye div.hot{border-color:#7a2a1a;background:#1e1216}
+.scroll{overflow-x:auto}
+#gate{display:flex;align-items:center;justify-content:center;min-height:70vh;color:var(--dim2);font-family:var(--hd);font-size:22px;letter-spacing:2px;text-transform:uppercase}
+.mobile-only{display:none}
+@media(max-width:700px){
+  #brand>div{display:none}
+  #meta{display:none}
+  nav a{padding:0 9px;font-size:13px}
+  main{padding:12px 10px 60px}
+  .deal{grid-template-columns:1fr auto 1fr;gap:6px}
+  .deal .num{grid-column:1/-1;display:flex;justify-content:space-between;text-align:left}
+  .deal .num b{display:inline;font-size:16px}
+  td,th{padding:5px 6px}
+}
+</style>
+</head>
+<body>
+<div id="top">
+  <div id="brand">__LOGO__<div><div class="t1">Desert League</div><div class="t2">Edge · in-season</div></div></div>
+  <nav>
+    <a href="trades.html" id="nav-trades">Trades</a>
+    <a href="waivers.html" id="nav-waivers">Waivers</a>
+    <a href="#" id="nav-war" target="_blank" rel="noopener">War Room</a>
+  </nav>
+  <div class="spacer"></div>
+  <div id="meta"></div>
+</div>
+<main id="main"><div id="gate">Desert League</div></main>
+
+<script id="edgedata" type="application/json">__DATA__</script>
+<script>
+const PAGE='__PAGE__';
+const D=JSON.parse(document.getElementById('edgedata').textContent);
+const qs=new URLSearchParams(location.search);
+function djb2(s){ let h=5381; for(let i=0;i<s.length;i++){ h=((h*33)^s.charCodeAt(i))>>>0; } return h.toString(16); }
+/* Same gate as the draft rooms: strategy renders only for a browser that has
+   presented the master key once (?key=…, cached, stripped from the URL). */
+const COACH=(()=>{
+  if(!D.coachKeyHash) return true;
+  if(location.protocol==='file:') return true;
+  const cached=localStorage.getItem('snakepit.coach');
+  if(cached && djb2(cached)===D.coachKeyHash) return true;
+  const k=qs.get('key');
+  if(k && djb2(k)===D.coachKeyHash){
+    localStorage.setItem('snakepit.coach',k);
+    try{ const u=new URL(location.href); u.searchParams.delete('key'); history.replaceState(null,'',u.toString()); }catch(e){}
+    return true;
+  }
+  return false;
+})();
+document.getElementById('nav-'+PAGE).classList.add('on');
+document.getElementById('nav-war').href=D.warRoom;
+
+/* ================= engine ================= */
+const CAPS=D.rules.caps, START=D.rules.start, ROSTER=D.rules.roster;
+const P={}; D.players.forEach(p=>P[p.id]=p);
+const teams=D.teams; const me=teams.find(t=>t.me); const opps=teams.filter(t=>!t.me);
+const rostered=new Set(); teams.forEach(t=>t.roster.forEach(id=>rostered.add(id)));
+const POSN=['QB','RB','WR','TE','K','DST'];
+const fmt=n=>(n>=0?'+':'')+Math.round(n);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// best legal lineup: 18 starters, positional caps, raw points are value
+function lineup(ids){
+  const ps=ids.map(id=>P[id]).sort((a,b)=>b.pts-a.pts);
+  const cnt={}; let total=0, n=0; const used=[];
+  for(const p of ps){ if(n>=START) break; if((cnt[p.pos]||0)>=CAPS[p.pos]) continue; cnt[p.pos]=(cnt[p.pos]||0)+1; total+=p.pts; n++; used.push(p.id); }
+  return {total,used,cnt,n};
+}
+// free agents, best first
+const FA=D.players.filter(p=>!rostered.has(p.id)&&p.pts>0).sort((a,b)=>b.pts-a.pts);
+function marginal(ids,p){ return lineup(ids.concat(p.id)).total-lineup(ids).total; }
+
+/* Replacement level: everyone can add for free on Thursday, so simulate all
+   11 teams filling to 20 with the best marginal free agent (snake), then the
+   best player LEFT at each position is what an open roster spot is worth. */
+const REPL={}, SIM={};
+(function(){
+  const pool=FA.slice(); const rosters={}; teams.forEach(t=>rosters[t.name]=t.roster.slice());
+  const order=teams.slice().sort((a,b)=>lineup(a.roster).total-lineup(b.roster).total);
+  for(let round=0;round<ROSTER;round++){
+    const seq=round%2?order.slice().reverse():order;
+    for(const t of seq){
+      const r=rosters[t.name]; if(r.length>=ROSTER) continue;
+      let best=null,bg=-1,bi=-1;
+      for(let i=0;i<Math.min(pool.length,60);i++){ const g=marginal(r,pool[i]); if(g>bg){bg=g;best=pool[i];bi=i;} }
+      if(!best) continue; r.push(best.id); pool.splice(bi,1); (SIM[t.name]=SIM[t.name]||[]).push(best.id);
+    }
+  }
+  POSN.forEach(pos=>{ const b=pool.find(p=>p.pos===pos); REPL[pos]=b?b.pts:0; });
+})();
+/* Team value = best 18 from roster + virtual replacement players in the open
+   roster spots. What a roster is worth once everyone has filled up. */
+function V(ids){
+  const open=Math.max(0,ROSTER-ids.length);
+  const cnt={}; ids.forEach(id=>{cnt[P[id].pos]=(cnt[P[id].pos]||0)+1;});
+  const cand=ids.map(id=>({pts:P[id].pts,pos:P[id].pos,v:false}));
+  POSN.forEach(pos=>{ for(let i=0;i<open;i++) cand.push({pts:REPL[pos],pos,v:true}); });
+  cand.sort((a,b)=>b.pts-a.pts);
+  const c2={}; let total=0,n=0,virt=0;
+  for(const c of cand){ if(n>=START) break; if((c2[c.pos]||0)>=CAPS[c.pos]) continue; if(c.v&&virt>=open) continue; c2[c.pos]=(c2[c.pos]||0)+1; total+=c.pts; n++; if(c.v) virt++; }
+  return total;
+}
+// what the other owners SEE: rtsports' own weekly projection on their lineup page
+function rts(p){ return p.rts==null?p.week:p.rts; }
+function player(p,extra){ return `<span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> <b>${esc(p.name)}</b><span class="tm">${esc(p.team)} · bye ${p.bye||'–'}</span>${p.inj?`<span class="inj">${esc(p.inj)}</span>`:''}${extra||''}`; }
+
+/* ================= render ================= */
+const main=document.getElementById('main');
+document.getElementById('meta').innerHTML=`<b>Week ${D.week}</b> · ${D.weeksLeft} weeks left<br>ESPN proj ${esc(D.projDate)} · built ${esc(D.built)}`;
+if(!COACH){ /* stay a blank shell */ }
+else if(PAGE==='trades') renderTrades(); else renderWaivers();
+
+function powerTable(){
+  const rows=teams.map(t=>{const L=lineup(t.roster); return {t,now:L.total,full:V(t.roster),open:ROSTER-t.roster.length,empty:START-L.n};})
+    .sort((a,b)=>b.full-a.full);
+  return `<div class="card"><h2>Projected rest-of-season standings</h2>
+  <div class="scroll"><table><tr><th>#</th><th>Team</th><th class="n">Roster today</th><th class="n">After everyone fills to 20</th><th class="n">Open spots</th><th class="n">Empty starters</th></tr>
+  ${rows.map((r,i)=>`<tr class="${r.t.me?'me':''}"><td>${i+1}</td><td><b>${esc(r.t.name)}</b><span class="tm">${esc(r.t.owner)}</span></td><td class="n">${Math.round(r.now)}</td><td class="n"><b>${Math.round(r.full)}</b></td><td class="n">${r.open}</td><td class="n ${r.empty?'bad':''}">${r.empty}</td></tr>`).join('')}
+  </table></div>
+  <p class="dim" style="margin-top:8px;font-size:11.5px">Total-points league: 18 of 20 start, only position caps (QB 4 · RB 6 · WR 9 · TE 9 · K 3 · D/ST 3). "After everyone fills" assumes every team adds the best free agents into its open spots, so an open spot is worth the replacement player: ${POSN.map(p=>`${p==='DST'?'D/ST':p} ${Math.round(REPL[p])}`).join(' · ')}.</p></div>`;
+}
+
+function renderTrades(){
+  const untouch=new Set(JSON.parse(localStorage.getItem('desert.untouch')||'[]'));
+  let minGain=+(localStorage.getItem('desert.minGain')||10);
+  let kinds=JSON.parse(localStorage.getItem('desert.kinds')||'{"11":true,"21":true,"12":true}');
+  const myIds=()=>me.roster;
+  function deals(){
+    const out=[]; const mine=myIds().filter(id=>!untouch.has(id)); const base=V(me.roster);
+    for(const o of opps){
+      const ob=V(o.roster);
+      const push=(give,get)=>{
+        const myNew=me.roster.filter(id=>!give.includes(id)).concat(get);
+        const thNew=o.roster.filter(id=>!get.includes(id)).concat(give);
+        if(myNew.length>ROSTER||thNew.length>ROSTER) return;
+        const mg=V(myNew)-base, tg=V(thNew)-ob;
+        if(mg<minGain) return;
+        // "paper": weekly points as rtsports shows them — what the other owner will compare
+        const paperGet=give.reduce((s,id)=>s+rts(P[id]),0), paperGive=get.reduce((s,id)=>s+rts(P[id]),0);
+        const paper=paperGet-paperGive; // >0: on rtsports it looks like THEY win
+        // sellable: they gain by projection, or the site's numbers say they do
+        const sell=tg>=-2?2:(paper>=-0.3?1:(paper>=-2?0:-1));
+        if(sell<0) return;
+        out.push({o,give,get,mg,tg,paper,paperGet,paperGive,sell,score:mg+(sell===2?8:sell===1?4:-6)});
+      };
+      for(const a of mine){ for(const b of o.roster){ if(kinds['11']) push([a],[b]); } }
+      if(kinds['21']) for(let i=0;i<mine.length;i++) for(let j=i+1;j<mine.length;j++) for(const b of o.roster) push([mine[i],mine[j]],[b]);
+      if(kinds['12']) for(const a of mine) for(let i=0;i<o.roster.length;i++) for(let j=i+1;j<o.roster.length;j++) push([a],[o.roster[i],o.roster[j]]);
+    }
+    return out.sort((a,b)=>b.score-a.score);
+  }
+  function needs(o){
+    const L=lineup(o.roster); const empty=START-L.n; const parts=[];
+    if(empty>0) parts.push(`<b>${empty} empty starting slot${empty>1?'s':''}</b> — any player they add scores`);
+    POSN.forEach(pos=>{ const room=CAPS[pos]-(L.cnt[pos]||0); if(pos==='QB'&&room>0) parts.push(`room for <b>${room} more QB</b>`); });
+    const weak=o.roster.map(id=>P[id]).sort((a,b)=>a.pts-b.pts).slice(0,2);
+    parts.push(`weakest: ${weak.map(p=>`${esc(p.name)} (${Math.round(p.pts)})`).join(', ')}`);
+    return parts.join(' · ');
+  }
+  function side(ids){ return ids.map(id=>{const p=P[id];return `<span class="ln">${player(p)}</span><span class="sub">${Math.round(p.pts)} pts rest of season · rtsports shows ${rts(p).toFixed(1)}/wk</span>`;}).join(''); }
+  function dealRow(d,top){
+    const tagTxt=d.sell===2?'<span class="tag ok">wins for them too</span>':d.sell===1?`<span class="tag warn">even on rtsports (${d.paperGet.toFixed(1)} vs ${d.paperGive.toFixed(1)})</span>`:'<span class="tag">hard sell</span>';
+    return `<div class="deal ${top?'top':''}"><div class="side">${side(d.give)}</div><div class="arrow">⇄</div><div class="side">${side(d.get)}</div>
+      <div class="num"><b class="${d.mg>=0?'good':'bad'}">${fmt(d.mg)}</b><small>me</small> <b class="${d.tg>=0?'good':'bad'}" style="font-size:14px">${fmt(d.tg)}</b><small>them</small>${tagTxt}</div></div>`;
+  }
+  function draw(){
+    const all=deals();
+    const byOpp={}; all.forEach(d=>{(byOpp[d.o.name]=byOpp[d.o.name]||[]).push(d);});
+    // the headline board: sellable deals only, spread across opponents and targets
+    const board=[]; const perOpp={}, perGet={};
+    for(const d of all){ if(d.sell<1) continue; const gk=d.get.join(','); if((perOpp[d.o.name]||0)>=2||(perGet[gk]||0)>=2) continue; perOpp[d.o.name]=(perOpp[d.o.name]||0)+1; perGet[gk]=(perGet[gk]||0)+1; board.push(d); if(board.length>=12) break; }
+    const myRoster=me.roster.map(id=>P[id]).sort((a,b)=>b.pts-a.pts);
+    main.innerHTML=`
+    <h1>Trade targets <small>Raiders of the Lost Title · projections under the league's real scoring</small></h1>
+    <div class="callout"><b>How to read this.</b> "Me" is how many rest-of-season points the deal adds to my best 18, after refilling any open spot with a replacement free agent. "Them" is the same for the other side. <span class="tag ok" style="margin:0">wins for them too</span> is positive-sum (someone's open roster spot gets used well). <span class="tag warn" style="margin:0">even on rtsports</span> means the weekly numbers the other owner sees on his own lineup page call it a wash, while ESPN's rest-of-season projection says I win — that gap is the edge. Trades need commissioner approval here, so keep them defensible.</div>
+    ${powerTable()}
+    <div class="card" style="margin-top:14px"><h2>Controls</h2>
+      <div class="row"><span class="pill">Min gain for me <input type="range" id="mg" min="0" max="60" step="2" value="${minGain}" style="margin-left:8px"> <b id="mgv">${minGain}</b></span>
+      <button class="btn ${kinds['11']?'on':''}" data-k="11">1 for 1</button><button class="btn ${kinds['21']?'on':''}" data-k="21">I give 2, get 1</button><button class="btn ${kinds['12']?'on':''}" data-k="12">I give 1, get 2</button></div>
+      <p class="dim" style="margin:10px 0 4px;font-size:11.5px">Click a player to mark him untouchable (never offered):</p>
+      <div>${myRoster.map(p=>`<span class="chk ${untouch.has(p.id)?'off':''}" data-id="${p.id}">${player(p)} <span class="dim">${Math.round(p.pts)}</span></span>`).join('')}</div>
+    </div>
+    <div class="card hot" style="margin-top:14px"><h2>Best deals on the board</h2>${board.length?board.map(d=>`<div class="dim" style="margin-top:8px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:800">vs ${esc(d.o.name)} · ${esc(d.o.owner)}</div>`+dealRow(d,true)).join(''):'<p class="dim">Nothing sellable clears the bar. Lower the minimum gain or allow more deal shapes.</p>'}</div>
+    ${opps.map(o=>{const ds=(byOpp[o.name]||[]).slice(0,5); return `<div class="opp card"><h3>${esc(o.name)} <span>${esc(o.owner)} · ${Math.round(V(o.roster))} projected</span></h3>
+      <div class="needs">${needs(o)}</div>${ds.length?ds.map(d=>dealRow(d,false)).join(''):'<p class="dim">No deal here clears the bar.</p>'}</div>`;}).join('')}`;
+    document.getElementById('mg').oninput=e=>{minGain=+e.target.value;localStorage.setItem('desert.minGain',minGain);document.getElementById('mgv').textContent=minGain;};
+    document.getElementById('mg').onchange=draw;
+    main.querySelectorAll('.btn[data-k]').forEach(b=>b.onclick=()=>{kinds[b.dataset.k]=!kinds[b.dataset.k];localStorage.setItem('desert.kinds',JSON.stringify(kinds));draw();});
+    main.querySelectorAll('.chk').forEach(c=>c.onclick=()=>{const id=c.dataset.id; untouch.has(id)?untouch.delete(id):untouch.add(id); localStorage.setItem('desert.untouch',JSON.stringify([...untouch])); draw();});
+  }
+  draw();
+}
+
+function renderWaivers(){
+  let posF='ALL', q='';
+  const open=ROSTER-me.roster.length; const L0=lineup(me.roster); const empty=START-L0.n;
+  // Thursday plan: greedy marginal adds into my open spots, best-marginal first
+  const plan=[]; let r=me.roster.slice();
+  for(let i=0;i<open;i++){
+    let best=null,bg=-1; for(const p of FA){ if(plan.find(x=>x.p===p)) continue; const g=marginal(r,p); if(g>bg){bg=g;best=p;} }
+    if(!best) break;
+    const starts=bg>0.5;
+    // who he pushes to the bench, if anyone
+    const before=lineup(r).used, after=lineup(r.concat(best.id)).used;
+    const benched=before.find(id=>!after.includes(id));
+    // backups: same position, next best by marginal gain
+    const backups=FA.filter(p=>p.pos===best.pos&&p!==best&&!plan.find(x=>x.p===p)).slice(0,3);
+    plan.push({p:best,gain:bg,starts,backups,benched}); r.push(best.id);
+  }
+  // who else is likely to chase my targets (from the fill simulation)
+  const chasers={}; Object.entries(SIM).forEach(([tn,ids])=>{ if(tn===me.name) return; ids.forEach(id=>{(chasers[id]=chasers[id]||[]).push(tn);}); });
+  // bye map for my current starters
+  const byes={}; me.roster.forEach(id=>{const p=P[id]; if(p.bye>=D.week) (byes[p.bye]=byes[p.bye]||[]).push(p);});
+  function draw(){
+    const list=FA.filter(p=>(posF==='ALL'||p.pos===posF)&&(!q||p.name.toLowerCase().includes(q)||p.team.toLowerCase().includes(q))).slice(0,80);
+    main.innerHTML=`
+    <h1>Waiver board <small>Free-for-all adds open Thursday 11:00 AM CT · unlimited · no waiver budget</small></h1>
+    <div class="callout red"><b>Why Thursday at 11:00 sharp matters.</b> This is a total-points league that starts 18 of 20 and lets every team carry 4 quarterbacks. You have <b>${open} open roster spots</b> and <b>${empty} empty starting slots</b> — every one of them is scoring zero right now. There is no waiver order and no budget: whoever clicks first gets the player. ${FA[0]?`The best free agent, ${esc(FA[0].name)}, projects for ${Math.round(FA[0].pts)} rest-of-season points — more than any running back in the league.`:''} Once everyone fills up, the best QB left on the wire is worth about ${Math.round(REPL.QB)}.</div>
+    <div class="grid g3">
+      <div class="card hot"><h2>Thursday plan — in this order</h2>
+        <ul class="plan">${plan.map((x,i)=>`<li><div class="no">${i+1}</div><div class="what"><span class="ln">${player(x.p)}</span><span class="sub">${Math.round(x.p.pts)} pts rest of season · ${x.p.week?x.p.week.toFixed(1)+' this week · ':''}ESPN ${x.p.own}% rostered${chasers[x.p.id]?` · <span class="gold">likely target for ${chasers[x.p.id].map(esc).join(', ')}</span>`:''}<br>if gone: ${x.backups.map(b=>`${esc(b.name)} (${Math.round(b.pts)})`).join(' → ')||'—'}</span></div>
+          <div class="g"><b class="${x.starts?'good':'dim'}">${fmt(x.gain)}</b><small>${x.starts?(x.benched?`starts over ${esc(P[x.benched].name.split(' ').pop())}`:'fills an empty slot'):'bench / bye cover'}</small></div></li>`).join('')}</ul>
+        <p class="dim" style="margin-top:8px;font-size:11.5px">Gain = points added to my best 18 for the rest of the season. ${plan.filter(x=>x.starts).length} of these start right away; anyone benched stays on the roster as bye-week cover. Total if I get all ${plan.length}: <b class="good">${fmt(plan.reduce((s,x)=>s+x.gain,0))}</b>.</p>
+      </div>
+      <div class="card"><h2>My bye weeks</h2><div class="bye">${Object.keys(byes).sort((a,b)=>a-b).map(w=>`<div class="${byes[w].length>=3?'hot':''}"><b>Wk ${w}</b>${byes[w].map(p=>esc(p.name.split(' ').pop())).join(', ')}</div>`).join('')}</div>
+        <p class="dim" style="margin-top:8px;font-size:11.5px">Total points means a bye is a zero, not a loss. Bench adds cover the weeks with 3+ out.</p>
+        <h2 style="margin-top:14px">Replacement level</h2><div class="row">${POSN.map(p=>`<span class="pill"><span class="pos ${p}">${p==='DST'?'D/ST':p}</span> ${Math.round(REPL[p])}</span>`).join('')}</div>
+        <p class="dim" style="margin-top:8px;font-size:11.5px">Best player left at each position after all 11 teams fill to 20. Anyone on my roster below this number is a drop candidate once I'm full.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px"><h2>Free agents</h2>
+      <div class="row" style="margin-bottom:8px">${['ALL',...POSN].map(p=>`<button class="btn ${posF===p?'on':''}" data-pos="${p}">${p==='DST'?'D/ST':p}</button>`).join('')}<input type="search" id="q" placeholder="Search name or team" value="${esc(q)}"></div>
+      <div class="scroll"><table><tr><th>Player</th><th class="n">Rest of season</th><th class="n">This week</th><th class="n">If I add him</th><th class="n">ESPN own%</th><th class="n">ADP</th></tr>
+      ${list.map(p=>{const g=marginal(me.roster,p); return `<tr><td>${player(p)}</td><td class="n"><b>${Math.round(p.pts)}</b></td><td class="n">${p.week?p.week.toFixed(1):'–'}</td><td class="n ${g>0.5?'good':'dim'}">${fmt(g)}</td><td class="n">${p.own}%</td><td class="n">${p.adp>=9999?'–':p.adp}</td></tr>`;}).join('')}
+      </table></div></div>`;
+    main.querySelectorAll('.btn[data-pos]').forEach(b=>b.onclick=()=>{posF=b.dataset.pos;draw();});
+    const qi=document.getElementById('q'); qi.oninput=e=>{q=e.target.value.toLowerCase();draw();document.getElementById('q').focus();document.getElementById('q').setSelectionRange(q.length,q.length);};
+  }
+  draw();
+}
+</script>
+</body>
+</html>

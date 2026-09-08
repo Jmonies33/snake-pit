@@ -1,0 +1,1302 @@
+{
+"teams": [
+{
+"team": "Bitch Mittens",
+"owner": "Mat Karr",
+"players": [
+{
+"pos": "QB",
+"name": "Matthew Stafford",
+"team": "LAR",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Caleb Williams",
+"team": "CHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Blake Corum",
+"team": "LAR",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Derrick Henry",
+"team": "BAL",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Jordan Mason",
+"team": "MIN",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Puka Nacua",
+"team": "LAR",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Rome Odunze",
+"team": "CHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Chris Olave",
+"team": "NO",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "DeVonta Smith",
+"team": "PHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "George Kittle",
+"team": "SF",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Ka'imi Fairbairn",
+"team": "HOU",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Jason Myers",
+"team": "SEA",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "San Francisco 49ers",
+"team": "SF",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Los Angeles Rams",
+"team": "LAR",
+"bye": 11,
+"inj": "",
+"wk1": null
+}
+]
+},
+{
+"team": "BOSSMAN",
+"owner": "David Garvey",
+"players": [
+{
+"pos": "QB",
+"name": "Jared Goff",
+"team": "DET",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Dak Prescott",
+"team": "DAL",
+"bye": 14,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Chase Brown",
+"team": "CIN",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Tony Pollard",
+"team": "TEN",
+"bye": 9,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Jonathan Taylor",
+"team": "IND",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "A.J. Brown",
+"team": "NE",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Chris Godwin",
+"team": "TB",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Drake London",
+"team": "ATL",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Michael Wilson",
+"team": "ARI",
+"bye": 14,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Tucker Kraft",
+"team": "GB",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Chris Boswell",
+"team": "PIT",
+"bye": 9,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Matt Gay",
+"team": "LV",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Chicago Bears",
+"team": "CHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Denver Broncos",
+"team": "DEN",
+"bye": 10,
+"inj": "",
+"wk1": null
+}
+]
+},
+{
+"team": "Can't stanzus",
+"owner": "Andy Midkiff",
+"players": [
+{
+"pos": "QB",
+"name": "Jordan Love",
+"team": "GB",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Malik Willis",
+"team": "MIA",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Josh Jacobs",
+"team": "GB",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Bijan Robinson",
+"team": "ATL",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Bhayshul Tuten",
+"team": "JAX",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "D.J. Moore",
+"team": "BUF",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Malik Nabers",
+"team": "NYG",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Parker Washington",
+"team": "JAX",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Brock Bowers",
+"team": "LV",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Tyler Warren",
+"team": "IND",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Brandon Aubrey",
+"team": "DAL",
+"bye": 14,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Tyler Bass",
+"team": "BUF",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Indianapolis Colts",
+"team": "IND",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Dallas Cowboys",
+"team": "DAL",
+"bye": 14,
+"inj": "",
+"wk1": null
+}
+]
+},
+{
+"team": "Ceedeez Nutz",
+"owner": "Dylan",
+"players": [
+{
+"pos": "QB",
+"name": "Kyler Murray",
+"team": "MIN",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Brock Purdy",
+"team": "SF",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Omarion Hampton",
+"team": "LAC",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "RJ Harvey",
+"team": "DEN",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Kenneth Walker III",
+"team": "KC",
+"bye": 5,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Ja'Marr Chase",
+"team": "CIN",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Emeka Egbuka",
+"team": "TB",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Mike Evans",
+"team": "SF",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Ladd McConkey",
+"team": "LAC",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Jaylen Waddle",
+"team": "DEN",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Cam Little",
+"team": "JAX",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Joey Slye",
+"team": "TEN",
+"bye": 9,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "New Orleans Saints",
+"team": "NO",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Houston Texans",
+"team": "HOU",
+"bye": 8,
+"inj": "",
+"wk1": null
+}
+]
+},
+{
+"team": "Drunk at the Draft",
+"owner": "jason twede",
+"players": [
+{
+"pos": "QB",
+"name": "Trevor Lawrence",
+"team": "JAX",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Bo Nix",
+"team": "DEN",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Saquon Barkley",
+"team": "PHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Quinshon Judkins",
+"team": "CLE",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Christian McCaffrey",
+"team": "SF",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Nico Collins",
+"team": "HOU",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Zay Flowers",
+"team": "BAL",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Michael Pittman Jr.",
+"team": "PIT",
+"bye": 9,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Christian Watson",
+"team": "GB",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Jameson Williams",
+"team": "DET",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Chase McLaughlin",
+"team": "TB",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Cairo Santos",
+"team": "CHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Philadelphia Eagles",
+"team": "PHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Minnesota Vikings",
+"team": "MIN",
+"bye": 6,
+"inj": "",
+"wk1": null
+}
+]
+},
+{
+"team": "ELEVE11s",
+"owner": "Jason Lucas",
+"players": [
+{
+"pos": "QB",
+"name": "Drake Maye",
+"team": "NE",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Tyler Shough",
+"team": "NO",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "James Cook",
+"team": "BUF",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Bucky Irving",
+"team": "TB",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Jeremiyah Love",
+"team": "ARI",
+"bye": 14,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Luther Burden III",
+"team": "CHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "CeeDee Lamb",
+"team": "DAL",
+"bye": 14,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Terry McLaurin",
+"team": "WAS",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Brian Thomas Jr.",
+"team": "JAX",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Kyle Pitts",
+"team": "ATL",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Wil Lutz",
+"team": "DEN",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Eddy Pineiro",
+"team": "SF",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Jacksonville Jaguars",
+"team": "JAX",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Detroit Lions",
+"team": "DET",
+"bye": 6,
+"inj": "",
+"wk1": null
+}
+]
+},
+{
+"team": "LONE STARR",
+"owner": "Anthony Ovalle",
+"players": [
+{
+"pos": "QB",
+"name": "Justin Herbert",
+"team": "LAC",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Lamar Jackson",
+"team": "BAL",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Breece Hall",
+"team": "NYJ",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Cam Skattebo",
+"team": "NYG",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Jaylen Warren",
+"team": "PIT",
+"bye": 9,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Marvin Harrison Jr.",
+"team": "ARI",
+"bye": 14,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Rashee Rice",
+"team": "KC",
+"bye": 5,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Jaxon Smith-Njigba",
+"team": "SEA",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Sam LaPorta",
+"team": "DET",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Isaiah Likely",
+"team": "NYG",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Tyler Loop",
+"team": "BAL",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Harrison Mevis",
+"team": "LAR",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Seattle Seahawks",
+"team": "SEA",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Pittsburgh Steelers",
+"team": "PIT",
+"bye": 9,
+"inj": "",
+"wk1": null
+}
+]
+},
+{
+"team": "Raiders of the Lost Title",
+"owner": "Jerry Asencio",
+"players": [
+{
+"pos": "QB",
+"name": "Jalen Hurts",
+"team": "PHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Daniel Jones",
+"team": "IND",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "J.K. Dobbins",
+"team": "DEN",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Jadarian Price",
+"team": "SEA",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Javonte Williams",
+"team": "DAL",
+"bye": 14,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Davante Adams",
+"team": "LAR",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Justin Jefferson",
+"team": "MIN",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Amon-Ra St. Brown",
+"team": "DET",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Carnell Tate",
+"team": "TEN",
+"bye": 9,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Dallas Goedert",
+"team": "PHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Andres Borregales",
+"team": "NE",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Blake Grupe",
+"team": "NYJ",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Green Bay Packers",
+"team": "GB",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "New England Patriots",
+"team": "NE",
+"bye": 11,
+"inj": "",
+"wk1": null
+}
+]
+},
+{
+"team": "Team Huevos",
+"owner": "Damien Gallardo",
+"players": [
+{
+"pos": "QB",
+"name": "Josh Allen",
+"team": "BUF",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Baker Mayfield",
+"team": "TB",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Devon Achane",
+"team": "MIA",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Ashton Jeanty",
+"team": "LV",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "D'Andre Swift",
+"team": "CHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Denzel Boston",
+"team": "CLE",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "George Pickens",
+"team": "DAL",
+"bye": 14,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Greg Dulcich",
+"team": "MIA",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Jake Ferguson",
+"team": "DAL",
+"bye": 14,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Oronde Gadsden II",
+"team": "LAC",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Jake Bates",
+"team": "DET",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Jake Elliott",
+"team": "PHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Cleveland Browns",
+"team": "CLE",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Baltimore Ravens",
+"team": "BAL",
+"bye": 13,
+"inj": "",
+"wk1": null
+}
+]
+},
+{
+"team": "TEAM NATRON",
+"owner": "jon karr",
+"players": [
+{
+"pos": "QB",
+"name": "Joe Burrow",
+"team": "CIN",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Patrick Mahomes",
+"team": "KC",
+"bye": 5,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Travis Etienne",
+"team": "NO",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Jahmyr Gibbs",
+"team": "DET",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Kyren Williams",
+"team": "LAR",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Tee Higgins",
+"team": "CIN",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Tetairoa McMillan",
+"team": "CAR",
+"bye": 5,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Courtland Sutton",
+"team": "DEN",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Mark Andrews",
+"team": "BAL",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Travis Kelce",
+"team": "KC",
+"bye": 5,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Harrison Butker",
+"team": "KC",
+"bye": 5,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Evan McPherson",
+"team": "CIN",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Los Angeles Chargers",
+"team": "LAC",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Kansas City Chiefs",
+"team": "KC",
+"bye": 5,
+"inj": "",
+"wk1": null
+}
+]
+},
+{
+"team": "Two T's Matt",
+"owner": "Matt Silva",
+"players": [
+{
+"pos": "QB",
+"name": "Jayden Daniels",
+"team": "WAS",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "QB",
+"name": "Jaxson Dart",
+"team": "NYG",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "TreVeyon Henderson",
+"team": "NE",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "David Montgomery",
+"team": "HOU",
+"bye": 8,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "RB",
+"name": "Rhamondre Stevenson",
+"team": "NE",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "D.K. Metcalf",
+"team": "PIT",
+"bye": 9,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "WR",
+"name": "Garrett Wilson",
+"team": "NYJ",
+"bye": 13,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Harold Fannin Jr.",
+"team": "CLE",
+"bye": 11,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Colston Loveland",
+"team": "CHI",
+"bye": 10,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "TE",
+"name": "Trey McBride",
+"team": "ARI",
+"bye": 14,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Cameron Dicker",
+"team": "LAC",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "K",
+"name": "Will Reichard",
+"team": "MIN",
+"bye": 6,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Buffalo Bills",
+"team": "BUF",
+"bye": 7,
+"inj": "",
+"wk1": null
+},
+{
+"pos": "DST",
+"name": "Tampa Bay Buccaneers",
+"team": "TB",
+"bye": 10,
+"inj": "",
+"wk1": null
+}
+]
+}
+]
+}
