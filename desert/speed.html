@@ -66,15 +66,17 @@ function parse(txt){ return txt.split('\n').map(l=>l.trim()).filter(Boolean).map
    3. reloads that window so the page unlocks, then uses the page's OWN
       selectAddPlayer / SaveTransactions functions — no guessed requests
    4. adds targets in order, QB cap 2, stops at 20 on the roster, logs everything */
-function botSource(targets){
+function botSource(targets,mode){
   return `(()=>{
-const T=${JSON.stringify(targets)};const QBMAX=2;const ROSTER=20;
+const T=${JSON.stringify(targets)};const QBMAX=2;const ROSTER=20;const MODE=${JSON.stringify(mode)};
 if(!/add-drop\\.php/.test(location.pathname)){alert('Run this on the rtsports Add/Drop Players page.');return;}
-const log=(m)=>{let b=document.getElementById('dlbot');if(!b){b=document.createElement('pre');b.id='dlbot';b.style.cssText='position:fixed;left:8px;bottom:8px;z-index:99999;max-width:480px;max-height:45vh;overflow:auto;background:#0b0e15;color:#8ff0c2;border:2px solid #e0102f;border-radius:8px;padding:10px;font:12px/1.4 Menlo,monospace;white-space:pre-wrap';document.body.appendChild(b);}b.textContent+=new Date().toLocaleTimeString()+'  '+m+'\\n';b.scrollTop=1e9;};
+const LOGKEY='dlbot.log';try{if(MODE!=='log')localStorage.setItem(LOGKEY,'--- '+MODE.toUpperCase()+' run started '+new Date().toString()+' ---\\n');}catch(e){}
+const log=(m)=>{let b=document.getElementById('dlbot');if(!b){b=document.createElement('pre');b.id='dlbot';b.style.cssText='position:fixed;left:8px;bottom:8px;z-index:99999;max-width:480px;max-height:45vh;overflow:auto;background:#0b0e15;color:#8ff0c2;border:2px solid #e0102f;border-radius:8px;padding:10px;font:12px/1.4 Menlo,monospace;white-space:pre-wrap';document.body.appendChild(b);}const line=new Date().toLocaleTimeString()+'.'+String(Date.now()%1000).padStart(3,'0')+'  '+m;b.textContent+=line+'\\n';b.scrollTop=1e9;try{localStorage.setItem(LOGKEY,(localStorage.getItem(LOGKEY)||'')+line+'\\n');}catch(e){}};
+if(MODE==='log'){const t=localStorage.getItem(LOGKEY)||'(no log yet)';const v=window.open('','dlbot_log','width=700,height=600');if(v){v.document.write('<pre style="font:13px Menlo,monospace;white-space:pre-wrap">'+t.replace(/</g,'&lt;')+'</pre>');}else{alert(t);}return;}
 const w=window.open(location.href,'dlbot_win','width=1100,height=900');if(!w){alert('Popup blocked — allow popups for rtsports.com and click the bookmark again.');return;}
-log('bot armed. targets: '+T.map(t=>t.name).join(', '));
+log('mode '+MODE.toUpperCase()+' · targets: '+T.map(t=>t.name).join(', '));
 function nextThu11(){const now=new Date();const f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour12:false,weekday:'short',hour:'2-digit',minute:'2-digit',second:'2-digit'});const p=Object.fromEntries(f.formatToParts(now).map(x=>[x.type,x.value]));const secsNowCT=(+p.hour%24)*3600+(+p.minute)*60+(+p.second);const dow=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);let days=(4-dow+7)%7;if(days===0&&secsNowCT>=11*3600)days=7;const target=11*3600+0.3;return now.getTime()+((days*86400)+(target-secsNowCT))*1000;}
-const goAt=nextThu11();const wait=goAt-Date.now();
+const goAt=MODE==='arm'?nextThu11():Date.now();const wait=goAt-Date.now();
 if(wait>36*3600*1000){log('WARNING: next window is more than a day away; firing at '+new Date(goAt).toLocaleString()+' anyway.');}
 if(wait<0){log('window is already open — going now');}else{log('firing in '+Math.round(wait/1000)+'s ('+new Date(goAt).toLocaleTimeString()+' local)');}
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
@@ -86,6 +88,7 @@ async function tryAdd(t){const e=elig(t.id);if(!e||!e.enabled){log('skip '+t.nam
   try{w.selectAddPlayer(+t.id);}catch(err){try{w.selectAddPlayer(t.id);}catch(e2){log('select failed '+t.name+': '+e2.message);return false;}}
   await sleep(120);let q=[];try{q=w.selectedAddIds()||[];}catch(e){}
   if(!q.map(String).includes(String(t.id))){log('not queued '+t.name);return false;}
+  if(MODE==='dry'){log('DRY RUN: '+t.name+' queued OK (would save now) — clearing');try{w.selectAddPlayer(+t.id);}catch(e){}await sleep(150);let q2=[];try{q2=w.selectedAddIds()||[];}catch(e){}if(q2.length){w.location.reload();await ready();}return true;}
   const before=rosterCount();
   try{const r=w.SaveTransactions(new w.Event('click'));if(r&&r.then)await r;}catch(err){log('save threw for '+t.name+': '+err.message);}
   for(let i=0;i<25;i++){await sleep(120);let un=true;try{un=w.hasUnsavedTransactions();}catch(e){}const c=rosterCount();if(!un&&c!==null&&before!==null&&c>before){log('ADDED '+t.name+' ('+c+'/20)');return true;}if(!un&&i>6)break;}
@@ -99,7 +102,7 @@ async function tryAdd(t){const e=elig(t.id);if(!e||!e.enabled){log('skip '+t.nam
   for(const t of T){const c=rosterCount();if(c!==null&&c>=ROSTER){log('roster full at '+c);break;}if(t.g==='QB'&&qb>=QBMAX)continue;
     const ok=await tryAdd(t);if(ok){got++;if(t.g==='QB')qb++;}
     if(!ok){await sleep(150);if(!(await ready())){await reloadUntilOpen();}}}
-  log('done — '+got+' added. Check the roster in the other window.');
+  log('done — '+got+(MODE==='dry'?' queued in dry run (nothing saved).':' added. Check the roster in the other window.')+' Log saved: click the Bot Log bookmark any time.');
 })();})();`;
 }
 
@@ -107,9 +110,15 @@ function render(){
   const saved=localStorage.getItem('desert.targets')||DEFAULT_TARGETS;
   document.getElementById('main').innerHTML=`
   <h1>Thursday speed kit <small>Adds open Thu 11:00:00 AM CT · first click wins · this clicks for you</small></h1>
-  <div class="card hot"><h2>1 · Drag this to your bookmarks bar</h2>
-    <p><a class="bm" id="bm" href="#">⚡ Desert Bot</a></p>
-    <p class="dim" style="margin-top:10px">Drag the red button onto Chrome's bookmarks bar (View → Always Show Bookmarks Bar). It rebuilds itself whenever you edit the list below, so re-drag it after changing targets.</p></div>
+  <div class="card hot"><h2>1 · Drag these four to your bookmarks bar</h2>
+    <p style="display:flex;gap:10px;flex-wrap:wrap"><a class="bm" id="bm" href="#">⚡ Desert Bot</a> <a class="bm" id="bm-now" href="#" style="background:#7a5c12;border-color:#ffd166">▶ Bot NOW</a> <a class="bm" id="bm-dry" href="#" style="background:#1e6a49;border-color:#8ff0c2">🧪 Dry Run</a> <a class="bm" id="bm-log" href="#" style="background:#2d3749;border-color:#93a0b4">📋 Bot Log</a></p>
+    <ul style="margin:10px 0 0 18px;line-height:1.7">
+      <li><b>⚡ Desert Bot</b> — arms and waits for Thursday 11:00:00 AM CT, then adds. The real one.</li>
+      <li><b>▶ Bot NOW</b> — same bot, fires immediately. For a live test any time the window is open (Thu 11 AM – Sun noon) with a small target list.</li>
+      <li><b>🧪 Dry Run</b> — fires immediately but never saves: it queues each target, confirms the site accepted the queue, then clears it. Safe to run during the open window without touching your roster.</li>
+      <li><b>📋 Bot Log</b> — opens the timestamped log from the last run so you can copy it or screenshot it for me.</li>
+    </ul>
+    <p class="dim" style="margin-top:10px">Drag each onto Chrome's bookmarks bar (View → Always Show Bookmarks Bar). They rebuild whenever you edit the list below, so re-drag after changing targets.</p></div>
   <div class="card"><h2>2 · Thursday, 10:55 AM</h2>
     <ol>
       <li>In Chrome on the Mac, open RTSports → Desert League → <b>Add/Drop Players</b>. Make sure you're logged in and the page shows your roster.</li>
@@ -125,9 +134,11 @@ function render(){
   <div class="card"><h2>Fallback if the bot can't run</h2>
     <p>Have the Add/Drop page open at 10:59 with the <b>QB</b> filter on and Darnold visible. At 11:00:00 hit refresh, click <b>ADD</b> on Darnold, save, then Stroud, save. QBs first, always — a free-agent QB is worth two of anything else in this league.</p></div>`;
   const ta=document.getElementById('tg');
-  function upd(){ const t=parse(ta.value); localStorage.setItem('desert.targets',ta.value); document.getElementById('bm').href='javascript:'+encodeURIComponent(botSource(t)); document.getElementById('cnt').textContent=t.length+' targets · '+t.filter(x=>x.g==='QB').length+' QBs'; }
+  function upd(){ const t=parse(ta.value); localStorage.setItem('desert.targets',ta.value);
+    for(const [id,mode] of [['bm','arm'],['bm-now','now'],['bm-dry','dry'],['bm-log','log']]) document.getElementById(id).href='javascript:'+encodeURIComponent(botSource(t,mode));
+    document.getElementById('cnt').textContent=t.length+' targets · '+t.filter(x=>x.g==='QB').length+' QBs'; }
   ta.addEventListener('input',upd); document.getElementById('reset').onclick=()=>{ta.value=DEFAULT_TARGETS;upd();};
-  document.getElementById('bm').addEventListener('click',e=>{e.preventDefault(); alert('Drag it to the bookmarks bar, then click it from there while on the rtsports Add/Drop page.');});
+  document.querySelectorAll('.bm').forEach(a=>a.addEventListener('click',e=>{e.preventDefault(); alert('Drag it to the bookmarks bar, then click it from there while on the rtsports Add/Drop page.');}));
   upd();
 }
 if(COACH) render();
