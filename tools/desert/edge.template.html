@@ -124,6 +124,7 @@ input[type=range]{accent-color:var(--red)}
   <nav>
     <a href="trades.html" id="nav-trades">Trades</a>
     <a href="waivers.html" id="nav-waivers">Waivers</a>
+    <a href="speed.html" id="nav-speed">Speed Kit</a>
     <a href="#" id="nav-war" target="_blank" rel="noopener">War Room</a>
   </nav>
   <div class="spacer"></div>
@@ -337,6 +338,18 @@ function renderWaivers(){
       <div class="row" style="margin-bottom:8px">${['ALL',...POSN].map(p=>`<button class="btn ${posF===p?'on':''}" data-pos="${p}">${p==='DST'?'D/ST':p}</button>`).join('')}<input type="search" id="q" placeholder="Search name or team" value="${esc(q)}"></div>
       <div class="scroll"><table><tr><th>Player</th><th class="n">Rest of season</th><th class="n">This week</th><th class="n">If I add him</th><th class="n">ESPN own%</th><th class="n">ADP</th></tr>
       ${list.map(p=>{const g=marginal(me.roster,p); return `<tr><td>${player(p)}</td><td class="n"><b>${Math.round(p.pts)}</b></td><td class="n">${p.week?p.week.toFixed(1):'–'}</td><td class="n ${g>0.5?'good':'dim'}">${fmt(g)}</td><td class="n">${p.own}%</td><td class="n">${p.adp>=9999?'–':p.adp}</td></tr>`;}).join('')}
+      </table></div></div>
+    <div class="card" style="margin-top:14px"><h2>Bye-week planner — where the zeros are</h2>
+      <p class="dim" style="margin-bottom:8px;font-size:11.5px">18 start, so with a full 20-man roster only 2 byes per week are covered. Every extra bye is a zero in a total-points league — unless you drop your lowest-value bye player that Thursday for a streamer and re-add him after. Kickers and defenses are the natural swap pieces. Plan below assumes the roster after the Thursday adds.</p>
+      <div class="scroll"><table><tr><th>Week</th><th>On bye</th><th class="n">Zeros</th><th>Cheapest swap</th><th>Best one-week fill (not on bye)</th></tr>
+      ${(()=>{const full=me.roster.concat(plan.map(x=>x.p.id)); const rows=[]; for(let w=D.week;w<=18;w++){ const out=full.map(id=>P[id]).filter(p=>p.bye===w); const active=full.length-out.length; const zeros=Math.max(0,Math.min(START,full.length)-active); if(!out.length) continue;
+        const cheapest=out.slice().sort((a,b)=>a.pts-b.pts)[0];
+        const cnt={}; full.forEach(id=>{cnt[P[id].pos]=(cnt[P[id].pos]||0)+1;});
+        // a one-week fill takes the dropped player's roster spot, so it must respect the caps after the drop
+        const fills=POSN.map(pos=>{ const room=CAPS[pos]-(cnt[pos]||0)+(cheapest.pos===pos?1:0); if(room<=0) return null; return FA.find(p=>p.pos===pos&&p.bye!==w&&!plan.find(x=>x.p===p)); }).filter(Boolean).sort((a,b)=>b.pts-a.pts).slice(0,2);
+        const short=p=>p.pos==='DST'?p.team:p.name.split(' ').pop();
+        rows.push(`<tr class="${zeros>0?'me':''}"><td><b>Wk ${w}</b></td><td>${out.map(p=>`<span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> ${esc(short(p))}`).join(' · ')}</td><td class="n ${zeros?'bad':'good'}">${zeros}</td><td>${zeros?`drop ${esc(cheapest.name)} (${Math.round(cheapest.pts)} ROS)`:'—'}</td><td>${zeros?fills.map(p=>`${esc(p.name)} <span class="dim">${Math.round(p.pts/D.weeksLeft)}/wk</span>`).join(' · '):'—'}</td></tr>`);}
+        return rows.join('');})()}
       </table></div></div>`;
     main.querySelectorAll('.btn[data-pos]').forEach(b=>b.onclick=()=>{posF=b.dataset.pos;draw();});
     const qi=document.getElementById('q'); qi.oninput=e=>{q=e.target.value.toLowerCase();draw();document.getElementById('q').focus();document.getElementById('q').setSelectionRange(q.length,q.length);};

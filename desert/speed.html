@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Desert League</title>
+<style>
+:root{--bg:#0b0e15;--panel:#141925;--panel2:#1a2130;--line:#232b3b;--line2:#2d3749;--txt:#f2f5fa;--dim:#93a0b4;--red:#e0102f;--gold:#ffb81c;--good:#26c281;--bad:#ff4d5e;
+--hd:"Avenir Next Condensed","Bahnschrift","Roboto Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;--ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{color-scheme:dark}
+body{background:var(--bg);color:var(--txt);font:14px/1.5 var(--ui);min-height:100vh}
+#top{height:58px;display:flex;align-items:center;gap:12px;padding:0 14px;background:linear-gradient(180deg,#151b28,#0f131c);border-bottom:2px solid var(--red)}
+#brand{display:flex;align-items:center;gap:11px}#brand .mark{height:32px}
+#brand .t1{font-family:var(--hd);font-weight:900;font-size:20px;letter-spacing:.8px;text-transform:uppercase}
+#brand .t2{font-size:9.5px;font-weight:800;letter-spacing:2px;color:var(--gold);text-transform:uppercase}
+nav{display:flex;gap:4px;margin-left:10px}nav a{padding:0 12px;height:34px;display:inline-flex;align-items:center;border-radius:6px;font-family:var(--hd);font-weight:800;font-size:14px;letter-spacing:.6px;text-transform:uppercase;text-decoration:none;color:var(--dim)}
+nav a.on{color:#fff;background:var(--red)}
+main{max-width:900px;margin:0 auto;padding:18px 14px 60px}
+h1{font-family:var(--hd);font-weight:900;font-size:26px;text-transform:uppercase;letter-spacing:.6px}
+h1 small{display:block;font-size:12px;color:var(--dim);letter-spacing:1.5px;margin-top:4px}
+h2{font-family:var(--hd);font-weight:800;font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:14px}
+.card.hot{border-color:#7a2a1a;background:linear-gradient(180deg,#1c1520,#141925)}
+ol{padding-left:22px}ol li{margin:6px 0}
+textarea{width:100%;min-height:210px;background:var(--panel2);color:var(--txt);border:1px solid var(--line2);border-radius:8px;padding:10px;font:13px/1.5 ui-monospace,Menlo,monospace}
+.bm{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:8px;background:var(--red);color:#fff;font-family:var(--hd);font-weight:900;font-size:18px;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;cursor:grab;border:2px dashed #ff8090}
+.dim{color:var(--dim)}.good{color:var(--good);font-weight:800}.bad{color:var(--bad);font-weight:800}.gold{color:var(--gold);font-weight:800}
+code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12.5px}
+#gate{display:flex;align-items:center;justify-content:center;min-height:70vh;color:#5c687b;font-family:var(--hd);font-size:22px;letter-spacing:2px;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div id="top"><div id="brand"><svg class="mark" viewBox="5 85 290 125" aria-hidden="true"><defs><linearGradient id="rtK" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#292929"/><stop offset=".45" stop-color="#0a0a0a"/><stop offset="1" stop-color="#000"/></linearGradient><linearGradient id="rtR" x1=".15" y1="0" x2=".7" y2="1"><stop offset="0" stop-color="#e11d26"/><stop offset=".55" stop-color="#da151c"/><stop offset="1" stop-color="#c9111a"/></linearGradient><clipPath id="rtC"><ellipse cx="147.5" cy="146" rx="118.5" ry="50"/></clipPath></defs><ellipse cx="149.5" cy="146.5" rx="142.5" ry="56.5" fill="url(#rtK)"/><ellipse cx="147.5" cy="146" rx="118.5" ry="50" fill="url(#rtR)"/><g clip-path="url(#rtC)"><ellipse cx="132" cy="62" rx="140" ry="40" fill="#fff" opacity=".08"/></g><image x="39" y="87" width="84" height="121" href="data:image/png;base64,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"/></svg><div><div class="t1">Desert League</div><div class="t2">Edge · in-season</div></div></div>
+<nav><a href="trades.html">Trades</a><a href="waivers.html">Waivers</a><a href="speed.html" class="on">Speed Kit</a></nav></div>
+<main id="main"><div id="gate">Desert League</div></main>
+<script>
+const COACH_HASH='b19f543f';
+function djb2(s){let h=5381;for(let i=0;i<s.length;i++){h=((h*33)^s.charCodeAt(i))>>>0;}return h.toString(16);}
+const qs=new URLSearchParams(location.search);
+const COACH=(()=>{ if(location.protocol==='file:')return true; const c=localStorage.getItem('snakepit.coach'); if(c&&djb2(c)===COACH_HASH)return true;
+  const k=qs.get('key'); if(k&&djb2(k)===COACH_HASH){localStorage.setItem('snakepit.coach',k);try{const u=new URL(location.href);u.searchParams.delete('key');history.replaceState(null,'',u.toString());}catch(e){}return true;} return false;})();
+
+/* Default target list. Format per line:  <rtsports player id>  <name>  [group]
+   Groups: QB (take at most 2 — you already have 2 of the 4 allowed) and ANY.
+   The bot walks the list top to bottom, skips anyone already taken, and stops
+   when the roster hits 20. Edit freely; the bookmarklet rebuilds as you type. */
+const DEFAULT_TARGETS=`16177 Sam Darnold QB
+18222 C.J. Stroud QB
+14324 Geno Smith QB
+18220 Bryce Young QB
+11494 Aaron Rodgers QB
+19092 Cam Ward QB
+16584 T.J. Hockenson ANY
+19126 Matthew Golden ANY
+17891 Alec Pierce ANY
+18275 Dalton Kincaid ANY
+15441 Jacoby Brissett ANY
+19791 Trey Smack ANY`;
+
+function parse(txt){ return txt.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const m=l.match(/^(\d+)\s+(.+?)(?:\s+(QB|ANY))?$/i); return m?{id:m[1],name:m[2],g:(m[3]||'ANY').toUpperCase()}:null;}).filter(Boolean); }
+
+/* The bot itself. It runs INSIDE rtsports (bookmarklet), on the Add/Drop page:
+   1. immediately opens a second Add/Drop window (needs the click, popups block later)
+   2. counts down to Thursday 11:00:00.3 AM Central on the local clock
+   3. reloads that window so the page unlocks, then uses the page's OWN
+      selectAddPlayer / SaveTransactions functions — no guessed requests
+   4. adds targets in order, QB cap 2, stops at 20 on the roster, logs everything */
+function botSource(targets){
+  return `(()=>{
+const T=${JSON.stringify(targets)};const QBMAX=2;const ROSTER=20;
+if(!/add-drop\\.php/.test(location.pathname)){alert('Run this on the rtsports Add/Drop Players page.');return;}
+const log=(m)=>{let b=document.getElementById('dlbot');if(!b){b=document.createElement('pre');b.id='dlbot';b.style.cssText='position:fixed;left:8px;bottom:8px;z-index:99999;max-width:480px;max-height:45vh;overflow:auto;background:#0b0e15;color:#8ff0c2;border:2px solid #e0102f;border-radius:8px;padding:10px;font:12px/1.4 Menlo,monospace;white-space:pre-wrap';document.body.appendChild(b);}b.textContent+=new Date().toLocaleTimeString()+'  '+m+'\\n';b.scrollTop=1e9;};
+const w=window.open(location.href,'dlbot_win','width=1100,height=900');if(!w){alert('Popup blocked — allow popups for rtsports.com and click the bookmark again.');return;}
+log('bot armed. targets: '+T.map(t=>t.name).join(', '));
+function nextThu11(){const now=new Date();const f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour12:false,weekday:'short',hour:'2-digit',minute:'2-digit',second:'2-digit'});const p=Object.fromEntries(f.formatToParts(now).map(x=>[x.type,x.value]));const secsNowCT=(+p.hour%24)*3600+(+p.minute)*60+(+p.second);const dow=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);let days=(4-dow+7)%7;if(days===0&&secsNowCT>=11*3600)days=7;const target=11*3600+0.3;return now.getTime()+((days*86400)+(target-secsNowCT))*1000;}
+const goAt=nextThu11();const wait=goAt-Date.now();
+if(wait>36*3600*1000){log('WARNING: next window is more than a day away; firing at '+new Date(goAt).toLocaleString()+' anyway.');}
+if(wait<0){log('window is already open — going now');}else{log('firing in '+Math.round(wait/1000)+'s ('+new Date(goAt).toLocaleTimeString()+' local)');}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function ready(){for(let i=0;i<120;i++){try{if(w.document&&w.document.readyState==='complete'&&typeof w.selectAddPlayer==='function'&&typeof w.SaveTransactions==='function'&&w.document.getElementById('fa-list'))return true;}catch(e){}await sleep(100);}return false;}
+function rosterCount(){try{const m=w.document.body.innerText.match(/(\\d+)\\s*\\/\\s*20\\s*Active/i)||w.document.body.innerText.match(/(\\d+)\\s*\\/\\s*20/);return m?+m[1]:null;}catch(e){return null;}}
+function elig(id){try{return w.addEligibility(+id)||w.addEligibility(id);}catch(e){return {enabled:false,reason:'elig err '+e.message};}}
+async function reloadUntilOpen(){for(let i=0;i<40;i++){w.location.reload();await sleep(250);if(!(await ready())){continue;}const e=elig(T[0].id);if(e&&e.enabled)return true;if(e&&/roster|already/i.test(e.reason||''))return true;log('not open yet: '+(e&&e.reason));await sleep(350);}return false;}
+async function tryAdd(t){const e=elig(t.id);if(!e||!e.enabled){log('skip '+t.name+': '+(e&&e.reason));return false;}
+  try{w.selectAddPlayer(+t.id);}catch(err){try{w.selectAddPlayer(t.id);}catch(e2){log('select failed '+t.name+': '+e2.message);return false;}}
+  await sleep(120);let q=[];try{q=w.selectedAddIds()||[];}catch(e){}
+  if(!q.map(String).includes(String(t.id))){log('not queued '+t.name);return false;}
+  const before=rosterCount();
+  try{const r=w.SaveTransactions(new w.Event('click'));if(r&&r.then)await r;}catch(err){log('save threw for '+t.name+': '+err.message);}
+  for(let i=0;i<25;i++){await sleep(120);let un=true;try{un=w.hasUnsavedTransactions();}catch(e){}const c=rosterCount();if(!un&&c!==null&&before!==null&&c>before){log('ADDED '+t.name+' ('+c+'/20)');return true;}if(!un&&i>6)break;}
+  const c=rosterCount();if(c!==null&&before!==null&&c>before){log('ADDED '+t.name+' ('+c+'/20)');return true;}
+  log('could not confirm '+t.name+' — moving on');return false;}
+(async()=>{
+  if(wait>0)await sleep(wait);
+  log('GO — reloading the add page');
+  if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;}
+  let qb=0;let got=0;
+  for(const t of T){const c=rosterCount();if(c!==null&&c>=ROSTER){log('roster full at '+c);break;}if(t.g==='QB'&&qb>=QBMAX)continue;
+    const ok=await tryAdd(t);if(ok){got++;if(t.g==='QB')qb++;}
+    if(!ok){await sleep(150);if(!(await ready())){await reloadUntilOpen();}}}
+  log('done — '+got+' added. Check the roster in the other window.');
+})();})();`;
+}
+
+function render(){
+  const saved=localStorage.getItem('desert.targets')||DEFAULT_TARGETS;
+  document.getElementById('main').innerHTML=`
+  <h1>Thursday speed kit <small>Adds open Thu 11:00:00 AM CT · first click wins · this clicks for you</small></h1>
+  <div class="card hot"><h2>1 · Drag this to your bookmarks bar</h2>
+    <p><a class="bm" id="bm" href="#">⚡ Desert Bot</a></p>
+    <p class="dim" style="margin-top:10px">Drag the red button onto Chrome's bookmarks bar (View → Always Show Bookmarks Bar). It rebuilds itself whenever you edit the list below, so re-drag it after changing targets.</p></div>
+  <div class="card"><h2>2 · Thursday, 10:55 AM</h2>
+    <ol>
+      <li>In Chrome on the Mac, open RTSports → Desert League → <b>Add/Drop Players</b>. Make sure you're logged in and the page shows your roster.</li>
+      <li>Click <b>⚡ Desert Bot</b> on the bookmarks bar. A second Add/Drop window opens (allow popups for rtsports.com if Chrome asks, then click the bookmark again). A green log box appears bottom-left with a countdown.</li>
+      <li><b>Leave both windows alone.</b> Don't minimize Chrome, don't let the Mac sleep. At 11:00:00.3 it reloads the popup, and as soon as the page unlocks it adds your targets in order, one save each, skipping anyone who's gone.</li>
+      <li>Watch the log. Anything it says <span class="bad">could not confirm</span>, do by hand in the popup — the list is sorted so the next name is the next best.</li>
+    </ol>
+    <p class="dim">Why the popup: the site only unlocks adds on a page that loaded after 11:00, and a bookmark can't survive a reload. The popup is opened by your click (so it isn't blocked), then reloaded at the bell.</p></div>
+  <div class="card"><h2>3 · Targets, in order</h2>
+    <p class="dim" style="margin-bottom:6px">One per line: <code>rtsports id  name  QB|ANY</code>. It takes at most 2 QBs (you have 2 of 4 allowed) and stops when the roster hits 20. IDs come from the Add/Drop page; the Tuesday refresh doesn't change them.</p>
+    <textarea id="tg">${saved.replace(/</g,'&lt;')}</textarea>
+    <p style="margin-top:8px"><button id="reset" style="font:inherit;color:var(--dim);background:none;border:1px solid var(--line2);border-radius:6px;padding:6px 10px;cursor:pointer">Reset to the waiver page's plan</button> <span id="cnt" class="dim"></span></p></div>
+  <div class="card"><h2>Fallback if the bot can't run</h2>
+    <p>Have the Add/Drop page open at 10:59 with the <b>QB</b> filter on and Darnold visible. At 11:00:00 hit refresh, click <b>ADD</b> on Darnold, save, then Stroud, save. QBs first, always — a free-agent QB is worth two of anything else in this league.</p></div>`;
+  const ta=document.getElementById('tg');
+  function upd(){ const t=parse(ta.value); localStorage.setItem('desert.targets',ta.value); document.getElementById('bm').href='javascript:'+encodeURIComponent(botSource(t)); document.getElementById('cnt').textContent=t.length+' targets · '+t.filter(x=>x.g==='QB').length+' QBs'; }
+  ta.addEventListener('input',upd); document.getElementById('reset').onclick=()=>{ta.value=DEFAULT_TARGETS;upd();};
+  document.getElementById('bm').addEventListener('click',e=>{e.preventDefault(); alert('Drag it to the bookmarks bar, then click it from there while on the rtsports Add/Drop page.');});
+  upd();
+}
+if(COACH) render();
+</script>
+</body>
+</html>

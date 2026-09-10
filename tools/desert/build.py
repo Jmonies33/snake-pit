@@ -87,4 +87,8 @@ for page in ('trades', 'waivers'):
     with open(os.path.join(OUT, page + '.html'), 'w') as f:
         f.write(html)
     print(f'wrote desert/{page}.html ({len(html)//1024} KB)')
+sp = open(os.path.join(HERE, 'speed.template.html')).read()
+with open(os.path.join(OUT, 'speed.html'), 'w') as f:
+    f.write(sp.replace('__HASH__', data['coachKeyHash']).replace('__LOGO__', logo))
+print('wrote desert/speed.html')
 print(f"{len(players)} players, {len(teams)} teams, week {proj['week']}, {weeks_left} weeks left")
