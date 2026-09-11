@@ -21,6 +21,16 @@ Inputs: rtsports rosters (needs Jerry's logged-in Chrome), ESPN projections (pub
    await fetch('http://127.0.0.1:8765/rosters',{method:'POST',mode:'no-cors',body:t}); 'posted '+t.length
    ```
    The collector prints `received rosters (~11 KB)` and exits.
+3b. Also refresh the rtsports player-id map (new free agents need ids for the Speed Kit).
+   Start `python3 collect.py rtsids --timeout=600`, open the Add/Drop page
+   (`/football/add-drop.php?LID=88775&UID=<token>&X=0093121`) in Chrome, and run:
+   ```
+   await new Promise(r=>setTimeout(r,2000));
+   const POS={Quarterback:'QB','Running Back':'RB','Wide Receiver':'WR','Tight End':'TE',Kicker:'K'};
+   const L=[];
+   document.querySelectorAll('a.p-name-link[id^="fa-player-"],a[id^="roster-player-"][id$="-name"]').forEach(a=>{const id=a.id.match(/\d+/)[0];const al=a.getAttribute('aria-label')||'';const m=al.match(/for (.+?), (.+?), NFL team ([A-Z]{2,4})/);L.push(m?[id,m[1],m[3],POS[m[2]]||m[2]].join('\t'):[id,a.textContent.trim(),'','?'].join('\t'));});
+   await fetch('http://127.0.0.1:8765/rtsids',{method:'POST',mode:'no-cors',body:L.join('\n')}); 'posted '+L.length
+   ```
 4. Parse + project + build:
    ```
    cd ~/snake-pit/tools/desert && python3 parse_rosters.py && python3 projections.py && python3 build.py

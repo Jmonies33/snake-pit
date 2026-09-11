@@ -18,7 +18,7 @@
 html{color-scheme:dark}
 body{background:var(--bg);color:var(--txt);font:13px/1.4 var(--ui);-webkit-font-smoothing:antialiased;min-height:100vh}
 button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
-input,select{font:inherit}
+input,select,textarea{font:inherit}
 a{color:inherit}
 .hd{font-family:var(--hd);font-weight:800;text-transform:uppercase;letter-spacing:.4px}
 #top{height:58px;display:flex;align-items:center;gap:12px;padding:0 14px;position:sticky;top:0;z-index:5;
@@ -65,7 +65,6 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
 .inj{color:var(--bad);font-size:10px;font-weight:800;margin-left:4px}
 .good{color:var(--good);font-weight:800}.bad{color:var(--bad);font-weight:800}.dim{color:var(--dim)}.gold{color:var(--gold);font-weight:800}
 .tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:2px 7px;border-radius:999px;border:1px solid var(--line2);color:var(--dim);margin-left:6px}
-.tag.fire{border-color:#a3341f;color:#ff8a6b;background:#2a1712}
 .tag.ok{border-color:#1e6a49;color:#8ff0c2}
 .tag.warn{border-color:#7a5c12;color:var(--gold)}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:var(--panel2);border:1px solid var(--line2);font-size:11.5px;font-weight:700}
@@ -75,9 +74,9 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
 .btn.on{background:var(--red);border-color:var(--red);color:#fff}
 input[type=search]{height:32px;padding:0 10px;border-radius:6px;border:1px solid var(--line2);background:var(--panel2);color:var(--txt);min-width:200px}
 input[type=range]{accent-color:var(--red)}
+textarea{width:100%;min-height:200px;background:var(--panel2);color:var(--txt);border:1px solid var(--line2);border-radius:8px;padding:10px;font:13px/1.5 ui-monospace,Menlo,monospace}
 .deal{display:grid;grid-template-columns:1fr auto 1fr auto;gap:10px;align-items:center;padding:9px 10px;border:1px solid var(--line);border-radius:8px;margin:6px 0;background:var(--bg2)}
-.deal .side .ln{display:block;font-size:13px;margin-top:4px}
-.deal .side .ln:first-child{margin-top:0}
+.deal .side .ln{display:block;font-size:13px}
 .deal .side .sub{display:block;font-size:11px;color:var(--dim)}
 .deal .arrow{font-family:var(--hd);font-weight:900;color:var(--gold);font-size:16px}
 .deal .num{text-align:right;line-height:1.2;min-width:96px}
@@ -103,9 +102,11 @@ input[type=range]{accent-color:var(--red)}
 .bye div{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:11px}
 .bye div b{display:block;font-family:var(--hd);font-size:14px}
 .bye div.hot{border-color:#7a2a1a;background:#1e1216}
+.bm{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:8px;background:var(--red);color:#fff;font-family:var(--hd);font-weight:900;font-size:18px;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;cursor:grab;border:2px dashed #ff8090}
+code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12.5px}
+ol{padding-left:22px}ol li{margin:6px 0}
 .scroll{overflow-x:auto}
 #gate{display:flex;align-items:center;justify-content:center;min-height:70vh;color:var(--dim2);font-family:var(--hd);font-size:22px;letter-spacing:2px;text-transform:uppercase}
-.mobile-only{display:none}
 @media(max-width:700px){
   #brand>div{display:none}
   #meta{display:none}
@@ -156,115 +157,96 @@ const COACH=(()=>{
 document.getElementById('nav-'+PAGE).classList.add('on');
 document.getElementById('nav-war').href=D.warRoom;
 
-/* ================= engine ================= */
-const CAPS=D.rules.caps;
-// 14/14 is the league's convention (everyone starts, every add is a swap); the site is set 20/18.
-const SITE_RULES=localStorage.getItem('desert.siteRules')==='1';
-const START=SITE_RULES?D.rules.siteStart:D.rules.start, ROSTER=SITE_RULES?D.rules.siteRoster:D.rules.roster;
+/* ================= engine =================
+   HARD league rule: exactly QB2 / RB3 / WR+TE 5 / K2 / DST2. Everyone starts.
+   Every pickup is a one-for-one swap inside the same slot. Total-points standings,
+   so a player's value is simply his projected points. */
+const SLOTS=D.rules.slots, SLOT_OF=D.rules.slotOf, ROSTER=D.rules.roster;
+const SLOT_KEYS=Object.keys(SLOTS);
 const P={}; D.players.forEach(p=>P[p.id]=p);
 const teams=D.teams; const me=teams.find(t=>t.me); const opps=teams.filter(t=>!t.me);
 const rostered=new Set(); teams.forEach(t=>t.roster.forEach(id=>rostered.add(id)));
 const POSN=['QB','RB','WR','TE','K','DST'];
+const slotName={QB:'QB',RB:'RB',WRTE:'WR/TE',K:'K',DST:'D/ST'};
 const fmt=n=>(n>=0?'+':'')+Math.round(n);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const slot=p=>SLOT_OF[p.pos];
 
-// best legal lineup: 18 starters, positional caps, raw points are value
+// best legal lineup under the fixed slots
 function lineup(ids){
   const ps=ids.map(id=>P[id]).sort((a,b)=>b.pts-a.pts);
   const cnt={}; let total=0, n=0; const used=[];
-  for(const p of ps){ if(n>=START) break; if((cnt[p.pos]||0)>=CAPS[p.pos]) continue; cnt[p.pos]=(cnt[p.pos]||0)+1; total+=p.pts; n++; used.push(p.id); }
+  for(const p of ps){ const s=slot(p); if((cnt[s]||0)>=SLOTS[s]) continue; cnt[s]=(cnt[s]||0)+1; total+=p.pts; n++; used.push(p.id); }
   return {total,used,cnt,n};
 }
-// free agents, best first
 const FA=D.players.filter(p=>!rostered.has(p.id)&&p.pts>0).sort((a,b)=>b.pts-a.pts);
-function marginal(ids,p){ return lineup(ids.concat(p.id)).total-lineup(ids).total; }
-
-/* Replacement level: everyone can add for free on Thursday, so simulate all
-   11 teams filling to 20 with the best marginal free agent (snake), then the
-   best player LEFT at each position is what an open roster spot is worth. */
-const REPL={}, SIM={};
-(function(){
-  const pool=FA.slice(); const rosters={}; teams.forEach(t=>rosters[t.name]=t.roster.slice());
-  const order=teams.slice().sort((a,b)=>lineup(a.roster).total-lineup(b.roster).total);
-  for(let round=0;round<ROSTER;round++){
-    const seq=round%2?order.slice().reverse():order;
-    for(const t of seq){
-      const r=rosters[t.name]; if(r.length>=ROSTER) continue;
-      let best=null,bg=-1,bi=-1;
-      for(let i=0;i<Math.min(pool.length,60);i++){ const g=marginal(r,pool[i]); if(g>bg){bg=g;best=pool[i];bi=i;} }
-      if(!best) continue; r.push(best.id); pool.splice(bi,1); (SIM[t.name]=SIM[t.name]||[]).push(best.id);
-    }
-  }
-  POSN.forEach(pos=>{ const b=pool.find(p=>p.pos===pos); REPL[pos]=b?b.pts:0; });
-})();
-/* Team value = best 18 from roster + virtual replacement players in the open
-   roster spots. What a roster is worth once everyone has filled up. */
-function V(ids){
-  const open=Math.max(0,ROSTER-ids.length);
-  const cnt={}; ids.forEach(id=>{cnt[P[id].pos]=(cnt[P[id].pos]||0)+1;});
-  const cand=ids.map(id=>({pts:P[id].pts,pos:P[id].pos,v:false}));
-  POSN.forEach(pos=>{ for(let i=0;i<open;i++) cand.push({pts:REPL[pos],pos,v:true}); });
-  cand.sort((a,b)=>b.pts-a.pts);
-  const c2={}; let total=0,n=0,virt=0;
-  for(const c of cand){ if(n>=START) break; if((c2[c.pos]||0)>=CAPS[c.pos]) continue; if(c.v&&virt>=open) continue; c2[c.pos]=(c2[c.pos]||0)+1; total+=c.pts; n++; if(c.v) virt++; }
-  return total;
-}
+const faBySlot=s=>FA.filter(p=>slot(p)===s);
+// replacement = best free agent in the slot: what a swap could get you today
+const REPL={}; SLOT_KEYS.forEach(s=>{ const b=faBySlot(s)[0]; REPL[s]=b?b.pts:0; });
+function V(ids){ return lineup(ids).total; }
 // what the other owners SEE: rtsports' own weekly projection on their lineup page
-function rts(p){ return p.rts==null?p.week:p.rts; }
+function rts(p){ return p.rts==null?(p.week||0):p.rts; }
 function player(p,extra){ return `<span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> <b>${esc(p.name)}</b><span class="tm">${esc(p.team)} · bye ${p.bye||'–'}</span>${p.inj?`<span class="inj">${esc(p.inj)}</span>`:''}${extra||''}`; }
+function short(p){ return p.pos==='DST'?p.team:p.name.split(' ').pop(); }
+
+/* Swap plan: greedy one-for-one, same slot, biggest net gain first, each side used once. */
+function swapPlan(rosterIds,minGain,max){
+  const plan=[]; let r=rosterIds.slice(); const added=new Set(), dropped=new Set();
+  for(let i=0;i<max;i++){
+    let best=null,bg=minGain;
+    for(const d of r){ if(added.has(d)) continue; const s=slot(P[d]);
+      for(const f of faBySlot(s).slice(0,25)){ if(added.has(f.id)) continue; const g=f.pts-P[d].pts; if(g>bg){bg=g;best={f,d};} } }
+    if(!best) break;
+    const s=slot(best.f);
+    const backups=faBySlot(s).filter(p=>p!==best.f&&!added.has(p.id)&&p.pts>P[best.d].pts+minGain).slice(0,3);
+    plan.push({p:best.f,drop:P[best.d],gain:bg,backups}); added.add(best.f.id); dropped.add(best.d); r=r.filter(x=>x!==best.d).concat(best.f.id);
+  }
+  return plan;
+}
 
 /* ================= render ================= */
 const main=document.getElementById('main');
-document.getElementById('meta').innerHTML=`<b>Week ${D.week}</b> · ${D.weeksLeft} weeks left · <a href="#" id="rulesToggle" style="color:var(--gold)">${ROSTER} roster / ${START} start</a><br>ESPN proj ${esc(D.projDate)} · built ${esc(D.built)}`;
-document.getElementById('rulesToggle').onclick=e=>{e.preventDefault(); localStorage.setItem('desert.siteRules',SITE_RULES?'0':'1'); location.reload();};
+document.getElementById('meta').innerHTML=`<b>Week ${D.week}</b> · ${D.weeksLeft} weeks left<br>ESPN proj ${esc(D.projDate)} · built ${esc(D.built)}`;
 if(!COACH){ /* stay a blank shell */ }
-else if(PAGE==='trades') renderTrades(); else renderWaivers();
+else if(PAGE==='trades') renderTrades(); else if(PAGE==='waivers') renderWaivers(); else renderSpeed();
 
 function powerTable(){
-  const rows=teams.map(t=>{const L=lineup(t.roster); return {t,now:L.total,full:V(t.roster),open:ROSTER-t.roster.length,empty:START-L.n};})
-    .sort((a,b)=>b.full-a.full);
+  const rows=teams.map(t=>({t,now:V(t.roster)})).sort((a,b)=>b.now-a.now);
+  const mine=rows.find(r=>r.t.me).now;
   return `<div class="card"><h2>Projected rest-of-season standings</h2>
-  <div class="scroll"><table><tr><th>#</th><th>Team</th><th class="n">Roster today</th><th class="n">After everyone fills to 20</th><th class="n">Open spots</th><th class="n">Empty starters</th></tr>
-  ${rows.map((r,i)=>`<tr class="${r.t.me?'me':''}"><td>${i+1}</td><td><b>${esc(r.t.name)}</b><span class="tm">${esc(r.t.owner)}</span></td><td class="n">${Math.round(r.now)}</td><td class="n"><b>${Math.round(r.full)}</b></td><td class="n">${r.open}</td><td class="n ${r.empty?'bad':''}">${r.empty}</td></tr>`).join('')}
+  <div class="scroll"><table><tr><th>#</th><th>Team</th><th class="n">Projected pts</th><th class="n">vs me</th>${SLOT_KEYS.map(s=>`<th class="n">${slotName[s]}</th>`).join('')}</tr>
+  ${rows.map((r,i)=>{const L=lineup(r.t.roster); const by={}; L.used.forEach(id=>{const s=slot(P[id]); by[s]=(by[s]||0)+P[id].pts;});
+    return `<tr class="${r.t.me?'me':''}"><td>${i+1}</td><td><b>${esc(r.t.name)}</b><span class="tm">${esc(r.t.owner)}</span></td><td class="n"><b>${Math.round(r.now)}</b></td><td class="n ${r.t.me?'dim':r.now>mine?'bad':'good'}">${r.t.me?'—':fmt(mine-r.now)}</td>${SLOT_KEYS.map(s=>`<td class="n">${Math.round(by[s]||0)}</td>`).join('')}</tr>`;}).join('')}
   </table></div>
-  <p class="dim" style="margin-top:8px;font-size:11.5px">Total-points league: 18 of 20 start, only position caps (QB 4 · RB 6 · WR 9 · TE 9 · K 3 · D/ST 3). "After everyone fills" assumes every team adds the best free agents into its open spots, so an open spot is worth the replacement player: ${POSN.map(p=>`${p==='DST'?'D/ST':p} ${Math.round(REPL[p])}`).join(' · ')}.</p></div>`;
+  <p class="dim" style="margin-top:8px;font-size:11.5px">Total-points league, fixed lineup QB2 · RB3 · WR/TE5 · K2 · D/ST2, everyone starts. Best free agent by slot right now: ${SLOT_KEYS.map(s=>`${slotName[s]} ${Math.round(REPL[s])}`).join(' · ')}.</p></div>`;
 }
 
 function renderTrades(){
   const untouch=new Set(JSON.parse(localStorage.getItem('desert.untouch')||'[]'));
   let minGain=+(localStorage.getItem('desert.minGain')||10);
-  let kinds=JSON.parse(localStorage.getItem('desert.kinds')||'{"11":true,"21":true,"12":true}');
-  const myIds=()=>me.roster;
   function deals(){
-    const out=[]; const mine=myIds().filter(id=>!untouch.has(id)); const base=V(me.roster);
+    const out=[]; const mine=me.roster.filter(id=>!untouch.has(id)); const base=V(me.roster);
     for(const o of opps){
       const ob=V(o.roster);
-      const push=(give,get)=>{
-        const myNew=me.roster.filter(id=>!give.includes(id)).concat(get);
-        const thNew=o.roster.filter(id=>!get.includes(id)).concat(give);
-        if(myNew.length>ROSTER||thNew.length>ROSTER) return;
+      for(const a of mine){ for(const b of o.roster){
+        if(slot(P[a])!==slot(P[b])) continue;            // one-for-one, same slot — league rule
+        const myNew=me.roster.filter(id=>id!==a).concat(b), thNew=o.roster.filter(id=>id!==b).concat(a);
         const mg=V(myNew)-base, tg=V(thNew)-ob;
-        if(mg<minGain) return;
-        // "paper": weekly points as rtsports shows them — what the other owner will compare
-        const paperGet=give.reduce((s,id)=>s+rts(P[id]),0), paperGive=get.reduce((s,id)=>s+rts(P[id]),0);
-        const paper=paperGet-paperGive; // >0: on rtsports it looks like THEY win
-        // sellable: they gain by projection, or the site's numbers say they do
-        const sell=tg>=-2?2:(paper>=-0.3?1:(paper>=-2?0:-1));
-        if(sell<0) return;
-        out.push({o,give,get,mg,tg,paper,paperGet,paperGive,sell,score:mg+(sell===2?8:sell===1?4:-6)});
-      };
-      for(const a of mine){ for(const b of o.roster){ if(kinds['11']) push([a],[b]); } }
-      if(kinds['21']) for(let i=0;i<mine.length;i++) for(let j=i+1;j<mine.length;j++) for(const b of o.roster) push([mine[i],mine[j]],[b]);
-      if(kinds['12']) for(const a of mine) for(let i=0;i<o.roster.length;i++) for(let j=i+1;j<o.roster.length;j++) push([a],[o.roster[i],o.roster[j]]);
+        if(mg<minGain) return_=0; if(mg<minGain) continue;
+        const paperGet=rts(P[a]), paperGive=rts(P[b]); const paper=paperGet-paperGive; // >0: on rtsports it looks like THEY win
+        const sell=tg>=-2?2:(paper>=-0.3?1:(paper>=-1.5?0:-1));
+        if(sell<0) continue;
+        out.push({o,give:[a],get:[b],mg,tg,paper,paperGet,paperGive,sell,score:mg+(sell===2?8:sell===1?4:-6)});
+      } }
     }
     return out.sort((a,b)=>b.score-a.score);
   }
   function needs(o){
-    const L=lineup(o.roster); const empty=START-L.n; const parts=[];
-    if(empty>0) parts.push(`<b>${empty} empty starting slot${empty>1?'s':''}</b> — any player they add scores`);
-    POSN.forEach(pos=>{ const room=CAPS[pos]-(L.cnt[pos]||0); if(pos==='QB'&&room>0) parts.push(`room for <b>${room} more QB</b>`); });
+    const L=lineup(o.roster); const parts=[];
+    SLOT_KEYS.forEach(s=>{ const have=(L.cnt[s]||0); if(have<SLOTS[s]) parts.push(`<b>short ${SLOTS[s]-have} at ${slotName[s]}</b>`); });
     const weak=o.roster.map(id=>P[id]).sort((a,b)=>a.pts-b.pts).slice(0,2);
     parts.push(`weakest: ${weak.map(p=>`${esc(p.name)} (${Math.round(p.pts)})`).join(', ')}`);
+    const best=o.roster.map(id=>P[id]).sort((a,b)=>b.pts-a.pts)[0]; parts.push(`best: ${esc(best.name)} (${Math.round(best.pts)})`);
     return parts.join(' · ');
   }
   function side(ids){ return ids.map(id=>{const p=P[id];return `<span class="ln">${player(p)}</span><span class="sub">${Math.round(p.pts)} pts rest of season · rtsports shows ${rts(p).toFixed(1)}/wk</span>`;}).join(''); }
@@ -276,26 +258,23 @@ function renderTrades(){
   function draw(){
     const all=deals();
     const byOpp={}; all.forEach(d=>{(byOpp[d.o.name]=byOpp[d.o.name]||[]).push(d);});
-    // the headline board: sellable deals only, spread across opponents and targets
     const board=[]; const perOpp={}, perGet={};
     for(const d of all){ if(d.sell<1) continue; const gk=d.get.join(','); if((perOpp[d.o.name]||0)>=2||(perGet[gk]||0)>=2) continue; perOpp[d.o.name]=(perOpp[d.o.name]||0)+1; perGet[gk]=(perGet[gk]||0)+1; board.push(d); if(board.length>=12) break; }
     const myRoster=me.roster.map(id=>P[id]).sort((a,b)=>b.pts-a.pts);
     main.innerHTML=`
-    <h1>Trade targets <small>Raiders of the Lost Title · projections under the league's real scoring</small></h1>
-    <div class="callout"><b>How to read this.</b> "Me" is how many rest-of-season points the deal adds to my best 18, after refilling any open spot with a replacement free agent. "Them" is the same for the other side. <span class="tag ok" style="margin:0">wins for them too</span> is positive-sum (someone's open roster spot gets used well). <span class="tag warn" style="margin:0">even on rtsports</span> means the weekly numbers the other owner sees on his own lineup page call it a wash, while ESPN's rest-of-season projection says I win — that gap is the edge. Trades need commissioner approval here, so keep them defensible.</div>
+    <h1>Trade targets <small>Raiders of the Lost Title · one-for-one, same position · projections under the league's real scoring</small></h1>
+    <div class="callout"><b>How to read this.</b> Every deal is one-for-one inside the same slot, because that's the league rule. "Me" is the rest-of-season points the swap adds to my lineup; "Them" is the same for the other side. <span class="tag ok" style="margin:0">wins for them too</span> means both projections improve (rare in a 1-for-1, happens with injuries and byes). <span class="tag warn" style="margin:0">even on rtsports</span> means the weekly number the other owner sees on his own lineup page calls it a wash, while ESPN's rest-of-season projection says I win — that gap is the edge. Trades need commissioner approval, so keep them defensible.</div>
     ${powerTable()}
     <div class="card" style="margin-top:14px"><h2>Controls</h2>
-      <div class="row"><span class="pill">Min gain for me <input type="range" id="mg" min="0" max="60" step="2" value="${minGain}" style="margin-left:8px"> <b id="mgv">${minGain}</b></span>
-      <button class="btn ${kinds['11']?'on':''}" data-k="11">1 for 1</button><button class="btn ${kinds['21']?'on':''}" data-k="21">I give 2, get 1</button><button class="btn ${kinds['12']?'on':''}" data-k="12">I give 1, get 2</button></div>
+      <div class="row"><span class="pill">Min gain for me <input type="range" id="mg" min="0" max="60" step="2" value="${minGain}" style="margin-left:8px"> <b id="mgv">${minGain}</b></span></div>
       <p class="dim" style="margin:10px 0 4px;font-size:11.5px">Click a player to mark him untouchable (never offered):</p>
       <div>${myRoster.map(p=>`<span class="chk ${untouch.has(p.id)?'off':''}" data-id="${p.id}">${player(p)} <span class="dim">${Math.round(p.pts)}</span></span>`).join('')}</div>
     </div>
-    <div class="card hot" style="margin-top:14px"><h2>Best deals on the board</h2>${board.length?board.map(d=>`<div class="dim" style="margin-top:8px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:800">vs ${esc(d.o.name)} · ${esc(d.o.owner)}</div>`+dealRow(d,true)).join(''):'<p class="dim">Nothing sellable clears the bar. Lower the minimum gain or allow more deal shapes.</p>'}</div>
+    <div class="card hot" style="margin-top:14px"><h2>Best deals on the board</h2>${board.length?board.map(d=>`<div class="dim" style="margin-top:8px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:800">vs ${esc(d.o.name)} · ${esc(d.o.owner)}</div>`+dealRow(d,true)).join(''):'<p class="dim">Nothing sellable clears the bar. Lower the minimum gain.</p>'}</div>
     ${opps.map(o=>{const ds=(byOpp[o.name]||[]).slice(0,5); return `<div class="opp card"><h3>${esc(o.name)} <span>${esc(o.owner)} · ${Math.round(V(o.roster))} projected</span></h3>
       <div class="needs">${needs(o)}</div>${ds.length?ds.map(d=>dealRow(d,false)).join(''):'<p class="dim">No deal here clears the bar.</p>'}</div>`;}).join('')}`;
     document.getElementById('mg').oninput=e=>{minGain=+e.target.value;localStorage.setItem('desert.minGain',minGain);document.getElementById('mgv').textContent=minGain;};
     document.getElementById('mg').onchange=draw;
-    main.querySelectorAll('.btn[data-k]').forEach(b=>b.onclick=()=>{kinds[b.dataset.k]=!kinds[b.dataset.k];localStorage.setItem('desert.kinds',JSON.stringify(kinds));draw();});
     main.querySelectorAll('.chk').forEach(c=>c.onclick=()=>{const id=c.dataset.id; untouch.has(id)?untouch.delete(id):untouch.add(id); localStorage.setItem('desert.untouch',JSON.stringify([...untouch])); draw();});
   }
   draw();
@@ -303,78 +282,175 @@ function renderTrades(){
 
 function renderWaivers(){
   let posF='ALL', q='';
-  const open=ROSTER-me.roster.length; const L0=lineup(me.roster); const empty=START-L0.n;
-  // Thursday plan. Open spots: greedy marginal adds. Full roster (the league's
-  // 14-man convention): greedy SWAPS — the (free agent, drop) pair that adds the
-  // most to the lineup, respecting caps, never dropping someone just added.
-  const plan=[]; let r=me.roster.slice();
-  for(let i=0;i<open;i++){
-    let best=null,bg=-1; for(const p of FA){ if(plan.find(x=>x.p===p)) continue; const g=marginal(r,p); if(g>bg){bg=g;best=p;} }
-    if(!best) break;
-    const starts=bg>0.5;
-    const before=lineup(r).used, after=lineup(r.concat(best.id)).used;
-    const benched=before.find(id=>!after.includes(id));
-    const backups=FA.filter(p=>p.pos===best.pos&&p!==best&&!plan.find(x=>x.p===p)).slice(0,3);
-    plan.push({p:best,gain:bg,starts,backups,benched}); r.push(best.id);
-  }
-  const SWAPS=6;
-  if(open<=0){
-    const added=new Set();
-    for(let i=0;i<SWAPS;i++){
-      const base=lineup(r).total; let best=null,bg=8; // a swap has to be worth at least 8 points to bother
-      for(const p of FA.slice(0,120)){ if(added.has(p.id)) continue;
-        for(const d of r){ if(added.has(d)) continue; const g=lineup(r.filter(x=>x!==d).concat(p.id)).total-base; if(g>bg){bg=g;best={p,d};} } }
-      if(!best) break;
-      const backups=FA.filter(p=>p.pos===best.p.pos&&p!==best.p&&!added.has(p.id)).slice(0,3);
-      plan.push({p:best.p,gain:bg,starts:true,backups,drop:P[best.d]}); added.add(best.p.id); r=r.filter(x=>x!==best.d).concat(best.p.id);
-    }
-  }
-  // who else is likely to chase my targets (from the fill simulation)
-  const chasers={}; Object.entries(SIM).forEach(([tn,ids])=>{ if(tn===me.name) return; ids.forEach(id=>{(chasers[id]=chasers[id]||[]).push(tn);}); });
-  // bye map for my current starters
+  const plan=swapPlan(me.roster,5,6);
+  // this week's streamers: same-slot swaps judged on THIS week's projection, only where the
+  // rest-of-season cost is small (K and D/ST are cheap to churn; skill players are not)
+  const streams=[];
+  for(const d of me.roster){ const p=P[d]; const s=slot(p); if(!p.week&&p.week!==0) continue;
+    const cands=faBySlot(s).filter(f=>f.bye!==D.week && (f.week||0)>(p.week||0)+1.5 && (p.pts-f.pts)<=40).sort((a,b)=>(b.week||0)-(a.week||0)).slice(0,2);
+    if(cands.length) streams.push({drop:p,adds:cands}); }
+  streams.sort((a,b)=>((b.adds[0].week||0)-(b.drop.week||0))-((a.adds[0].week||0)-(a.drop.week||0)));
   const byes={}; me.roster.forEach(id=>{const p=P[id]; if(p.bye>=D.week) (byes[p.bye]=byes[p.bye]||[]).push(p);});
   function draw(){
     const list=FA.filter(p=>(posF==='ALL'||p.pos===posF)&&(!q||p.name.toLowerCase().includes(q)||p.team.toLowerCase().includes(q))).slice(0,80);
+    const myWorst={}; me.roster.forEach(id=>{const s=slot(P[id]); if(!myWorst[s]||P[id].pts<myWorst[s].pts) myWorst[s]=P[id];});
     main.innerHTML=`
-    <h1>Waiver board <small>Free-for-all adds open Thursday 11:00 AM CT · unlimited · no waiver budget</small></h1>
-    <div class="callout red"><b>Why Thursday at 11:00 sharp matters.</b> Total-points league, ${ROSTER} rostered, everyone starts, and the only limits are position caps — up to <b>4 quarterbacks</b>, and kickers and defenses can go to zero. ${open>0?`You have <b>${open} open roster spots</b> and <b>${empty} empty starting slots</b> scoring zero right now.`:`Every pickup is a swap, so the play is trading your lowest scorers (kickers, defenses) for the highest scorers on the wire.`} There is no waiver order and no budget: whoever clicks first gets the player. ${FA[0]?`The best free agent, ${esc(FA[0].name)}, projects for ${Math.round(FA[0].pts)} rest-of-season points — a kicker projects for about ${Math.round((FA.find(p=>p.pos==='K')||{pts:120}).pts)}.`:''}</div>
+    <h1>Waiver board <small>Free-for-all adds open Thursday 11:00 AM CT · unlimited · no budget · every add is a same-position swap</small></h1>
+    <div class="callout red"><b>How this league actually works.</b> Fixed lineup QB2 · RB3 · WR/TE5 · K2 · D/ST2, everyone starts, and a pickup must replace a player in the same slot. So the wire can only help where a free agent out-projects the worst guy you already start there. Standings are total points, so a bye is a zero, not a loss — and there is no waiver order: first click wins on Thursday at 11:00 sharp.</div>
     <div class="grid g3">
-      <div class="card hot"><h2>Thursday plan — in this order</h2>
-        <ul class="plan">${plan.map((x,i)=>`<li><div class="no">${i+1}</div><div class="what"><span class="ln">${player(x.p)}${x.drop?` <span class="dim">for</span> <span class="bad">${esc(x.drop.name)}</span> <span class="dim">(${Math.round(x.drop.pts)})</span>`:''}</span><span class="sub">${Math.round(x.p.pts)} pts rest of season · ${x.p.week?x.p.week.toFixed(1)+' this week · ':''}ESPN ${x.p.own}% rostered${chasers[x.p.id]?` · <span class="gold">likely target for ${chasers[x.p.id].map(esc).join(', ')}</span>`:''}<br>if gone: ${x.backups.map(b=>`${esc(b.name)} (${Math.round(b.pts)})`).join(' → ')||'—'}</span></div>
-          <div class="g"><b class="${x.starts?'good':'dim'}">${fmt(x.gain)}</b><small>${x.drop?'net gain':x.starts?(x.benched?`starts over ${esc(P[x.benched].name.split(' ').pop())}`:'fills an empty slot'):'bench / bye cover'}</small></div></li>`).join('')}</ul>
-        <p class="dim" style="margin-top:8px;font-size:11.5px">Gain = points added to my lineup for the rest of the season${open<=0?', after the drop':''}. Total if I get all ${plan.length}: <b class="good">${fmt(plan.reduce((s,x)=>s+x.gain,0))}</b>. ${open<=0?'The Speed Kit runs these swaps in this order.':''}</p>
+      <div class="card hot"><h2>Thursday swaps — in this order</h2>
+        ${plan.length?`<ul class="plan">${plan.map((x,i)=>`<li><div class="no">${i+1}</div><div class="what"><span class="ln">${player(x.p)} <span class="dim">for</span> <span class="bad">${esc(x.drop.name)}</span> <span class="dim">(${Math.round(x.drop.pts)})</span></span><span class="sub">${Math.round(x.p.pts)} pts rest of season · ${x.p.week!=null?x.p.week.toFixed(1)+' this week · ':''}ESPN ${x.p.own}% rostered<br>if gone: ${x.backups.map(b=>`${esc(b.name)} (${Math.round(b.pts)})`).join(' → ')||'—'}</span></div>
+          <div class="g"><b class="good">${fmt(x.gain)}</b><small>net gain</small></div></li>`).join('')}</ul>
+        <p class="dim" style="margin-top:8px;font-size:11.5px">Net gain = free agent's rest-of-season points minus the dropped player's. Total if all ${plan.length} go through: <b class="good">${fmt(plan.reduce((s,x)=>s+x.gain,0))}</b>. The Speed Kit runs exactly this list.</p>`:'<p class="dim">No free agent out-projects anyone you start by 5+ points. Your roster beats the wire — hold.</p>'}
       </div>
-      <div class="card"><h2>My bye weeks</h2><div class="bye">${Object.keys(byes).sort((a,b)=>a-b).map(w=>`<div class="${byes[w].length>=3?'hot':''}"><b>Wk ${w}</b>${byes[w].map(p=>esc(p.name.split(' ').pop())).join(', ')}</div>`).join('')}</div>
-        <p class="dim" style="margin-top:8px;font-size:11.5px">Total points means a bye is a zero, not a loss. Bench adds cover the weeks with 3+ out.</p>
-        <h2 style="margin-top:14px">Replacement level</h2><div class="row">${POSN.map(p=>`<span class="pill"><span class="pos ${p}">${p==='DST'?'D/ST':p}</span> ${Math.round(REPL[p])}</span>`).join('')}</div>
-        <p class="dim" style="margin-top:8px;font-size:11.5px">Best player left at each position after all 11 teams fill to 20. Anyone on my roster below this number is a drop candidate once I'm full.</p>
+      <div class="card"><h2>Your floor by slot</h2>
+        <div class="scroll"><table><tr><th>Slot</th><th>Your worst starter</th><th class="n">His ROS</th><th>Best on the wire</th><th class="n">ROS</th></tr>
+        ${SLOT_KEYS.map(s=>{const w=myWorst[s], f=faBySlot(s)[0]; return `<tr><td><b>${slotName[s]}</b></td><td>${w?esc(w.name):'—'}</td><td class="n">${w?Math.round(w.pts):''}</td><td>${f?esc(f.name):'—'}</td><td class="n ${f&&w&&f.pts>w.pts?'good':'dim'}">${f?Math.round(f.pts):''}</td></tr>`;}).join('')}
+        </table></div>
+        <h2 style="margin-top:14px">My bye weeks</h2><div class="bye">${Object.keys(byes).sort((a,b)=>a-b).map(w=>`<div class="${byes[w].length>=3?'hot':''}"><b>Wk ${w}</b>${byes[w].map(p=>esc(short(p))).join(', ')}</div>`).join('')}</div>
       </div>
+    </div>
+    <div class="card" style="margin-top:14px"><h2>This week's streamers (week ${D.week})</h2>
+      <p class="dim" style="margin-bottom:8px;font-size:11.5px">Same-slot swaps that project better <i>this week</i> and cost little for the rest of the season. Kickers and defenses are the natural churn; swap back next Thursday if the original guy is still there.</p>
+      ${streams.length?`<div class="scroll"><table><tr><th>Drop</th><th class="n">This wk</th><th>Add</th><th class="n">This wk</th><th class="n">Wk gain</th><th class="n">Rest-of-season change</th></tr>
+      ${streams.slice(0,8).map(s=>s.adds.map((a,i)=>`<tr><td>${i?'':player(s.drop)}</td><td class="n">${i?'':(s.drop.week||0).toFixed(1)}</td><td>${player(a)}</td><td class="n">${(a.week||0).toFixed(1)}</td><td class="n good">${fmt((a.week||0)-(s.drop.week||0))}</td><td class="n ${s.drop.pts-a.pts>0?'bad':'good'}">${fmt(a.pts-s.drop.pts)}</td></tr>`).join('')).join('')}</table></div>`:'<p class="dim">No streamer beats your starters this week.</p>'}
     </div>
     <div class="card" style="margin-top:14px"><h2>Free agents</h2>
       <div class="row" style="margin-bottom:8px">${['ALL',...POSN].map(p=>`<button class="btn ${posF===p?'on':''}" data-pos="${p}">${p==='DST'?'D/ST':p}</button>`).join('')}<input type="search" id="q" placeholder="Search name or team" value="${esc(q)}"></div>
-      <div class="scroll"><table><tr><th>Player</th><th class="n">Rest of season</th><th class="n">This week</th><th class="n">If I add him</th><th class="n">ESPN own%</th><th class="n">ADP</th></tr>
-      ${list.map(p=>{const g=marginal(me.roster,p); return `<tr><td>${player(p)}</td><td class="n"><b>${Math.round(p.pts)}</b></td><td class="n">${p.week?p.week.toFixed(1):'–'}</td><td class="n ${g>0.5?'good':'dim'}">${fmt(g)}</td><td class="n">${p.own}%</td><td class="n">${p.adp>=9999?'–':p.adp}</td></tr>`;}).join('')}
+      <div class="scroll"><table><tr><th>Player</th><th class="n">Rest of season</th><th class="n">This week</th><th class="n">vs my worst in slot</th><th class="n">ESPN own%</th><th class="n">ADP</th></tr>
+      ${list.map(p=>{const w=myWorst[slot(p)]; const g=w?p.pts-w.pts:0; return `<tr><td>${player(p)}</td><td class="n"><b>${Math.round(p.pts)}</b></td><td class="n">${p.week!=null?p.week.toFixed(1):'–'}</td><td class="n ${g>0.5?'good':'dim'}">${fmt(g)}</td><td class="n">${p.own}%</td><td class="n">${p.adp>=9999?'–':p.adp}</td></tr>`;}).join('')}
       </table></div></div>
     <div class="card" style="margin-top:14px"><h2>Bye-week planner — where the zeros are</h2>
-      <p class="dim" style="margin-bottom:8px;font-size:11.5px">${START>=ROSTER?'Everyone starts, so every bye is a zero in a total-points league':`${START} start of ${ROSTER}, so only ${ROSTER-START} byes a week are covered; every extra one is a zero`} — unless you swap the lowest-value bye player that Thursday for a streamer and swap back after. Kickers and defenses are the natural pieces. Plan below assumes the roster after the Thursday swaps.</p>
-      <div class="scroll"><table><tr><th>Week</th><th>On bye</th><th class="n">Zeros</th><th>Cheapest swap</th><th>Best one-week fill (not on bye)</th></tr>
-      ${(()=>{const full=me.roster.filter(id=>!plan.find(x=>x.drop&&x.drop.id===id)).concat(plan.map(x=>x.p.id)); const rows=[]; for(let w=D.week;w<=18;w++){ const out=full.map(id=>P[id]).filter(p=>p.bye===w); const active=full.length-out.length; const zeros=Math.max(0,Math.min(START,full.length)-active); if(!out.length) continue;
-        // only swap out a bye player you could get back or replace: his value must be
-        // within 30 pts of the best free agent at his position, otherwise eat the zero
-        const cnt={}; full.forEach(id=>{cnt[P[id].pos]=(cnt[P[id].pos]||0)+1;});
-        const replaceable=out.filter(p=>{const f=FA.find(x=>x.pos===p.pos&&x!==p&&!plan.find(y=>y.p===x)); return f&&p.pts-f.pts<=30;}).sort((a,b)=>a.pts-b.pts);
-        const cheapest=replaceable[0];
-        if(!cheapest){ rows.push(`<tr class="${zeros>0?'me':''}"><td><b>Wk ${w}</b></td><td>${out.map(p=>`<span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> ${esc(p.pos==='DST'?p.team:p.name.split(' ').pop())}`).join(' · ')}</td><td class="n ${zeros?'bad':'good'}">${zeros}</td><td colspan="2" class="dim">eat the zero — nobody on bye is cheap enough to risk losing</td></tr>`); continue; }
-        // a one-week fill takes the dropped player's roster spot, so it must respect the caps after the drop
-        const fills=POSN.map(pos=>{ const room=CAPS[pos]-(cnt[pos]||0)+(cheapest.pos===pos?1:0); if(room<=0) return null; return FA.find(p=>p.pos===pos&&p.bye!==w&&!plan.find(x=>x.p===p)); }).filter(Boolean).sort((a,b)=>b.pts-a.pts).slice(0,2);
-        const short=p=>p.pos==='DST'?p.team:p.name.split(' ').pop();
-        rows.push(`<tr class="${zeros>0?'me':''}"><td><b>Wk ${w}</b></td><td>${out.map(p=>`<span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> ${esc(short(p))}`).join(' · ')}</td><td class="n ${zeros?'bad':'good'}">${zeros}</td><td>${zeros?`drop ${esc(cheapest.name)} (${Math.round(cheapest.pts)} ROS)`:'—'}</td><td>${zeros?fills.map(p=>`${esc(p.name)} <span class="dim">${Math.round(p.pts/D.weeksLeft)}/wk</span>`).join(' · '):'—'}</td></tr>`);}
+      <p class="dim" style="margin-bottom:8px;font-size:11.5px">Everyone starts, so every bye is a zero. The only fix is a same-slot swap that Thursday for someone who plays — worth it only when the bye player is cheap enough that losing him doesn't matter (kickers, defenses, your 3rd RB). Plan assumes the roster after the Thursday swaps.</p>
+      <div class="scroll"><table><tr><th>Week</th><th>On bye</th><th class="n">Zeros</th><th>Swap worth making</th><th>One-week fill (same slot, plays that week)</th></tr>
+      ${(()=>{const full=me.roster.filter(id=>!plan.find(x=>x.drop.id===id)).concat(plan.map(x=>x.p.id)); const rows=[]; for(let w=D.week;w<=18;w++){ const out=full.map(id=>P[id]).filter(p=>p.bye===w); if(!out.length) continue;
+        const cheap=out.filter(p=>{const f=faBySlot(slot(p)).find(x=>x.bye!==w&&!plan.find(y=>y.p===x)); return f&&p.pts-f.pts<=30;}).sort((a,b)=>a.pts-b.pts);
+        const fills=cheap.map(p=>{const f=faBySlot(slot(p)).find(x=>x.bye!==w&&!plan.find(y=>y.p===x)); return f?`${esc(p.name.split(' ').pop())} → ${esc(f.name)} <span class="dim">${Math.round(f.pts/D.weeksLeft)}/wk</span>`:null;}).filter(Boolean);
+        rows.push(`<tr class="me"><td><b>Wk ${w}</b></td><td>${out.map(p=>`<span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> ${esc(short(p))}`).join(' · ')}</td><td class="n bad">${out.length}</td><td>${cheap.length?cheap.map(p=>esc(p.name)).join(', '):'<span class="dim">none — eat the zero, nobody on bye is cheap enough to risk</span>'}</td><td>${fills.join(' · ')||'—'}</td></tr>`);}
         return rows.join('');})()}
       </table></div></div>`;
     main.querySelectorAll('.btn[data-pos]').forEach(b=>b.onclick=()=>{posF=b.dataset.pos;draw();});
     const qi=document.getElementById('q'); qi.oninput=e=>{q=e.target.value.toLowerCase();draw();document.getElementById('q').focus();document.getElementById('q').setSelectionRange(q.length,q.length);};
   }
   draw();
+}
+
+/* ================= speed kit =================
+   Bookmarklets that run INSIDE rtsports on the Add/Drop page and drive the page's
+   own functions: selectAddPlayer(id) for the add, the real DROP button for the
+   drop, SaveTransactions() to save. A same-origin popup is opened by the click
+   (so it isn't blocked) and reloaded at the bell so the site unlocks. */
+function parseSwaps(txt){ return txt.split('\n').map(l=>l.trim()).filter(l=>l&&!l.startsWith('#')).map(l=>{const m=l.match(/^(\d+)\s+(.+?)\s+drop\s+(\d+)\s+(.+)$/i); return m?{id:m[1],name:m[2].trim(),drop:m[3],dropName:m[4].trim()}:null;}).filter(Boolean); }
+function botSource(targets,mode){
+  return `(()=>{
+const T=${JSON.stringify(targets)};const MODE=${JSON.stringify(mode)};
+if(!/add-drop\\.php/.test(location.pathname)){alert('Run this on the rtsports Add/Drop Players page.');return;}
+const LOGKEY='dlbot.log';try{if(MODE!=='log')localStorage.setItem(LOGKEY,'--- '+MODE.toUpperCase()+' run started '+new Date().toString()+' ---\\n');}catch(e){}
+const log=(m)=>{let b=document.getElementById('dlbot');if(!b){b=document.createElement('pre');b.id='dlbot';b.style.cssText='position:fixed;left:8px;bottom:8px;z-index:99999;max-width:480px;max-height:45vh;overflow:auto;background:#0b0e15;color:#8ff0c2;border:2px solid #e0102f;border-radius:8px;padding:10px;font:12px/1.4 Menlo,monospace;white-space:pre-wrap';document.body.appendChild(b);}const line=new Date().toLocaleTimeString()+'.'+String(Date.now()%1000).padStart(3,'0')+'  '+m;b.textContent+=line+'\\n';b.scrollTop=1e9;try{localStorage.setItem(LOGKEY,(localStorage.getItem(LOGKEY)||'')+line+'\\n');}catch(e){}};
+if(MODE==='log'){const t=localStorage.getItem(LOGKEY)||'(no log yet)';const v=window.open('','dlbot_log','width=700,height=600');if(v){v.document.write('<pre style="font:13px Menlo,monospace;white-space:pre-wrap">'+t.replace(/</g,'&lt;')+'</pre>');}else{alert(t);}return;}
+if(!T.length){alert('No swap lines. Fill in the list on the Speed Kit page first.');return;}
+const w=window.open(location.href,'dlbot_win','width=1100,height=900');if(!w){alert('Popup blocked — allow popups for rtsports.com and click the bookmark again.');return;}
+log('mode '+MODE.toUpperCase()+' · '+T.length+' lines: '+T.map(t=>t.name+' for '+t.dropName).join(' | '));
+function nextThu11(){const now=new Date();const f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour12:false,weekday:'short',hour:'2-digit',minute:'2-digit',second:'2-digit'});const p=Object.fromEntries(f.formatToParts(now).map(x=>[x.type,x.value]));const secsNowCT=(+p.hour%24)*3600+(+p.minute)*60+(+p.second);const dow=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);let days=(4-dow+7)%7;if(days===0&&secsNowCT>=11*3600)days=7;const target=11*3600-0.4;return now.getTime()+((days*86400)+(target-secsNowCT))*1000;}
+const goAt=MODE==='arm'?nextThu11():Date.now();const wait=goAt-Date.now();
+if(wait>36*3600*1000){log('WARNING: next window is more than a day away; firing at '+new Date(goAt).toLocaleString()+' anyway.');}
+if(wait<0){log('window is already open — going now');}else{log('firing in '+Math.round(wait/1000)+'s ('+new Date(goAt).toLocaleTimeString()+' local)');}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function ready(){for(let i=0;i<120;i++){try{if(w.document&&w.document.readyState==='complete'&&typeof w.selectAddPlayer==='function'&&typeof w.SaveTransactions==='function'&&w.document.getElementById('fa-list'))return true;}catch(e){}await sleep(100);}return false;}
+const onRoster=id=>{try{return !!w.document.getElementById('roster-player-'+id+'-name');}catch(e){return false;}};
+function elig(id){try{return w.addEligibility(+id)||w.addEligibility(id);}catch(e){return {enabled:false,reason:'elig err '+e.message};}}
+async function reloadUntilOpen(){for(let i=0;i<40;i++){w.location.reload();await sleep(200);if(!(await ready())){continue;}const e=elig(T[0].id);if(e&&e.enabled)return true;if(e&&/roster|already/i.test(e.reason||''))return true;log('not open yet: '+(e&&e.reason));await sleep(300);}return false;}
+async function clearQueue(){try{if(w.hasUnsavedTransactions()){w.location.reload();await ready();}}catch(e){}}
+async function trySwap(t){
+  if(onRoster(t.id)){log('already have '+t.name);return 'have';}
+  const e=elig(t.id);if(!e||!e.enabled){log('skip '+t.name+': '+(e&&e.reason));return false;}
+  if(!onRoster(t.drop)){log('skip '+t.name+': '+t.dropName+' is no longer on the roster');return false;}
+  try{w.selectAddPlayer(+t.id);}catch(err){try{w.selectAddPlayer(t.id);}catch(e2){log('select failed '+t.name+': '+e2.message);return false;}}
+  await sleep(120);let q=[];try{q=w.selectedAddIds()||[];}catch(e){}
+  if(!q.map(String).includes(String(t.id))){log('not queued '+t.name);await clearQueue();return false;}
+  const db=w.document.querySelector('button[data-drop-id="'+t.drop+'"]');if(!db){log('no DROP button for '+t.dropName);await clearQueue();return false;}
+  db.click();await sleep(120);let dq=[];try{dq=w.selectedDropIds()||[];}catch(e){}
+  if(!dq.map(String).includes(String(t.drop))){log('drop not queued: '+t.dropName);await clearQueue();return false;}
+  if(MODE==='dry'){log('DRY RUN OK: '+t.name+' for '+t.dropName+' queued (would save now) — clearing');await clearQueue();return true;}
+  try{const r=w.SaveTransactions(new w.Event('click'));if(r&&r.then)await r;}catch(err){log('save threw for '+t.name+': '+err.message);}
+  for(let i=0;i<30;i++){await sleep(100);if(onRoster(t.id)){log('DONE: added '+t.name+', dropped '+t.dropName);return true;}}
+  let un=null;try{un=w.hasUnsavedTransactions();}catch(e){}
+  log('could not confirm '+t.name+' (unsaved='+un+') — reloading to check');w.location.reload();await ready();
+  if(onRoster(t.id)){log('DONE (confirmed after reload): '+t.name);return true;}
+  log('FAILED '+t.name+' — do this one by hand if you still want him');return false;}
+(async()=>{
+  if(wait>0)await sleep(wait);
+  log('GO — reloading the add page');
+  if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;}
+  const usedDrops=new Set();let got=0;
+  for(const t of T){
+    if(usedDrops.has(t.drop))continue;
+    const r=await trySwap(t);
+    if(r===true){got++;usedDrops.add(t.drop);}
+    else if(r==='have'){usedDrops.add(t.drop);}
+    if(!(await ready())){await reloadUntilOpen();}
+  }
+  log('done — '+got+(MODE==='dry'?' swaps rehearsed (nothing saved).':' swaps made. Check the roster in the other window.')+' Click the Bot Log bookmark any time to see this again.');
+})();})();`;
+}
+function renderSpeed(){
+  const plan=swapPlan(me.roster,5,6);
+  const lines=[]; const missing=[];
+  for(const x of plan){
+    const cands=[x.p].concat(x.backups);
+    for(const c of cands){ if(c.rts_id&&x.drop.rts_id) lines.push(`${c.rts_id} ${c.name} drop ${x.drop.rts_id} ${x.drop.name}`); else missing.push(c.name+(x.drop.rts_id?'':' / '+x.drop.name)); }
+  }
+  const SUGGESTED=lines.join('\n');
+  // Jerry's list is HIS: it persists across rebuilds and is never overwritten automatically.
+  const saved=localStorage.getItem('desert.targets3'); const hasOwn=saved!=null&&saved.trim().length>0;
+  const myIds=me.roster.map(id=>P[id]).map(p=>`${p.rts_id||'?????'} ${p.name}`).join('\n');
+  const myOpts=me.roster.map(id=>P[id]).sort((a,b)=>SLOT_KEYS.indexOf(slot(a))-SLOT_KEYS.indexOf(slot(b))||b.pts-a.pts).map(p=>`<option value="${p.id}">${p.pos==='DST'?'D/ST':p.pos} · ${esc(p.name)} (${Math.round(p.pts)})</option>`).join('');
+  main.innerHTML=`
+  <h1>Thursday speed kit <small>Adds open Thu 11:00:00 AM CT (9:00 Pacific) · first click wins · this clicks for you</small></h1>
+  <div class="card hot"><h2>1 · Drag these four to your bookmarks bar</h2>
+    <p style="display:flex;gap:10px;flex-wrap:wrap"><a class="bm" id="bm" href="#">⚡ Desert Bot</a> <a class="bm" id="bm-now" href="#" style="background:#7a5c12;border-color:#ffd166">▶ Bot NOW</a> <a class="bm" id="bm-dry" href="#" style="background:#1e6a49;border-color:#8ff0c2">🧪 Dry Run</a> <a class="bm" id="bm-log" href="#" style="background:#2d3749;border-color:#93a0b4">📋 Bot Log</a></p>
+    <ul style="margin:10px 0 0 18px;line-height:1.7">
+      <li><b>⚡ Desert Bot</b> — arms and waits for Thursday 11:00:00 AM CT, then runs the swaps. The real one.</li>
+      <li><b>▶ Bot NOW</b> — same bot, fires immediately. For a live test while the window is open (Thu 11 AM – Sun noon CT).</li>
+      <li><b>🧪 Dry Run</b> — fires immediately but never saves: queues the add and the drop, confirms the site accepted both, clears. Safe any time the window is open.</li>
+      <li><b>📋 Bot Log</b> — opens the timestamped log from the last run.</li>
+    </ul>
+    <p class="dim" style="margin-top:10px">Drag each onto Chrome's bookmarks bar (View → Always Show Bookmarks Bar). They rebuild whenever you edit the list below, so re-drag after changing it. Every swap is same-position by construction — the list is generated from the waiver page's plan.</p></div>
+  <div class="card"><h2>2 · Thursday, 8:50 AM Pacific</h2>
+    <ol>
+      <li>Chrome on the Mac, logged into RTSports, on Desert League → <b>Add/Drop Players</b>. Mac awake, no sleep.</li>
+      <li>8:55: click <b>⚡ Desert Bot</b>. A second Add/Drop window opens (allow popups for rtsports.com if asked, then click again). The green log box shows the countdown.</li>
+      <li>Start a screen recording (Cmd+Shift+5) and leave both windows alone through 9:01.</li>
+      <li>Any line the log marks <span class="bad">FAILED</span>, do by hand in the popup. Then message me; I can read the log from your browser.</li>
+    </ol></div>
+  <div class="card"><h2>3 · Wednesday night: write the swaps</h2>
+    <p class="dim" style="margin-bottom:8px">Pick who you're dropping, then who you want — the list only shows free agents in the same slot, best first. Add a backup line for the same drop right after it: if the first guy is gone at the bell, the bot tries the next. Nothing on this page decides for you; the bot runs exactly these lines, in this order.</p>
+    <div class="row" style="margin-bottom:10px">
+      <select id="pickDrop" class="btn" style="height:36px"><option value="">Drop…</option>${myOpts}</select>
+      <select id="pickAdd" class="btn" style="height:36px;min-width:260px"><option value="">Add… (pick a drop first)</option></select>
+      <button id="addLine" class="btn on">Add line</button>
+    </div>
+    <textarea id="tg">${esc(hasOwn?saved:'')}</textarea>
+    <p style="margin-top:8px" class="row"><button id="suggest" class="btn">Load the waiver page's suggested swaps</button> <button id="clear" class="btn">Clear</button> <span id="cnt" class="dim"></span></p>
+    <p class="dim" style="margin-top:6px;font-size:11.5px">Raw format, if you'd rather type: <code>add-id name drop roster-id name</code>, one per line; lines starting with # are ignored. Your list is saved in this browser and is never overwritten by a refresh.${missing.length?` <span class="bad">No rtsports id yet for: ${esc(missing.join(', '))}.</span>`:''}</p>
+    <details style="margin-top:10px"><summary class="dim" style="cursor:pointer">Your roster's rtsports ids</summary><pre style="font:12px Menlo,monospace;margin-top:6px;color:var(--dim)">${esc(myIds)}</pre></details></div>
+  <div class="card"><h2>Fallback if the bot can't run</h2>
+    <p>Add/Drop page open at 8:59 with the right position filter on. At 9:00:00 refresh, click <b>ADD</b> on the first target, click <b>DROP</b> on the player he replaces, save. Same position, one for one, in the order above.</p></div>`;
+  const ta=document.getElementById('tg');
+  function upd(){ const t=parseSwaps(ta.value); localStorage.setItem('desert.targets3',ta.value);
+    for(const [id,mode] of [['bm','arm'],['bm-now','now'],['bm-dry','dry'],['bm-log','log']]) document.getElementById(id).href='javascript:'+encodeURIComponent(botSource(t,mode));
+    document.getElementById('cnt').textContent=t.length+' lines · '+new Set(t.map(x=>x.drop)).size+' distinct drops'+(t.length?'':' — empty: the bot will do nothing'); }
+  ta.addEventListener('input',upd);
+  document.getElementById('suggest').onclick=()=>{ta.value=(ta.value.trim()?ta.value.trim()+'\n':'')+SUGGESTED;upd();};
+  document.getElementById('clear').onclick=()=>{if(confirm('Clear the whole list?')){ta.value='';upd();}};
+  const pd=document.getElementById('pickDrop'), pa=document.getElementById('pickAdd');
+  pd.onchange=()=>{ const d=P[pd.value]; pa.innerHTML='<option value="">Add…</option>'; if(!d) return;
+    faBySlot(slot(d)).slice(0,40).forEach(f=>{ pa.innerHTML+=`<option value="${f.id}" ${f.rts_id?'':'disabled'}>${f.pos==='DST'?'D/ST':f.pos} · ${esc(f.name)} (${Math.round(f.pts)}${f.rts_id?'':' · no id'})</option>`; }); };
+  document.getElementById('addLine').onclick=()=>{ const d=P[pd.value], f=P[pa.value]; if(!d||!f){alert('Pick a drop and an add.');return;}
+    if(!f.rts_id||!d.rts_id){alert('Missing an rtsports id for that player.');return;}
+    ta.value=(ta.value.trim()?ta.value.trim()+'\n':'')+`${f.rts_id} ${f.name} drop ${d.rts_id} ${d.name}`; upd(); pa.value=''; };
+  document.querySelectorAll('.bm').forEach(a=>a.addEventListener('click',e=>{e.preventDefault(); alert('Drag it to the bookmarks bar, then click it from there while on the rtsports Add/Drop page.');}));
+  upd();
 }
 </script>
 </body>
