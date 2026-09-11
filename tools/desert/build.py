@@ -72,7 +72,10 @@ assert sum(t['me'] for t in teams) == 1, 'could not find my team'
 
 data = {'built': datetime.datetime.now().strftime('%b %-d, %Y %-I:%M %p'),
         'projDate': proj['date'], 'week': proj['week'], 'weeksLeft': weeks_left,
-        'rules': {'roster': 20, 'start': 18, 'caps': {'QB': 4, 'RB': 6, 'WR': 9, 'TE': 9, 'K': 3, 'DST': 3}},
+        # League convention per Jerry (2026-09-11): 14 rostered, everyone starts, every add is a swap.
+        # The site itself is configured 20 / 18 — kept as siteRoster/siteStart for the toggle.
+        'rules': {'roster': 14, 'start': 14, 'siteRoster': 20, 'siteStart': 18,
+                  'caps': {'QB': 4, 'RB': 6, 'WR': 9, 'TE': 9, 'K': 3, 'DST': 3}},
         'coachKeyHash': league.get('coachKeyHash', ''),
         'warRoom': 'https://jmonies33.github.io/snake-pit/?room=jerry-2026&team=10',
         'players': players, 'teams': teams}

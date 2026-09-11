@@ -157,7 +157,10 @@ document.getElementById('nav-'+PAGE).classList.add('on');
 document.getElementById('nav-war').href=D.warRoom;
 
 /* ================= engine ================= */
-const CAPS=D.rules.caps, START=D.rules.start, ROSTER=D.rules.roster;
+const CAPS=D.rules.caps;
+// 14/14 is the league's convention (everyone starts, every add is a swap); the site is set 20/18.
+const SITE_RULES=localStorage.getItem('desert.siteRules')==='1';
+const START=SITE_RULES?D.rules.siteStart:D.rules.start, ROSTER=SITE_RULES?D.rules.siteRoster:D.rules.roster;
 const P={}; D.players.forEach(p=>P[p.id]=p);
 const teams=D.teams; const me=teams.find(t=>t.me); const opps=teams.filter(t=>!t.me);
 const rostered=new Set(); teams.forEach(t=>t.roster.forEach(id=>rostered.add(id)));
@@ -212,7 +215,8 @@ function player(p,extra){ return `<span class="pos ${p.pos}">${p.pos==='DST'?'D/
 
 /* ================= render ================= */
 const main=document.getElementById('main');
-document.getElementById('meta').innerHTML=`<b>Week ${D.week}</b> · ${D.weeksLeft} weeks left<br>ESPN proj ${esc(D.projDate)} · built ${esc(D.built)}`;
+document.getElementById('meta').innerHTML=`<b>Week ${D.week}</b> · ${D.weeksLeft} weeks left · <a href="#" id="rulesToggle" style="color:var(--gold)">${ROSTER} roster / ${START} start</a><br>ESPN proj ${esc(D.projDate)} · built ${esc(D.built)}`;
+document.getElementById('rulesToggle').onclick=e=>{e.preventDefault(); localStorage.setItem('desert.siteRules',SITE_RULES?'0':'1'); location.reload();};
 if(!COACH){ /* stay a blank shell */ }
 else if(PAGE==='trades') renderTrades(); else renderWaivers();
 
@@ -300,18 +304,30 @@ function renderTrades(){
 function renderWaivers(){
   let posF='ALL', q='';
   const open=ROSTER-me.roster.length; const L0=lineup(me.roster); const empty=START-L0.n;
-  // Thursday plan: greedy marginal adds into my open spots, best-marginal first
+  // Thursday plan. Open spots: greedy marginal adds. Full roster (the league's
+  // 14-man convention): greedy SWAPS — the (free agent, drop) pair that adds the
+  // most to the lineup, respecting caps, never dropping someone just added.
   const plan=[]; let r=me.roster.slice();
   for(let i=0;i<open;i++){
     let best=null,bg=-1; for(const p of FA){ if(plan.find(x=>x.p===p)) continue; const g=marginal(r,p); if(g>bg){bg=g;best=p;} }
     if(!best) break;
     const starts=bg>0.5;
-    // who he pushes to the bench, if anyone
     const before=lineup(r).used, after=lineup(r.concat(best.id)).used;
     const benched=before.find(id=>!after.includes(id));
-    // backups: same position, next best by marginal gain
     const backups=FA.filter(p=>p.pos===best.pos&&p!==best&&!plan.find(x=>x.p===p)).slice(0,3);
     plan.push({p:best,gain:bg,starts,backups,benched}); r.push(best.id);
+  }
+  const SWAPS=6;
+  if(open<=0){
+    const added=new Set();
+    for(let i=0;i<SWAPS;i++){
+      const base=lineup(r).total; let best=null,bg=8; // a swap has to be worth at least 8 points to bother
+      for(const p of FA.slice(0,120)){ if(added.has(p.id)) continue;
+        for(const d of r){ if(added.has(d)) continue; const g=lineup(r.filter(x=>x!==d).concat(p.id)).total-base; if(g>bg){bg=g;best={p,d};} } }
+      if(!best) break;
+      const backups=FA.filter(p=>p.pos===best.p.pos&&p!==best.p&&!added.has(p.id)).slice(0,3);
+      plan.push({p:best.p,gain:bg,starts:true,backups,drop:P[best.d]}); added.add(best.p.id); r=r.filter(x=>x!==best.d).concat(best.p.id);
+    }
   }
   // who else is likely to chase my targets (from the fill simulation)
   const chasers={}; Object.entries(SIM).forEach(([tn,ids])=>{ if(tn===me.name) return; ids.forEach(id=>{(chasers[id]=chasers[id]||[]).push(tn);}); });
@@ -321,12 +337,12 @@ function renderWaivers(){
     const list=FA.filter(p=>(posF==='ALL'||p.pos===posF)&&(!q||p.name.toLowerCase().includes(q)||p.team.toLowerCase().includes(q))).slice(0,80);
     main.innerHTML=`
     <h1>Waiver board <small>Free-for-all adds open Thursday 11:00 AM CT · unlimited · no waiver budget</small></h1>
-    <div class="callout red"><b>Why Thursday at 11:00 sharp matters.</b> This is a total-points league that starts 18 of 20 and lets every team carry 4 quarterbacks. You have <b>${open} open roster spots</b> and <b>${empty} empty starting slots</b> — every one of them is scoring zero right now. There is no waiver order and no budget: whoever clicks first gets the player. ${FA[0]?`The best free agent, ${esc(FA[0].name)}, projects for ${Math.round(FA[0].pts)} rest-of-season points — more than any running back in the league.`:''} Once everyone fills up, the best QB left on the wire is worth about ${Math.round(REPL.QB)}.</div>
+    <div class="callout red"><b>Why Thursday at 11:00 sharp matters.</b> Total-points league, ${ROSTER} rostered, everyone starts, and the only limits are position caps — up to <b>4 quarterbacks</b>, and kickers and defenses can go to zero. ${open>0?`You have <b>${open} open roster spots</b> and <b>${empty} empty starting slots</b> scoring zero right now.`:`Every pickup is a swap, so the play is trading your lowest scorers (kickers, defenses) for the highest scorers on the wire.`} There is no waiver order and no budget: whoever clicks first gets the player. ${FA[0]?`The best free agent, ${esc(FA[0].name)}, projects for ${Math.round(FA[0].pts)} rest-of-season points — a kicker projects for about ${Math.round((FA.find(p=>p.pos==='K')||{pts:120}).pts)}.`:''}</div>
     <div class="grid g3">
       <div class="card hot"><h2>Thursday plan — in this order</h2>
-        <ul class="plan">${plan.map((x,i)=>`<li><div class="no">${i+1}</div><div class="what"><span class="ln">${player(x.p)}</span><span class="sub">${Math.round(x.p.pts)} pts rest of season · ${x.p.week?x.p.week.toFixed(1)+' this week · ':''}ESPN ${x.p.own}% rostered${chasers[x.p.id]?` · <span class="gold">likely target for ${chasers[x.p.id].map(esc).join(', ')}</span>`:''}<br>if gone: ${x.backups.map(b=>`${esc(b.name)} (${Math.round(b.pts)})`).join(' → ')||'—'}</span></div>
-          <div class="g"><b class="${x.starts?'good':'dim'}">${fmt(x.gain)}</b><small>${x.starts?(x.benched?`starts over ${esc(P[x.benched].name.split(' ').pop())}`:'fills an empty slot'):'bench / bye cover'}</small></div></li>`).join('')}</ul>
-        <p class="dim" style="margin-top:8px;font-size:11.5px">Gain = points added to my best 18 for the rest of the season. ${plan.filter(x=>x.starts).length} of these start right away; anyone benched stays on the roster as bye-week cover. Total if I get all ${plan.length}: <b class="good">${fmt(plan.reduce((s,x)=>s+x.gain,0))}</b>.</p>
+        <ul class="plan">${plan.map((x,i)=>`<li><div class="no">${i+1}</div><div class="what"><span class="ln">${player(x.p)}${x.drop?` <span class="dim">for</span> <span class="bad">${esc(x.drop.name)}</span> <span class="dim">(${Math.round(x.drop.pts)})</span>`:''}</span><span class="sub">${Math.round(x.p.pts)} pts rest of season · ${x.p.week?x.p.week.toFixed(1)+' this week · ':''}ESPN ${x.p.own}% rostered${chasers[x.p.id]?` · <span class="gold">likely target for ${chasers[x.p.id].map(esc).join(', ')}</span>`:''}<br>if gone: ${x.backups.map(b=>`${esc(b.name)} (${Math.round(b.pts)})`).join(' → ')||'—'}</span></div>
+          <div class="g"><b class="${x.starts?'good':'dim'}">${fmt(x.gain)}</b><small>${x.drop?'net gain':x.starts?(x.benched?`starts over ${esc(P[x.benched].name.split(' ').pop())}`:'fills an empty slot'):'bench / bye cover'}</small></div></li>`).join('')}</ul>
+        <p class="dim" style="margin-top:8px;font-size:11.5px">Gain = points added to my lineup for the rest of the season${open<=0?', after the drop':''}. Total if I get all ${plan.length}: <b class="good">${fmt(plan.reduce((s,x)=>s+x.gain,0))}</b>. ${open<=0?'The Speed Kit runs these swaps in this order.':''}</p>
       </div>
       <div class="card"><h2>My bye weeks</h2><div class="bye">${Object.keys(byes).sort((a,b)=>a-b).map(w=>`<div class="${byes[w].length>=3?'hot':''}"><b>Wk ${w}</b>${byes[w].map(p=>esc(p.name.split(' ').pop())).join(', ')}</div>`).join('')}</div>
         <p class="dim" style="margin-top:8px;font-size:11.5px">Total points means a bye is a zero, not a loss. Bench adds cover the weeks with 3+ out.</p>
@@ -340,11 +356,15 @@ function renderWaivers(){
       ${list.map(p=>{const g=marginal(me.roster,p); return `<tr><td>${player(p)}</td><td class="n"><b>${Math.round(p.pts)}</b></td><td class="n">${p.week?p.week.toFixed(1):'–'}</td><td class="n ${g>0.5?'good':'dim'}">${fmt(g)}</td><td class="n">${p.own}%</td><td class="n">${p.adp>=9999?'–':p.adp}</td></tr>`;}).join('')}
       </table></div></div>
     <div class="card" style="margin-top:14px"><h2>Bye-week planner — where the zeros are</h2>
-      <p class="dim" style="margin-bottom:8px;font-size:11.5px">18 start, so with a full 20-man roster only 2 byes per week are covered. Every extra bye is a zero in a total-points league — unless you drop your lowest-value bye player that Thursday for a streamer and re-add him after. Kickers and defenses are the natural swap pieces. Plan below assumes the roster after the Thursday adds.</p>
+      <p class="dim" style="margin-bottom:8px;font-size:11.5px">${START>=ROSTER?'Everyone starts, so every bye is a zero in a total-points league':`${START} start of ${ROSTER}, so only ${ROSTER-START} byes a week are covered; every extra one is a zero`} — unless you swap the lowest-value bye player that Thursday for a streamer and swap back after. Kickers and defenses are the natural pieces. Plan below assumes the roster after the Thursday swaps.</p>
       <div class="scroll"><table><tr><th>Week</th><th>On bye</th><th class="n">Zeros</th><th>Cheapest swap</th><th>Best one-week fill (not on bye)</th></tr>
-      ${(()=>{const full=me.roster.concat(plan.map(x=>x.p.id)); const rows=[]; for(let w=D.week;w<=18;w++){ const out=full.map(id=>P[id]).filter(p=>p.bye===w); const active=full.length-out.length; const zeros=Math.max(0,Math.min(START,full.length)-active); if(!out.length) continue;
-        const cheapest=out.slice().sort((a,b)=>a.pts-b.pts)[0];
+      ${(()=>{const full=me.roster.filter(id=>!plan.find(x=>x.drop&&x.drop.id===id)).concat(plan.map(x=>x.p.id)); const rows=[]; for(let w=D.week;w<=18;w++){ const out=full.map(id=>P[id]).filter(p=>p.bye===w); const active=full.length-out.length; const zeros=Math.max(0,Math.min(START,full.length)-active); if(!out.length) continue;
+        // only swap out a bye player you could get back or replace: his value must be
+        // within 30 pts of the best free agent at his position, otherwise eat the zero
         const cnt={}; full.forEach(id=>{cnt[P[id].pos]=(cnt[P[id].pos]||0)+1;});
+        const replaceable=out.filter(p=>{const f=FA.find(x=>x.pos===p.pos&&x!==p&&!plan.find(y=>y.p===x)); return f&&p.pts-f.pts<=30;}).sort((a,b)=>a.pts-b.pts);
+        const cheapest=replaceable[0];
+        if(!cheapest){ rows.push(`<tr class="${zeros>0?'me':''}"><td><b>Wk ${w}</b></td><td>${out.map(p=>`<span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> ${esc(p.pos==='DST'?p.team:p.name.split(' ').pop())}`).join(' · ')}</td><td class="n ${zeros?'bad':'good'}">${zeros}</td><td colspan="2" class="dim">eat the zero — nobody on bye is cheap enough to risk losing</td></tr>`); continue; }
         // a one-week fill takes the dropped player's roster spot, so it must respect the caps after the drop
         const fills=POSN.map(pos=>{ const room=CAPS[pos]-(cnt[pos]||0)+(cheapest.pos===pos?1:0); if(room<=0) return null; return FA.find(p=>p.pos===pos&&p.bye!==w&&!plan.find(x=>x.p===p)); }).filter(Boolean).sort((a,b)=>b.pts-a.pts).slice(0,2);
         const short=p=>p.pos==='DST'?p.team:p.name.split(' ').pop();
