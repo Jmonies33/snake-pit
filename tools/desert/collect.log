@@ -1,0 +1,3 @@
+collector listening on 127.0.0.1:8765, waiting for: ['rosters']
+received rosters (11716 bytes)
+done
