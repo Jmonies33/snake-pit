@@ -10,7 +10,8 @@ for i, l in enumerate(lines):
         cur = {'team': lines[i-1], 'owner': re.sub(r' \d+-\d+$', '', l), 'players': []}; teams.append(cur); continue
     if cur and l in POS and i + 3 < len(lines) and re.match(r'^Bye \d+$', lines[i+3]):
         st = lines[i+5] if i + 5 < len(lines) else ''
-        m = re.match(r'^(?:Starter|Bench|Reserve)\s+(\S+) .* ([\d.]+)$', st)
+        # "Starter - Sun 12:00pm CT 29.66" — separators are spaces or tabs depending on the page build
+        m = re.match(r'^(?:Starter|Bench|Reserve)\s+(\S+)\s+.*?\s([\d.]+)$', st)
         cur['players'].append({'pos': 'DST' if l == 'D/ST' else l, 'name': lines[i+1], 'team': lines[i+2],
                                'bye': int(lines[i+3][4:]), 'inj': (m.group(1) if m and m.group(1) != '-' else ''),
                                'wk1': float(m.group(2)) if m else None})

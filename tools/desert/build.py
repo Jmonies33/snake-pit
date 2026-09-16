@@ -60,7 +60,8 @@ def add_player(p):
     e = {'id': f"{p['pos']}-{k}", 'k': k, 'name': p['name'], 'pos': p['pos'], 'team': p['team'],
          'bye': p.get('bye', 0), 'pts': p.get('pts', 0), 'season': p.get('season', 0),
          'week': p.get('week', 0), 'inj': p.get('inj', ''), 'own': p.get('pctOwn', 0),
-         'adp': adp.get(k, 9999), 'stats': p.get('stats', {})}
+         'adp': adp.get(k, 9999), 'stats': p.get('stats', {}),
+         'actual': p.get('actual'), 'lastWk': p.get('lastWk'), 'opp': p.get('opp', ''), 'gp': p.get('gp', 0)}
     if k in RTS: e['rts_id'] = RTS[k]
     byKey[k] = e; players.append(e); return e
 for p in proj['players']:

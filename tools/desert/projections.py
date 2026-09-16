@@ -73,20 +73,43 @@ def main(out=os.path.join(HERE, 'projections.json')):
     except Exception:
         pass
     week = week or 1
+    # ESPN's currentScoringPeriod lags until Thursday's kickoff; if any player already
+    # has ACTUAL stats for week N, the week being played next is N+1.
+    played = 0
+    for pl in players:
+        for s in pl['player'].get('stats', []):
+            if s.get('seasonId') == 2026 and s.get('statSourceId') == 0 and s.get('statSplitTypeId') == 1 and s.get('scoringPeriodId'):
+                played = max(played, int(s['scoringPeriodId']))
+    week = max(week, min(18, played + 1))
     weeks_left = max(1, 18 - week + 1)
-    byes = {}
+    byes, opp = {}, {}
     for pt in (info.get('settings', {}).get('proTeams', []) if week else []):
-        if pt.get('byeWeek'): byes[TEAM_ABBR.get(pt['id'], '')] = pt['byeWeek']
+        ab = TEAM_ABBR.get(pt['id'], '')
+        if pt.get('byeWeek'): byes[ab] = pt['byeWeek']
+        # this week's opponent from the pro schedule (home/away)
+        try:
+            games = (pt.get('proGamesByScoringPeriod') or {}).get(str(week)) or []
+            for g in games:
+                h, a = TEAM_ABBR.get(g.get('homeProTeamId')), TEAM_ABBR.get(g.get('awayProTeamId'))
+                if h == ab: opp[ab] = 'vs ' + (a or '?')
+                elif a == ab: opp[ab] = '@ ' + (h or '?')
+        except Exception:
+            pass
 
     rows = []
     for pl in players:
         p = pl['player']; pos = POS.get(p.get('defaultPositionId'))
         if not pos: continue
-        season = wk = None
+        season = wk = actual = lastwk = None
         for s in p.get('stats', []):
-            if s.get('seasonId') != 2026 or s.get('statSourceId') != 1: continue
-            if s.get('statSplitTypeId') == 0: season = s
-            elif s.get('statSplitTypeId') == 1 and s.get('scoringPeriodId') == week: wk = s
+            if s.get('seasonId') != 2026: continue
+            src, split, sp_id = s.get('statSourceId'), s.get('statSplitTypeId'), s.get('scoringPeriodId')
+            if src == 1:      # projections
+                if split == 0: season = s
+                elif split == 1 and sp_id == week: wk = s
+            elif src == 0:    # actual results
+                if split == 0: actual = s
+                elif split == 1 and sp_id == week - 1: lastwk = s
         if not season: continue
         team = TEAM_ABBR.get(p.get('proTeamId'), 'FA')
         st = {k: float(v) for k, v in (season.get('stats') or {}).items()}
@@ -97,8 +120,14 @@ def main(out=os.path.join(HERE, 'projections.json')):
         stats = {k: round(st.get(c, 0)) for k, c in
                  (('passYd','3'),('passTD','4'),('int','20'),('rushYd','24'),('rushTD','25'),
                   ('rec','53'),('recYd','42'),('recTD','43')) if st.get(c, 0) >= 0.5}
+        sta = {k: float(v) for k, v in ((actual or {}).get('stats') or {}).items()}
+        stl = {k: float(v) for k, v in ((lastwk or {}).get('stats') or {}).items()}
+        ap = round(score(sta, pos), 1) if actual else None
+        lp = round(score(stl, pos), 1) if lastwk else None
         rows.append({'name': p['fullName'], 'pos': pos, 'team': team, 'bye': byes.get(team, 0),
                      'season': sp, 'week': wp, 'stats': stats,
+                     'actual': ap, 'lastWk': lp, 'opp': opp.get(team, ''),
+                     'gp': int(sta.get('210', 0) or 0) if actual else 0,
                      'inj': p.get('injuryStatus', '') if p.get('injuryStatus') not in (None, '', 'ACTIVE') else '',
                      'pctOwn': round(float(((pl.get('player') or {}).get('ownership') or {}).get('percentOwned', 0)), 1)})
     # D/ST projections are the flattest, least reliable line ESPN publishes;

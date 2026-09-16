@@ -297,9 +297,21 @@ function renderWaivers(){
     main.innerHTML=`
     <h1>Waiver board <small>Free-for-all adds open Thursday 11:00 AM CT · unlimited · no budget · every add is a same-position swap</small></h1>
     <div class="callout red"><b>How this league actually works.</b> Fixed lineup QB2 · RB3 · WR/TE5 · K2 · D/ST2, everyone starts, and a pickup must replace a player in the same slot. So the wire can only help where a free agent out-projects the worst guy you already start there. Standings are total points, so a bye is a zero, not a loss — and there is no waiver order: first click wins on Thursday at 11:00 sharp.</div>
-    <div class="grid g3">
+    <div class="card hot" id="cmpCard"><h2>Compare two players</h2>
+      <p class="dim" style="margin-bottom:8px;font-size:11.5px">Pick one on each side, or type a question like <i>"Dobbins or Dowdle?"</i> — it finds the names. Anyone in the league or on the wire. Green side wins each row.</p>
+      <div class="row" style="margin-bottom:8px">
+        <input type="search" id="cmpA" list="allPlayers" placeholder="Player A (start typing)" autocomplete="off">
+        <span class="hd gold">vs</span>
+        <input type="search" id="cmpB" list="allPlayers" placeholder="Player B" autocomplete="off">
+        <input type="search" id="cmpQ" placeholder="…or ask: should I drop X for Y?" style="min-width:260px" autocomplete="off">
+        <button id="cmpGo" class="btn on">Compare</button>
+      </div>
+      <datalist id="allPlayers">${D.players.filter(p=>p.pts>0).sort((a,b)=>b.pts-a.pts).map(p=>`<option value="${esc(p.name)}">${p.pos==='DST'?'D/ST':p.pos} · ${esc(p.team)} · ${Math.round(p.pts)} ROS${rostered.has(p.id)?' · '+esc((teams.find(t=>t.roster.includes(p.id))||{}).name||''):' · free agent'}</option>`).join('')}</datalist>
+      <div id="cmpOut"></div>
+    </div>
+    <div class="grid g3" style="margin-top:14px">
       <div class="card hot"><h2>Thursday swaps — in this order</h2>
-        ${plan.length?`<ul class="plan">${plan.map((x,i)=>`<li><div class="no">${i+1}</div><div class="what"><span class="ln">${player(x.p)} <span class="dim">for</span> <span class="bad">${esc(x.drop.name)}</span> <span class="dim">(${Math.round(x.drop.pts)})</span></span><span class="sub">${Math.round(x.p.pts)} pts rest of season · ${x.p.week!=null?x.p.week.toFixed(1)+' this week · ':''}ESPN ${x.p.own}% rostered<br>if gone: ${x.backups.map(b=>`${esc(b.name)} (${Math.round(b.pts)})`).join(' → ')||'—'}</span></div>
+        ${plan.length?`<ul class="plan">${plan.map((x,i)=>`<li><div class="no">${i+1}</div><div class="what"><span class="ln">${player(x.p)} <span class="dim">for</span> <span class="bad">${esc(x.drop.name)}</span> <span class="dim">(${Math.round(x.drop.pts)})</span></span><span class="sub">${Math.round(x.p.pts)} pts rest of season · ${x.p.week!=null?x.p.week.toFixed(1)+' this week · ':''}ESPN ${x.p.own}% rostered<br>if gone: ${x.backups.map(b=>`${esc(b.name)} (${Math.round(b.pts)})`).join(' → ')||'—'} · <a href="#" data-cmp="${x.drop.id}|${x.p.id}" class="gold">compare</a></span></div>
           <div class="g"><b class="good">${fmt(x.gain)}</b><small>net gain</small></div></li>`).join('')}</ul>
         <p class="dim" style="margin-top:8px;font-size:11.5px">Net gain = free agent's rest-of-season points minus the dropped player's. Total if all ${plan.length} go through: <b class="good">${fmt(plan.reduce((s,x)=>s+x.gain,0))}</b>. The Speed Kit runs exactly this list.</p>`:'<p class="dim">No free agent out-projects anyone you start by 5+ points. Your roster beats the wire — hold.</p>'}
       </div>
@@ -313,7 +325,7 @@ function renderWaivers(){
     <div class="card" style="margin-top:14px"><h2>This week's streamers (week ${D.week})</h2>
       <p class="dim" style="margin-bottom:8px;font-size:11.5px">Same-slot swaps that project better <i>this week</i> and cost little for the rest of the season. Kickers and defenses are the natural churn; swap back next Thursday if the original guy is still there.</p>
       ${streams.length?`<div class="scroll"><table><tr><th>Drop</th><th class="n">This wk</th><th>Add</th><th class="n">This wk</th><th class="n">Wk gain</th><th class="n">Rest-of-season change</th></tr>
-      ${streams.slice(0,8).map(s=>s.adds.map((a,i)=>`<tr><td>${i?'':player(s.drop)}</td><td class="n">${i?'':(s.drop.week||0).toFixed(1)}</td><td>${player(a)}</td><td class="n">${(a.week||0).toFixed(1)}</td><td class="n good">${fmt((a.week||0)-(s.drop.week||0))}</td><td class="n ${s.drop.pts-a.pts>0?'bad':'good'}">${fmt(a.pts-s.drop.pts)}</td></tr>`).join('')).join('')}</table></div>`:'<p class="dim">No streamer beats your starters this week.</p>'}
+      ${streams.slice(0,8).map(s=>s.adds.map((a,i)=>`<tr><td>${i?'':player(s.drop)}</td><td class="n">${i?'':(s.drop.week||0).toFixed(1)}</td><td>${player(a)} <a href="#" data-cmp="${s.drop.id}|${a.id}" class="gold" style="font-size:10px">compare</a></td><td class="n">${(a.week||0).toFixed(1)}</td><td class="n good">${fmt((a.week||0)-(s.drop.week||0))}</td><td class="n ${s.drop.pts-a.pts>0?'bad':'good'}">${fmt(a.pts-s.drop.pts)}</td></tr>`).join('')).join('')}</table></div>`:'<p class="dim">No streamer beats your starters this week.</p>'}
     </div>
     <div class="card" style="margin-top:14px"><h2>Free agents</h2>
       <div class="row" style="margin-bottom:8px">${['ALL',...POSN].map(p=>`<button class="btn ${posF===p?'on':''}" data-pos="${p}">${p==='DST'?'D/ST':p}</button>`).join('')}<input type="search" id="q" placeholder="Search name or team" value="${esc(q)}"></div>
@@ -331,8 +343,77 @@ function renderWaivers(){
       </table></div></div>`;
     main.querySelectorAll('.btn[data-pos]').forEach(b=>b.onclick=()=>{posF=b.dataset.pos;draw();});
     const qi=document.getElementById('q'); qi.oninput=e=>{q=e.target.value.toLowerCase();draw();document.getElementById('q').focus();document.getElementById('q').setSelectionRange(q.length,q.length);};
+    wireCompare();
   }
   draw();
+}
+
+/* ================= compare tool ================= */
+const norm=s=>String(s).toLowerCase().replace(/\b(jr|sr|ii|iii|iv|v)\b\.?/g,'').replace(/[^a-z]/g,'');
+const byName={}; D.players.forEach(p=>{ byName[norm(p.name)]=p; if(p.pos==='DST'){ byName[norm(p.team+' dst')]=p; byName[norm(p.name.replace(/ D\/ST$/,''))]=p; } });
+function findPlayer(txt){ if(!txt) return null; const n=norm(txt); if(byName[n]) return byName[n];
+  // partial: last name, or start of name — prefer higher-projected
+  const c=D.players.filter(p=>{const pn=norm(p.name); return pn.includes(n)||n.includes(norm(p.name.split(' ').pop()))&&n.length>=4;}).sort((a,b)=>b.pts-a.pts);
+  return c[0]||null; }
+function parseQuestion(q){
+  // find the two best name matches inside a free-text question
+  const words=q.replace(/[?.,!]/g,' ').split(/\s+/).filter(Boolean); const hits=[];
+  for(let i=0;i<words.length;i++){ for(let len=3;len>=1;len--){ const phrase=words.slice(i,i+len).join(' '); if(phrase.length<4) continue; const n=norm(phrase);
+      const exact=byName[n]; if(exact){ if(!hits.find(h=>h.p===exact)) hits.push({p:exact,i}); i+=len-1; break; } } }
+  if(hits.length<2){ // fallback: any word that's a unique last name
+    for(let i=0;i<words.length;i++){ const w=norm(words[i]); if(w.length<4) continue; const m=D.players.filter(p=>norm(p.name.split(' ').pop())===w).sort((a,b)=>b.pts-a.pts); if(m.length&&!hits.find(h=>h.p===m[0])) hits.push({p:m[0],i}); } }
+  hits.sort((a,b)=>a.i-b.i); return hits.slice(0,2).map(h=>h.p);
+}
+function ownerOf(p){ const t=teams.find(t=>t.roster.includes(p.id)); return t?t.name:'Free agent'; }
+function posRank(p){ return D.players.filter(x=>x.pos===p.pos&&x.pts>p.pts).length+1; }
+function renderCompare(a,b){
+  const out=document.getElementById('cmpOut'); if(!a||!b){ out.innerHTML='<p class="dim">Pick two players.</p>'; return; }
+  const rows=[]; const R=(label,va,vb,fmtf,higher=true,note)=>rows.push({label,va,vb,fmtf:fmtf||(v=>v==null?'–':Math.round(v)),higher,note});
+  const gp=x=>x.gp||Math.max(1,D.week-1);
+  R('Rest-of-season projection',a.pts,b.pts,v=>Math.round(v),true,'ESPN, scored under Desert rules');
+  R('Per game, rest of season',a.pts/D.weeksLeft,b.pts/D.weeksLeft,v=>v.toFixed(1));
+  R(`This week (${D.week}) projection`,a.week,b.week,v=>v==null?'–':v.toFixed(1));
+  R('Points so far this season',a.actual,b.actual,v=>v==null?'–':v.toFixed(1));
+  R('Last week actual',a.lastWk,b.lastWk,v=>v==null?'–':v.toFixed(1));
+  R('rtsports weekly projection',a.rts,b.rts,v=>v==null?'–':Number(v).toFixed(1),true,'what the other owners see');
+  R('Position rank (rest of season)',posRank(a),posRank(b),v=>'#'+v,false);
+  R('Draft-day ADP',a.adp>=9999?null:a.adp,b.adp>=9999?null:b.adp,v=>v==null?'undrafted':v,false);
+  R('ESPN % rostered',a.own,b.own,v=>v+'%');
+  const sk=[['passYd','Pass yds'],['passTD','Pass TD'],['rushYd','Rush yds'],['rushTD','Rush TD'],['rec','Receptions'],['recYd','Rec yds'],['recTD','Rec TD']];
+  sk.forEach(([k,l])=>{ const va=(a.stats||{})[k], vb=(b.stats||{})[k]; if(va||vb) R(l+' (proj)',va||0,vb||0,v=>Math.round(v)); });
+  const sameSlot=slot(a)===slot(b);
+  const mine=me.roster.includes(a.id)?a:me.roster.includes(b.id)?b:null; const other=mine===a?b:a;
+  const facts=[[ 'Team / opponent', `${a.team} ${a.opp||''}`, `${b.team} ${b.opp||''}`],['Bye week',a.bye||'–',b.bye||'–'],['Injury',a.inj||'healthy',b.inj||'healthy'],['Who has him',ownerOf(a),ownerOf(b)]];
+  const win=(r)=>{ if(r.va==null||r.vb==null||r.va===r.vb) return 0; return (r.higher?r.va>r.vb:r.va<r.vb)?-1:1; };
+  const score=rows.reduce((s,r)=>s+win(r),0);
+  // verdict: rest-of-season is what total points rewards; this week matters for streaming
+  const rosGap=a.pts-b.pts, wkGap=(a.week||0)-(b.week||0);
+  const better=rosGap>=0?a:b, worse=better===a?b:a;
+  const conf=Math.abs(rosGap)>=40?'clear':Math.abs(rosGap)>=15?'lean':'coin flip';
+  let verdict=`<b>${esc(better.name)}</b> for the rest of the season by <b>${Math.round(Math.abs(rosGap))}</b> points (${conf}).`;
+  if(Math.sign(wkGap)!==Math.sign(rosGap)&&Math.abs(wkGap)>=1.5) verdict+=` This week it's <b>${esc(wkGap>0?a.name:b.name)}</b> by ${Math.abs(wkGap).toFixed(1)}.`;
+  if(!sameSlot) verdict+=` <span class="bad">Different slots</span> — you can't swap one for the other in this league.`;
+  else if(mine&&!rostered.has(other.id)){ const g=other.pts-mine.pts; verdict+=g>0?` Swapping <b>${esc(mine.name)}</b> for <b>${esc(other.name)}</b> nets <b class="good">${fmt(g)}</b> rest of season.`:` Keep <b>${esc(mine.name)}</b>: the swap would cost <b class="bad">${fmt(g)}</b>.`; }
+  else if(mine&&rostered.has(other.id)&&other!==mine) verdict+=` ${esc(other.name)} is on ${esc(ownerOf(other))} — a one-for-one trade target if the gap holds.`;
+  const head=(p,left)=>`<div style="text-align:center;padding:10px 6px;border-radius:8px;background:${(left?rosGap>=0:rosGap<0)?'#163a2a':'var(--bg2)'};border:1px solid ${(left?rosGap>=0:rosGap<0)?'#1e6a49':'var(--line)'}"><div style="font-family:var(--hd);font-weight:900;font-size:18px">${esc(p.name)}</div><div class="dim" style="font-size:11px"><span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> ${esc(p.team)} ${esc(p.opp||'')} · bye ${p.bye||'–'}${p.inj?` · <span class="inj">${esc(p.inj)}</span>`:''}</div></div>`;
+  const max=r=>Math.max(Math.abs(r.va||0),Math.abs(r.vb||0))||1;
+  const bar=(r,v,left,w)=>{ const pct=Math.round(Math.abs(v||0)/max(r)*100); return `<div style="display:flex;${left?'justify-content:flex-end':''};align-items:center;gap:6px"><${left?'span':'i'} style="display:inline-block;height:6px;width:${pct}%;max-width:120px;background:${w?'var(--good)':'var(--line2)'};border-radius:3px"></${left?'span':'i'}></div>`; };
+  out.innerHTML=`<div class="callout" style="margin:6px 0 10px">${verdict}</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px">${head(a,true)}${head(b,false)}</div>
+  <div class="scroll"><table>
+    ${rows.map(r=>{const w=win(r); return `<tr><td class="n ${w<0?'good':''}" style="width:38%">${r.fmtf(r.va)}${bar(r,r.va,true,w<0)}</td><td style="text-align:center;color:var(--dim);font-size:11px;white-space:normal">${r.label}${r.note?`<br><span style="font-size:10px">${r.note}</span>`:''}</td><td class="${w>0?'good':''}" style="width:38%">${r.fmtf(r.vb)}${bar(r,r.vb,false,w>0)}</td></tr>`;}).join('')}
+    ${facts.map(f=>`<tr><td class="n">${esc(f[1])}</td><td style="text-align:center;color:var(--dim);font-size:11px">${f[0]}</td><td>${esc(f[2])}</td></tr>`).join('')}
+  </table></div>
+  <p class="dim" style="margin-top:8px;font-size:11px">Rows won: <b>${rows.filter(r=>win(r)<0).length}</b> – <b>${rows.filter(r=>win(r)>0).length}</b>. Rest-of-season projection is what a total-points league pays; the rest is context.</p>`;
+  out.scrollIntoView({block:'nearest'});
+}
+function wireCompare(){
+  const A=document.getElementById('cmpA'), B=document.getElementById('cmpB'), Q=document.getElementById('cmpQ');
+  const go=()=>{ let a=null,b=null; if(Q.value.trim()){ [a,b]=parseQuestion(Q.value); if(a) A.value=a.name; if(b) B.value=b.name; Q.value=''; } else { a=findPlayer(A.value); b=findPlayer(B.value); }
+    renderCompare(a,b); };
+  document.getElementById('cmpGo').onclick=go; [A,B,Q].forEach(el=>el.addEventListener('keydown',e=>{ if(e.key==='Enter') go(); }));
+  [A,B].forEach(el=>el.addEventListener('change',()=>{ if(findPlayer(A.value)&&findPlayer(B.value)) go(); }));
+  main.querySelectorAll('[data-cmp]').forEach(el=>el.onclick=e=>{ e.preventDefault(); const [x,y]=el.dataset.cmp.split('|'); A.value=P[x].name; B.value=P[y].name; Q.value=''; go(); });
 }
 
 /* ================= speed kit =================
