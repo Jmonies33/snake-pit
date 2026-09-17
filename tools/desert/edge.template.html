@@ -512,7 +512,7 @@ function renderSpeed(){
   const myIds=me.roster.map(id=>P[id]).map(p=>`${p.rts_id||'?????'} ${p.name}`).join('\n');
   const myOpts=me.roster.map(id=>P[id]).sort((a,b)=>SLOT_KEYS.indexOf(slot(a))-SLOT_KEYS.indexOf(slot(b))||b.pts-a.pts).map(p=>`<option value="${p.id}">${p.pos==='DST'?'D/ST':p.pos} · ${esc(p.name)} (${Math.round(p.pts)})</option>`).join('');
   main.innerHTML=`
-  <h1>Thursday speed kit <small>Adds open Thu 11:00:00 AM CT (9:00 Pacific) · first click wins · this clicks for you</small></h1>
+  <h1>Thursday speed kit <small>Adds open Thursday 11:00:00 AM Central · first click wins · this clicks for you</small></h1>
   <div class="card hot"><h2>1 · Drag these four to your bookmarks bar</h2>
     <p style="display:flex;gap:10px;flex-wrap:wrap"><a class="bm" id="bm" href="#">⚡ Desert Bot</a> <a class="bm" id="bm-now" href="#" style="background:#7a5c12;border-color:#ffd166">▶ Bot NOW</a> <a class="bm" id="bm-dry" href="#" style="background:#1e6a49;border-color:#8ff0c2">🧪 Dry Run</a> <a class="bm" id="bm-log" href="#" style="background:#2d3749;border-color:#93a0b4">📋 Bot Log</a></p>
     <ul style="margin:10px 0 0 18px;line-height:1.7">
@@ -522,11 +522,11 @@ function renderSpeed(){
       <li><b>📋 Bot Log</b> — opens the timestamped log from the last run.</li>
     </ul>
     <p class="dim" style="margin-top:10px">Drag each onto Chrome's bookmarks bar (View → Always Show Bookmarks Bar) <b>once</b>. When clicked, they fetch whatever list is saved on this page at that moment, so editing the list never requires re-dragging. Outside the add window, 🧪 Dry Run checks every line against the live free-agent list and your roster and reports which are valid.</p></div>
-  <div class="card"><h2>2 · Thursday, 8:50 AM Pacific</h2>
+  <div class="card"><h2>2 · Thursday, 10:50 AM</h2>
     <ol>
       <li>Chrome on the Mac, logged into RTSports, on Desert League → <b>Add/Drop Players</b>. Mac awake, no sleep.</li>
-      <li>8:55: click <b>⚡ Desert Bot</b>. A second Add/Drop window opens (allow popups for rtsports.com if asked, then click again). The green log box shows the countdown.</li>
-      <li>Start a screen recording (Cmd+Shift+5) and leave both windows alone through 9:01.</li>
+      <li>10:55: click <b>⚡ Desert Bot</b>. A second Add/Drop window opens (allow popups for rtsports.com if asked, then click again). The green log box shows the countdown.</li>
+      <li>Start a screen recording (Cmd+Shift+5) and leave both windows alone through 11:01.</li>
       <li>Any line the log marks <span class="bad">FAILED</span>, do by hand in the popup. Then message me; I can read the log from your browser.</li>
     </ol></div>
   <div class="card"><h2>3 · Wednesday night: write the swaps</h2>
@@ -542,7 +542,7 @@ function renderSpeed(){
     <p class="dim" style="margin-top:6px;font-size:11.5px">Raw format, if you'd rather type: <code>add-id name drop roster-id name</code>, one per line; lines starting with # are ignored. Your list is saved in this browser and is never overwritten by a refresh.${missing.length?` <span class="bad">No rtsports id yet for: ${esc(missing.join(', '))}.</span>`:''}</p>
     <details style="margin-top:10px"><summary class="dim" style="cursor:pointer">Your roster's rtsports ids</summary><pre style="font:12px Menlo,monospace;margin-top:6px;color:var(--dim)">${esc(myIds)}</pre></details></div>
   <div class="card"><h2>Fallback if the bot can't run</h2>
-    <p>Add/Drop page open at 8:59 with the right position filter on. At 9:00:00 refresh, click <b>ADD</b> on the first target, click <b>DROP</b> on the player he replaces, save. Same position, one for one, in the order above.</p></div>`;
+    <p>Add/Drop page open at 10:59 with the right position filter on. At 11:00:00 refresh, click <b>ADD</b> on the first target, click <b>DROP</b> on the player he replaces, save. Same position, one for one, in the order above.</p></div>`;
   const ta=document.getElementById('tg');
   for(const [id,mode] of [['bm','arm'],['bm-now','now'],['bm-dry','dry'],['bm-log','log']]) document.getElementById(id).href='javascript:'+encodeURIComponent(botSource(mode));
   function upd(){ const t=parseSwaps(ta.value); localStorage.setItem('desert.targets3',ta.value); localStorage.setItem('desert.targets3.at',String(Date.now()));
