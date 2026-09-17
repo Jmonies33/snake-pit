@@ -451,11 +451,17 @@ T=(msg.lines||'').split('\\n').map(l=>l.trim()).filter(l=>l&&!l.startsWith('#'))
 if(!T.length){log('list is EMPTY — nothing to do. Write it on the Speed Kit page.');alert('Your Speed Kit list is empty.');w.close();return;}
 log('mode '+MODE.toUpperCase()+' · '+T.length+' lines: '+T.map(t=>t.name+' for '+t.dropName).join(' | '));
 w.location.href=ADDDROP;
-function nextThu11(){const now=new Date();const f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour12:false,weekday:'short',hour:'2-digit',minute:'2-digit',second:'2-digit'});const p=Object.fromEntries(f.formatToParts(now).map(x=>[x.type,x.value]));const secsNowCT=(+p.hour%24)*3600+(+p.minute)*60+(+p.second);const dow=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);let days=(4-dow+7)%7;if(days===0&&secsNowCT>=11*3600)days=7;const target=11*3600-0.4;return now.getTime()+((days*86400)+(target-secsNowCT))*1000;}
+function nextThu11(){const now=new Date();const f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour12:false,weekday:'short',hour:'2-digit',minute:'2-digit',second:'2-digit'});const p=Object.fromEntries(f.formatToParts(now).map(x=>[x.type,x.value]));const secsNowCT=(+p.hour%24)*3600+(+p.minute)*60+(+p.second);const dow=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);let days=(4-dow+7)%7;if(days===0&&secsNowCT>=11*3600)days=7;const target=11*3600;return now.getTime()+((days*86400)+(target-secsNowCT))*1000;}
 const goAt=MODE==='arm'?nextThu11():Date.now();const wait=goAt-Date.now();
 if(wait>36*3600*1000){log('WARNING: next window is more than a day away; firing at '+new Date(goAt).toLocaleString()+' anyway.');}
-if(wait<0){log('window is already open — going now');}else{log('firing in '+Math.round(wait/1000)+'s ('+new Date(goAt).toLocaleTimeString()+' local)');}
+if(wait<0){log('window is already open — going now');}else{log('bell at '+new Date(goAt).toLocaleTimeString()+' local, in '+Math.round(wait/1000)+'s — will sync to the rtsports server clock first');}
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+/* server clock: rtsports' Date header (whole seconds) sampled fast enough to catch a second
+   tick. Returns serverMs - localMs. On 9/17 this Mac ran 0.7s ahead of the server. */
+async function serverOffset(){const S=[];const t0=Date.now();while(Date.now()-t0<2800){const a=Date.now();let d=null;try{d=(await fetch('/favicon.ico?'+a,{method:'HEAD',cache:'no-store'})).headers.get('date');}catch(e){}const b=Date.now();if(d&&!isNaN(Date.parse(d)))S.push({mid:(a+b)/2,sec:Date.parse(d),rtt:b-a});await sleep(120);}
+  if(!S.length)return 0;let off=null;for(let i=1;i<S.length;i++){if(S[i].sec>S[i-1].sec){off=S[i].sec-S[i].mid;}}
+  if(off===null){const s=S[S.length-1];off=s.sec+500-s.mid;}log('server clock is '+(Math.abs(off)/1000).toFixed(2)+'s '+(off<0?'behind':'ahead of')+' this Mac ('+S.length+' samples, rtt ~'+Math.round(S.reduce((x,y)=>x+y.rtt,0)/S.length)+'ms)');return off;}
+async function spinUntil(localMs){const early=localMs-1500;if(Date.now()<early)await sleep(early-Date.now());while(Date.now()<localMs){}}
 async function ready(){for(let i=0;i<120;i++){try{if(w.document&&w.document.readyState==='complete'&&typeof w.selectAddPlayer==='function'&&typeof w.SaveTransactions==='function'&&w.document.getElementById('fa-list'))return true;}catch(e){}await sleep(100);}return false;}
 const onRoster=id=>{try{return !!w.document.getElementById('roster-player-'+id+'-name');}catch(e){return false;}};
 function elig(id){try{return w.addEligibility(+id)||w.addEligibility(id);}catch(e){return {enabled:false,reason:'elig err '+e.message};}}
@@ -482,11 +488,20 @@ async function trySwap(t){
   log('could not confirm '+t.name+' (unsaved='+un+') — reloading to check');w.location.reload();await ready();
   if(onRoster(t.id)){log('DONE (confirmed after reload): '+t.name);return true;}
   log('FAILED '+t.name+' — do this one by hand if you still want him');return false;}
-  if(wait>0)await sleep(wait);
-  if(MODE==='dry'){await sleep(500);if(!(await ready())){log('popup did not load the Add/Drop page');return;}const e=elig(T[0].id);if(!(e&&e.enabled)&&!/roster|already/i.test((e&&e.reason)||'')){log('adds are closed right now ('+(e&&e.reason)+') — validating the list instead');await validateOnly();return;}}
-  log('GO — reloading the add page');
-  if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;}
   const usedDrops=new Set();let got=0;
+  if(MODE==='dry'){await sleep(500);if(!(await ready())){log('popup did not load the Add/Drop page');return;}const e=elig(T[0].id);
+    if(!(e&&e.enabled)&&!/roster|already/i.test((e&&e.reason)||'')){log('adds are closed right now ('+(e&&e.reason)+') — validating the list instead');await validateOnly();return;}}
+  if(MODE==='arm'&&wait>0){
+    /* timing plan (all on the SERVER clock): 45s out, measure the clock offset and reload so the
+       page and its 1,200-row list are warm; then start the real reload ~0.4s BEFORE the bell so
+       the request reaches the server just as it unlocks and the page lands open ~2.5s later. */
+    const pre=goAt-45000; if(Date.now()<pre)await sleep(pre-Date.now());
+    const off=await serverOffset(); const goLocal=goAt-off; log('bell on the server clock = '+new Date(goLocal).toLocaleTimeString()+'.'+String(goLocal%1000|0).padStart(3,'0')+' local');
+    w.location.reload();await ready();log('page pre-warmed');
+    await spinUntil(goLocal-400);log('GO — reloading into the open window');w.location.reload();await sleep(150);
+    if(await ready()){const e=elig(T[0].id);if(e&&(e.enabled||/roster|already/i.test(e.reason||''))){log('page landed open '+((Date.now()-goLocal)/1000).toFixed(2)+'s after the bell');}else{log('landed early ('+(e&&e.reason)+') — retrying');if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;}}}
+    else if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;}
+  }else{ if(wait>0)await sleep(wait); log('GO — reloading the add page'); if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;} }
   for(const t of T){
     if(usedDrops.has(t.drop))continue;
     const r=await trySwap(t);
@@ -525,9 +540,9 @@ function renderSpeed(){
   <div class="card hot"><h2>1 · Drag these four to your bookmarks bar</h2>
     <p style="display:flex;gap:10px;flex-wrap:wrap"><a class="bm" id="bm" href="#">⚡ Desert Bot</a> <a class="bm" id="bm-now" href="#" style="background:#7a5c12;border-color:#ffd166">▶ Bot NOW</a> <a class="bm" id="bm-dry" href="#" style="background:#1e6a49;border-color:#8ff0c2">🧪 Dry Run</a> <a class="bm" id="bm-log" href="#" style="background:#2d3749;border-color:#93a0b4">📋 Bot Log</a></p>
     <ul style="margin:10px 0 0 18px;line-height:1.7">
-      <li><b>⚡ Desert Bot</b> — arms and waits for Thursday 11:00:00 AM CT, then runs the swaps. The real one.</li>
+      <li><b>⚡ Desert Bot</b> — arms and waits for Thursday 11:00 AM CT. 45 seconds out it syncs to the rtsports server clock and pre-loads the page; it starts the reload a hair before the bell so the page lands already open, then saves your swaps in order, about a second each. The real one.</li>
       <li><b>▶ Bot NOW</b> — same bot, fires immediately. For a live test while the window is open (Thu 11 AM – Sun noon CT).</li>
-      <li><b>🧪 Dry Run</b> — fires immediately but never saves: queues the add and the drop, confirms the site accepted both, clears. Safe any time the window is open.</li>
+      <li><b>🧪 Dry Run</b> — never saves. While the window is closed (Sun noon–Thu 11) it validates every line against the live lists; while open, it queues each swap, confirms the site accepted it, and clears.</li>
       <li><b>📋 Bot Log</b> — opens the timestamped log from the last run.</li>
     </ul>
     <p class="dim" style="margin-top:10px">Drag each onto Chrome's bookmarks bar (View → Always Show Bookmarks Bar) <b>once</b>. When clicked, they fetch whatever list is saved on this page at that moment, so editing the list never requires re-dragging. Outside the add window, 🧪 Dry Run checks every line against the live free-agent list and your roster and reports which are valid.</p></div>
