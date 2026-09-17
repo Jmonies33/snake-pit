@@ -422,16 +422,30 @@ function wireCompare(){
    drop, SaveTransactions() to save. A same-origin popup is opened by the click
    (so it isn't blocked) and reloaded at the bell so the site unlocks. */
 function parseSwaps(txt){ return txt.split('\n').map(l=>l.trim()).filter(l=>l&&!l.startsWith('#')).map(l=>{const m=l.match(/^(\d+)\s+(.+?)\s+drop\s+(\d+)\s+(.+)$/i); return m?{id:m[1],name:m[2].trim(),drop:m[3],dropName:m[4].trim()}:null;}).filter(Boolean); }
-function botSource(targets,mode){
+/* The bookmarklet does NOT carry the swap list. It opens the Speed Kit page in
+   the popup with #bridge, the page posts the saved list back (postMessage), and
+   the popup is then pointed at the Add/Drop page. So the bookmarks are dragged
+   once and always run whatever the Speed Kit page currently holds. */
+function botSource(mode){
+  const SPEED_URL=(location.protocol==='file:'?'https://jmonies33.github.io/snake-pit/desert/speed.html':location.href.split('#')[0].split('?')[0]);
   return `(()=>{
-const T=${JSON.stringify(targets)};const MODE=${JSON.stringify(mode)};
+const MODE=${JSON.stringify(mode)};const SPEED=${JSON.stringify(SPEED_URL)};
 if(!/add-drop\\.php/.test(location.pathname)){alert('Run this on the rtsports Add/Drop Players page.');return;}
 const LOGKEY='dlbot.log';try{if(MODE!=='log')localStorage.setItem(LOGKEY,'--- '+MODE.toUpperCase()+' run started '+new Date().toString()+' ---\\n');}catch(e){}
 const log=(m)=>{let b=document.getElementById('dlbot');if(!b){b=document.createElement('pre');b.id='dlbot';b.style.cssText='position:fixed;left:8px;bottom:8px;z-index:99999;max-width:480px;max-height:45vh;overflow:auto;background:#0b0e15;color:#8ff0c2;border:2px solid #e0102f;border-radius:8px;padding:10px;font:12px/1.4 Menlo,monospace;white-space:pre-wrap';document.body.appendChild(b);}const line=new Date().toLocaleTimeString()+'.'+String(Date.now()%1000).padStart(3,'0')+'  '+m;b.textContent+=line+'\\n';b.scrollTop=1e9;try{localStorage.setItem(LOGKEY,(localStorage.getItem(LOGKEY)||'')+line+'\\n');}catch(e){}};
 if(MODE==='log'){const t=localStorage.getItem(LOGKEY)||'(no log yet)';const v=window.open('','dlbot_log','width=700,height=600');if(v){v.document.write('<pre style="font:13px Menlo,monospace;white-space:pre-wrap">'+t.replace(/</g,'&lt;')+'</pre>');}else{alert(t);}return;}
-if(!T.length){alert('No swap lines. Fill in the list on the Speed Kit page first.');return;}
-const w=window.open(location.href,'dlbot_win','width=1100,height=900');if(!w){alert('Popup blocked — allow popups for rtsports.com and click the bookmark again.');return;}
+const ADDDROP=location.href;
+const w=window.open(SPEED+'#bridge','dlbot_win','width=1100,height=900');if(!w){alert('Popup blocked — allow popups for rtsports.com and click the bookmark again.');return;}
+log('fetching your swap list from the Speed Kit page…');
+let T=null;
+const gotList=new Promise((res)=>{const h=(ev)=>{if(!ev.data||ev.data.type!=='desert-swaps')return;window.removeEventListener('message',h);res(ev.data);};window.addEventListener('message',h);setTimeout(()=>res(null),12000);});
+(async()=>{
+const msg=await gotList;
+if(!msg){log('FAILED: no answer from the Speed Kit page (is it unlocked with your key in this browser?)');alert('Could not read the swap list from the Speed Kit page. Open it once in this browser, make sure it shows the list, then try again.');w.close();return;}
+T=(msg.lines||'').split('\\n').map(l=>l.trim()).filter(l=>l&&!l.startsWith('#')).map(l=>{const m=l.match(/^(\\d+)\\s+(.+?)\\s+drop\\s+(\\d+)\\s+(.+)$/i);return m?{id:m[1],name:m[2].trim(),drop:m[3],dropName:m[4].trim()}:null;}).filter(Boolean);
+if(!T.length){log('list is EMPTY — nothing to do. Write it on the Speed Kit page.');alert('Your Speed Kit list is empty.');w.close();return;}
 log('mode '+MODE.toUpperCase()+' · '+T.length+' lines: '+T.map(t=>t.name+' for '+t.dropName).join(' | '));
+w.location.href=ADDDROP;
 function nextThu11(){const now=new Date();const f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour12:false,weekday:'short',hour:'2-digit',minute:'2-digit',second:'2-digit'});const p=Object.fromEntries(f.formatToParts(now).map(x=>[x.type,x.value]));const secsNowCT=(+p.hour%24)*3600+(+p.minute)*60+(+p.second);const dow=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);let days=(4-dow+7)%7;if(days===0&&secsNowCT>=11*3600)days=7;const target=11*3600-0.4;return now.getTime()+((days*86400)+(target-secsNowCT))*1000;}
 const goAt=MODE==='arm'?nextThu11():Date.now();const wait=goAt-Date.now();
 if(wait>36*3600*1000){log('WARNING: next window is more than a day away; firing at '+new Date(goAt).toLocaleString()+' anyway.');}
@@ -442,6 +456,10 @@ const onRoster=id=>{try{return !!w.document.getElementById('roster-player-'+id+'
 function elig(id){try{return w.addEligibility(+id)||w.addEligibility(id);}catch(e){return {enabled:false,reason:'elig err '+e.message};}}
 async function reloadUntilOpen(){for(let i=0;i<40;i++){w.location.reload();await sleep(200);if(!(await ready())){continue;}const e=elig(T[0].id);if(e&&e.enabled)return true;if(e&&/roster|already/i.test(e.reason||''))return true;log('not open yet: '+(e&&e.reason));await sleep(300);}return false;}
 async function clearQueue(){try{if(w.hasUnsavedTransactions()){w.location.reload();await ready();}}catch(e){}}
+const faPresent=id=>{try{return !!w.document.getElementById('fa-player-'+id+'-name');}catch(e){return false;}};
+async function validateOnly(){ /* window closed: just prove every line resolves on the live page */
+  let ok=0;for(const t of T){const a=faPresent(t.id),d=onRoster(t.drop);log((a&&d?'OK   ':'BAD  ')+t.name+(a?'':' [add not in free-agent list]')+' for '+t.dropName+(d?'':' [drop not on your roster]'));if(a&&d)ok++;}
+  log('window is closed, so nothing was queued. '+ok+' of '+T.length+' lines are valid and ready for Thursday.');}
 async function trySwap(t){
   if(onRoster(t.id)){log('already have '+t.name);return 'have';}
   const e=elig(t.id);if(!e||!e.enabled){log('skip '+t.name+': '+(e&&e.reason));return false;}
@@ -459,8 +477,8 @@ async function trySwap(t){
   log('could not confirm '+t.name+' (unsaved='+un+') — reloading to check');w.location.reload();await ready();
   if(onRoster(t.id)){log('DONE (confirmed after reload): '+t.name);return true;}
   log('FAILED '+t.name+' — do this one by hand if you still want him');return false;}
-(async()=>{
   if(wait>0)await sleep(wait);
+  if(MODE==='dry'){await sleep(500);if(!(await ready())){log('popup did not load the Add/Drop page');return;}const e=elig(T[0].id);if(!(e&&e.enabled)&&!/roster|already/i.test((e&&e.reason)||'')){log('adds are closed right now ('+(e&&e.reason)+') — validating the list instead');await validateOnly();return;}}
   log('GO — reloading the add page');
   if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;}
   const usedDrops=new Set();let got=0;
@@ -473,6 +491,13 @@ async function trySwap(t){
   }
   log('done — '+got+(MODE==='dry'?' swaps rehearsed (nothing saved).':' swaps made. Check the roster in the other window.')+' Click the Bot Log bookmark any time to see this again.');
 })();})();`;
+}
+/* bridge: opened by the bookmarklet as the popup — hand back the saved list and wait to be navigated away */
+if(location.hash==='#bridge'&&window.opener){
+  const lines=COACH?(localStorage.getItem('desert.targets3')||''):'';
+  try{ window.opener.postMessage({type:'desert-swaps',lines},'https://www.rtsports.com'); }catch(e){}
+  try{ window.opener.postMessage({type:'desert-swaps',lines},'https://rtsports.com'); }catch(e){}
+  document.getElementById('main').innerHTML='<div id="gate">'+(COACH?'List sent to the bot…':'Locked — open the Speed Kit with your key first')+'</div>';
 }
 function renderSpeed(){
   const plan=swapPlan(me.roster,5,6);
@@ -496,7 +521,7 @@ function renderSpeed(){
       <li><b>🧪 Dry Run</b> — fires immediately but never saves: queues the add and the drop, confirms the site accepted both, clears. Safe any time the window is open.</li>
       <li><b>📋 Bot Log</b> — opens the timestamped log from the last run.</li>
     </ul>
-    <p class="dim" style="margin-top:10px">Drag each onto Chrome's bookmarks bar (View → Always Show Bookmarks Bar). They rebuild whenever you edit the list below, so re-drag after changing it. Every swap is same-position by construction — the list is generated from the waiver page's plan.</p></div>
+    <p class="dim" style="margin-top:10px">Drag each onto Chrome's bookmarks bar (View → Always Show Bookmarks Bar) <b>once</b>. When clicked, they fetch whatever list is saved on this page at that moment, so editing the list never requires re-dragging. Outside the add window, 🧪 Dry Run checks every line against the live free-agent list and your roster and reports which are valid.</p></div>
   <div class="card"><h2>2 · Thursday, 8:50 AM Pacific</h2>
     <ol>
       <li>Chrome on the Mac, logged into RTSports, on Desert League → <b>Add/Drop Players</b>. Mac awake, no sleep.</li>
@@ -513,14 +538,19 @@ function renderSpeed(){
     </div>
     <textarea id="tg">${esc(hasOwn?saved:'')}</textarea>
     <p style="margin-top:8px" class="row"><button id="suggest" class="btn">Load the waiver page's suggested swaps</button> <button id="clear" class="btn">Clear</button> <span id="cnt" class="dim"></span></p>
+    <div id="saved" class="callout" style="margin:10px 0 0;padding:8px 12px;font-size:12.5px"></div>
     <p class="dim" style="margin-top:6px;font-size:11.5px">Raw format, if you'd rather type: <code>add-id name drop roster-id name</code>, one per line; lines starting with # are ignored. Your list is saved in this browser and is never overwritten by a refresh.${missing.length?` <span class="bad">No rtsports id yet for: ${esc(missing.join(', '))}.</span>`:''}</p>
     <details style="margin-top:10px"><summary class="dim" style="cursor:pointer">Your roster's rtsports ids</summary><pre style="font:12px Menlo,monospace;margin-top:6px;color:var(--dim)">${esc(myIds)}</pre></details></div>
   <div class="card"><h2>Fallback if the bot can't run</h2>
     <p>Add/Drop page open at 8:59 with the right position filter on. At 9:00:00 refresh, click <b>ADD</b> on the first target, click <b>DROP</b> on the player he replaces, save. Same position, one for one, in the order above.</p></div>`;
   const ta=document.getElementById('tg');
-  function upd(){ const t=parseSwaps(ta.value); localStorage.setItem('desert.targets3',ta.value);
-    for(const [id,mode] of [['bm','arm'],['bm-now','now'],['bm-dry','dry'],['bm-log','log']]) document.getElementById(id).href='javascript:'+encodeURIComponent(botSource(t,mode));
-    document.getElementById('cnt').textContent=t.length+' lines · '+new Set(t.map(x=>x.drop)).size+' distinct drops'+(t.length?'':' — empty: the bot will do nothing'); }
+  for(const [id,mode] of [['bm','arm'],['bm-now','now'],['bm-dry','dry'],['bm-log','log']]) document.getElementById(id).href='javascript:'+encodeURIComponent(botSource(mode));
+  function upd(){ const t=parseSwaps(ta.value); localStorage.setItem('desert.targets3',ta.value); localStorage.setItem('desert.targets3.at',String(Date.now()));
+    document.getElementById('cnt').textContent=t.length+' lines · '+new Set(t.map(x=>x.drop)).size+' distinct drops';
+    const bad=ta.value.split('\n').map(l=>l.trim()).filter(l=>l&&!l.startsWith('#')).filter(l=>!/^\d+\s+.+?\s+drop\s+\d+\s+.+$/i.test(l));
+    const sv=document.getElementById('saved');
+    if(!t.length){ sv.innerHTML='<b style="color:var(--bad)">Nothing saved</b> — the list is empty, so the bot will do nothing on Thursday.'; sv.style.borderLeftColor='var(--bad)'; }
+    else { sv.innerHTML=`<b class="good">Saved ✓</b> ${t.length} swap${t.length>1?'s':''} at ${new Date().toLocaleTimeString()} — this is what the bot will run:<br>`+t.map((x,i)=>`${i+1}. ${esc(x.name)} <span class="dim">for</span> ${esc(x.dropName)}`).join('<br>')+(bad.length?`<br><span class="bad">Ignored (bad format): ${esc(bad.join(' · '))}</span>`:''); sv.style.borderLeftColor='var(--good)'; } }
   ta.addEventListener('input',upd);
   document.getElementById('suggest').onclick=()=>{ta.value=(ta.value.trim()?ta.value.trim()+'\n':'')+SUGGESTED;upd();};
   document.getElementById('clear').onclick=()=>{if(confirm('Clear the whole list?')){ta.value='';upd();}};
