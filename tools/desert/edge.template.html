@@ -188,6 +188,7 @@ function V(ids){ return lineup(ids).total; }
 function rts(p){ return p.rts==null?(p.week||0):p.rts; }
 function player(p,extra){ return `<span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> <b>${esc(p.name)}</b><span class="tm">${esc(p.team)} · bye ${p.bye||'–'}</span>${p.inj?`<span class="inj">${esc(p.inj)}</span>`:''}${extra||''}`; }
 function short(p){ return p.pos==='DST'?p.team:p.name.split(' ').pop(); }
+const CITY={ARI:'Arizona',ATL:'Atlanta',BAL:'Baltimore',BUF:'Buffalo',CAR:'Carolina',CHI:'Chicago',CIN:'Cincinnati',CLE:'Cleveland',DAL:'Dallas',DEN:'Denver',DET:'Detroit',GB:'Green Bay',HOU:'Houston',IND:'Indianapolis',JAX:'Jacksonville',KC:'Kansas City',LV:'Las Vegas',LAC:'Los Angeles Chargers',LAR:'Los Angeles Rams',MIA:'Miami',MIN:'Minnesota',NE:'New England',NO:'New Orleans',NYG:'New York Giants',NYJ:'New York Jets',PHI:'Philadelphia',PIT:'Pittsburgh',SF:'San Francisco',SEA:'Seattle',TB:'Tampa Bay',TEN:'Tennessee',WSH:'Washington'};
 
 /* Swap plan: greedy one-for-one, same slot, biggest net gain first, each side used once. */
 function swapPlan(rosterIds,minGain,max){
@@ -306,7 +307,7 @@ function renderWaivers(){
         <input type="search" id="cmpQ" placeholder="…or ask: should I drop X for Y?" style="min-width:260px" autocomplete="off">
         <button id="cmpGo" class="btn on">Compare</button>
       </div>
-      <datalist id="allPlayers">${D.players.filter(p=>p.pts>0).sort((a,b)=>b.pts-a.pts).map(p=>`<option value="${esc(p.name)}">${p.pos==='DST'?'D/ST':p.pos} · ${esc(p.team)} · ${Math.round(p.pts)} ROS${rostered.has(p.id)?' · '+esc((teams.find(t=>t.roster.includes(p.id))||{}).name||''):' · free agent'}</option>`).join('')}</datalist>
+      <datalist id="allPlayers">${D.players.filter(p=>p.pts>0).sort((a,b)=>b.pts-a.pts).map(p=>`<option value="${esc(p.name)}">${p.pos==='DST'?'D/ST · '+esc((CITY[p.team]||p.team)):p.pos+' · '+esc(p.team)} · ${Math.round(p.pts)} ROS${rostered.has(p.id)?' · '+esc((teams.find(t=>t.roster.includes(p.id))||{}).name||''):' · free agent'}</option>`).join('')}</datalist>
       <div id="cmpOut"></div>
     </div>
     <div class="grid g3" style="margin-top:14px">
@@ -350,7 +351,7 @@ function renderWaivers(){
 
 /* ================= compare tool ================= */
 const norm=s=>String(s).toLowerCase().replace(/\b(jr|sr|ii|iii|iv|v)\b\.?/g,'').replace(/[^a-z]/g,'');
-const byName={}; D.players.forEach(p=>{ byName[norm(p.name)]=p; if(p.pos==='DST'){ byName[norm(p.team+' dst')]=p; byName[norm(p.name.replace(/ D\/ST$/,''))]=p; } });
+const byName={}; D.players.forEach(p=>{ byName[norm(p.name)]=p; if(p.pos==='DST'){ const nick=p.name.replace(/ D\/ST$/,''); [p.team+' dst',p.team+' defense',p.team,nick,nick+' defense',nick+' d',(CITY[p.team]||'')+' defense',(CITY[p.team]||'')+' dst',(CITY[p.team]||'')].forEach(k=>{ if(k.trim()) byName[norm(k)]=byName[norm(k)]||p; }); } });
 function findPlayer(txt){ if(!txt) return null; const n=norm(txt); if(byName[n]) return byName[n];
   // partial: last name, or start of name — prefer higher-projected
   const c=D.players.filter(p=>{const pn=norm(p.name); return pn.includes(n)||n.includes(norm(p.name.split(' ').pop()))&&n.length>=4;}).sort((a,b)=>b.pts-a.pts);
@@ -379,8 +380,11 @@ function renderCompare(a,b){
   R('Position rank (rest of season)',posRank(a),posRank(b),v=>'#'+v,false);
   R('Draft-day ADP',a.adp>=9999?null:a.adp,b.adp>=9999?null:b.adp,v=>v==null?'undrafted':v,false);
   R('ESPN % rostered',a.own,b.own,v=>v+'%');
-  const sk=[['passYd','Pass yds'],['passTD','Pass TD'],['rushYd','Rush yds'],['rushTD','Rush TD'],['rec','Receptions'],['recYd','Rec yds'],['recTD','Rec TD']];
-  sk.forEach(([k,l])=>{ const va=(a.stats||{})[k], vb=(b.stats||{})[k]; if(va||vb) R(l+' (proj)',va||0,vb||0,v=>Math.round(v)); });
+  const sk=[['passYd','Pass yds'],['passTD','Pass TD'],['rushYd','Rush yds'],['rushTD','Rush TD'],['rec','Receptions'],['recYd','Rec yds'],['recTD','Rec TD'],
+    ['fgMade','Field goals made'],['fgAtt','Field goal attempts'],['xpMade','Extra points'],
+    ['sacks','Sacks'],['ints','Interceptions'],['fumRec','Fumble recoveries'],['defTD','Defensive / return TDs'],['safeties','Safeties'],['blocks','Blocked kicks'],['lowPAgames','Games allowing 10 or fewer']];
+  sk.forEach(([k,l])=>{ const va=(a.stats||{})[k], vb=(b.stats||{})[k]; if(va||vb) R(l+' (proj)',va||0,vb||0,v=>Number.isInteger(v)?v:v.toFixed(1)); });
+  if((a.stats||{}).paPerGame||(b.stats||{}).paPerGame) R('Points allowed per game (proj)',(a.stats||{}).paPerGame,(b.stats||{}).paPerGame,v=>v==null?'–':v.toFixed(1),false);
   const sameSlot=slot(a)===slot(b);
   const mine=me.roster.includes(a.id)?a:me.roster.includes(b.id)?b:null; const other=mine===a?b:a;
   const facts=[[ 'Team / opponent', `${a.team} ${a.opp||''}`, `${b.team} ${b.opp||''}`],['Bye week',a.bye||'–',b.bye||'–'],['Injury',a.inj||'healthy',b.inj||'healthy'],['Who has him',ownerOf(a),ownerOf(b)]];
@@ -394,6 +398,7 @@ function renderCompare(a,b){
   if(Math.sign(wkGap)!==Math.sign(rosGap)&&Math.abs(wkGap)>=1.5) verdict+=` This week it's <b>${esc(wkGap>0?a.name:b.name)}</b> by ${Math.abs(wkGap).toFixed(1)}.`;
   if(!sameSlot) verdict+=` <span class="bad">Different slots</span> — you can't swap one for the other in this league.`;
   else if(mine&&!rostered.has(other.id)){ const g=other.pts-mine.pts; verdict+=g>0?` Swapping <b>${esc(mine.name)}</b> for <b>${esc(other.name)}</b> nets <b class="good">${fmt(g)}</b> rest of season.`:` Keep <b>${esc(mine.name)}</b>: the swap would cost <b class="bad">${fmt(g)}</b>.`; }
+  else if(mine&&me.roster.includes(other.id)) verdict+=` Both are on your roster.`;
   else if(mine&&rostered.has(other.id)&&other!==mine) verdict+=` ${esc(other.name)} is on ${esc(ownerOf(other))} — a one-for-one trade target if the gap holds.`;
   const head=(p,left)=>`<div style="text-align:center;padding:10px 6px;border-radius:8px;background:${(left?rosGap>=0:rosGap<0)?'#163a2a':'var(--bg2)'};border:1px solid ${(left?rosGap>=0:rosGap<0)?'#1e6a49':'var(--line)'}"><div style="font-family:var(--hd);font-weight:900;font-size:18px">${esc(p.name)}</div><div class="dim" style="font-size:11px"><span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> ${esc(p.team)} ${esc(p.opp||'')} · bye ${p.bye||'–'}${p.inj?` · <span class="inj">${esc(p.inj)}</span>`:''}</div></div>`;
   const max=r=>Math.max(Math.abs(r.va||0),Math.abs(r.vb||0))||1;
@@ -500,7 +505,11 @@ if(location.hash==='#bridge'&&window.opener){
   document.getElementById('main').innerHTML='<div id="gate">'+(COACH?'List sent to the bot…':'Locked — open the Speed Kit with your key first')+'</div>';
 }
 function renderSpeed(){
-  const plan=swapPlan(me.roster,5,6);
+  // Priority order for the bot = list order. Defenses get contested at the bell (they
+  // score most among the churn slots), kickers almost never do — so D/ST first, then
+  // skill players by gain, kickers last.
+  const PRI={DST:0,RB:1,WRTE:1,QB:1,K:2};
+  const plan=swapPlan(me.roster,5,6).sort((a,b)=>(PRI[slot(a.p)]-PRI[slot(b.p)])||(b.gain-a.gain));
   const lines=[]; const missing=[];
   for(const x of plan){
     const cands=[x.p].concat(x.backups);
@@ -530,7 +539,7 @@ function renderSpeed(){
       <li>Any line the log marks <span class="bad">FAILED</span>, do by hand in the popup. Then message me; I can read the log from your browser.</li>
     </ol></div>
   <div class="card"><h2>3 · Wednesday night: write the swaps</h2>
-    <p class="dim" style="margin-bottom:8px">Pick who you're dropping, then who you want — the list only shows free agents in the same slot, best first. Add a backup line for the same drop right after it: if the first guy is gone at the bell, the bot tries the next. Nothing on this page decides for you; the bot runs exactly these lines, in this order.</p>
+    <p class="dim" style="margin-bottom:8px">Pick who you're dropping, then who you want — the list only shows free agents in the same slot, best first. Add a backup line for the same drop right after it: if the first guy is gone at the bell, the bot tries the next. Nothing on this page decides for you; the bot runs exactly these lines, <b>top to bottom, about 3 seconds each</b> — so put the swap most likely to be contested (usually the defense) at the top. Suggested lists come out D/ST first, kickers last.</p>
     <div class="row" style="margin-bottom:10px">
       <select id="pickDrop" class="btn" style="height:36px"><option value="">Drop…</option>${myOpts}</select>
       <select id="pickAdd" class="btn" style="height:36px;min-width:260px"><option value="">Add… (pick a drop first)</option></select>

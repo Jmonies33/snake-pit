@@ -117,9 +117,20 @@ def main(out=os.path.join(HERE, 'projections.json')):
         sp = score(st, pos); wp = score(stw, pos)
         if pos in ('K', 'DST') and sp <= 0:      # no stat line: fall back to ESPN's own total
             sp = float(season.get('appliedTotal', 0)); wp = float((wk or {}).get('appliedTotal', 0))
-        stats = {k: round(st.get(c, 0)) for k, c in
-                 (('passYd','3'),('passTD','4'),('int','20'),('rushYd','24'),('rushTD','25'),
-                  ('rec','53'),('recYd','42'),('recTD','43')) if st.get(c, 0) >= 0.5}
+        if pos == 'K':
+            stats = {k: round(st.get(c, 0)) for k, c in (('fgMade','83'),('fgAtt','84'),('xpMade','86')) if st.get(c, 0) >= 0.5}
+        elif pos == 'DST':
+            stats = {k: round(st.get(c, 0), 1) for k, c in
+                     (('sacks','99'),('ints','95'),('fumRec','96'),('safeties','98'),('blocks','97')) if st.get(c, 0) >= 0.05}
+            tds = st.get('94', 0) + st.get('103', 0) + st.get('104', 0)
+            if tds >= 0.05: stats['defTD'] = round(tds, 1)
+            if st.get('120'): stats['paPerGame'] = round(st['120'] / 17, 1)
+            low = st.get('89', 0) + st.get('90', 0) + 0.4 * st.get('91', 0)
+            if low >= 0.05: stats['lowPAgames'] = round(low, 1)
+        else:
+            stats = {k: round(st.get(c, 0)) for k, c in
+                     (('passYd','3'),('passTD','4'),('int','20'),('rushYd','24'),('rushTD','25'),
+                      ('rec','53'),('recYd','42'),('recTD','43')) if st.get(c, 0) >= 0.5}
         sta = {k: float(v) for k, v in ((actual or {}).get('stats') or {}).items()}
         stl = {k: float(v) for k, v in ((lastwk or {}).get('stats') or {}).items()}
         ap = round(score(sta, pos), 1) if actual else None

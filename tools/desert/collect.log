@@ -1,4 +1,3 @@
-collector listening on 127.0.0.1:8765, waiting for: ['rosters', 'rtsids']
-received rosters (11700 bytes)
-received rtsids (32434 bytes)
+collector listening on 127.0.0.1:8765, waiting for: ['rosters']
+received rosters (11714 bytes)
 done
