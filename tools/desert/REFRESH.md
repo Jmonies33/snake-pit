@@ -46,5 +46,7 @@ Inputs: rtsports rosters (needs Jerry's logged-in Chrome), ESPN projections (pub
    `?key=<master key>` (same key as the draft rooms; never paste it anywhere shared).
 
 ## Cadence
-- Tuesday 7:00 AM: after Monday night, before the trade window (Tue 6 AM–Sun noon).
-- Thursday 10:00 AM: one hour before the free-for-all add window (Thu 11:00 AM CT).
+- Tuesday 7:30 AM PT: after Monday night.
+- Wednesday 9:30 PM PT: after the blind-bid results (~9 PM PT) — the run Jerry writes his swap list from.
+- Thursday 8:30 AM PT: 30 min before the free-for-all opens (9:00 AM PT / 11:00 AM CT).
+
