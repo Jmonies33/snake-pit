@@ -43,6 +43,17 @@ h1{font-family:var(--hd);font-weight:900;font-size:26px;letter-spacing:.6px;text
 h1 small{font-size:12px;color:var(--dim);letter-spacing:1.5px;display:block;margin-top:5px;font-weight:800}
 h2{font-family:var(--hd);font-weight:800;font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
 .grid{display:grid;gap:14px}
+.grid>*{min-width:0}
+.g32{grid-template-columns:3fr 2fr}
+@media(max-width:1000px){.g32{grid-template-columns:1fr}}
+.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.kv div{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.kv b{display:block;font-family:var(--hd);font-size:22px;letter-spacing:.3px}
+.kv span{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--dim);font-weight:800}
+.tiny{font-size:10.5px;color:var(--dim);white-space:normal;line-height:1.25}
+.form{display:grid;grid-template-columns:1fr 1fr 80px auto;gap:6px;align-items:center}
+.form input,.form select{height:32px;padding:0 8px;border-radius:6px;border:1px solid var(--line2);background:var(--panel2);color:var(--txt);min-width:0;width:100%}
+@media(max-width:700px){.form{grid-template-columns:1fr 1fr}.kv{grid-template-columns:1fr 1fr}}
 .g2{grid-template-columns:1fr 1fr}
 .g3{grid-template-columns:2fr 1fr}
 @media(max-width:860px){.g2,.g3{grid-template-columns:1fr}}
@@ -384,25 +395,26 @@ function bidBoard(){
     targets.push({p,drop:w,gain,rivals,bid,wait:rivals.length<=1}); }
   targets.sort((a,b)=>b.gain-a.gain);
   const pace=(myLeft/bidWeeksLeft).toFixed(0);
-  return `<div class="card hot" style="margin-top:14px" id="bidCard"><h2>Wednesday blind bids — $${budget} budget</h2>
-    <div class="grid g2">
+  const short2=n=>n.replace(/^Raiders of the Lost Title$/,'Raiders').replace(/^Drunk at the Draft$/,'Drunk').replace(/^Can't stanzus$/,"Can't stanzus").replace(/^Two T's Matt$/,"Two T's");
+  return `<div class="card hot" style="margin-top:14px" id="bidCard"><h2>Wednesday blind bids <span class="dim" style="font-weight:700;letter-spacing:0;text-transform:none;font-family:var(--ui);font-size:12px">· $${budget} budget · bids due 8:00 PM CT · winners posted in the group text</span></h2>
+    <div class="grid g32">
       <div>
-        <div class="row" style="margin-bottom:8px"><span class="pill">You have <b class="good" style="margin-left:4px">$${myLeft}</b></span><span class="pill">${bidWeeksLeft} bid nights left</span><span class="pill">pace $${pace}/week</span>${mine.unknown?`<span class="pill bad">${mine.unknown} of your wins have no price entered</span>`:''}</div>
-        <div class="callout" style="margin:0 0 10px;font-size:12.5px"><b>The rule that saves you money:</b> a player only needs a bid if another team would also start him. If nobody else has a hole at his position, don't bid — the Thursday bot takes him for free at 11:00. Spend the $300 on the contested ones: injury replacements and the week a starter goes down.</div>
-        <div class="scroll"><table><tr><th>Target</th><th>For</th><th class="n">Gain</th><th>Who else needs him</th><th>Call</th><th class="n">Bid</th></tr>
-        ${targets.length?targets.slice(0,12).map(x=>`<tr><td>${player(x.p)}</td><td class="dim">${esc(x.drop.name)}</td><td class="n good">${fmt(x.gain)}</td><td style="white-space:normal;font-size:11px">${x.rivals.length?esc(x.rivals.join(', ')):'<span class="dim">nobody</span>'}</td><td>${x.wait?'<span class="tag ok" style="margin:0">wait — free Thursday</span>':'<span class="tag warn" style="margin:0">bid</span>'}</td><td class="n"><b>${x.wait?'$0':'$'+cents(x.bid)}</b>${x.wait?'':`<span class="dim" style="font-size:10px"> ($${Math.max(1,Math.round(x.bid*0.7))}–$${Math.round(x.bid*1.3)})</span>`}</td></tr>`).join(''):'<tr><td colspan="6" class="dim">No free agent beats one of your starters by 5+ points right now. Keep the $300.</td></tr>'}
+        <div class="kv"><div><b class="good">$${myLeft.toFixed(2)}</b><span>You have left</span></div><div><b>${bidWeeksLeft}</b><span>Bid nights left</span></div><div><b>$${pace}</b><span>Pace per week</span></div></div>
+        <div class="callout" style="margin:0 0 10px;font-size:12px"><b>Bid only when it's contested.</b> If no other team would start him, the Thursday bot takes him for free at 11:00. Save the money for injury replacements and the week a starter goes down.</div>
+        <div class="scroll"><table><tr><th>Target</th><th>For</th><th class="n">Gain</th><th>Contested by</th><th>Call</th><th class="n">Bid</th></tr>
+        ${targets.length?targets.slice(0,12).map(x=>`<tr><td>${player(x.p)}</td><td class="dim">${esc(x.drop.name)}</td><td class="n good">${fmt(x.gain)}</td><td style="max-width:220px"><b>${x.rivals.length?x.rivals.length+' team'+(x.rivals.length>1?'s':''):'nobody'}</b>${x.rivals.length?`<div class="tiny">${esc(x.rivals.map(short2).join(', '))}</div>`:''}</td><td>${x.wait?'<span class="tag ok" style="margin:0">wait · free Thu</span>':'<span class="tag warn" style="margin:0">bid</span>'}</td><td class="n"><b>${x.wait?'$0':'$'+cents(x.bid)}</b>${x.wait?'':`<div class="tiny">range $${Math.max(1,Math.round(x.bid*0.7))}–$${Math.round(x.bid*1.3)}</div>`}</td></tr>`).join(''):'<tr><td colspan="6" class="dim">No free agent beats one of your starters by 5+ points right now. Keep the $300.</td></tr>'}
         </table></div>
-        <p class="dim" style="margin-top:8px;font-size:11px">Bid = 60¢ per rest-of-season point of gain, × up to 2.5 for how many teams could start him, never below 60% of what this league has paid per point for a contested player, never more than $2 per point he adds for you, capped at 40% of what you have left (60% for a 100+ point player). <b>Bid in odd cents</b> — this league does, and ties go to the higher cent. ${known.length?`Market so far: ${known.length} winning bids, median <b>$${median}</b>, high <b>$${high}</b>${dollarsPerPt?`, about <b>$${dollarsPerPt.toFixed(2)}</b> per rest-of-season point`:''}.`:'Once real winning bids are recorded, the numbers calibrate to this league.'}</p>
+        <p class="tiny" style="margin-top:8px">Bid = 60¢ per rest-of-season point gained, × up to 2.5 for how contested he is, floored at 60% of what this league pays per point, capped at $2 per point gained and 40% of your remaining budget. <b>Bid in odd cents</b> — ties go to the higher cent. ${known.length?`Market: ${known.length} winning bids · median <b>$${median}</b> · high <b>$${high}</b>${dollarsPerPt?` · about <b>$${dollarsPerPt.toFixed(2)}</b> per projected point`:''}.`:'Calibrates once real winning bids are recorded.'}</p>
       </div>
       <div>
         <h2 style="font-size:13px">League budgets</h2>
-        <div class="scroll"><table><tr><th>Team</th><th class="n">Wins</th><th class="n">Known spend</th><th class="n">Left</th></tr>
-        ${teams.slice().sort((a,b)=>spend[b.name].known-spend[a.name].known).map(t=>{const s=spend[t.name]; return `<tr class="${t.me?'me':''}"><td>${esc(t.name)}</td><td class="n">${s.wins}${s.unknown?`<span class="dim"> (${s.unknown} unpriced)</span>`:''}</td><td class="n">$${s.known.toFixed(2)}</td><td class="n"><b>${s.unknown?'≤':''}$${(budget-s.known).toFixed(2)}</b></td></tr>`;}).join('')}
+        <div class="scroll"><table><tr><th>Team</th><th class="n">Wins</th><th class="n">Spent</th><th class="n">Left</th></tr>
+        ${teams.slice().sort((a,b)=>spend[b.name].known-spend[a.name].known).map(t=>{const s=spend[t.name]; return `<tr class="${t.me?'me':''}"><td>${esc(short2(t.name))}</td><td class="n">${s.wins}${s.unknown?`<span class="dim"> (${s.unknown}?)</span>`:''}</td><td class="n">$${s.known.toFixed(2)}</td><td class="n"><b>${s.unknown?'≤':''}$${(budget-s.known).toFixed(2)}</b></td></tr>`;}).join('')}
         </table></div>
-        <h2 style="font-size:13px;margin-top:12px">Record a result</h2>
-        <p class="dim" style="font-size:11px;margin-bottom:6px">After the commish posts winners in the group text, log them here so the budgets and bid math learn the league.</p>
-        <div class="row"><select id="fbTeam" class="btn" style="height:32px">${teams.map(t=>`<option>${esc(t.name)}</option>`).join('')}</select><input type="search" id="fbPlayer" list="allPlayers" placeholder="Player" style="min-width:160px"><input type="number" id="fbAmt" placeholder="$" min="0" max="${budget}" step="0.01" style="width:80px;height:32px;padding:0 8px;border-radius:6px;border:1px solid var(--line2);background:var(--panel2);color:var(--txt)"><button id="fbAdd" class="btn on">Add</button></div>
-        ${rows.length?`<details style="margin-top:8px"><summary class="dim" style="cursor:pointer;font-size:11px">All ${rows.length} recorded results</summary><div class="scroll"><table style="margin-top:6px">${rows.slice().reverse().map(r=>`<tr><td>wk ${r.week}</td><td>${esc(r.team)}</td><td>${esc(r.player)}</td><td class="n">${r.amount!=null?'$'+r.amount:'<span class="dim">?</span>'}</td></tr>`).join('')}</table></div></details>`:''}
+        <h2 style="font-size:13px;margin-top:14px">Record a result</h2>
+        <div class="form"><select id="fbTeam">${teams.map(t=>`<option>${esc(t.name)}</option>`).join('')}</select><input type="search" id="fbPlayer" list="allPlayers" placeholder="Player"><input type="number" id="fbAmt" placeholder="$" min="0" max="${budget}" step="0.01"><button id="fbAdd" class="btn on">Add</button></div>
+        <p class="tiny" style="margin-top:6px">Log the commish’s winners here after each Wednesday so the budgets and bid math learn the league.</p>
+        ${rows.length?`<details style="margin-top:8px"><summary class="dim" style="cursor:pointer;font-size:11px">All ${rows.length} recorded results</summary><div class="scroll"><table style="margin-top:6px">${rows.slice().reverse().map(r=>`<tr><td>wk ${r.week}</td><td>${esc(short2(r.team))}</td><td>${esc(r.player)}</td><td class="n">${r.amount!=null?'$'+Number(r.amount).toFixed(2):'<span class="dim">?</span>'}</td></tr>`).join('')}</table></div></details>`:''}
       </div>
     </div></div>`;
 }
