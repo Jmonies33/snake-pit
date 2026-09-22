@@ -359,8 +359,12 @@ function bidBoard(){
   const rows=faabRows(); const budget=D.faab.budget; const bidWeeksLeft=Math.max(1,18-D.week);
   const spend={}; teams.forEach(t=>spend[t.name]={known:0,wins:0,unknown:0});
   rows.forEach(r=>{ const s=spend[r.team]||(spend[r.team]={known:0,wins:0,unknown:0}); s.wins++; if(r.amount!=null) s.known+=+r.amount; else s.unknown++; });
-  const mine=spend[me.name]; const myLeft=budget-mine.known;
-  const known=rows.filter(r=>r.amount!=null); const perPt=known.length?null:null; // calibrated below when history exists
+  const mine=spend[me.name]; const myLeft=Math.round((budget-mine.known)*100)/100;
+  // what this league actually pays: known winning bids, and $ per rest-of-season point where we know the player
+  const known=rows.filter(r=>r.amount!=null).map(r=>{const p=findPlayer(r.player); return {...r,pts:p?p.pts:null};});
+  const amts=known.map(r=>r.amount).sort((a,b)=>a-b); const median=amts.length?amts[Math.floor(amts.length/2)]:null; const high=amts.length?amts[amts.length-1]:null;
+  const ppp=known.filter(r=>r.pts).map(r=>r.amount/r.pts).sort((a,b)=>a-b); const dollarsPerPt=ppp.length?ppp[Math.floor(ppp.length/2)]:null; // per point of the player's own ROS total
+  const cents=n=>{ const c=[.11,.23,.37,.41,.53,.67,.77,.83,.91][Math.abs(Math.round(n))%9]; return (Math.max(1,Math.round(n))+c).toFixed(2); };
   // targets: free agents who beat one of my starters in the same slot
   const worst={}; me.roster.forEach(id=>{const s=slot(P[id]); if(!worst[s]||P[id].pts<worst[s].pts) worst[s]=P[id];});
   const worstOf=t=>{const w={}; t.roster.forEach(id=>{const s=slot(P[id]); if(!w[s]||P[id].pts<w[s].pts) w[s]=P[id];}); return w;};
@@ -370,7 +374,10 @@ function bidBoard(){
     const rivals=oppWorst.filter(o=>o.w[s]&&p.pts-o.w[s].pts>=5).map(o=>o.t.name);
     // suggested bid: $ per rest-of-season point, scaled by how contested he is; capped by budget discipline
     const base=gain*0.6; const contest=Math.min(2.5,1+0.18*rivals.length); const onlyUpgrade=FA.filter(x=>slot(x)===s&&x.pts-w.pts>=5).length===1?1.25:1;
-    let bid=Math.round(base*contest*onlyUpgrade); const cap=Math.round(myLeft*(gain>=100?0.6:0.4)); bid=Math.max(1,Math.min(bid,cap));
+    let bid=base*contest*onlyUpgrade;
+    // market floor: this league pays real money for anyone contested — never bid below what a comparable player went for
+    if(dollarsPerPt&&rivals.length>=2) bid=Math.max(bid,p.pts*dollarsPerPt*0.6);
+    const cap=myLeft*(gain>=100?0.6:0.4); bid=Math.max(1,Math.min(bid,cap));
     targets.push({p,drop:w,gain,rivals,bid,wait:rivals.length<=1}); }
   targets.sort((a,b)=>b.gain-a.gain);
   const pace=(myLeft/bidWeeksLeft).toFixed(0);
@@ -380,18 +387,18 @@ function bidBoard(){
         <div class="row" style="margin-bottom:8px"><span class="pill">You have <b class="good" style="margin-left:4px">$${myLeft}</b></span><span class="pill">${bidWeeksLeft} bid nights left</span><span class="pill">pace $${pace}/week</span>${mine.unknown?`<span class="pill bad">${mine.unknown} of your wins have no price entered</span>`:''}</div>
         <div class="callout" style="margin:0 0 10px;font-size:12.5px"><b>The rule that saves you money:</b> a player only needs a bid if another team would also start him. If nobody else has a hole at his position, don't bid — the Thursday bot takes him for free at 11:00. Spend the $300 on the contested ones: injury replacements and the week a starter goes down.</div>
         <div class="scroll"><table><tr><th>Target</th><th>For</th><th class="n">Gain</th><th>Who else needs him</th><th>Call</th><th class="n">Bid</th></tr>
-        ${targets.length?targets.slice(0,12).map(x=>`<tr><td>${player(x.p)}</td><td class="dim">${esc(x.drop.name)}</td><td class="n good">${fmt(x.gain)}</td><td style="white-space:normal;font-size:11px">${x.rivals.length?esc(x.rivals.join(', ')):'<span class="dim">nobody</span>'}</td><td>${x.wait?'<span class="tag ok" style="margin:0">wait — free Thursday</span>':'<span class="tag warn" style="margin:0">bid</span>'}</td><td class="n"><b>${x.wait?'$0':'$'+x.bid}</b>${x.wait?'':`<span class="dim" style="font-size:10px"> ($${Math.max(1,Math.round(x.bid*0.7))}–$${Math.round(x.bid*1.3)})</span>`}</td></tr>`).join(''):'<tr><td colspan="6" class="dim">No free agent beats one of your starters by 5+ points right now. Keep the $300.</td></tr>'}
+        ${targets.length?targets.slice(0,12).map(x=>`<tr><td>${player(x.p)}</td><td class="dim">${esc(x.drop.name)}</td><td class="n good">${fmt(x.gain)}</td><td style="white-space:normal;font-size:11px">${x.rivals.length?esc(x.rivals.join(', ')):'<span class="dim">nobody</span>'}</td><td>${x.wait?'<span class="tag ok" style="margin:0">wait — free Thursday</span>':'<span class="tag warn" style="margin:0">bid</span>'}</td><td class="n"><b>${x.wait?'$0':'$'+cents(x.bid)}</b>${x.wait?'':`<span class="dim" style="font-size:10px"> ($${Math.max(1,Math.round(x.bid*0.7))}–$${Math.round(x.bid*1.3)})</span>`}</td></tr>`).join(''):'<tr><td colspan="6" class="dim">No free agent beats one of your starters by 5+ points right now. Keep the $300.</td></tr>'}
         </table></div>
-        <p class="dim" style="margin-top:8px;font-size:11px">Bid = 60¢ per rest-of-season point of gain, × up to 2.5 for how many teams could start him, capped at 40% of what you have left (60% for a 100+ point player). ${known.length?`Calibrated against ${known.length} known winning bids.`:'Once you enter real winning bids below, the numbers calibrate to this league.'}</p>
+        <p class="dim" style="margin-top:8px;font-size:11px">Bid = 60¢ per rest-of-season point of gain, × up to 2.5 for how many teams could start him, never below 60% of what this league has paid per point for a contested player, capped at 40% of what you have left (60% for a 100+ point player). <b>Bid in odd cents</b> — this league does, and ties go to the higher cent. ${known.length?`Market so far: ${known.length} winning bids, median <b>$${median}</b>, high <b>$${high}</b>${dollarsPerPt?`, about <b>$${dollarsPerPt.toFixed(2)}</b> per rest-of-season point`:''}.`:'Once real winning bids are recorded, the numbers calibrate to this league.'}</p>
       </div>
       <div>
         <h2 style="font-size:13px">League budgets</h2>
         <div class="scroll"><table><tr><th>Team</th><th class="n">Wins</th><th class="n">Known spend</th><th class="n">Left</th></tr>
-        ${teams.map(t=>{const s=spend[t.name]; return `<tr class="${t.me?'me':''}"><td>${esc(t.name)}</td><td class="n">${s.wins}${s.unknown?`<span class="dim"> (${s.unknown} unpriced)</span>`:''}</td><td class="n">$${s.known}</td><td class="n"><b>${s.unknown?'≤':''}$${budget-s.known}</b></td></tr>`;}).join('')}
+        ${teams.slice().sort((a,b)=>spend[b.name].known-spend[a.name].known).map(t=>{const s=spend[t.name]; return `<tr class="${t.me?'me':''}"><td>${esc(t.name)}</td><td class="n">${s.wins}${s.unknown?`<span class="dim"> (${s.unknown} unpriced)</span>`:''}</td><td class="n">$${s.known.toFixed(2)}</td><td class="n"><b>${s.unknown?'≤':''}$${(budget-s.known).toFixed(2)}</b></td></tr>`;}).join('')}
         </table></div>
         <h2 style="font-size:13px;margin-top:12px">Record a result</h2>
         <p class="dim" style="font-size:11px;margin-bottom:6px">After the commish posts winners in the group text, log them here so the budgets and bid math learn the league.</p>
-        <div class="row"><select id="fbTeam" class="btn" style="height:32px">${teams.map(t=>`<option>${esc(t.name)}</option>`).join('')}</select><input type="search" id="fbPlayer" list="allPlayers" placeholder="Player" style="min-width:160px"><input type="number" id="fbAmt" placeholder="$" min="0" max="${budget}" style="width:70px;height:32px;padding:0 8px;border-radius:6px;border:1px solid var(--line2);background:var(--panel2);color:var(--txt)"><button id="fbAdd" class="btn on">Add</button></div>
+        <div class="row"><select id="fbTeam" class="btn" style="height:32px">${teams.map(t=>`<option>${esc(t.name)}</option>`).join('')}</select><input type="search" id="fbPlayer" list="allPlayers" placeholder="Player" style="min-width:160px"><input type="number" id="fbAmt" placeholder="$" min="0" max="${budget}" step="0.01" style="width:80px;height:32px;padding:0 8px;border-radius:6px;border:1px solid var(--line2);background:var(--panel2);color:var(--txt)"><button id="fbAdd" class="btn on">Add</button></div>
         ${rows.length?`<details style="margin-top:8px"><summary class="dim" style="cursor:pointer;font-size:11px">All ${rows.length} recorded results</summary><div class="scroll"><table style="margin-top:6px">${rows.slice().reverse().map(r=>`<tr><td>wk ${r.week}</td><td>${esc(r.team)}</td><td>${esc(r.player)}</td><td class="n">${r.amount!=null?'$'+r.amount:'<span class="dim">?</span>'}</td></tr>`).join('')}</table></div></details>`:''}
       </div>
     </div></div>`;
