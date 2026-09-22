@@ -1,0 +1,13 @@
+{
+  "budget": 300,
+  "note": "Blind bids run by the commissioner outside rtsports every Wednesday (due 8 PM CT, entered ~9:30 PM CT). rtsports shows no amounts, so winning bids are recorded here from the group text. amount = null means the win is known but the price is not.",
+  "history": [
+    {"week": 2, "team": "Two T's Matt", "player": "Kaelon Black", "pos": "RB", "amount": null},
+    {"week": 2, "team": "LONE STARR", "player": "Chuba Hubbard", "pos": "RB", "amount": null},
+    {"week": 2, "team": "Los Huevos Grandes", "player": "Deebo Samuel", "pos": "WR", "amount": null},
+    {"week": 2, "team": "Los Huevos Grandes", "player": "T.J. Hockenson", "pos": "TE", "amount": null},
+    {"week": 2, "team": "Los Huevos Grandes", "player": "Dalton Kincaid", "pos": "TE", "amount": null},
+    {"week": 2, "team": "Ceedeez Nutz", "player": "Bryce Young", "pos": "QB", "amount": null},
+    {"week": 2, "team": "Bitch Mittens", "player": "Aaron Jones", "pos": "RB", "amount": null}
+  ]
+}

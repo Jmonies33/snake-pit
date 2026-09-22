@@ -89,7 +89,16 @@ for t in rost['teams']:
     teams.append({'name': t['team'], 'owner': t['owner'], 'me': t['owner'] == ME, 'roster': ids})
 assert sum(t['me'] for t in teams) == 1, 'could not find my team'
 
+faab_path = os.path.join(HERE, 'faab.json')
+faab = json.load(open(faab_path)) if os.path.exists(faab_path) else {'budget': 300, 'history': []}
+# owners rename teams mid-season; map any name seen in bid results onto the roster report's current name
+TEAM_ALIASES = {'Los Huevos Grandes': 'Team Huevos', 'Team Huevos': 'Los Huevos Grandes'}
+current = {t['name'] for t in teams}
+for h in faab.get('history', []):
+    if h.get('team') not in current and TEAM_ALIASES.get(h.get('team')) in current:
+        h['team'] = TEAM_ALIASES[h['team']]
 data = {'built': datetime.datetime.now().strftime('%b %-d, %Y %-I:%M %p'),
+        'faab': {'budget': faab.get('budget', 300), 'history': faab.get('history', [])},
         'projDate': proj['date'], 'week': proj['week'], 'weeksLeft': weeks_left,
         # HARD league rule per Jerry (2026-09-11): exactly QB2 / RB3 / WR+TE 5 / K2 / DST2,
         # everyone starts, every pickup is a one-for-one swap within the same slot.

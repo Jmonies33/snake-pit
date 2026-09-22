@@ -323,6 +323,7 @@ function renderWaivers(){
         <h2 style="margin-top:14px">My bye weeks</h2><div class="bye">${Object.keys(byes).sort((a,b)=>a-b).map(w=>`<div class="${byes[w].length>=3?'hot':''}"><b>Wk ${w}</b>${byes[w].map(p=>esc(short(p))).join(', ')}</div>`).join('')}</div>
       </div>
     </div>
+    ${bidBoard()}
     <div class="card" style="margin-top:14px"><h2>This week's streamers (week ${D.week})</h2>
       <p class="dim" style="margin-bottom:8px;font-size:11.5px">Same-slot swaps that project better <i>this week</i> and cost little for the rest of the season. Kickers and defenses are the natural churn; swap back next Thursday if the original guy is still there.</p>
       ${streams.length?`<div class="scroll"><table><tr><th>Drop</th><th class="n">This wk</th><th>Add</th><th class="n">This wk</th><th class="n">Wk gain</th><th class="n">Rest-of-season change</th></tr>
@@ -344,9 +345,63 @@ function renderWaivers(){
       </table></div></div>`;
     main.querySelectorAll('.btn[data-pos]').forEach(b=>b.onclick=()=>{posF=b.dataset.pos;draw();});
     const qi=document.getElementById('q'); qi.oninput=e=>{q=e.target.value.toLowerCase();draw();document.getElementById('q').focus();document.getElementById('q').setSelectionRange(q.length,q.length);};
-    wireCompare();
+    wireCompare(); wireBidBoard(draw);
   }
   draw();
+}
+
+/* ================= blind-bid board (Wednesday, $300 FAAB) =================
+   The commissioner runs the auction outside rtsports and the site shows no
+   amounts, so spend is tracked from what Jerry hears: faab.json (built in) plus
+   results he types on this page (kept in this browser). */
+function faabRows(){ const extra=JSON.parse(localStorage.getItem('desert.faab.extra')||'[]'); return D.faab.history.concat(extra); }
+function bidBoard(){
+  const rows=faabRows(); const budget=D.faab.budget; const bidWeeksLeft=Math.max(1,18-D.week);
+  const spend={}; teams.forEach(t=>spend[t.name]={known:0,wins:0,unknown:0});
+  rows.forEach(r=>{ const s=spend[r.team]||(spend[r.team]={known:0,wins:0,unknown:0}); s.wins++; if(r.amount!=null) s.known+=+r.amount; else s.unknown++; });
+  const mine=spend[me.name]; const myLeft=budget-mine.known;
+  const known=rows.filter(r=>r.amount!=null); const perPt=known.length?null:null; // calibrated below when history exists
+  // targets: free agents who beat one of my starters in the same slot
+  const worst={}; me.roster.forEach(id=>{const s=slot(P[id]); if(!worst[s]||P[id].pts<worst[s].pts) worst[s]=P[id];});
+  const worstOf=t=>{const w={}; t.roster.forEach(id=>{const s=slot(P[id]); if(!w[s]||P[id].pts<w[s].pts) w[s]=P[id];}); return w;};
+  const oppWorst=opps.map(t=>({t,w:worstOf(t)}));
+  const targets=[];
+  for(const p of FA.slice(0,150)){ const s=slot(p); const w=worst[s]; if(!w) continue; const gain=p.pts-w.pts; if(gain<5) continue;
+    const rivals=oppWorst.filter(o=>o.w[s]&&p.pts-o.w[s].pts>=5).map(o=>o.t.name);
+    // suggested bid: $ per rest-of-season point, scaled by how contested he is; capped by budget discipline
+    const base=gain*0.6; const contest=Math.min(2.5,1+0.18*rivals.length); const onlyUpgrade=FA.filter(x=>slot(x)===s&&x.pts-w.pts>=5).length===1?1.25:1;
+    let bid=Math.round(base*contest*onlyUpgrade); const cap=Math.round(myLeft*(gain>=100?0.6:0.4)); bid=Math.max(1,Math.min(bid,cap));
+    targets.push({p,drop:w,gain,rivals,bid,wait:rivals.length<=1}); }
+  targets.sort((a,b)=>b.gain-a.gain);
+  const pace=(myLeft/bidWeeksLeft).toFixed(0);
+  return `<div class="card hot" style="margin-top:14px" id="bidCard"><h2>Wednesday blind bids — $${budget} budget</h2>
+    <div class="grid g2">
+      <div>
+        <div class="row" style="margin-bottom:8px"><span class="pill">You have <b class="good" style="margin-left:4px">$${myLeft}</b></span><span class="pill">${bidWeeksLeft} bid nights left</span><span class="pill">pace $${pace}/week</span>${mine.unknown?`<span class="pill bad">${mine.unknown} of your wins have no price entered</span>`:''}</div>
+        <div class="callout" style="margin:0 0 10px;font-size:12.5px"><b>The rule that saves you money:</b> a player only needs a bid if another team would also start him. If nobody else has a hole at his position, don't bid — the Thursday bot takes him for free at 11:00. Spend the $300 on the contested ones: injury replacements and the week a starter goes down.</div>
+        <div class="scroll"><table><tr><th>Target</th><th>For</th><th class="n">Gain</th><th>Who else needs him</th><th>Call</th><th class="n">Bid</th></tr>
+        ${targets.length?targets.slice(0,12).map(x=>`<tr><td>${player(x.p)}</td><td class="dim">${esc(x.drop.name)}</td><td class="n good">${fmt(x.gain)}</td><td style="white-space:normal;font-size:11px">${x.rivals.length?esc(x.rivals.join(', ')):'<span class="dim">nobody</span>'}</td><td>${x.wait?'<span class="tag ok" style="margin:0">wait — free Thursday</span>':'<span class="tag warn" style="margin:0">bid</span>'}</td><td class="n"><b>${x.wait?'$0':'$'+x.bid}</b>${x.wait?'':`<span class="dim" style="font-size:10px"> ($${Math.max(1,Math.round(x.bid*0.7))}–$${Math.round(x.bid*1.3)})</span>`}</td></tr>`).join(''):'<tr><td colspan="6" class="dim">No free agent beats one of your starters by 5+ points right now. Keep the $300.</td></tr>'}
+        </table></div>
+        <p class="dim" style="margin-top:8px;font-size:11px">Bid = 60¢ per rest-of-season point of gain, × up to 2.5 for how many teams could start him, capped at 40% of what you have left (60% for a 100+ point player). ${known.length?`Calibrated against ${known.length} known winning bids.`:'Once you enter real winning bids below, the numbers calibrate to this league.'}</p>
+      </div>
+      <div>
+        <h2 style="font-size:13px">League budgets</h2>
+        <div class="scroll"><table><tr><th>Team</th><th class="n">Wins</th><th class="n">Known spend</th><th class="n">Left</th></tr>
+        ${teams.map(t=>{const s=spend[t.name]; return `<tr class="${t.me?'me':''}"><td>${esc(t.name)}</td><td class="n">${s.wins}${s.unknown?`<span class="dim"> (${s.unknown} unpriced)</span>`:''}</td><td class="n">$${s.known}</td><td class="n"><b>${s.unknown?'≤':''}$${budget-s.known}</b></td></tr>`;}).join('')}
+        </table></div>
+        <h2 style="font-size:13px;margin-top:12px">Record a result</h2>
+        <p class="dim" style="font-size:11px;margin-bottom:6px">After the commish posts winners in the group text, log them here so the budgets and bid math learn the league.</p>
+        <div class="row"><select id="fbTeam" class="btn" style="height:32px">${teams.map(t=>`<option>${esc(t.name)}</option>`).join('')}</select><input type="search" id="fbPlayer" list="allPlayers" placeholder="Player" style="min-width:160px"><input type="number" id="fbAmt" placeholder="$" min="0" max="${budget}" style="width:70px;height:32px;padding:0 8px;border-radius:6px;border:1px solid var(--line2);background:var(--panel2);color:var(--txt)"><button id="fbAdd" class="btn on">Add</button></div>
+        ${rows.length?`<details style="margin-top:8px"><summary class="dim" style="cursor:pointer;font-size:11px">All ${rows.length} recorded results</summary><div class="scroll"><table style="margin-top:6px">${rows.slice().reverse().map(r=>`<tr><td>wk ${r.week}</td><td>${esc(r.team)}</td><td>${esc(r.player)}</td><td class="n">${r.amount!=null?'$'+r.amount:'<span class="dim">?</span>'}</td></tr>`).join('')}</table></div></details>`:''}
+      </div>
+    </div></div>`;
+}
+function wireBidBoard(redraw){
+  const b=document.getElementById('fbAdd'); if(!b) return;
+  b.onclick=()=>{ const team=document.getElementById('fbTeam').value, player=document.getElementById('fbPlayer').value.trim(), amt=document.getElementById('fbAmt').value;
+    if(!player){alert('Type the player.');return;}
+    const extra=JSON.parse(localStorage.getItem('desert.faab.extra')||'[]'); extra.push({week:D.week,team,player,amount:amt===''?null:+amt,addedAt:Date.now()});
+    localStorage.setItem('desert.faab.extra',JSON.stringify(extra)); redraw(); document.getElementById('bidCard').scrollIntoView({block:'start'}); };
 }
 
 /* ================= compare tool ================= */
