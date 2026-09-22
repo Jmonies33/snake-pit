@@ -188,6 +188,7 @@ function V(ids){ return lineup(ids).total; }
 function rts(p){ return p.rts==null?(p.week||0):p.rts; }
 function player(p,extra){ return `<span class="pos ${p.pos}">${p.pos==='DST'?'D/ST':p.pos}</span> <b>${esc(p.name)}</b><span class="tm">${esc(p.team)} · bye ${p.bye||'–'}</span>${p.inj?`<span class="inj">${esc(p.inj)}</span>`:''}${extra||''}`; }
 function short(p){ return p.pos==='DST'?p.team:p.name.split(' ').pop(); }
+const norm=s=>String(s).toLowerCase().replace(/\b(jr|sr|ii|iii|iv|v)\b\.?/g,'').replace(/[^a-z]/g,'');
 const CITY={ARI:'Arizona',ATL:'Atlanta',BAL:'Baltimore',BUF:'Buffalo',CAR:'Carolina',CHI:'Chicago',CIN:'Cincinnati',CLE:'Cleveland',DAL:'Dallas',DEN:'Denver',DET:'Detroit',GB:'Green Bay',HOU:'Houston',IND:'Indianapolis',JAX:'Jacksonville',KC:'Kansas City',LV:'Las Vegas',LAC:'Los Angeles Chargers',LAR:'Los Angeles Rams',MIA:'Miami',MIN:'Minnesota',NE:'New England',NO:'New Orleans',NYG:'New York Giants',NYJ:'New York Jets',PHI:'Philadelphia',PIT:'Pittsburgh',SF:'San Francisco',SEA:'Seattle',TB:'Tampa Bay',TEN:'Tennessee',WSH:'Washington'};
 const byName={}; D.players.forEach(p=>{ byName[norm(p.name)]=p; if(p.pos==='DST'){ const nick=p.name.replace(/ D\/ST$/,''); [p.team+' dst',p.team+' defense',p.team,nick,nick+' defense',nick+' d',(CITY[p.team]||'')+' defense',(CITY[p.team]||'')+' dst',(CITY[p.team]||'')].forEach(k=>{ if(k.trim()) byName[norm(k)]=byName[norm(k)]||p; }); } });
 
@@ -413,7 +414,6 @@ function wireBidBoard(redraw){
 }
 
 /* ================= compare tool ================= */
-const norm=s=>String(s).toLowerCase().replace(/\b(jr|sr|ii|iii|iv|v)\b\.?/g,'').replace(/[^a-z]/g,'');
 function findPlayer(txt){ if(!txt) return null; const n=norm(txt); if(byName[n]) return byName[n];
   // partial: last name, or start of name — prefer higher-projected
   const c=D.players.filter(p=>{const pn=norm(p.name); return pn.includes(n)||n.includes(norm(p.name.split(' ').pop()))&&n.length>=4;}).sort((a,b)=>b.pts-a.pts);
