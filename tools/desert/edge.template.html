@@ -379,6 +379,7 @@ function bidBoard(){
     let bid=base*contest*onlyUpgrade;
     // market floor: this league pays real money for anyone contested — never bid below what a comparable player went for
     if(dollarsPerPt&&rivals.length>=2) bid=Math.max(bid,p.pts*dollarsPerPt*0.6);
+    bid=Math.min(bid,gain*2);            // but never more than $2 per point HE actually adds for you
     const cap=myLeft*(gain>=100?0.6:0.4); bid=Math.max(1,Math.min(bid,cap));
     targets.push({p,drop:w,gain,rivals,bid,wait:rivals.length<=1}); }
   targets.sort((a,b)=>b.gain-a.gain);
@@ -391,7 +392,7 @@ function bidBoard(){
         <div class="scroll"><table><tr><th>Target</th><th>For</th><th class="n">Gain</th><th>Who else needs him</th><th>Call</th><th class="n">Bid</th></tr>
         ${targets.length?targets.slice(0,12).map(x=>`<tr><td>${player(x.p)}</td><td class="dim">${esc(x.drop.name)}</td><td class="n good">${fmt(x.gain)}</td><td style="white-space:normal;font-size:11px">${x.rivals.length?esc(x.rivals.join(', ')):'<span class="dim">nobody</span>'}</td><td>${x.wait?'<span class="tag ok" style="margin:0">wait — free Thursday</span>':'<span class="tag warn" style="margin:0">bid</span>'}</td><td class="n"><b>${x.wait?'$0':'$'+cents(x.bid)}</b>${x.wait?'':`<span class="dim" style="font-size:10px"> ($${Math.max(1,Math.round(x.bid*0.7))}–$${Math.round(x.bid*1.3)})</span>`}</td></tr>`).join(''):'<tr><td colspan="6" class="dim">No free agent beats one of your starters by 5+ points right now. Keep the $300.</td></tr>'}
         </table></div>
-        <p class="dim" style="margin-top:8px;font-size:11px">Bid = 60¢ per rest-of-season point of gain, × up to 2.5 for how many teams could start him, never below 60% of what this league has paid per point for a contested player, capped at 40% of what you have left (60% for a 100+ point player). <b>Bid in odd cents</b> — this league does, and ties go to the higher cent. ${known.length?`Market so far: ${known.length} winning bids, median <b>$${median}</b>, high <b>$${high}</b>${dollarsPerPt?`, about <b>$${dollarsPerPt.toFixed(2)}</b> per rest-of-season point`:''}.`:'Once real winning bids are recorded, the numbers calibrate to this league.'}</p>
+        <p class="dim" style="margin-top:8px;font-size:11px">Bid = 60¢ per rest-of-season point of gain, × up to 2.5 for how many teams could start him, never below 60% of what this league has paid per point for a contested player, never more than $2 per point he adds for you, capped at 40% of what you have left (60% for a 100+ point player). <b>Bid in odd cents</b> — this league does, and ties go to the higher cent. ${known.length?`Market so far: ${known.length} winning bids, median <b>$${median}</b>, high <b>$${high}</b>${dollarsPerPt?`, about <b>$${dollarsPerPt.toFixed(2)}</b> per rest-of-season point`:''}.`:'Once real winning bids are recorded, the numbers calibrate to this league.'}</p>
       </div>
       <div>
         <h2 style="font-size:13px">League budgets</h2>
