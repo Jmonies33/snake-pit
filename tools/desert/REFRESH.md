@@ -1,10 +1,28 @@
 # Desert League edge pages — refresh runbook
 
-Pages: `desert/trades.html`, `desert/waivers.html` (GitHub Pages, master-key gated).
-Inputs: rtsports rosters (needs Jerry's logged-in Chrome), ESPN projections (public).
+Pages: `desert/trades.html`, `desert/waivers.html`, `desert/speed.html` (GitHub Pages, master-key gated).
+Inputs: rtsports rosters + player ids (needs Jerry's rtsports login), ESPN projections (public),
+`faab.json` (Wednesday winning bids, typed in from Jerry's screenshot of the commish's text).
 
-## Steps
+## The normal way (no AI, no Chrome): `refresh_desert.js`
 
+```
+node refresh_desert.js --login     # ONCE: a window opens, sign in to rtsports, open the Desert League, done
+node refresh_desert.js             # every run: rosters + ids → parse → projections → build → push
+```
+Uses a persistent Chromium profile at `~/.snake-pit-browser` (login + UID token live there, never in the
+repo). Exit 2 = never logged in, exit 3 = session expired → run `--login` again. The scheduled task
+`desert-edge-refresh` (Tue 7:30 AM, Wed 11:30 PM, Thu 10:30 AM Central) just runs this script.
+
+## What keeps what current
+- **Free agents / who owns whom** — the rosters report, every run. A player shows as a free agent only
+  if no team's roster lists him, so a stale run = stale wire.
+- **Projections, actuals, this-week opponent** — ESPN, every run (`projections.py`).
+- **Player ids for the Speed Kit** — the Add/Drop page, every run.
+- **FAAB budgets / winning bids** — `faab.json`, by hand: Jerry sends the Wednesday screenshot, add the
+  lines, rebuild. Team renames map through `TEAM_ALIASES` in build.py.
+
+## Fallback: Chrome-driven (if the script can't log in)
 1. Start the collector (waits for the rosters text, exits when it arrives):
    ```
    cd ~/snake-pit/tools/desert && python3 collect.py rosters --timeout=600

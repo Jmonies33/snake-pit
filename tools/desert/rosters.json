@@ -10,15 +10,15 @@
 "team": "LAR",
 "bye": 11,
 "inj": "",
-"wk1": 27.4
+"wk1": 26.25
 },
 {
 "pos": "QB",
 "name": "Caleb Williams",
 "team": "CHI",
 "bye": 10,
-"inj": "",
-"wk1": 27.39
+"inj": "D",
+"wk1": 0.0
 },
 {
 "pos": "RB",
@@ -26,7 +26,7 @@
 "team": "LAR",
 "bye": 11,
 "inj": "",
-"wk1": 10.4
+"wk1": 9.74
 },
 {
 "pos": "RB",
@@ -34,39 +34,39 @@
 "team": "BAL",
 "bye": 13,
 "inj": "",
-"wk1": 19.16
+"wk1": 21.76
 },
 {
 "pos": "RB",
 "name": "Aaron Jones",
 "team": "MIN",
 "bye": 6,
-"inj": "",
-"wk1": 14.18
+"inj": "Q",
+"wk1": 12.4
 },
 {
 "pos": "WR",
 "name": "Puka Nacua",
 "team": "LAR",
 "bye": 11,
-"inj": "",
-"wk1": 19.21
+"inj": "Q",
+"wk1": 18.42
 },
 {
 "pos": "WR",
 "name": "Rome Odunze",
 "team": "CHI",
 "bye": 10,
-"inj": "Q",
-"wk1": 10.61
+"inj": "",
+"wk1": 9.82
 },
 {
 "pos": "WR",
 "name": "Chris Olave",
 "team": "NO",
 "bye": 8,
-"inj": "",
-"wk1": 16.25
+"inj": "Q",
+"wk1": 17.44
 },
 {
 "pos": "WR",
@@ -74,15 +74,15 @@
 "team": "PHI",
 "bye": 10,
 "inj": "",
-"wk1": 14.41
+"wk1": 16.36
 },
 {
 "pos": "TE",
 "name": "George Kittle",
 "team": "SF",
 "bye": 8,
-"inj": "Q",
-"wk1": 13.51
+"inj": "",
+"wk1": 15.69
 },
 {
 "pos": "K",
@@ -90,7 +90,7 @@
 "team": "HOU",
 "bye": 8,
 "inj": "",
-"wk1": 8.77
+"wk1": 8.88
 },
 {
 "pos": "K",
@@ -98,7 +98,7 @@
 "team": "SEA",
 "bye": 11,
 "inj": "",
-"wk1": 8.46
+"wk1": 8.29
 },
 {
 "pos": "DST",
@@ -106,7 +106,7 @@
 "team": "SF",
 "bye": 8,
 "inj": "",
-"wk1": 6.2
+"wk1": 5.54
 },
 {
 "pos": "DST",
@@ -114,7 +114,7 @@
 "team": "LAR",
 "bye": 11,
 "inj": "",
-"wk1": 6.06
+"wk1": 5.73
 }
 ]
 },
@@ -128,7 +128,7 @@
 "team": "DET",
 "bye": 6,
 "inj": "",
-"wk1": 26.0
+"wk1": 30.0
 },
 {
 "pos": "QB",
@@ -136,7 +136,7 @@
 "team": "DAL",
 "bye": 14,
 "inj": "",
-"wk1": 31.04
+"wk1": 29.31
 },
 {
 "pos": "RB",
@@ -144,7 +144,7 @@
 "team": "CIN",
 "bye": 6,
 "inj": "",
-"wk1": 14.78
+"wk1": 15.54
 },
 {
 "pos": "RB",
@@ -160,7 +160,7 @@
 "team": "IND",
 "bye": 13,
 "inj": "",
-"wk1": 19.62
+"wk1": 20.28
 },
 {
 "pos": "WR",
@@ -168,7 +168,7 @@
 "team": "CAR",
 "bye": 5,
 "inj": "Q",
-"wk1": 12.7
+"wk1": 13.51
 },
 {
 "pos": "WR",
@@ -176,7 +176,7 @@
 "team": "TB",
 "bye": 10,
 "inj": "",
-"wk1": 9.63
+"wk1": 9.03
 },
 {
 "pos": "WR",
@@ -184,7 +184,7 @@
 "team": "ATL",
 "bye": 11,
 "inj": "",
-"wk1": 15.08
+"wk1": 14.9
 },
 {
 "pos": "WR",
@@ -192,7 +192,7 @@
 "team": "ARI",
 "bye": 14,
 "inj": "",
-"wk1": 10.19
+"wk1": 10.94
 },
 {
 "pos": "TE",
@@ -200,7 +200,7 @@
 "team": "GB",
 "bye": 11,
 "inj": "",
-"wk1": 12.75
+"wk1": 12.43
 },
 {
 "pos": "K",
@@ -208,7 +208,7 @@
 "team": "PIT",
 "bye": 9,
 "inj": "",
-"wk1": 6.72
+"wk1": 7.16
 },
 {
 "pos": "K",
@@ -216,7 +216,7 @@
 "team": "LV",
 "bye": 13,
 "inj": "",
-"wk1": 6.57
+"wk1": 6.74
 },
 {
 "pos": "DST",
@@ -224,7 +224,7 @@
 "team": "CHI",
 "bye": 10,
 "inj": "",
-"wk1": 6.65
+"wk1": 5.42
 },
 {
 "pos": "DST",
@@ -232,7 +232,7 @@
 "team": "DEN",
 "bye": 10,
 "inj": "",
-"wk1": 5.18
+"wk1": 5.0
 }
 ]
 },
@@ -246,23 +246,23 @@
 "team": "GB",
 "bye": 11,
 "inj": "",
-"wk1": 27.01
+"wk1": 26.86
 },
 {
 "pos": "QB",
-"name": "Malik Willis",
-"team": "MIA",
-"bye": 6,
-"inj": "P",
-"wk1": 23.22
+"name": "C.J. Stroud",
+"team": "HOU",
+"bye": 8,
+"inj": "",
+"wk1": 25.1
 },
 {
 "pos": "RB",
-"name": "Kyle Monangai",
-"team": "CHI",
-"bye": 10,
-"inj": "Q",
-"wk1": 8.8
+"name": "TreVeyon Henderson",
+"team": "NE",
+"bye": 11,
+"inj": "",
+"wk1": 11.76
 },
 {
 "pos": "RB",
@@ -270,7 +270,7 @@
 "team": "ATL",
 "bye": 11,
 "inj": "",
-"wk1": 22.22
+"wk1": 20.08
 },
 {
 "pos": "RB",
@@ -278,23 +278,23 @@
 "team": "JAX",
 "bye": 7,
 "inj": "",
-"wk1": 9.88
+"wk1": 12.48
 },
 {
 "pos": "WR",
 "name": "D.J. Moore",
 "team": "BUF",
 "bye": 7,
-"inj": "",
-"wk1": 12.95
+"inj": "Q",
+"wk1": 11.07
 },
 {
 "pos": "WR",
 "name": "Malik Nabers",
 "team": "NYG",
 "bye": 8,
-"inj": "Q",
-"wk1": 14.99
+"inj": "",
+"wk1": 14.28
 },
 {
 "pos": "WR",
@@ -302,7 +302,7 @@
 "team": "JAX",
 "bye": 7,
 "inj": "",
-"wk1": 12.16
+"wk1": 14.26
 },
 {
 "pos": "TE",
@@ -310,7 +310,7 @@
 "team": "LV",
 "bye": 13,
 "inj": "Q",
-"wk1": 16.52
+"wk1": 15.52
 },
 {
 "pos": "TE",
@@ -318,7 +318,7 @@
 "team": "IND",
 "bye": 13,
 "inj": "",
-"wk1": 13.58
+"wk1": 12.76
 },
 {
 "pos": "K",
@@ -326,7 +326,7 @@
 "team": "DAL",
 "bye": 14,
 "inj": "",
-"wk1": 8.89
+"wk1": 8.8
 },
 {
 "pos": "K",
@@ -334,15 +334,7 @@
 "team": "IND",
 "bye": 13,
 "inj": "",
-"wk1": 7.13
-},
-{
-"pos": "DST",
-"name": "Indianapolis Colts",
-"team": "IND",
-"bye": 13,
-"inj": "",
-"wk1": 5.6
+"wk1": 7.47
 },
 {
 "pos": "DST",
@@ -350,7 +342,15 @@
 "team": "CAR",
 "bye": 5,
 "inj": "",
-"wk1": 5.81
+"wk1": 8.25
+},
+{
+"pos": "DST",
+"name": "New England Patriots",
+"team": "NE",
+"bye": 11,
+"inj": "",
+"wk1": 5.33
 }
 ]
 },
@@ -364,7 +364,7 @@
 "team": "SF",
 "bye": 8,
 "inj": "",
-"wk1": 30.51
+"wk1": 31.15
 },
 {
 "pos": "QB",
@@ -372,7 +372,7 @@
 "team": "CAR",
 "bye": 5,
 "inj": "",
-"wk1": 26.84
+"wk1": 26.57
 },
 {
 "pos": "RB",
@@ -380,7 +380,7 @@
 "team": "LAC",
 "bye": 7,
 "inj": "",
-"wk1": 14.18
+"wk1": 14.66
 },
 {
 "pos": "RB",
@@ -388,7 +388,7 @@
 "team": "DEN",
 "bye": 10,
 "inj": "Q",
-"wk1": 7.58
+"wk1": 6.98
 },
 {
 "pos": "RB",
@@ -396,7 +396,7 @@
 "team": "KC",
 "bye": 5,
 "inj": "",
-"wk1": 18.44
+"wk1": 21.04
 },
 {
 "pos": "WR",
@@ -404,7 +404,7 @@
 "team": "CIN",
 "bye": 6,
 "inj": "",
-"wk1": 17.98
+"wk1": 18.39
 },
 {
 "pos": "WR",
@@ -412,15 +412,15 @@
 "team": "TB",
 "bye": 10,
 "inj": "",
-"wk1": 12.37
+"wk1": 10.91
 },
 {
 "pos": "WR",
 "name": "Mike Evans",
 "team": "SF",
 "bye": 8,
-"inj": "",
-"wk1": 13.59
+"inj": "Q",
+"wk1": 13.09
 },
 {
 "pos": "WR",
@@ -428,7 +428,7 @@
 "team": "LAC",
 "bye": 7,
 "inj": "Q",
-"wk1": 12.87
+"wk1": 13.12
 },
 {
 "pos": "WR",
@@ -436,7 +436,7 @@
 "team": "NO",
 "bye": 8,
 "inj": "",
-"wk1": 9.43
+"wk1": 11.25
 },
 {
 "pos": "K",
@@ -444,7 +444,7 @@
 "team": "BUF",
 "bye": 7,
 "inj": "",
-"wk1": 7.93
+"wk1": 7.87
 },
 {
 "pos": "K",
@@ -452,7 +452,7 @@
 "team": "JAX",
 "bye": 7,
 "inj": "",
-"wk1": 7.52
+"wk1": 7.58
 },
 {
 "pos": "DST",
@@ -460,7 +460,7 @@
 "team": "NO",
 "bye": 8,
 "inj": "",
-"wk1": 5.24
+"wk1": 6.9
 },
 {
 "pos": "DST",
@@ -468,7 +468,7 @@
 "team": "HOU",
 "bye": 8,
 "inj": "",
-"wk1": 6.06
+"wk1": 6.12
 }
 ]
 },
@@ -482,7 +482,7 @@
 "team": "JAX",
 "bye": 7,
 "inj": "",
-"wk1": 26.74
+"wk1": 27.12
 },
 {
 "pos": "QB",
@@ -490,7 +490,7 @@
 "team": "DEN",
 "bye": 10,
 "inj": "",
-"wk1": 26.54
+"wk1": 26.64
 },
 {
 "pos": "RB",
@@ -498,7 +498,7 @@
 "team": "PHI",
 "bye": 10,
 "inj": "",
-"wk1": 18.02
+"wk1": 17.66
 },
 {
 "pos": "RB",
@@ -506,7 +506,7 @@
 "team": "CLE",
 "bye": 11,
 "inj": "",
-"wk1": 12.34
+"wk1": 13.7
 },
 {
 "pos": "RB",
@@ -514,7 +514,7 @@
 "team": "SF",
 "bye": 8,
 "inj": "",
-"wk1": 19.22
+"wk1": 19.58
 },
 {
 "pos": "WR",
@@ -522,7 +522,7 @@
 "team": "HOU",
 "bye": 8,
 "inj": "Q",
-"wk1": 15.14
+"wk1": 14.73
 },
 {
 "pos": "WR",
@@ -530,15 +530,15 @@
 "team": "BAL",
 "bye": 13,
 "inj": "Q",
-"wk1": 13.97
+"wk1": 16.06
 },
 {
 "pos": "WR",
-"name": "Michael Pittman Jr.",
-"team": "PIT",
-"bye": 9,
-"inj": "Q",
-"wk1": 10.89
+"name": "Jaylen Waddle",
+"team": "DEN",
+"bye": 10,
+"inj": "",
+"wk1": 13.9
 },
 {
 "pos": "WR",
@@ -546,7 +546,7 @@
 "team": "GB",
 "bye": 11,
 "inj": "",
-"wk1": 14.68
+"wk1": 15.41
 },
 {
 "pos": "WR",
@@ -554,7 +554,7 @@
 "team": "DET",
 "bye": 6,
 "inj": "",
-"wk1": 11.66
+"wk1": 11.75
 },
 {
 "pos": "K",
@@ -562,7 +562,7 @@
 "team": "TB",
 "bye": 10,
 "inj": "",
-"wk1": 7.77
+"wk1": 7.64
 },
 {
 "pos": "K",
@@ -570,7 +570,7 @@
 "team": "CHI",
 "bye": 10,
 "inj": "",
-"wk1": 7.76
+"wk1": 6.87
 },
 {
 "pos": "DST",
@@ -578,7 +578,7 @@
 "team": "PHI",
 "bye": 10,
 "inj": "",
-"wk1": 6.24
+"wk1": 5.76
 },
 {
 "pos": "DST",
@@ -586,7 +586,7 @@
 "team": "MIN",
 "bye": 6,
 "inj": "",
-"wk1": 5.39
+"wk1": 7.5
 }
 ]
 },
@@ -600,7 +600,7 @@
 "team": "NE",
 "bye": 11,
 "inj": "",
-"wk1": 28.34
+"wk1": 27.6
 },
 {
 "pos": "QB",
@@ -608,7 +608,7 @@
 "team": "NO",
 "bye": 8,
 "inj": "",
-"wk1": 26.08
+"wk1": 28.28
 },
 {
 "pos": "RB",
@@ -624,15 +624,15 @@
 "team": "TB",
 "bye": 10,
 "inj": "",
-"wk1": 14.24
+"wk1": 14.0
 },
 {
 "pos": "RB",
 "name": "Jeremiyah Love",
 "team": "ARI",
 "bye": 14,
-"inj": "Q",
-"wk1": 11.98
+"inj": "",
+"wk1": 12.94
 },
 {
 "pos": "WR",
@@ -640,7 +640,7 @@
 "team": "CHI",
 "bye": 10,
 "inj": "",
-"wk1": 10.3
+"wk1": 9.9
 },
 {
 "pos": "WR",
@@ -648,7 +648,7 @@
 "team": "DAL",
 "bye": 14,
 "inj": "",
-"wk1": 17.5
+"wk1": 18.35
 },
 {
 "pos": "WR",
@@ -656,23 +656,23 @@
 "team": "WAS",
 "bye": 7,
 "inj": "",
-"wk1": 13.26
+"wk1": 10.54
 },
 {
 "pos": "WR",
 "name": "Brian Thomas Jr.",
 "team": "JAX",
 "bye": 7,
-"inj": "Q",
-"wk1": 9.55
+"inj": "",
+"wk1": 10.03
 },
 {
 "pos": "TE",
-"name": "Kyle Pitts",
-"team": "ATL",
-"bye": 11,
+"name": "Mike Gesicki",
+"team": "CIN",
+"bye": 6,
 "inj": "",
-"wk1": 12.58
+"wk1": 8.64
 },
 {
 "pos": "K",
@@ -680,15 +680,15 @@
 "team": "DEN",
 "bye": 10,
 "inj": "",
-"wk1": 7.28
+"wk1": 7.22
 },
 {
 "pos": "K",
 "name": "Eddy Pineiro",
 "team": "SF",
 "bye": 8,
-"inj": "Q",
-"wk1": 8.03
+"inj": "",
+"wk1": 8.25
 },
 {
 "pos": "DST",
@@ -696,7 +696,7 @@
 "team": "JAX",
 "bye": 7,
 "inj": "",
-"wk1": 5.84
+"wk1": 5.72
 },
 {
 "pos": "DST",
@@ -704,7 +704,7 @@
 "team": "DET",
 "bye": 6,
 "inj": "",
-"wk1": 5.66
+"wk1": 7.53
 }
 ]
 },
@@ -718,7 +718,7 @@
 "team": "LAC",
 "bye": 7,
 "inj": "",
-"wk1": 26.42
+"wk1": 25.47
 },
 {
 "pos": "QB",
@@ -726,7 +726,7 @@
 "team": "BAL",
 "bye": 13,
 "inj": "",
-"wk1": 29.53
+"wk1": 31.17
 },
 {
 "pos": "RB",
@@ -734,87 +734,7 @@
 "team": "NYJ",
 "bye": 13,
 "inj": "",
-"wk1": 15.12
-},
-{
-"pos": "RB",
-"name": "Cam Skattebo",
-"team": "NYG",
-"bye": 8,
-"inj": "",
-"wk1": 14.54
-},
-{
-"pos": "WR",
-"name": "Marvin Harrison Jr.",
-"team": "ARI",
-"bye": 14,
-"inj": "",
-"wk1": 9.81
-},
-{
-"pos": "WR",
-"name": "Rashee Rice",
-"team": "KC",
-"bye": 5,
-"inj": "P",
-"wk1": 14.28
-},
-{
-"pos": "WR",
-"name": "Jaxon Smith-Njigba",
-"team": "SEA",
-"bye": 11,
-"inj": "",
-"wk1": 18.75
-},
-{
-"pos": "TE",
-"name": "Sam LaPorta",
-"team": "DET",
-"bye": 6,
-"inj": "",
-"wk1": 13.43
-},
-{
-"pos": "TE",
-"name": "Isaiah Likely",
-"team": "NYG",
-"bye": 8,
-"inj": "",
-"wk1": 12.49
-},
-{
-"pos": "K",
-"name": "Tyler Loop",
-"team": "BAL",
-"bye": 13,
-"inj": "",
-"wk1": 8.09
-},
-{
-"pos": "K",
-"name": "Harrison Mevis",
-"team": "LAR",
-"bye": 11,
-"inj": "",
-"wk1": 8.09
-},
-{
-"pos": "DST",
-"name": "Seattle Seahawks",
-"team": "SEA",
-"bye": 11,
-"inj": "",
-"wk1": 6.75
-},
-{
-"pos": "DST",
-"name": "Pittsburgh Steelers",
-"team": "PIT",
-"bye": 9,
-"inj": "",
-"wk1": 5.75
+"wk1": 16.06
 },
 {
 "pos": "RB",
@@ -822,130 +742,92 @@
 "team": "CAR",
 "bye": 5,
 "inj": "",
-"wk1": 14.24
-}
-]
-},
-{
-"team": "Raiders of the Lost Title",
-"owner": "Jerry Asencio",
-"players": [
-{
-"pos": "QB",
-"name": "Jalen Hurts",
-"team": "PHI",
-"bye": 10,
-"inj": "",
-"wk1": 29.29
-},
-{
-"pos": "QB",
-"name": "Daniel Jones",
-"team": "IND",
-"bye": 13,
-"inj": "",
-"wk1": 23.76
+"wk1": 14.96
 },
 {
 "pos": "RB",
-"name": "J.K. Dobbins",
-"team": "DEN",
-"bye": 10,
+"name": "Cam Skattebo",
+"team": "NYG",
+"bye": 8,
 "inj": "",
-"wk1": 12.34
+"wk1": 14.84
 },
 {
-"pos": "RB",
-"name": "Jadarian Price",
+"pos": "WR",
+"name": "Rashee Rice",
+"team": "KC",
+"bye": 5,
+"inj": "P",
+"wk1": 13.86
+},
+{
+"pos": "WR",
+"name": "Jaxon Smith-Njigba",
 "team": "SEA",
 "bye": 11,
 "inj": "",
-"wk1": 13.36
-},
-{
-"pos": "RB",
-"name": "Javonte Williams",
-"team": "DAL",
-"bye": 14,
-"inj": "",
-"wk1": 17.86
-},
-{
-"pos": "WR",
-"name": "Davante Adams",
-"team": "LAR",
-"bye": 11,
-"inj": "",
-"wk1": 12.31
-},
-{
-"pos": "WR",
-"name": "Justin Jefferson",
-"team": "MIN",
-"bye": 6,
-"inj": "",
-"wk1": 16.97
-},
-{
-"pos": "WR",
-"name": "Amon-Ra St. Brown",
-"team": "DET",
-"bye": 6,
-"inj": "",
-"wk1": 18.62
-},
-{
-"pos": "WR",
-"name": "Carnell Tate",
-"team": "TEN",
-"bye": 9,
-"inj": "",
-"wk1": 9.99
+"wk1": 21.24
 },
 {
 "pos": "TE",
-"name": "Dallas Goedert",
-"team": "PHI",
-"bye": 10,
+"name": "Sam LaPorta",
+"team": "DET",
+"bye": 6,
 "inj": "",
-"wk1": 13.18
+"wk1": 14.09
+},
+{
+"pos": "TE",
+"name": "Isaiah Likely",
+"team": "NYG",
+"bye": 8,
+"inj": "",
+"wk1": 13.42
+},
+{
+"pos": "TE",
+"name": "Kyle Pitts",
+"team": "ATL",
+"bye": 11,
+"inj": "",
+"wk1": 10.92
 },
 {
 "pos": "K",
-"name": "Andres Borregales",
-"team": "NE",
-"bye": 11,
-"inj": "",
-"wk1": 6.78
-},
-{
-"pos": "K",
-"name": "Trey Smack",
-"team": "GB",
-"bye": 11,
-"inj": "",
-"wk1": 7.3
-},
-{
-"pos": "DST",
-"name": "Green Bay Packers",
-"team": "GB",
-"bye": 11,
-"inj": "",
-"wk1": 5.81
-},
-{
-"pos": "DST",
-"name": "Baltimore Ravens",
+"name": "Tyler Loop",
 "team": "BAL",
 "bye": 13,
 "inj": "",
-"wk1": 6.44
+"wk1": 8.02
+},
+{
+"pos": "K",
+"name": "Harrison Mevis",
+"team": "LAR",
+"bye": 11,
+"inj": "",
+"wk1": 7.5
+},
+{
+"pos": "DST",
+"name": "Seattle Seahawks",
+"team": "SEA",
+"bye": 11,
+"inj": "",
+"wk1": 6.69
+},
+{
+"pos": "DST",
+"name": "Pittsburgh Steelers",
+"team": "PIT",
+"bye": 9,
+"inj": "",
+"wk1": 6.05
 }
 ]
 },
 {
-"team": "Team Huevos",
+"team": "Los Huevos Grandes",
 "owner": "Damien Gallardo",
 "players": [
 {
@@ -954,15 +836,15 @@
 "team": "BUF",
 "bye": 7,
 "inj": "",
-"wk1": 32.89
+"wk1": 34.0
 },
 {
 "pos": "QB",
 "name": "Baker Mayfield",
 "team": "TB",
 "bye": 10,
-"inj": "",
-"wk1": 26.74
+"inj": "P",
+"wk1": 25.02
 },
 {
 "pos": "RB",
@@ -970,23 +852,23 @@
 "team": "MIA",
 "bye": 6,
 "inj": "",
-"wk1": 16.54
+"wk1": 16.42
 },
 {
 "pos": "RB",
 "name": "Ashton Jeanty",
 "team": "LV",
 "bye": 13,
-"inj": "P",
-"wk1": 15.08
+"inj": "",
+"wk1": 15.96
 },
 {
 "pos": "RB",
 "name": "D'Andre Swift",
 "team": "CHI",
 "bye": 10,
-"inj": "Q",
-"wk1": 14.12
+"inj": "",
+"wk1": 13.94
 },
 {
 "pos": "WR",
@@ -994,7 +876,7 @@
 "team": "DAL",
 "bye": 14,
 "inj": "",
-"wk1": 14.64
+"wk1": 14.43
 },
 {
 "pos": "WR",
@@ -1010,7 +892,7 @@
 "team": "DAL",
 "bye": 14,
 "inj": "",
-"wk1": 12.34
+"wk1": 10.8
 },
 {
 "pos": "TE",
@@ -1018,7 +900,7 @@
 "team": "MIN",
 "bye": 6,
 "inj": "",
-"wk1": 11.11
+"wk1": 11.37
 },
 {
 "pos": "TE",
@@ -1026,7 +908,7 @@
 "team": "BUF",
 "bye": 7,
 "inj": "",
-"wk1": 13.0
+"wk1": 14.5
 },
 {
 "pos": "K",
@@ -1034,7 +916,7 @@
 "team": "DET",
 "bye": 6,
 "inj": "",
-"wk1": 7.5
+"wk1": 8.19
 },
 {
 "pos": "K",
@@ -1042,7 +924,7 @@
 "team": "PHI",
 "bye": 10,
 "inj": "",
-"wk1": 7.31
+"wk1": 7.05
 },
 {
 "pos": "DST",
@@ -1050,7 +932,7 @@
 "team": "CLE",
 "bye": 11,
 "inj": "",
-"wk1": 5.0
+"wk1": 5.18
 },
 {
 "pos": "DST",
@@ -1058,7 +940,125 @@
 "team": "TEN",
 "bye": 9,
 "inj": "",
-"wk1": 4.31
+"wk1": 5.27
+}
+]
+},
+{
+"team": "Raiders of the Lost Title",
+"owner": "Jerry Asencio",
+"players": [
+{
+"pos": "QB",
+"name": "Jalen Hurts",
+"team": "PHI",
+"bye": 10,
+"inj": "",
+"wk1": 28.61
+},
+{
+"pos": "QB",
+"name": "Daniel Jones",
+"team": "IND",
+"bye": 13,
+"inj": "",
+"wk1": 23.73
+},
+{
+"pos": "RB",
+"name": "J.K. Dobbins",
+"team": "DEN",
+"bye": 10,
+"inj": "Q",
+"wk1": 10.8
+},
+{
+"pos": "RB",
+"name": "Jadarian Price",
+"team": "SEA",
+"bye": 11,
+"inj": "",
+"wk1": 12.7
+},
+{
+"pos": "RB",
+"name": "Javonte Williams",
+"team": "DAL",
+"bye": 14,
+"inj": "",
+"wk1": 13.72
+},
+{
+"pos": "WR",
+"name": "Davante Adams",
+"team": "LAR",
+"bye": 11,
+"inj": "",
+"wk1": 13.55
+},
+{
+"pos": "WR",
+"name": "Justin Jefferson",
+"team": "MIN",
+"bye": 6,
+"inj": "",
+"wk1": 16.58
+},
+{
+"pos": "WR",
+"name": "Amon-Ra St. Brown",
+"team": "DET",
+"bye": 6,
+"inj": "",
+"wk1": 20.71
+},
+{
+"pos": "WR",
+"name": "Carnell Tate",
+"team": "TEN",
+"bye": 9,
+"inj": "",
+"wk1": 10.41
+},
+{
+"pos": "TE",
+"name": "Dallas Goedert",
+"team": "PHI",
+"bye": 10,
+"inj": "O",
+"wk1": 0.0
+},
+{
+"pos": "K",
+"name": "Andres Borregales",
+"team": "NE",
+"bye": 11,
+"inj": "",
+"wk1": 6.69
+},
+{
+"pos": "K",
+"name": "Trey Smack",
+"team": "GB",
+"bye": 11,
+"inj": "",
+"wk1": 7.74
+},
+{
+"pos": "DST",
+"name": "Green Bay Packers",
+"team": "GB",
+"bye": 11,
+"inj": "",
+"wk1": 5.6
+},
+{
+"pos": "DST",
+"name": "Baltimore Ravens",
+"team": "BAL",
+"bye": 13,
+"inj": "",
+"wk1": 5.51
 }
 ]
 },
@@ -1072,7 +1072,7 @@
 "team": "CIN",
 "bye": 6,
 "inj": "Q",
-"wk1": 26.85
+"wk1": 26.6
 },
 {
 "pos": "QB",
@@ -1080,15 +1080,15 @@
 "team": "KC",
 "bye": 5,
 "inj": "P",
-"wk1": 28.51
+"wk1": 30.57
 },
 {
 "pos": "RB",
 "name": "Travis Etienne",
 "team": "NO",
 "bye": 8,
-"inj": "",
-"wk1": 11.62
+"inj": "Q",
+"wk1": 12.7
 },
 {
 "pos": "RB",
@@ -1096,7 +1096,7 @@
 "team": "DET",
 "bye": 6,
 "inj": "",
-"wk1": 25.38
+"wk1": 26.32
 },
 {
 "pos": "RB",
@@ -1104,7 +1104,7 @@
 "team": "LAR",
 "bye": 11,
 "inj": "",
-"wk1": 15.98
+"wk1": 14.02
 },
 {
 "pos": "WR",
@@ -1112,7 +1112,7 @@
 "team": "CIN",
 "bye": 6,
 "inj": "",
-"wk1": 13.56
+"wk1": 13.17
 },
 {
 "pos": "WR",
@@ -1120,7 +1120,7 @@
 "team": "CAR",
 "bye": 5,
 "inj": "",
-"wk1": 14.06
+"wk1": 13.84
 },
 {
 "pos": "WR",
@@ -1128,7 +1128,7 @@
 "team": "DEN",
 "bye": 10,
 "inj": "",
-"wk1": 11.15
+"wk1": 10.48
 },
 {
 "pos": "TE",
@@ -1136,7 +1136,7 @@
 "team": "BAL",
 "bye": 13,
 "inj": "",
-"wk1": 11.93
+"wk1": 12.07
 },
 {
 "pos": "TE",
@@ -1144,7 +1144,7 @@
 "team": "KC",
 "bye": 5,
 "inj": "",
-"wk1": 13.21
+"wk1": 15.59
 },
 {
 "pos": "K",
@@ -1152,7 +1152,7 @@
 "team": "KC",
 "bye": 5,
 "inj": "",
-"wk1": 8.09
+"wk1": 8.19
 },
 {
 "pos": "K",
@@ -1160,7 +1160,7 @@
 "team": "CIN",
 "bye": 6,
 "inj": "",
-"wk1": 7.06
+"wk1": 7.15
 },
 {
 "pos": "DST",
@@ -1168,7 +1168,7 @@
 "team": "LAC",
 "bye": 7,
 "inj": "",
-"wk1": 7.74
+"wk1": 5.3
 },
 {
 "pos": "DST",
@@ -1176,7 +1176,7 @@
 "team": "KC",
 "bye": 5,
 "inj": "",
-"wk1": 5.57
+"wk1": 5.78
 }
 ]
 },
@@ -1189,16 +1189,16 @@
 "name": "Jayden Daniels",
 "team": "WAS",
 "bye": 7,
-"inj": "",
-"wk1": 29.16
+"inj": "O",
+"wk1": 0.0
 },
 {
 "pos": "QB",
 "name": "Jaxson Dart",
 "team": "NYG",
 "bye": 8,
-"inj": "",
-"wk1": 25.72
+"inj": "O",
+"wk1": 0.0
 },
 {
 "pos": "RB",
@@ -1206,7 +1206,7 @@
 "team": "SF",
 "bye": 8,
 "inj": "",
-"wk1": 8.5
+"wk1": 7.14
 },
 {
 "pos": "RB",
@@ -1214,7 +1214,7 @@
 "team": "HOU",
 "bye": 8,
 "inj": "",
-"wk1": 15.68
+"wk1": 13.32
 },
 {
 "pos": "RB",
@@ -1222,7 +1222,7 @@
 "team": "NE",
 "bye": 11,
 "inj": "",
-"wk1": 13.06
+"wk1": 10.52
 },
 {
 "pos": "WR",
@@ -1230,7 +1230,7 @@
 "team": "PIT",
 "bye": 9,
 "inj": "",
-"wk1": 10.86
+"wk1": 10.52
 },
 {
 "pos": "WR",
@@ -1238,7 +1238,7 @@
 "team": "NYJ",
 "bye": 13,
 "inj": "",
-"wk1": 15.43
+"wk1": 15.48
 },
 {
 "pos": "TE",
@@ -1246,7 +1246,7 @@
 "team": "CLE",
 "bye": 11,
 "inj": "",
-"wk1": 12.13
+"wk1": 11.52
 },
 {
 "pos": "TE",
@@ -1254,15 +1254,15 @@
 "team": "CHI",
 "bye": 10,
 "inj": "",
-"wk1": 13.19
+"wk1": 11.02
 },
 {
 "pos": "TE",
 "name": "Trey McBride",
 "team": "ARI",
 "bye": 14,
-"inj": "Q",
-"wk1": 18.44
+"inj": "",
+"wk1": 20.86
 },
 {
 "pos": "K",
@@ -1270,7 +1270,7 @@
 "team": "LAC",
 "bye": 7,
 "inj": "",
-"wk1": 8.41
+"wk1": 7.37
 },
 {
 "pos": "K",
@@ -1278,7 +1278,7 @@
 "team": "MIN",
 "bye": 6,
 "inj": "",
-"wk1": 7.4
+"wk1": 7.52
 },
 {
 "pos": "DST",
@@ -1286,7 +1286,7 @@
 "team": "BUF",
 "bye": 7,
 "inj": "",
-"wk1": 5.96
+"wk1": 6.26
 },
 {
 "pos": "DST",
@@ -1294,7 +1294,7 @@
 "team": "TB",
 "bye": 10,
 "inj": "",
-"wk1": 7.98
+"wk1": 5.75
 }
 ]
 }
