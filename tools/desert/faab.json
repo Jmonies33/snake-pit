@@ -1,13 +1,118 @@
 {
   "budget": 300,
-  "note": "Blind bids run by the commissioner (Dave Garvey) outside rtsports every Wednesday (due 8 PM CT, winners posted in the group text ~8:50 PM, entered on rtsports ~9:30 PM). Bids are to the CENT — owners bid odd amounts to win ties. rtsports shows no amounts, so winners are recorded here from Jerry's screenshots of the group text.",
+  "note": "Blind bids run by the commissioner (Dave Garvey) outside rtsports every Wednesday (due 8 PM CT, winners posted in the group text by Jennifer Garvey ~8:50 PM, entered on rtsports ~9:30 PM). Bids are to the CENT \u2014 owners bid odd amounts to win ties. rtsports shows no amounts, so winners are recorded here from Jerry's screenshots of the group text.",
   "history": [
-    {"week": 2, "team": "Team Huevos", "player": "Dalton Kincaid", "pos": "TE", "amount": 64.48, "dropped": "Greg Dulcich"},
-    {"week": 2, "team": "Ceedeez Nutz", "player": "Bryce Young", "pos": "QB", "amount": 17.11, "dropped": "Kyler Murray"},
-    {"week": 2, "team": "Team Huevos", "player": "Deebo Samuel", "pos": "WR", "amount": 50.99, "dropped": "Denzel Boston"},
-    {"week": 2, "team": "Team Huevos", "player": "T.J. Hockenson", "pos": "TE", "amount": 20.17, "dropped": "Oronde Gadsden II"},
-    {"week": 2, "team": "Bitch Mittens", "player": "Aaron Jones", "pos": "RB", "amount": 27.89, "dropped": "Jordan Mason"},
-    {"week": 2, "team": "LONE STARR", "player": "Chuba Hubbard", "pos": "RB", "amount": 111.11, "dropped": "Jaylen Warren"},
-    {"week": 2, "team": "Two T's Matt", "player": "Kaelon Black", "pos": "RB", "amount": 91.70, "dropped": "TreVeyon Henderson"}
+    {
+      "week": 2,
+      "team": "Team Huevos",
+      "player": "Dalton Kincaid",
+      "pos": "TE",
+      "amount": 64.48,
+      "dropped": "Greg Dulcich"
+    },
+    {
+      "week": 2,
+      "team": "Ceedeez Nutz",
+      "player": "Bryce Young",
+      "pos": "QB",
+      "amount": 17.11,
+      "dropped": "Kyler Murray"
+    },
+    {
+      "week": 2,
+      "team": "Team Huevos",
+      "player": "Deebo Samuel",
+      "pos": "WR",
+      "amount": 50.99,
+      "dropped": "Denzel Boston"
+    },
+    {
+      "week": 2,
+      "team": "Team Huevos",
+      "player": "T.J. Hockenson",
+      "pos": "TE",
+      "amount": 20.17,
+      "dropped": "Oronde Gadsden II"
+    },
+    {
+      "week": 2,
+      "team": "Bitch Mittens",
+      "player": "Aaron Jones",
+      "pos": "RB",
+      "amount": 27.89,
+      "dropped": "Jordan Mason"
+    },
+    {
+      "week": 2,
+      "team": "LONE STARR",
+      "player": "Chuba Hubbard",
+      "pos": "RB",
+      "amount": 111.11,
+      "dropped": "Jaylen Warren"
+    },
+    {
+      "week": 2,
+      "team": "Two T's Matt",
+      "player": "Kaelon Black",
+      "pos": "RB",
+      "amount": 91.7,
+      "dropped": "TreVeyon Henderson"
+    },
+    {
+      "week": 3,
+      "team": "ELEVE11s",
+      "player": "Stefon Diggs",
+      "pos": "WR",
+      "amount": 23.33,
+      "dropped": "Mikey Giseki"
+    },
+    {
+      "week": 3,
+      "team": "ELEVE11s",
+      "player": "Denzel Boston",
+      "pos": "WR",
+      "amount": 18.2,
+      "dropped": "Terry McLaurin"
+    },
+    {
+      "week": 3,
+      "team": "Ceedeez Nutz",
+      "player": "Las Vegas Raiders",
+      "pos": "DST",
+      "amount": 4.11,
+      "dropped": "New Orleans Saints"
+    },
+    {
+      "week": 3,
+      "team": "Two T's Matt",
+      "player": "Jameis Winston",
+      "pos": "QB",
+      "amount": 11.3,
+      "dropped": "Jaxon Dart"
+    },
+    {
+      "week": 3,
+      "team": "Two T's Matt",
+      "player": "Kyler Murray",
+      "pos": "QB",
+      "amount": 13.4,
+      "dropped": "Jayden Daniels"
+    },
+    {
+      "week": 3,
+      "team": "Raiders of the Lost Title",
+      "player": "Dalton Schultz",
+      "pos": "TE",
+      "amount": 41.37,
+      "dropped": "Dallas Goedert"
+    },
+    {
+      "week": 3,
+      "team": "Raiders of the Lost Title",
+      "player": "Darren Waller",
+      "pos": "TE",
+      "amount": 12.37,
+      "dropped": "Carnell Tate"
+    }
   ]
 }

@@ -320,7 +320,7 @@ Malik Nabers
 NYG
 Bye 8
 TEN
-	Starter	-	Sun 12:00pm CT	14.28
+	Starter	Q	Sun 12:00pm CT	14.28
 
 WR
 Parker Washington
@@ -970,7 +970,7 @@ Jadarian Price
 SEA
 Bye 11
 @WAS
-	Starter	-	Sun 12:00pm CT	12.70
+	Starter	Q	Sun 12:00pm CT	12.70
 
 RB
 Javonte Williams
