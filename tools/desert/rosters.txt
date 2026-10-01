@@ -39,7 +39,7 @@ AVG ROSTER
 13
 Players per team
 AVG PROJ
-169.99
+170.20
 Starting lineup
 Bitch Mittens
 Mat Karr 0-0
@@ -950,7 +950,7 @@ Add/Drop
 Capsule
 Email
 Trade
-180.49
+183.01
 PROJ LINEUP
 14
 STARTERS
@@ -980,11 +980,11 @@ Bye 13
 	Starter	-	Sun 12:00pm CT	11.64
 
 RB
-Jadarian Price
-SEA
-Bye 11
-LAC
-	Starter	Q	Sun 3:25pm CT	9.10
+Tony Pollard
+TEN
+Bye 9
+@BAL
+	Starter	Q	Sun 12:00pm CT	11.62
 
 RB
 Javonte Williams
