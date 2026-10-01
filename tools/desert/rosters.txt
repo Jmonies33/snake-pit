@@ -39,7 +39,7 @@ AVG ROSTER
 13
 Players per team
 AVG PROJ
-169.41
+169.99
 Starting lineup
 Bitch Mittens
 Mat Karr 0-0
@@ -484,11 +484,11 @@ jason twede 0-0
 Capsule
 Email
 Trade
-196.48
+203.51
 PROJ LINEUP
-13
+14
 STARTERS
-1
+0
 BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
@@ -563,6 +563,13 @@ Bye 11
 	Starter	-	Sun 12:00pm CT	15.48
 
 K
+Ryan Fitzgerald
+CAR
+Bye 5
+DET
+	Starter	-	Sun 7:20pm CT	7.03
+
+K
 Chase McLaughlin
 TB
 Bye 10
@@ -582,13 +589,6 @@ MIN
 Bye 6
 MIA
 	Starter	-	Sun 3:05pm CT	7.92
-
-K
-Ryan Fitzgerald
-CAR
-Bye 5
-DET
-	Bench	-	Sun 7:20pm CT	7.03
 DUKES OF EARL
 Earl The Duke Williams 0-0
 Capsule
