@@ -113,6 +113,86 @@
       "pos": "TE",
       "amount": 12.37,
       "dropped": "Carnell Tate"
+    },
+    {
+      "week": 4,
+      "team": "Two T's Matt",
+      "player": "Kirk Cousins",
+      "pos": "QB",
+      "amount": 8.6,
+      "dropped": "Jameis Winston"
+    },
+    {
+      "week": 4,
+      "team": "BOSSMAN",
+      "player": "Zach Charbonnet",
+      "pos": "RB",
+      "amount": 22.45,
+      "dropped": "Josh Jacobs"
+    },
+    {
+      "week": 4,
+      "team": "Raiders of the Lost Title",
+      "player": "Matthew Golden",
+      "pos": "WR",
+      "amount": 44.37,
+      "dropped": "Dalton Schultz"
+    },
+    {
+      "week": 4,
+      "team": "Bitch Mittens",
+      "player": "Kenyon Sadiq",
+      "pos": "TE",
+      "amount": 36.89,
+      "dropped": "Terrance Ferguson"
+    },
+    {
+      "week": 4,
+      "team": "Two T's Matt",
+      "player": "Ollie Gordon II",
+      "pos": "RB",
+      "amount": 54.1,
+      "dropped": "Kaelon Black"
+    },
+    {
+      "week": 4,
+      "team": "Raiders of the Lost Title",
+      "player": "Geno Smith",
+      "pos": "QB",
+      "amount": 13.37,
+      "dropped": "Daniel Jones"
+    },
+    {
+      "week": 4,
+      "team": "Raiders of the Lost Title",
+      "player": "Braelon Allen",
+      "pos": "RB",
+      "amount": 14.41,
+      "dropped": "J.K. Dobbins"
+    },
+    {
+      "week": 4,
+      "team": "Raiders of the Lost Title",
+      "player": "New York Jets",
+      "pos": "DST",
+      "amount": 0.03,
+      "dropped": "Green Bay Packers"
+    },
+    {
+      "week": 4,
+      "team": "Raiders of the Lost Title",
+      "player": "Baltimore Ravens",
+      "pos": "DST",
+      "amount": 0.03,
+      "dropped": "New York Giants"
+    },
+    {
+      "week": 4,
+      "team": "Can't stanzus",
+      "player": "Jacoby Brissett",
+      "pos": "QB",
+      "amount": 17.75,
+      "dropped": "C.J. Stroud"
     }
   ]
 }
