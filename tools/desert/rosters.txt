@@ -39,14 +39,14 @@ AVG ROSTER
 12.8
 Players per team
 AVG PROJ
-173.30
+171.20
 Starting lineup
 Bitch Mittens
 Mat Karr 0-0
 Capsule
 Email
 Trade
-174.83
+162.79
 PROJ LINEUP
 14
 STARTERS
@@ -108,7 +108,7 @@ DeVonta Smith
 PHI
 Bye 10
 LAR
-	Starter	Q	Sun 12:00pm CT	12.04
+	Starter	O	Sun 12:00pm CT	0.00
 
 TE
 George Kittle
@@ -539,7 +539,7 @@ Nico Collins
 HOU
 Bye 8
 DAL
-	Starter	Q	Sun 12:00pm CT	15.33
+	Starter	-	Sun 12:00pm CT	15.33
 
 WR
 Zay Flowers
@@ -638,7 +638,7 @@ Bucky Irving
 TB
 Bye 10
 GB
-	Starter	Q	Sun 12:00pm CT	16.46
+	Starter	-	Sun 12:00pm CT	16.46
 
 RB
 Jeremiyah Love
@@ -865,7 +865,7 @@ D'Andre Swift
 CHI
 Bye 10
 NYJ
-	Starter	Q	Sun 12:00pm CT	15.66
+	Starter	-	Sun 12:00pm CT	15.66
 
 WR
 George Pickens
@@ -936,7 +936,7 @@ Add/Drop
 Capsule
 Email
 Trade
-182.20
+168.98
 PROJ LINEUP
 14
 STARTERS
@@ -970,7 +970,7 @@ Tony Pollard
 TEN
 Bye 9
 @BAL
-	Starter	P	Sun 12:00pm CT	11.62
+	Starter	-	Sun 12:00pm CT	11.62
 
 RB
 Javonte Williams
@@ -998,7 +998,7 @@ Justin Jefferson
 MIN
 Bye 6
 MIA
-	Starter	Q	Sun 3:05pm CT	13.22
+	Starter	O	Sun 3:05pm CT	0.00
 
 WR
 Amon-Ra St. Brown

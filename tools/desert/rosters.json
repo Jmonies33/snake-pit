@@ -65,8 +65,8 @@
 "name": "DeVonta Smith",
 "team": "PHI",
 "bye": 10,
-"inj": "Q",
-"wk1": 12.04
+"inj": "O",
+"wk1": 0.0
 },
 {
 "pos": "TE",
@@ -529,7 +529,7 @@
 "name": "Nico Collins",
 "team": "HOU",
 "bye": 8,
-"inj": "Q",
+"inj": "",
 "wk1": 15.33
 },
 {
@@ -623,7 +623,7 @@
 "name": "Bucky Irving",
 "team": "TB",
 "bye": 10,
-"inj": "Q",
+"inj": "",
 "wk1": 16.46
 },
 {
@@ -867,7 +867,7 @@
 "name": "D'Andre Swift",
 "team": "CHI",
 "bye": 10,
-"inj": "Q",
+"inj": "",
 "wk1": 15.66
 },
 {
@@ -977,7 +977,7 @@
 "name": "Tony Pollard",
 "team": "TEN",
 "bye": 9,
-"inj": "P",
+"inj": "",
 "wk1": 11.62
 },
 {
@@ -1009,8 +1009,8 @@
 "name": "Justin Jefferson",
 "team": "MIN",
 "bye": 6,
-"inj": "Q",
-"wk1": 13.22
+"inj": "O",
+"wk1": 0.0
 },
 {
 "pos": "WR",
