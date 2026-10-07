@@ -1,9 +1,9 @@
 Raiders of the Lost Title
 Desert League
-WEEK 4 · NFL WEEK 4
+WEEK 5 · NFL WEEK 5
 REPORTS
 Rosters
-Desert League - 12 teams - Week 4
+Desert League - 12 teams - Week 5
 Full
 Team
 Compare
@@ -39,14 +39,14 @@ AVG ROSTER
 12.8
 Players per team
 AVG PROJ
-171.20
+158.04
 Starting lineup
 Bitch Mittens
 Mat Karr 0-0
 Capsule
 Email
 Trade
-162.79
+161.99
 PROJ LINEUP
 14
 STARTERS
@@ -58,105 +58,105 @@ QB
 Matthew Stafford
 LAR
 Bye 11
-@PHI
-	Starter	-	Sun 12:00pm CT	25.35
+BUF
+	Starter	-	Mon 7:15pm CT	26.50
 
 QB
 Caleb Williams
 CHI
 Bye 10
-NYJ
+@GB
 	Starter	O	Sun 12:00pm CT	0.00
 
 RB
 Blake Corum
 LAR
 Bye 11
-@PHI
-	Starter	-	Sun 12:00pm CT	7.32
+BUF
+	Starter	-	Mon 7:15pm CT	7.38
 
 RB
 Derrick Henry
 BAL
 Bye 13
-TEN
-	Starter	-	Sun 12:00pm CT	22.54
+@ATL
+	Starter	-	Sun 7:20pm CT	22.48
 
 RB
 Aaron Jones
 MIN
 Bye 6
-MIA
-	Starter	-	Sun 3:05pm CT	15.00
+@NO
+	Starter	-	Sun 12:00pm CT	14.94
 
 WR
 Puka Nacua
 LAR
 Bye 11
-@PHI
-	Starter	Q	Sun 12:00pm CT	18.22
+BUF
+	Starter	-	Mon 7:15pm CT	16.96
 
 WR
 Chris Olave
 NO
 Bye 8
-ATL
-	Starter	-	Mon 7:15pm CT	19.14
+MIN
+	Starter	-	Sun 12:00pm CT	19.10
 
 WR
 DeVonta Smith
 PHI
 Bye 10
-LAR
-	Starter	O	Sun 12:00pm CT	0.00
+@JAX
+	Starter	D	Sun 8:30am CT	0.00
 
 TE
 George Kittle
 SF
 Bye 8
-DEN
-	Starter	-	Sun 3:25pm CT	16.05
+@SEA
+	Starter	-	Sun 3:25pm CT	15.99
 
 TE
 Kenyon Sadiq
 NYJ
 Bye 13
-@CHI
-	Starter	Q	Sun 12:00pm CT	11.64
+CLE
+	Starter	Q	Sun 12:00pm CT	11.73
 
 K
 Ka'imi Fairbairn
 HOU
 Bye 8
-DAL
-	Starter	-	Sun 12:00pm CT	9.32
+@TEN
+	Starter	-	Sun 12:00pm CT	8.35
 
 K
 Jason Myers
 SEA
 Bye 11
-LAC
-	Starter	-	Sun 3:25pm CT	8.14
+SF
+	Starter	-	Sun 3:25pm CT	8.81
 
 D/ST
 San Francisco 49ers
 SF
 Bye 8
-DEN
-	Starter	-	Sun 3:25pm CT	4.24
+@SEA
+	Starter	-	Sun 3:25pm CT	4.06
 
 D/ST
 Los Angeles Rams
 LAR
 Bye 11
-@PHI
-	Starter	-	Sun 12:00pm CT	5.83
+BUF
+	Starter	-	Mon 7:15pm CT	5.70
 BOSSMAN
 David Garvey 0-0
 Capsule
 Email
 Trade
-185.87
+178.39
 PROJ LINEUP
 14
 STARTERS
@@ -168,104 +168,104 @@ QB
 Jared Goff
 DET
 Bye 6
-@CAR
-	Starter	-	Sun 7:20pm CT	27.50
+@ARI
+	Starter	-	Sun 3:25pm CT	29.60
 
 QB
 Dak Prescott
 DAL
 Bye 14
-@HOU
-	Starter	-	Sun 12:00pm CT	27.80
+TB
+	Starter	-	Thu 7:15pm CT	27.95
 
 RB
 Chase Brown
 CIN
 Bye 6
-JAX
+@MIA
 	Starter	-	Sun 12:00pm CT	15.72
 
 RB
 Zach Charbonnet
 SEA
 Bye 11
-LAC
+SF
 	Starter	IR	Sun 3:25pm CT	0.00
 
 RB
 Jonathan Taylor
 IND
 Bye 13
-@WAS
-	Starter	-	Sun 8:30am CT	21.54
+@PIT
+	Starter	-	Sun 12:00pm CT	21.66
 
 WR
 Josh Downs
 IND
 Bye 13
-@WAS
-	Starter	-	Sun 8:30am CT	13.09
+@PIT
+	Starter	-	Sun 12:00pm CT	13.60
 
 WR
 Drake London
 ATL
 Bye 11
-@NO
-	Starter	-	Mon 7:15pm CT	16.11
+BAL
+	Starter	-	Sun 7:20pm CT	16.34
 
 WR
 Michael Wilson
 ARI
 Bye 14
-@NYG
-	Starter	-	Sun 12:00pm CT	13.66
+DET
+	Starter	-	Sun 3:25pm CT	13.57
 
 TE
 Tucker Kraft
 GB
 Bye 11
-@TB
-	Starter	-	Sun 12:00pm CT	12.34
+CHI
+	Starter	-	Sun 12:00pm CT	12.61
 
 TE
 Darren Waller
 CAR
 Bye 5
-DET
-	Starter	-	Sun 7:20pm CT	11.59
+bye
+	Starter	-	Bye	0.00
 
 K
 Chris Boswell
 PIT
 Bye 9
-@CLE
-	Starter	-	Final	7.39
+IND
+	Starter	-	Sun 12:00pm CT	7.97
 
 K
 Matt Gay
 LV
 Bye 13
-KC
-	Starter	-	Sun 3:25pm CT	7.24
+@NE
+	Starter	-	Sun 12:00pm CT	8.08
 
 D/ST
 Chicago Bears
 CHI
 Bye 10
-NYJ
-	Starter	-	Sun 12:00pm CT	6.86
+@GB
+	Starter	-	Sun 12:00pm CT	6.35
 
 D/ST
 Denver Broncos
 DEN
 Bye 10
-@SF
-	Starter	-	Sun 3:25pm CT	5.03
+@LAC
+	Starter	-	Sun 3:05pm CT	4.94
 Can't stanzus
 Andy Midkiff 0-0
 Capsule
 Trade
-200.58
+197.73
 PROJ LINEUP
 14
 STARTERS
@@ -277,104 +277,104 @@ QB
 Jacoby Brissett
 ARI
 Bye 14
-@NYG
-	Starter	-	Sun 12:00pm CT	25.17
+DET
+	Starter	-	Sun 3:25pm CT	25.39
 
 QB
 Jordan Love
 GB
 Bye 11
-@TB
+CHI
 	Starter	-	Sun 12:00pm CT	25.35
 
 RB
 TreVeyon Henderson
 NE
 Bye 11
-@BUF
-	Starter	-	Sun 12:00pm CT	11.28
+LV
+	Starter	-	Sun 12:00pm CT	11.34
 
 RB
 Bijan Robinson
 ATL
 Bye 11
-@NO
-	Starter	-	Mon 7:15pm CT	22.28
+BAL
+	Starter	-	Sun 7:20pm CT	22.34
 
 RB
 Bhayshul Tuten
 JAX
 Bye 7
-@CIN
-	Starter	-	Sun 12:00pm CT	12.88
+PHI
+	Starter	-	Sun 8:30am CT	12.76
 
 WR
 D.J. Moore
 BUF
 Bye 7
-NE
-	Starter	Q	Sun 12:00pm CT	12.96
+@LAR
+	Starter	Q	Mon 7:15pm CT	12.84
 
 WR
 Malik Nabers
 NYG
 Bye 8
-ARI
-	Starter	-	Sun 12:00pm CT	13.44
+@WAS
+	Starter	-	Sun 12:00pm CT	13.57
 
 WR
 Parker Washington
 JAX
 Bye 7
-@CIN
-	Starter	-	Sun 12:00pm CT	16.27
+PHI
+	Starter	-	Sun 8:30am CT	16.26
 
 TE
 Brock Bowers
 LV
 Bye 13
-KC
-	Starter	-	Sun 3:25pm CT	18.57
+@NE
+	Starter	-	Sun 12:00pm CT	19.86
 
 TE
 Tyler Warren
 IND
 Bye 13
-@WAS
-	Starter	-	Sun 8:30am CT	15.02
+@PIT
+	Starter	-	Sun 12:00pm CT	15.59
 
 K
 Brandon Aubrey
 DAL
 Bye 14
-@HOU
-	Starter	-	Sun 12:00pm CT	8.93
+TB
+	Starter	-	Thu 7:15pm CT	8.41
 
 K
 Spencer Shrader
 IND
 Bye 13
-@WAS
-	Starter	-	Sun 8:30am CT	7.74
+@PIT
+	Starter	-	Sun 12:00pm CT	8.67
 
 D/ST
 Carolina Panthers
 CAR
 Bye 5
-DET
-	Starter	-	Sun 7:20pm CT	5.54
+bye
+	Starter	-	Bye	0.00
 
 D/ST
 New England Patriots
 NE
 Bye 11
-@BUF
-	Starter	-	Sun 12:00pm CT	5.15
+LV
+	Starter	-	Sun 12:00pm CT	5.36
 Ceedeez Nutz
 Dylan 0-0
 Capsule
 Trade
-190.86
+141.54
 PROJ LINEUP
 14
 STARTERS
@@ -386,105 +386,105 @@ QB
 Brock Purdy
 SF
 Bye 8
-DEN
-	Starter	-	Sun 3:25pm CT	28.68
+@SEA
+	Starter	-	Sun 3:25pm CT	28.66
 
 QB
 Bryce Young
 CAR
 Bye 5
-DET
-	Starter	-	Sun 7:20pm CT	29.01
+bye
+	Starter	-	Bye	0.00
 
 RB
 Omarion Hampton
 LAC
 Bye 7
-@SEA
-	Starter	-	Sun 3:25pm CT	11.46
+DEN
+	Starter	-	Sun 3:05pm CT	11.46
 
 RB
 RJ Harvey
 DEN
 Bye 10
-@SF
-	Starter	-	Sun 3:25pm CT	7.04
+@LAC
+	Starter	-	Sun 3:05pm CT	8.04
 
 RB
 Kenneth Walker III
 KC
 Bye 5
-@LV
-	Starter	-	Sun 3:25pm CT	20.10
+bye
+	Starter	-	Bye	0.00
+
+WR
+Jordan Addison
+MIN
+Bye 6
+@NO
+	Starter	-	Sun 12:00pm CT	13.00
 
 WR
 Ja'Marr Chase
 CIN
 Bye 6
-JAX
-	Starter	-	Sun 12:00pm CT	19.43
+@MIA
+	Starter	Q	Sun 12:00pm CT	16.20
 
 WR
 Emeka Egbuka
 TB
 Bye 10
-GB
-	Starter	-	Sun 12:00pm CT	11.05
+@DAL
+	Starter	-	Thu 7:15pm CT	11.99
 
 WR
 Mike Evans
 SF
 Bye 8
-DEN
-	Starter	Q	Sun 3:25pm CT	12.90
+@SEA
+	Starter	Q	Sun 3:25pm CT	12.88
 
 WR
 Ladd McConkey
 LAC
 Bye 7
-@SEA
-	Starter	Q	Sun 3:25pm CT	12.41
-
-WR
-Devaughn Vele
-NO
-Bye 8
-ATL
-	Starter	-	Mon 7:15pm CT	11.24
+DEN
+	Starter	Q	Sun 3:05pm CT	9.98
 
 K
 Tyler Bass
 BUF
 Bye 7
-NE
-	Starter	-	Sun 12:00pm CT	7.54
+@LAR
+	Starter	-	Mon 7:15pm CT	8.81
 
 K
 Cam Little
 JAX
 Bye 7
-@CIN
-	Starter	-	Sun 12:00pm CT	7.89
+PHI
+	Starter	-	Sun 8:30am CT	8.68
 
 D/ST
 Las Vegas Raiders
 LV
 Bye 13
-KC
-	Starter	-	Sun 3:25pm CT	6.31
+@NE
+	Starter	-	Sun 12:00pm CT	6.13
 
 D/ST
 Houston Texans
 HOU
 Bye 8
-DAL
-	Starter	-	Sun 12:00pm CT	5.80
+@TEN
+	Starter	-	Sun 12:00pm CT	5.71
 Drunk at the Draft
 jason twede 0-0
 Capsule
 Email
 Trade
-202.56
+193.16
 PROJ LINEUP
 14
 STARTERS
@@ -496,99 +496,99 @@ QB
 Trevor Lawrence
 JAX
 Bye 7
-@CIN
-	Starter	-	Sun 12:00pm CT	28.66
+PHI
+	Starter	-	Sun 8:30am CT	28.56
 
 QB
 Bo Nix
 DEN
 Bye 10
-@SF
-	Starter	-	Sun 3:25pm CT	26.18
+@LAC
+	Starter	-	Sun 3:05pm CT	26.18
 
 RB
 Saquon Barkley
 PHI
 Bye 10
-LAR
-	Starter	-	Sun 12:00pm CT	15.70
+@JAX
+	Starter	Q	Sun 8:30am CT	12.10
 
 RB
 Quinshon Judkins
 CLE
 Bye 11
-PIT
-	Starter	-	Final	11.74
+@NYJ
+	Starter	-	Sun 12:00pm CT	11.98
 
 RB
 Christian McCaffrey
 SF
 Bye 8
-DEN
-	Starter	-	Sun 3:25pm CT	18.80
-
-WR
-Jalen Coker
-CAR
-Bye 5
-DET
-	Starter	Q	Sun 7:20pm CT	13.61
+@SEA
+	Starter	-	Sun 3:25pm CT	19.04
 
 WR
 Nico Collins
 HOU
 Bye 8
-DAL
-	Starter	-	Sun 12:00pm CT	15.33
+@TEN
+	Starter	-	Sun 12:00pm CT	16.75
 
 WR
 Zay Flowers
 BAL
 Bye 13
-TEN
-	Starter	Q	Sun 12:00pm CT	15.93
+@ATL
+	Starter	Q	Sun 7:20pm CT	16.20
 
 WR
 Jaylen Waddle
 DEN
 Bye 10
-@SF
-	Starter	-	Sun 3:25pm CT	13.36
+@LAC
+	Starter	-	Sun 3:05pm CT	13.54
 
 WR
 Christian Watson
 GB
 Bye 11
-@TB
-	Starter	-	Sun 12:00pm CT	15.48
+CHI
+	Starter	-	Sun 12:00pm CT	15.37
+
+WR
+Jameson Williams
+DET
+Bye 6
+@ARI
+	Starter	-	Sun 3:25pm CT	11.53
 
 K
 Ryan Fitzgerald
 CAR
 Bye 5
-DET
-	Starter	-	Sun 7:20pm CT	7.03
+bye
+	Starter	-	Bye	0.00
 
 K
 Chase McLaughlin
 TB
 Bye 10
-GB
-	Starter	-	Sun 12:00pm CT	7.13
+@DAL
+	Starter	Q	Thu 7:15pm CT	8.15
 
 D/ST
-Cincinnati Bengals
-CIN
-Bye 6
-JAX
-	Starter	-	Sun 12:00pm CT	5.69
+Green Bay Packers
+GB
+Bye 11
+CHI
+	Starter	-	Sun 12:00pm CT	5.87
 
 D/ST
 Minnesota Vikings
 MIN
 Bye 6
-MIA
-	Starter	-	Sun 3:05pm CT	7.92
+@NO
+	Starter	-	Sun 12:00pm CT	7.89
 DUKES OF EARL
 Earl The Duke Williams 0-0
 Capsule
@@ -604,7 +604,7 @@ ELEVE11s
 Jason Lucas 0-0
 Capsule
 Trade
-186.07
+190.30
 PROJ LINEUP
 14
 STARTERS
@@ -616,105 +616,105 @@ QB
 Jalon Daniels
 TB
 Bye 10
-GB
-	Starter	-	Sun 12:00pm CT	21.95
+@DAL
+	Starter	-	Thu 7:15pm CT	21.88
 
 QB
 Tyler Shough
 NO
 Bye 8
-ATL
-	Starter	-	Mon 7:15pm CT	28.55
+MIN
+	Starter	-	Sun 12:00pm CT	28.40
 
 RB
 James Cook
 BUF
 Bye 7
-NE
-	Starter	-	Sun 12:00pm CT	18.32
+@LAR
+	Starter	-	Mon 7:15pm CT	18.38
 
 RB
 Bucky Irving
 TB
 Bye 10
-GB
-	Starter	-	Sun 12:00pm CT	16.46
+@DAL
+	Starter	-	Thu 7:15pm CT	16.40
 
 RB
 Jeremiyah Love
 ARI
 Bye 14
-@NYG
-	Starter	-	Sun 12:00pm CT	15.72
+DET
+	Starter	-	Sun 3:25pm CT	15.72
 
 WR
 Denzel Boston
 CLE
 Bye 11
-PIT
-	Starter	-	Final	10.53
+@NYJ
+	Starter	-	Sun 12:00pm CT	10.55
 
 WR
 Luther Burden III
 CHI
 Bye 10
-NYJ
-	Starter	-	Sun 12:00pm CT	12.18
+@GB
+	Starter	-	Sun 12:00pm CT	12.21
 
 WR
 Stefon Diggs
 WAS
 Bye 7
-IND
-	Starter	-	Sun 8:30am CT	11.51
+NYG
+	Starter	-	Sun 12:00pm CT	13.32
 
 WR
 Ted Hurst
 TB
 Bye 10
-GB
-	Starter	-	Sun 12:00pm CT	6.23
+@DAL
+	Starter	-	Thu 7:15pm CT	6.25
 
 WR
 CeeDee Lamb
 DAL
 Bye 14
-@HOU
-	Starter	-	Sun 12:00pm CT	18.39
+TB
+	Starter	-	Thu 7:15pm CT	18.84
 
 K
 Wil Lutz
 DEN
 Bye 10
-@SF
-	Starter	-	Sun 3:25pm CT	7.01
+@LAC
+	Starter	-	Sun 3:05pm CT	8.07
 
 K
 Eddy Pineiro
 SF
 Bye 8
-DEN
-	Starter	-	Sun 3:25pm CT	7.51
+@SEA
+	Starter	-	Sun 3:25pm CT	8.72
 
 D/ST
 Jacksonville Jaguars
 JAX
 Bye 7
-@CIN
-	Starter	-	Sun 12:00pm CT	5.93
+PHI
+	Starter	-	Sun 8:30am CT	5.96
 
 D/ST
 Detroit Lions
 DET
 Bye 6
-@CAR
-	Starter	-	Sun 7:20pm CT	5.78
+@ARI
+	Starter	-	Sun 3:25pm CT	5.60
 LONE STARR
 Anthony Ovalle 0-0
 Capsule
 Email
 Trade
-188.89
+157.70
 PROJ LINEUP
 14
 STARTERS
@@ -726,105 +726,105 @@ QB
 Justin Herbert
 LAC
 Bye 7
-@SEA
-	Starter	-	Sun 3:25pm CT	23.10
+DEN
+	Starter	-	Sun 3:05pm CT	23.10
 
 QB
 Lamar Jackson
 BAL
 Bye 13
-TEN
-	Starter	P	Sun 12:00pm CT	29.03
+@ATL
+	Starter	Q	Sun 7:20pm CT	28.91
 
 RB
 Breece Hall
 NYJ
 Bye 13
-@CHI
-	Starter	O	Sun 12:00pm CT	0.00
+CLE
+	Starter	Q	Sun 12:00pm CT	0.00
 
 RB
 Chuba Hubbard
 CAR
 Bye 5
-DET
-	Starter	-	Sun 7:20pm CT	16.08
+bye
+	Starter	-	Bye	0.00
 
 RB
 Cam Skattebo
 NYG
 Bye 8
-ARI
-	Starter	-	Sun 12:00pm CT	15.66
+@WAS
+	Starter	-	Sun 12:00pm CT	14.88
 
 WR
 Rashee Rice
 KC
 Bye 5
-@LV
-	Starter	-	Sun 3:25pm CT	13.85
+bye
+	Starter	Q	Bye	0.00
 
 WR
 Jaxon Smith-Njigba
 SEA
 Bye 11
-LAC
-	Starter	-	Sun 3:25pm CT	22.47
+SF
+	Starter	-	Sun 3:25pm CT	22.59
 
 TE
 Sam LaPorta
 DET
 Bye 6
-@CAR
-	Starter	-	Sun 7:20pm CT	14.06
+@ARI
+	Starter	-	Sun 3:25pm CT	14.29
 
 TE
 Isaiah Likely
 NYG
 Bye 8
-ARI
-	Starter	-	Sun 12:00pm CT	13.69
+@WAS
+	Starter	-	Sun 12:00pm CT	13.76
 
 TE
 Kyle Pitts
 ATL
 Bye 11
-@NO
-	Starter	-	Mon 7:15pm CT	10.59
+BAL
+	Starter	-	Sun 7:20pm CT	10.48
 
 K
 Tyler Loop
 BAL
 Bye 13
-TEN
-	Starter	-	Sun 12:00pm CT	8.40
+@ATL
+	Starter	-	Sun 7:20pm CT	8.99
 
 K
 Harrison Mevis
 LAR
 Bye 11
-@PHI
-	Starter	-	Sun 12:00pm CT	7.15
+BUF
+	Starter	-	Mon 7:15pm CT	5.70
 
 D/ST
 Seattle Seahawks
 SEA
 Bye 11
-LAC
-	Starter	-	Sun 3:25pm CT	6.75
+SF
+	Starter	-	Sun 3:25pm CT	6.93
 
 D/ST
 Pittsburgh Steelers
 PIT
 Bye 9
-@CLE
-	Starter	-	Final	8.07
+IND
+	Starter	-	Sun 12:00pm CT	8.07
 Los Huevos Grandes
 Damien Gallardo 0-0
 Capsule
 Email
 Trade
-186.82
+189.79
 PROJ LINEUP
 14
 STARTERS
@@ -836,99 +836,99 @@ QB
 Josh Allen
 BUF
 Bye 7
-NE
-	Starter	-	Sun 12:00pm CT	32.24
+@LAR
+	Starter	-	Mon 7:15pm CT	32.46
 
 QB
 Sam Darnold
 SEA
 Bye 11
-LAC
-	Starter	-	Sun 3:25pm CT	25.75
+SF
+	Starter	-	Sun 3:25pm CT	26.05
 
 RB
 Ashton Jeanty
 LV
 Bye 13
-KC
-	Starter	-	Sun 3:25pm CT	15.78
+@NE
+	Starter	-	Sun 12:00pm CT	15.72
 
 RB
 Rhamondre Stevenson
 NE
 Bye 11
-@BUF
-	Starter	-	Sun 12:00pm CT	12.64
+LV
+	Starter	-	Sun 12:00pm CT	12.76
 
 RB
 D'Andre Swift
 CHI
 Bye 10
-NYJ
-	Starter	-	Sun 12:00pm CT	15.66
+@GB
+	Starter	-	Sun 12:00pm CT	15.60
 
 WR
 George Pickens
 DAL
 Bye 14
-@HOU
-	Starter	-	Sun 12:00pm CT	14.39
+TB
+	Starter	-	Thu 7:15pm CT	14.40
 
 WR
 Deebo Samuel
 SF
 Bye 8
-DEN
-	Starter	-	Sun 3:25pm CT	11.30
+@SEA
+	Starter	-	Sun 3:25pm CT	11.58
 
 TE
 Jake Ferguson
 DAL
 Bye 14
-@HOU
-	Starter	-	Sun 12:00pm CT	10.70
+TB
+	Starter	-	Thu 7:15pm CT	10.55
 
 TE
 T.J. Hockenson
 MIN
 Bye 6
-MIA
-	Starter	-	Sun 3:05pm CT	9.84
+@NO
+	Starter	-	Sun 12:00pm CT	11.68
 
 TE
 Dalton Kincaid
 BUF
 Bye 7
-NE
-	Starter	-	Sun 12:00pm CT	14.28
+@LAR
+	Starter	-	Mon 7:15pm CT	13.18
 
 K
 Jake Bates
 DET
 Bye 6
-@CAR
-	Starter	-	Sun 7:20pm CT	7.90
+@ARI
+	Starter	-	Sun 3:25pm CT	9.01
 
 K
 Jake Elliott
 PHI
 Bye 10
-LAR
-	Starter	-	Sun 12:00pm CT	6.82
+@JAX
+	Starter	-	Sun 8:30am CT	8.17
 
 D/ST
 Cleveland Browns
 CLE
 Bye 11
-PIT
-	Starter	-	Final	5.15
+@NYJ
+	Starter	-	Sun 12:00pm CT	5.36
 
 D/ST
 Tennessee Titans
 TEN
 Bye 9
-@BAL
-	Starter	-	Sun 12:00pm CT	4.37
+HOU
+	Starter	-	Sun 12:00pm CT	3.28
 Raiders of the Lost Title
 Jerry Asencio 0-0
 Lineup
@@ -936,7 +936,7 @@ Add/Drop
 Capsule
 Email
 Trade
-168.98
+175.62
 PROJ LINEUP
 14
 STARTERS
@@ -948,105 +948,105 @@ QB
 Jalen Hurts
 PHI
 Bye 10
-LAR
-	Starter	-	Sun 12:00pm CT	25.14
+@JAX
+	Starter	-	Sun 8:30am CT	24.92
 
 QB
 Geno Smith
 NYJ
 Bye 13
-@CHI
-	Starter	-	Sun 12:00pm CT	22.60
+CLE
+	Starter	-	Sun 12:00pm CT	22.80
 
 RB
 Braelon Allen
 NYJ
 Bye 13
-@CHI
-	Starter	-	Sun 12:00pm CT	11.58
+CLE
+	Starter	-	Sun 12:00pm CT	12.70
 
 RB
-Tony Pollard
-TEN
-Bye 9
-@BAL
-	Starter	-	Sun 12:00pm CT	11.62
+Jacory Croskey-Merritt
+WAS
+Bye 7
+NYG
+	Starter	-	Sun 12:00pm CT	13.12
 
 RB
 Javonte Williams
 DAL
 Bye 14
-@HOU
-	Starter	-	Sun 12:00pm CT	13.30
+TB
+	Starter	-	Thu 7:15pm CT	13.66
 
 WR
 Davante Adams
 LAR
 Bye 11
-@PHI
-	Starter	-	Sun 12:00pm CT	14.60
+BUF
+	Starter	-	Mon 7:15pm CT	14.80
 
 WR
 Matthew Golden
 GB
 Bye 11
-@TB
-	Starter	-	Sun 12:00pm CT	12.30
+CHI
+	Starter	-	Sun 12:00pm CT	12.33
 
 WR
 Justin Jefferson
 MIN
 Bye 6
-MIA
-	Starter	O	Sun 3:05pm CT	0.00
+@NO
+	Starter	Q	Sun 12:00pm CT	0.00
 
 WR
 Amon-Ra St. Brown
 DET
 Bye 6
-@CAR
-	Starter	-	Sun 7:20pm CT	19.30
+@ARI
+	Starter	-	Sun 3:25pm CT	19.54
 
 TE
 Juwan Johnson
 NO
 Bye 8
-ATL
-	Starter	-	Mon 7:15pm CT	13.76
+MIN
+	Starter	-	Sun 12:00pm CT	14.03
 
 K
 Daniel Carlson
 NO
 Bye 8
-ATL
-	Starter	-	Mon 7:15pm CT	7.74
+MIN
+	Starter	-	Sun 12:00pm CT	8.41
 
 K
 Trey Smack
 GB
 Bye 11
-@TB
-	Starter	-	Sun 12:00pm CT	7.23
+CHI
+	Starter	-	Sun 12:00pm CT	8.11
 
 D/ST
 New York Jets
 NYJ
 Bye 13
-@CHI
-	Starter	-	Sun 12:00pm CT	3.28
+CLE
+	Starter	-	Sun 12:00pm CT	4.70
 
 D/ST
 Baltimore Ravens
 BAL
 Bye 13
-TEN
-	Starter	-	Sun 12:00pm CT	6.53
+@ATL
+	Starter	-	Sun 7:20pm CT	6.50
 TEAM NATRON
 jon karr 0-0
 Capsule
 Email
 Trade
-191.27
+118.97
 PROJ LINEUP
 14
 STARTERS
@@ -1058,104 +1058,104 @@ QB
 Joe Burrow
 CIN
 Bye 6
-JAX
+@MIA
 	Starter	-	Sun 12:00pm CT	26.80
 
 QB
 Patrick Mahomes
 KC
 Bye 5
-@LV
-	Starter	-	Sun 3:25pm CT	29.12
+bye
+	Starter	-	Bye	0.00
 
 RB
 Travis Etienne
 NO
 Bye 8
-ATL
-	Starter	IR	Mon 7:15pm CT	0.00
+MIN
+	Starter	IR	Sun 12:00pm CT	0.00
 
 RB
 Jahmyr Gibbs
 DET
 Bye 6
-@CAR
-	Starter	-	Sun 7:20pm CT	24.44
+@ARI
+	Starter	-	Sun 3:25pm CT	24.50
 
 RB
 Kyren Williams
 LAR
 Bye 11
-@PHI
-	Starter	-	Sun 12:00pm CT	15.72
+BUF
+	Starter	-	Mon 7:15pm CT	15.90
 
 WR
 Tee Higgins
 CIN
 Bye 6
-JAX
-	Starter	-	Sun 12:00pm CT	14.70
+@MIA
+	Starter	Q	Sun 12:00pm CT	14.86
 
 WR
 Tetairoa McMillan
 CAR
 Bye 5
-DET
-	Starter	-	Sun 7:20pm CT	14.20
+bye
+	Starter	-	Bye	0.00
 
 WR
 Courtland Sutton
 DEN
 Bye 10
-@SF
-	Starter	-	Sun 3:25pm CT	10.55
+@LAC
+	Starter	-	Sun 3:05pm CT	10.47
 
 TE
 Mark Andrews
 BAL
 Bye 13
-TEN
-	Starter	-	Sun 12:00pm CT	11.50
+@ATL
+	Starter	-	Sun 7:20pm CT	11.56
 
 TE
 Travis Kelce
 KC
 Bye 5
-@LV
-	Starter	-	Sun 3:25pm CT	15.54
+bye
+	Starter	-	Bye	0.00
 
 K
 Harrison Butker
 KC
 Bye 5
-@LV
-	Starter	-	Sun 3:25pm CT	8.64
+bye
+	Starter	-	Bye	0.00
 
 K
 Evan McPherson
 CIN
 Bye 6
-JAX
-	Starter	-	Sun 12:00pm CT	7.90
+@MIA
+	Starter	-	Sun 12:00pm CT	8.65
 
 D/ST
 Los Angeles Chargers
 LAC
 Bye 7
-@SEA
-	Starter	-	Sun 3:25pm CT	6.32
+DEN
+	Starter	-	Sun 3:05pm CT	6.23
 
 D/ST
 Kansas City Chiefs
 KC
 Bye 5
-@LV
-	Starter	-	Sun 3:25pm CT	5.84
+bye
+	Starter	-	Bye	0.00
 Two T's Matt
 Matt Silva 0-0
 Capsule
 Trade
-189.66
+191.23
 PROJ LINEUP
 14
 STARTERS
@@ -1167,96 +1167,96 @@ QB
 Kirk Cousins
 LV
 Bye 13
-KC
-	Starter	-	Sun 3:25pm CT	23.50
+@NE
+	Starter	-	Sun 12:00pm CT	23.35
 
 QB
 Kyler Murray
 MIN
 Bye 6
-MIA
-	Starter	-	Sun 3:05pm CT	24.18
+@NO
+	Starter	-	Sun 12:00pm CT	24.08
 
 RB
 Ollie Gordon II
 MIA
 Bye 6
-@MIN
-	Starter	-	Sun 3:05pm CT	8.20
+CIN
+	Starter	-	Sun 12:00pm CT	8.56
 
 RB
 David Montgomery
 HOU
 Bye 8
-DAL
-	Starter	-	Sun 12:00pm CT	14.60
+@TEN
+	Starter	-	Sun 12:00pm CT	14.36
 
 RB
 Jaylen Warren
 PIT
 Bye 9
-@CLE
-	Starter	-	Final	17.88
+IND
+	Starter	-	Sun 12:00pm CT	17.88
 
 WR
 D.K. Metcalf
 PIT
 Bye 9
-@CLE
-	Starter	-	Final	10.72
+IND
+	Starter	-	Sun 12:00pm CT	10.90
 
 WR
 Garrett Wilson
 NYJ
 Bye 13
-@CHI
-	Starter	-	Sun 12:00pm CT	17.43
+CLE
+	Starter	-	Sun 12:00pm CT	17.39
 
 TE
 Harold Fannin Jr.
 CLE
 Bye 11
-PIT
-	Starter	-	Final	14.12
+@NYJ
+	Starter	-	Sun 12:00pm CT	14.21
 
 TE
 Colston Loveland
 CHI
 Bye 10
-NYJ
-	Starter	-	Sun 12:00pm CT	11.23
+@GB
+	Starter	-	Sun 12:00pm CT	11.40
 
 TE
 Trey McBride
 ARI
 Bye 14
-@NYG
-	Starter	-	Sun 12:00pm CT	21.30
+DET
+	Starter	-	Sun 3:25pm CT	21.22
 
 K
 Cameron Dicker
 LAC
 Bye 7
-@SEA
-	Starter	-	Sun 3:25pm CT	6.49
+DEN
+	Starter	-	Sun 3:05pm CT	7.81
 
 K
 Will Reichard
 MIN
 Bye 6
-MIA
-	Starter	-	Sun 3:05pm CT	8.25
+@NO
+	Starter	-	Sun 12:00pm CT	8.37
 
 D/ST
 Buffalo Bills
 BUF
 Bye 7
-NE
-	Starter	-	Sun 12:00pm CT	6.14
+@LAR
+	Starter	-	Mon 7:15pm CT	6.23
 
 D/ST
 New Orleans Saints
 NO
 Bye 8
-ATL
-	Starter	-	Mon 7:15pm CT	5.63
+MIN
+	Starter	-	Sun 12:00pm CT	5.48
