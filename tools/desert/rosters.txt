@@ -39,7 +39,7 @@ AVG ROSTER
 12.8
 Players per team
 AVG PROJ
-156.08
+148.87
 Starting lineup
 Bitch Mittens
 Mat Karr 0-0
@@ -156,11 +156,11 @@ David Garvey 0-0
 Capsule
 Email
 Trade
-185.20
+172.85
 PROJ LINEUP
-14
+13
 STARTERS
-0
+1
 BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
@@ -176,7 +176,7 @@ Dak Prescott
 DAL
 Bye 14
 TB
-	Starter	-	Thu 7:15pm CT	28.80
+	Starter	-	Thu 7:15pm CT	28.85
 
 RB
 Chase Brown
@@ -197,14 +197,7 @@ Jonathan Taylor
 IND
 Bye 13
 @PIT
-	Starter	-	Sun 12:00pm CT	20.58
-
-WR
-Josh Downs
-IND
-Bye 13
-@PIT
-	Starter	-	Sun 12:00pm CT	12.28
+	Starter	-	Sun 12:00pm CT	20.46
 
 WR
 Drake London
@@ -221,18 +214,18 @@ DET
 	Starter	-	Sun 3:25pm CT	16.13
 
 TE
+Dallas Goedert
+PHI
+Bye 10
+@JAX
+	Starter	O	Sun 8:30am CT	0.00
+
+TE
 Tucker Kraft
 GB
 Bye 11
 CHI
 	Starter	-	Sun 12:00pm CT	12.93
-
-TE
-Darren Waller
-CAR
-Bye 5
-bye
-	Starter	-	Bye	0.00
 
 K
 Chris Boswell
@@ -261,11 +254,18 @@ DEN
 Bye 10
 @LAC
 	Starter	-	Sun 3:05pm CT	6.63
+
+WR
+D.J. Moore
+BUF
+Bye 7
+@LAR
+	Bench	Q	Mon 7:15pm CT	8.56
 Can't stanzus
 Andy Midkiff 0-0
 Capsule
 Trade
-195.89
+208.30
 PROJ LINEUP
 14
 STARTERS
@@ -285,14 +285,7 @@ Jordan Love
 GB
 Bye 11
 CHI
-	Starter	-	Sun 12:00pm CT	25.60
-
-RB
-TreVeyon Henderson
-NE
-Bye 11
-LV
-	Starter	-	Sun 12:00pm CT	11.40
+	Starter	-	Sun 12:00pm CT	25.65
 
 RB
 Bijan Robinson
@@ -308,19 +301,26 @@ Bye 7
 PHI
 	Starter	-	Sun 8:30am CT	13.94
 
-WR
-D.J. Moore
-BUF
-Bye 7
-@LAR
-	Starter	Q	Mon 7:15pm CT	8.56
+RB
+Emanuel Wilson
+SEA
+Bye 11
+SF
+	Starter	-	Sun 3:25pm CT	12.70
 
 WR
 Malik Nabers
 NYG
 Bye 8
 @WAS
-	Starter	Q	Sun 12:00pm CT	14.71
+	Starter	Q	Sun 12:00pm CT	14.65
+
+WR
+Carnell Tate
+TEN
+Bye 9
+HOU
+	Starter	-	Sun 12:00pm CT	12.33
 
 WR
 Parker Washington
@@ -358,11 +358,11 @@ Bye 13
 	Starter	-	Sun 12:00pm CT	8.13
 
 D/ST
-Carolina Panthers
-CAR
-Bye 5
-bye
-	Starter	-	Bye	0.00
+Cincinnati Bengals
+CIN
+Bye 6
+@MIA
+	Starter	-	Sun 12:00pm CT	7.35
 
 D/ST
 New England Patriots
@@ -374,11 +374,11 @@ Ceedeez Nutz
 Dylan 0-0
 Capsule
 Trade
-134.74
+124.24
 PROJ LINEUP
-14
+13
 STARTERS
-0
+1
 BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
@@ -418,13 +418,6 @@ bye
 	Starter	-	Bye	0.00
 
 WR
-Jordan Addison
-MIN
-Bye 6
-@NO
-	Starter	Q	Sun 12:00pm CT	10.57
-
-WR
 Ja'Marr Chase
 CIN
 Bye 6
@@ -436,7 +429,7 @@ Emeka Egbuka
 TB
 Bye 10
 @DAL
-	Starter	-	Thu 7:15pm CT	10.70
+	Starter	-	Thu 7:15pm CT	10.77
 
 WR
 Mike Evans
@@ -479,16 +472,23 @@ HOU
 Bye 8
 @TEN
 	Starter	-	Sun 12:00pm CT	6.30
+
+WR
+A.J. Brown
+NE
+Bye 11
+LV
+	Bench	IR	Sun 12:00pm CT	0.00
 Drunk at the Draft
 jason twede 0-0
 Capsule
 Email
 Trade
-182.24
+156.25
 PROJ LINEUP
-14
+12
 STARTERS
-0
+2
 BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
@@ -498,13 +498,6 @@ JAX
 Bye 7
 PHI
 	Starter	-	Sun 8:30am CT	27.41
-
-QB
-Bo Nix
-DEN
-Bye 10
-@LAC
-	Starter	-	Sun 3:05pm CT	26.09
 
 RB
 Saquon Barkley
@@ -532,7 +525,7 @@ Nico Collins
 HOU
 Bye 8
 @TEN
-	Starter	-	Sun 12:00pm CT	16.90
+	Starter	-	Sun 12:00pm CT	16.91
 
 WR
 Zay Flowers
@@ -553,7 +546,7 @@ Christian Watson
 GB
 Bye 11
 CHI
-	Starter	-	Sun 12:00pm CT	16.50
+	Starter	-	Sun 12:00pm CT	16.56
 
 WR
 Jameson Williams
@@ -561,13 +554,6 @@ DET
 Bye 6
 @ARI
 	Starter	-	Sun 3:25pm CT	12.01
-
-K
-Ryan Fitzgerald
-CAR
-Bye 5
-bye
-	Starter	-	Bye	0.00
 
 K
 Chase McLaughlin
@@ -581,7 +567,7 @@ Green Bay Packers
 GB
 Bye 11
 CHI
-	Starter	-	Sun 12:00pm CT	4.03
+	Starter	-	Sun 12:00pm CT	4.06
 
 D/ST
 Minnesota Vikings
@@ -589,6 +575,20 @@ MIN
 Bye 6
 @NO
 	Starter	-	Sun 12:00pm CT	7.29
+
+QB
+C.J. Stroud
+HOU
+Bye 8
+@TEN
+	Bench	-	Sun 12:00pm CT	24.20
+
+K
+Cairo Santos
+CHI
+Bye 10
+@GB
+	Bench	-	Sun 12:00pm CT	7.20
 DUKES OF EARL
 Earl The Duke Williams 0-0
 Capsule
@@ -604,7 +604,7 @@ ELEVE11s
 Jason Lucas 0-0
 Capsule
 Trade
-181.55
+181.57
 PROJ LINEUP
 14
 STARTERS
@@ -673,7 +673,7 @@ Ted Hurst
 TB
 Bye 10
 @DAL
-	Starter	-	Thu 7:15pm CT	5.75
+	Starter	-	Thu 7:15pm CT	5.77
 
 WR
 CeeDee Lamb
@@ -755,7 +755,7 @@ Cam Skattebo
 NYG
 Bye 8
 @WAS
-	Starter	Q	Sun 12:00pm CT	13.58
+	Starter	Q	Sun 12:00pm CT	13.46
 
 WR
 Rashee Rice
@@ -783,7 +783,7 @@ Isaiah Likely
 NYG
 Bye 8
 @WAS
-	Starter	Q	Sun 12:00pm CT	14.41
+	Starter	Q	Sun 12:00pm CT	14.43
 
 TE
 Kyle Pitts
@@ -818,13 +818,13 @@ Pittsburgh Steelers
 PIT
 Bye 9
 IND
-	Starter	-	Sun 12:00pm CT	6.74
+	Starter	-	Sun 12:00pm CT	6.83
 Los Huevos Grandes
 Damien Gallardo 0-0
 Capsule
 Email
 Trade
-186.09
+185.09
 PROJ LINEUP
 14
 STARTERS
@@ -865,7 +865,7 @@ D'Andre Swift
 CHI
 Bye 10
 @GB
-	Starter	Q	Sun 12:00pm CT	15.66
+	Starter	Q	Sun 12:00pm CT	14.66
 
 WR
 George Pickens
@@ -936,11 +936,11 @@ Add/Drop
 Capsule
 Email
 Trade
-186.89
+137.71
 PROJ LINEUP
-14
+10
 STARTERS
-0
+4
 BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
@@ -951,33 +951,12 @@ Bye 10
 @JAX
 	Starter	-	Sun 8:30am CT	23.08
 
-QB
-Geno Smith
-NYJ
-Bye 13
-CLE
-	Starter	-	Sun 12:00pm CT	20.70
-
-RB
-Braelon Allen
-NYJ
-Bye 13
-CLE
-	Starter	-	Sun 12:00pm CT	12.70
-
-RB
-Jacory Croskey-Merritt
-WAS
-Bye 7
-NYG
-	Starter	Q	Sun 12:00pm CT	11.34
-
 RB
 Javonte Williams
 DAL
 Bye 14
 TB
-	Starter	-	Thu 7:15pm CT	17.58
+	Starter	-	Thu 7:15pm CT	17.70
 
 WR
 Davante Adams
@@ -991,7 +970,7 @@ Matthew Golden
 GB
 Bye 11
 CHI
-	Starter	-	Sun 12:00pm CT	12.01
+	Starter	-	Sun 12:00pm CT	12.02
 
 WR
 Justin Jefferson
@@ -1035,18 +1014,39 @@ Bye 13
 CLE
 	Starter	-	Sun 12:00pm CT	5.21
 
+QB
+Drake Maye
+NE
+Bye 11
+LV
+	Bench	P	Sun 12:00pm CT	27.18
+
+RB
+J.K. Dobbins
+DEN
+Bye 10
+@LAC
+	Bench	-	Sun 3:05pm CT	10.86
+
+RB
+Tony Pollard
+TEN
+Bye 9
+HOU
+	Bench	Q	Sun 12:00pm CT	11.80
+
 D/ST
-Baltimore Ravens
-BAL
-Bye 13
-@ATL
-	Starter	-	Sun 7:20pm CT	4.57
+Washington Commanders
+WAS
+Bye 7
+NYG
+	Bench	-	Sun 12:00pm CT	5.87
 TEAM NATRON
 jon karr 0-0
 Capsule
 Email
 Trade
-122.47
+122.52
 PROJ LINEUP
 14
 STARTERS
@@ -1059,7 +1059,7 @@ Joe Burrow
 CIN
 Bye 6
 @MIA
-	Starter	-	Sun 12:00pm CT	28.95
+	Starter	-	Sun 12:00pm CT	29.00
 
 QB
 Patrick Mahomes
@@ -1155,7 +1155,7 @@ Two T's Matt
 Matt Silva 0-0
 Capsule
 Trade
-190.10
+190.08
 PROJ LINEUP
 14
 STARTERS
@@ -1217,7 +1217,7 @@ Harold Fannin Jr.
 CLE
 Bye 11
 @NYJ
-	Starter	-	Sun 12:00pm CT	13.60
+	Starter	-	Sun 12:00pm CT	13.62
 
 TE
 Colston Loveland
@@ -1231,7 +1231,7 @@ Trey McBride
 ARI
 Bye 14
 DET
-	Starter	-	Sun 3:25pm CT	22.33
+	Starter	-	Sun 3:25pm CT	22.30
 
 K
 Cameron Dicker
