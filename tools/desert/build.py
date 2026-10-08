@@ -22,8 +22,12 @@ def slug(s):
     s = re.sub(r'\b(jr|sr|ii|iii|iv|v)\b\.?', '', s.lower())
     return re.sub(r'[^a-z]', '', s)
 
+# rtsports and ESPN spell a few teams differently; defenses are keyed by team, so normalise first
+TEAM_FIX = {'WAS': 'WSH', 'JAC': 'JAX', 'LA': 'LAR', 'KAN': 'KC', 'GNB': 'GB', 'NWE': 'NE', 'NOR': 'NO',
+            'SFO': 'SF', 'TAM': 'TB', 'LVR': 'LV', 'SDG': 'LAC', 'STL': 'LAR'}
+
 def key(pos, name, team):
-    k = ('DST-' + team) if pos == 'DST' else slug(name)
+    k = ('DST-' + TEAM_FIX.get(team, team)) if pos == 'DST' else slug(name)
     return ALIASES.get(k, k)
 
 proj = json.load(open(os.path.join(HERE, 'projections.json')))
