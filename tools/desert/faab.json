@@ -193,6 +193,70 @@
       "pos": "QB",
       "amount": 17.75,
       "dropped": "C.J. Stroud"
+    },
+    {
+      "week": 5,
+      "team": "Can't stanzus",
+      "player": "Emanuel Wilson",
+      "pos": "RB",
+      "amount": 62.5,
+      "dropped": "TreVeyon Henderson"
+    },
+    {
+      "week": 5,
+      "team": "Raiders of the Lost Title",
+      "player": "Drake Maye",
+      "pos": "QB",
+      "amount": 36.19,
+      "dropped": "Geno Smith"
+    },
+    {
+      "week": 5,
+      "team": "BOSSMAN",
+      "player": "Dallas Goedert",
+      "pos": "TE",
+      "amount": 5.55,
+      "dropped": "Darren Waller"
+    },
+    {
+      "week": 5,
+      "team": "Raiders of the Lost Title",
+      "player": "J.K. Dobbins",
+      "pos": "RB",
+      "amount": 4.23,
+      "dropped": "Jacory Croskey-Merritt"
+    },
+    {
+      "week": 5,
+      "team": "Ceedeez Nutz",
+      "player": "A.J. Brown",
+      "pos": "WR",
+      "amount": 11.28,
+      "dropped": "Jordan Addison"
+    },
+    {
+      "week": 5,
+      "team": "Raiders of the Lost Title",
+      "player": "Tony Pollard",
+      "pos": "RB",
+      "amount": 5.17,
+      "dropped": "Braelon Allen"
+    },
+    {
+      "week": 5,
+      "team": "Can't stanzus",
+      "player": "Cincinnati Bengals",
+      "pos": "DST",
+      "amount": 2.25,
+      "dropped": "Carolina Panthers"
+    },
+    {
+      "week": 5,
+      "team": "Raiders of the Lost Title",
+      "player": "Washington Commanders",
+      "pos": "DST",
+      "amount": 1.03,
+      "dropped": "Baltimore Ravens"
     }
   ]
 }
