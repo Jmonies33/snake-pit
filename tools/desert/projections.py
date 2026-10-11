@@ -75,12 +75,18 @@ def main(out=os.path.join(HERE, 'projections.json')):
     week = week or 1
     # ESPN's currentScoringPeriod lags until Thursday's kickoff; if any player already
     # has ACTUAL stats for week N, the week being played next is N+1.
-    played = 0
+    # BUT a Thursday game alone must not roll the week: after TNF two teams have week-N
+    # actuals while the other ~28 have not played yet (2026-10-11: Sunday showed week-6
+    # byes for Jefferson/St. Brown during week 5). Only advance once most teams have played.
+    teams_played = {}
     for pl in players:
         for s in pl['player'].get('stats', []):
             if s.get('seasonId') == 2026 and s.get('statSourceId') == 0 and s.get('statSplitTypeId') == 1 and s.get('scoringPeriodId'):
-                played = max(played, int(s['scoringPeriodId']))
-    week = max(week, min(18, played + 1))
+                teams_played.setdefault(int(s['scoringPeriodId']), set()).add(pl['player'].get('proTeamId'))
+    played = max(teams_played) if teams_played else 0
+    if played and len(teams_played[played]) < 24:   # week `played` still in progress
+        played -= 1
+    week = max(week if played == 0 else 0, min(18, played + 1))
     weeks_left = max(1, 18 - week + 1)
     byes, opp = {}, {}
     for pt in (info.get('settings', {}).get('proTeams', []) if week else []):
