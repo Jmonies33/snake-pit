@@ -57,6 +57,8 @@ def compress(players, spread, key):
     mean = sum(vals) / len(vals); f = spread / cur
     for p in players: p[key] = mean + (p[key] - mean) * f
 
+WEEK_DATES = ''
+
 def main(out=os.path.join(HERE, 'projections.json')):
     hdr = {'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json',
            'X-Fantasy-Filter': '{"players":{"limit":900,"sortDraftRanks":{"sortPriority":100,"sortAsc":true,"value":"STANDARD"}}}'}
@@ -87,6 +89,21 @@ def main(out=os.path.join(HERE, 'projections.json')):
     if played and len(teams_played[played]) < 24:   # week `played` still in progress
         played -= 1
     week = max(week if played == 0 else 0, min(18, played + 1))
+    # SOURCE OF TRUTH (added 2026-10-11 after the board showed week-6 byes on week-5 Sunday):
+    # ESPN's public scoreboard reports the NFL week actually being played. The guess above is
+    # only a cross-check now; if they disagree we say so loudly and trust the scoreboard.
+    global WEEK_DATES
+    WEEK_DATES = ''
+    try:
+        sb = fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard', {'User-Agent': 'Mozilla/5.0'})
+        sb_week = int(sb['week']['number'])
+        days = sorted({e['date'][:10] for e in sb.get('events', [])})
+        WEEK_DATES = f"{days[0]} to {days[-1]}" if days else ''
+        if sb_week != week:
+            print(f'WEEK CHECK: stat-based guess said week {week}, ESPN scoreboard says week {sb_week} -- using {sb_week}')
+        week = sb_week
+    except Exception as e:
+        print(f'WEEK CHECK WARNING: could not read the ESPN scoreboard ({e}); using guessed week {week}')
     weeks_left = max(1, 18 - week + 1)
     byes, opp = {}, {}
     for pt in (info.get('settings', {}).get('proTeams', []) if week else []):
@@ -101,6 +118,9 @@ def main(out=os.path.join(HERE, 'projections.json')):
                 elif a == ab: opp[ab] = '@ ' + (h or '?')
         except Exception:
             pass
+
+    if len(opp) < 20:
+        print(f'SANITY FAIL: only {len(opp)} teams have an opponent in week {week} -- wrong week?'); sys.exit(1)
 
     rows = []
     for pl in players:
@@ -154,7 +174,7 @@ def main(out=os.path.join(HERE, 'projections.json')):
         r['season'] = round(r['season'], 1); r['week'] = round(r['week'], 1)
         r['pts'] = round(r['season'] * weeks_left / 18, 1)
     rows = [r for r in rows if r['season'] > 0]
-    json.dump({'date': str(datetime.date.today()), 'week': week, 'weeksLeft': weeks_left, 'players': rows},
+    json.dump({'date': str(datetime.date.today()), 'week': week, 'weekDates': WEEK_DATES, 'weeksLeft': weeks_left, 'players': rows},
               open(out, 'w'), separators=(',', ':'))
     print(f'projections: {len(rows)} players, week {week}, {weeks_left} weeks left')
     return rows

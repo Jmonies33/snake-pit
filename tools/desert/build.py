@@ -103,7 +103,7 @@ for h in faab.get('history', []):
         h['team'] = TEAM_ALIASES[h['team']]
 data = {'built': datetime.datetime.now().strftime('%b %-d, %Y %-I:%M %p'),
         'faab': {'budget': faab.get('budget', 300), 'history': faab.get('history', [])},
-        'projDate': proj['date'], 'week': proj['week'], 'weeksLeft': weeks_left,
+        'projDate': proj['date'], 'week': proj['week'], 'weekDates': proj.get('weekDates', ''), 'weeksLeft': weeks_left,
         # HARD league rule per Jerry (2026-09-11): exactly QB2 / RB3 / WR+TE 5 / K2 / DST2,
         # everyone starts, every pickup is a one-for-one swap within the same slot.
         # (The site is configured looser — roster 20, caps QB4 etc. — ignore that.)

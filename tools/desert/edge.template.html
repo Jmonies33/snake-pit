@@ -220,7 +220,7 @@ function swapPlan(rosterIds,minGain,max){
 
 /* ================= render ================= */
 const main=document.getElementById('main');
-document.getElementById('meta').innerHTML=`<b>Week ${D.week}</b> · ${D.weeksLeft} weeks left<br>ESPN proj ${esc(D.projDate)} · built ${esc(D.built)}`;
+document.getElementById('meta').innerHTML=`<b>Week ${D.week}</b>${D.weekDates?` <span class="dim">(NFL games ${esc(D.weekDates)})</span>`:''} · ${D.weeksLeft} weeks left<br>ESPN proj ${esc(D.projDate)} · built ${esc(D.built)}`;
 if(!COACH){ /* stay a blank shell */ }
 else if(PAGE==='trades') renderTrades(); else if(PAGE==='waivers') renderWaivers(); else renderSpeed();
 
