@@ -760,8 +760,8 @@
 17032	Jauan Jennings	MIN	WR
 18069	Montrell Washington	HOU	WR
 18647	De'Corian Clark		?
-19181	Dont'e Thornton Jr.	LV	WR
 18258	Tyler Scott	LV	WR
+19181	Dont'e Thornton Jr.	LV	WR
 19539	Omar Cooper Jr.	NYJ	WR
 19175	Antwane Wells Jr.	ATL	WR
 16917	Gunner Olszewski	NYG	WR
@@ -792,8 +792,8 @@
 19631	Jeff Caldwell	KC	WR
 19570	Caullin Lacy	NYJ	WR
 18650	Dominic Lovett	DET	WR
-19543	Chris Brazzell II	CAR	WR
 18635	Ricky Pearsall	SF	WR
+19543	Chris Brazzell II	CAR	WR
 17401	D'Wayne Eskridge	MIA	WR
 16964	Greg Ward		?
 18514	Jake Bobo	SEA	WR

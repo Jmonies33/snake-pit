@@ -257,6 +257,94 @@
       "pos": "DST",
       "amount": 1.03,
       "dropped": "Baltimore Ravens"
+    },
+    {
+      "week": 6,
+      "team": "Drunk at the Draft",
+      "player": "Hunter Henry",
+      "pos": "TE",
+      "amount": 31.5,
+      "dropped": "Tyler Higbee"
+    },
+    {
+      "week": 6,
+      "team": "BOSSMAN",
+      "player": "Brenton Strange",
+      "pos": "TE",
+      "amount": 21.66,
+      "dropped": "Josh Downs"
+    },
+    {
+      "week": 6,
+      "team": "ELEVE11s",
+      "player": "Marvin Harrison Jr.",
+      "pos": "WR",
+      "amount": 28.1,
+      "dropped": "Jameson Williams"
+    },
+    {
+      "week": 6,
+      "team": "Drunk at the Draft",
+      "player": "Pat Freiermuth",
+      "pos": "TE",
+      "amount": 12.5,
+      "dropped": "Jaylen Waddle"
+    },
+    {
+      "week": 6,
+      "team": "ELEVE11s",
+      "player": "Atlanta Falcons",
+      "pos": "DST",
+      "amount": 10.01,
+      "dropped": "Detroit Lions"
+    },
+    {
+      "week": 6,
+      "team": "Drunk at the Draft",
+      "player": "Carolina Panthers",
+      "pos": "DST",
+      "amount": 5.0,
+      "dropped": "New York Giants"
+    },
+    {
+      "week": 6,
+      "team": "ELEVE11s",
+      "player": "Aaron Rodgers",
+      "pos": "QB",
+      "amount": 15.5,
+      "dropped": "Jalon Daniels"
+    },
+    {
+      "week": 6,
+      "team": "BOSSMAN",
+      "player": "Blake Grupe",
+      "pos": "K",
+      "amount": 7.55,
+      "dropped": "Chad Ryland"
+    },
+    {
+      "week": 6,
+      "team": "Drunk at the Draft",
+      "player": "Ryan Fitzgerald",
+      "pos": "K",
+      "amount": 7.0,
+      "dropped": "Cairo Santos"
+    },
+    {
+      "week": 6,
+      "team": "Raiders of the Lost Title",
+      "player": "Jalen Coker",
+      "pos": "WR",
+      "amount": 38.03,
+      "dropped": "Juwan Johnson"
+    },
+    {
+      "week": 6,
+      "team": "Raiders of the Lost Title",
+      "player": "MarShawn Lloyd",
+      "pos": "RB",
+      "amount": 31.03,
+      "dropped": "Braelon Allen"
     }
   ]
 }

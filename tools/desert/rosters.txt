@@ -769,7 +769,7 @@ Jaxon Smith-Njigba
 SEA
 Bye 11
 @DEN
-	Starter	Q	Thu 7:15pm CT	19.66
+	Starter	-	Thu 7:15pm CT	19.66
 
 TE
 Sam LaPorta
