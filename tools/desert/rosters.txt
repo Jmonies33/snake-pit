@@ -39,7 +39,7 @@ AVG ROSTER
 12.8
 Players per team
 AVG PROJ
-147.80
+146.97
 Starting lineup
 Bitch Mittens
 Mat Karr 0-0
@@ -936,11 +936,11 @@ Add/Drop
 Capsule
 Email
 Trade
-139.71
+129.77
 PROJ LINEUP
-12
+10
 STARTERS
-2
+4
 BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
@@ -1001,13 +1001,6 @@ bye
 	Starter	-	Bye	0.00
 
 K
-Daniel Carlson
-NO
-Bye 8
-@NYG
-	Starter	-	Sun 12:00pm CT	6.18
-
-K
 Trey Smack
 GB
 Bye 11
@@ -1020,13 +1013,6 @@ WAS
 Bye 7
 @SF
 	Starter	-	Mon 7:15pm CT	3.79
-
-D/ST
-Dallas Cowboys
-DAL
-Bye 14
-@GB
-	Starter	-	Sun 7:20pm CT	3.76
 
 RB
 MarShawn Lloyd
@@ -1041,6 +1027,20 @@ CAR
 Bye 5
 @PHI
 	Bench	Q	Sun 12:00pm CT	13.31
+
+K
+Dominic Zvada
+NYG
+Bye 8
+NO
+	Bench	-	Sun 12:00pm CT	7.90
+
+D/ST
+New York Jets
+NYJ
+Bye 13
+@NE
+	Bench	-	Sun 12:00pm CT	4.76
 TEAM NATRON
 jon karr 0-0
 Capsule

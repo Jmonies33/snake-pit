@@ -1014,14 +1014,6 @@
 },
 {
 "pos": "K",
-"name": "Daniel Carlson",
-"team": "NO",
-"bye": 8,
-"inj": "",
-"wk1": 6.18
-},
-{
-"pos": "K",
 "name": "Trey Smack",
 "team": "GB",
 "bye": 11,
@@ -1035,14 +1027,6 @@
 "bye": 7,
 "inj": "",
 "wk1": 3.79
-},
-{
-"pos": "DST",
-"name": "Dallas Cowboys",
-"team": "DAL",
-"bye": 14,
-"inj": "",
-"wk1": 3.76
 },
 {
 "pos": "RB",
@@ -1059,6 +1043,22 @@
 "bye": 5,
 "inj": "Q",
 "wk1": 13.31
+},
+{
+"pos": "K",
+"name": "Dominic Zvada",
+"team": "NYG",
+"bye": 8,
+"inj": "",
+"wk1": 7.9
+},
+{
+"pos": "DST",
+"name": "New York Jets",
+"team": "NYJ",
+"bye": 13,
+"inj": "",
+"wk1": 4.76
 }
 ]
 },
