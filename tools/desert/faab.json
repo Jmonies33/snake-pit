@@ -1,6 +1,6 @@
 {
   "budget": 300,
-  "note": "Blind bids run by the commissioner (Dave Garvey) outside rtsports every Wednesday (due 8 PM CT, winners posted in the group text by Jennifer Garvey ~8:50 PM, entered on rtsports ~9:30 PM). Bids are to the CENT \u2014 owners bid odd amounts to win ties. rtsports shows no amounts, so winners are recorded here from Jerry's screenshots of the group text.",
+  "note": "Blind bids run by the commissioner (Dave Garvey) outside rtsports every Wednesday (due 8 PM CT, winners posted in the group text by Jennifer Garvey ~8:50 PM, entered on rtsports ~9:30 PM). Bids are to the CENT \u2014 owners bid odd amounts to win ties. rtsports shows no amounts, so winners are recorded here from Jerry's screenshots of the group text. Owners may buy a FAAB top-up: +$150 buy-in = +$300 FAAB, recorded as a negative 'FAAB top-up' row.",
   "history": [
     {
       "week": 2,
@@ -345,6 +345,14 @@
       "pos": "RB",
       "amount": 31.03,
       "dropped": "Braelon Allen"
+    },
+    {
+      "week": 7,
+      "team": "Raiders of the Lost Title",
+      "player": "FAAB top-up (+$150 buy-in)",
+      "pos": "-",
+      "amount": -300.0,
+      "dropped": "-"
     }
   ]
 }
