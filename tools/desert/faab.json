@@ -345,6 +345,94 @@
       "pos": "RB",
       "amount": 31.03,
       "dropped": "Braelon Allen"
+    },
+    {
+      "week": 7,
+      "team": "Drunk at the Draft",
+      "player": "Josh Jacobs",
+      "pos": "RB",
+      "amount": 244.0,
+      "dropped": "Aaron Jones"
+    },
+    {
+      "week": 7,
+      "team": "Raiders of the Lost Title",
+      "player": "J.K. Dobbins",
+      "pos": "RB",
+      "amount": 3.41,
+      "dropped": "MarShawn Lloyd"
+    },
+    {
+      "week": 7,
+      "team": "Ceedeez Nutz",
+      "player": "Chase McLaughlin",
+      "pos": "K",
+      "amount": 11.22,
+      "dropped": "Tyler Bass"
+    },
+    {
+      "week": 7,
+      "team": "Can't stanzus",
+      "player": "Quinshon Judkins",
+      "pos": "RB",
+      "amount": 12.75,
+      "dropped": "Emanuel Wilson"
+    },
+    {
+      "week": 7,
+      "team": "Ceedeez Nutz",
+      "player": "Cairo Santos",
+      "pos": "K",
+      "amount": 1.22,
+      "dropped": "Cam Little"
+    },
+    {
+      "week": 7,
+      "team": "Bitch Mittens",
+      "player": "Jordan Mason",
+      "pos": "RB",
+      "amount": 15.78,
+      "dropped": "Braelon Allen"
+    },
+    {
+      "week": 7,
+      "team": "Raiders of the Lost Title",
+      "player": "Stefon Diggs",
+      "pos": "WR",
+      "amount": 4.17,
+      "dropped": "Davante Adams"
+    },
+    {
+      "week": 7,
+      "team": "Raiders of the Lost Title",
+      "player": "New York Jets",
+      "pos": "DST",
+      "amount": 0.03,
+      "dropped": "Indianapolis Colts"
+    },
+    {
+      "week": 7,
+      "team": "BOSSMAN",
+      "player": "Brandon McManus",
+      "pos": "K",
+      "amount": 6.55,
+      "dropped": "Blake Grupe"
+    },
+    {
+      "week": 7,
+      "team": "BOSSMAN",
+      "player": "Jameson Williams",
+      "pos": "WR",
+      "amount": 16.45,
+      "dropped": "Brenton Strange"
+    },
+    {
+      "week": 7,
+      "team": "Raiders of the Lost Title",
+      "player": "Kyler Murray",
+      "pos": "QB",
+      "amount": 26.04,
+      "dropped": "Jayden Daniels"
     }
   ]
 }
