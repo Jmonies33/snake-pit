@@ -433,6 +433,54 @@
       "pos": "QB",
       "amount": 26.04,
       "dropped": "Jayden Daniels"
+    },
+    {
+      "week": 8,
+      "team": "LONE STARR",
+      "player": "Jayden Daniels",
+      "pos": "QB",
+      "amount": 188.89,
+      "dropped": "Bo Nix"
+    },
+    {
+      "week": 8,
+      "team": "Raiders of the Lost Title",
+      "player": "Rachaad White",
+      "pos": "RB",
+      "amount": 13.51,
+      "dropped": "Aaron Jones"
+    },
+    {
+      "week": 8,
+      "team": "Can't stanzus",
+      "player": "Stefon Diggs",
+      "pos": "WR",
+      "amount": 22.5,
+      "dropped": "Tyler Higbee"
+    },
+    {
+      "week": 8,
+      "team": "Raiders of the Lost Title",
+      "player": "Jacksonville Jaguars",
+      "pos": "DST",
+      "amount": 6.03,
+      "dropped": "Carolina Panthers"
+    },
+    {
+      "week": 8,
+      "team": "BOSSMAN",
+      "player": "Tyler Bass",
+      "pos": "K",
+      "amount": 12.55,
+      "dropped": "Brandon McManus"
+    },
+    {
+      "week": 8,
+      "team": "BOSSMAN",
+      "player": "Chig Okonkwo",
+      "pos": "TE",
+      "amount": 17.55,
+      "dropped": "Demario Douglas"
     }
   ]
 }
