@@ -563,6 +563,9 @@ async function trySwap(t){
   log('could not confirm '+t.name+' (unsaved='+un+') — reloading to check');w.location.reload();await ready();
   if(onRoster(t.id)){log('DONE (confirmed after reload): '+t.name);return true;}
   log('FAILED '+t.name+' — do this one by hand if you still want him');return false;}
+  /* the popup is still on the Speed Kit page (another site) until it lands on Add/Drop;
+     reloading it before then throws and used to kill the bot silently (NOW mode, late clicks) */
+  if(!(await ready())){log('FAILED: the popup never loaded the Add/Drop page — do it by hand NOW');return;}
   const usedDrops=new Set();let got=0;
   if(MODE==='dry'){await sleep(500);if(!(await ready())){log('popup did not load the Add/Drop page');return;}const e=elig(T[0].id);
     if(!(e&&e.enabled)&&!/roster|already/i.test((e&&e.reason)||'')){log('adds are closed right now ('+(e&&e.reason)+') — validating the list instead');await validateOnly();return;}}
@@ -585,7 +588,7 @@ async function trySwap(t){
     if(!(await ready())){await reloadUntilOpen();}
   }
   log('done — '+got+(MODE==='dry'?' swaps rehearsed (nothing saved).':' swaps made. Check the roster in the other window.')+' Click the Bot Log bookmark any time to see this again.');
-})();})();`;
+})().catch(e=>{log('CRASHED: '+(e&&e.message)+' — do the swaps by hand NOW');try{alert('Desert Bot crashed: '+(e&&e.message));}catch(_){}});})();`;
 }
 /* bridge: opened by the bookmarklet as the popup — hand back the saved list and wait to be navigated away */
 if(location.hash==='#bridge'&&window.opener){
