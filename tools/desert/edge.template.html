@@ -540,8 +540,14 @@ async function spinUntil(localMs){const early=localMs-1500;if(Date.now()<early)a
 async function ready(){for(let i=0;i<120;i++){try{if(w.document&&w.document.readyState==='complete'&&typeof w.selectAddPlayer==='function'&&typeof w.SaveTransactions==='function'&&w.document.getElementById('fa-list'))return true;}catch(e){}await sleep(100);}return false;}
 const onRoster=id=>{try{return !!w.document.getElementById('roster-player-'+id+'-name');}catch(e){return false;}};
 function elig(id){try{return w.addEligibility(+id)||w.addEligibility(id);}catch(e){return {enabled:false,reason:'elig err '+e.message};}}
-async function reloadUntilOpen(){for(let i=0;i<40;i++){w.location.reload();await sleep(200);if(!(await ready())){continue;}const e=elig(T[0].id);if(e&&e.enabled)return true;if(e&&/roster|already/i.test(e.reason||''))return true;log('not open yet: '+(e&&e.reason));await sleep(300);}return false;}
-async function clearQueue(){try{if(w.hasUnsavedTransactions()){w.location.reload();await ready();}}catch(e){}}
+/* reload() is async: the OLD page stays on screen (and passes ready()) until the new one commits
+   ~2.5s later. Waiting on ready() alone made the bot work on a page about to vanish, and the
+   retry loop re-reloaded every 0.5s, cancelling each load before it landed. Wait for a NEW document. */
+async function freshLoad(){let old=null;try{old=w.document;}catch(e){}try{w.location.reload();}catch(e){w.location.href=ADDDROP;}
+  for(let i=0;i<150;i++){await sleep(100);try{const d=w.document;if(d&&d!==old&&d.readyState==='complete'&&typeof w.selectAddPlayer==='function'&&typeof w.SaveTransactions==='function'&&d.getElementById('fa-list'))return true;}catch(e){}}return false;}
+function isOpen(){let last=null;for(const t of T){const e=elig(t.id);last=e;if(e&&(e.enabled||/roster|already/i.test(e.reason||'')))return {open:true};}return {open:false,reason:last&&last.reason};}
+async function reloadUntilOpen(){for(let i=0;i<40;i++){if(!(await freshLoad())){log('page did not finish loading — reloading again');continue;}const o=isOpen();if(o.open)return true;log('not open yet: '+o.reason);}return false;}
+async function clearQueue(){try{if(w.hasUnsavedTransactions()){await freshLoad();}}catch(e){}}
 const faPresent=id=>{try{return !!w.document.getElementById('fa-player-'+id+'-name');}catch(e){return false;}};
 async function validateOnly(){ /* window closed: just prove every line resolves on the live page */
   let ok=0;for(const t of T){const a=faPresent(t.id),d=onRoster(t.drop);log((a&&d?'OK   ':'BAD  ')+t.name+(a?'':' [add not in free-agent list]')+' for '+t.dropName+(d?'':' [drop not on your roster]'));if(a&&d)ok++;}
@@ -551,33 +557,33 @@ async function trySwap(t){
   const e=elig(t.id);if(!e||!e.enabled){log('skip '+t.name+': '+(e&&e.reason));return false;}
   if(!onRoster(t.drop)){log('skip '+t.name+': '+t.dropName+' is no longer on the roster');return false;}
   try{w.selectAddPlayer(+t.id);}catch(err){try{w.selectAddPlayer(t.id);}catch(e2){log('select failed '+t.name+': '+e2.message);return false;}}
-  await sleep(120);let q=[];try{q=w.selectedAddIds()||[];}catch(e){}
+  let q=[];for(let i=0;i<5;i++){await sleep(i?100:120);try{q=w.selectedAddIds()||[];}catch(e){}if(q.map(String).includes(String(t.id)))break;}
   if(!q.map(String).includes(String(t.id))){log('not queued '+t.name);await clearQueue();return false;}
   const db=w.document.querySelector('button[data-drop-id="'+t.drop+'"]');if(!db){log('no DROP button for '+t.dropName);await clearQueue();return false;}
-  db.click();await sleep(120);let dq=[];try{dq=w.selectedDropIds()||[];}catch(e){}
+  db.click();let dq=[];for(let i=0;i<5;i++){await sleep(i?100:120);try{dq=w.selectedDropIds()||[];}catch(e){}if(dq.map(String).includes(String(t.drop)))break;}
   if(!dq.map(String).includes(String(t.drop))){log('drop not queued: '+t.dropName);await clearQueue();return false;}
   if(MODE==='dry'){log('DRY RUN OK: '+t.name+' for '+t.dropName+' queued (would save now) — clearing');await clearQueue();return true;}
   try{const r=w.SaveTransactions(new w.Event('click'));if(r&&r.then)await r;}catch(err){log('save threw for '+t.name+': '+err.message);}
   for(let i=0;i<30;i++){await sleep(100);if(onRoster(t.id)){log('DONE: added '+t.name+', dropped '+t.dropName);return true;}}
   let un=null;try{un=w.hasUnsavedTransactions();}catch(e){}
-  log('could not confirm '+t.name+' (unsaved='+un+') — reloading to check');w.location.reload();await ready();
+  log('could not confirm '+t.name+' (unsaved='+un+') — reloading to check');await freshLoad();
   if(onRoster(t.id)){log('DONE (confirmed after reload): '+t.name);return true;}
   log('FAILED '+t.name+' — do this one by hand if you still want him');return false;}
   /* the popup is still on the Speed Kit page (another site) until it lands on Add/Drop;
      reloading it before then throws and used to kill the bot silently (NOW mode, late clicks) */
   if(!(await ready())){log('FAILED: the popup never loaded the Add/Drop page — do it by hand NOW');return;}
   const usedDrops=new Set();let got=0;
-  if(MODE==='dry'){await sleep(500);if(!(await ready())){log('popup did not load the Add/Drop page');return;}const e=elig(T[0].id);
-    if(!(e&&e.enabled)&&!/roster|already/i.test((e&&e.reason)||'')){log('adds are closed right now ('+(e&&e.reason)+') — validating the list instead');await validateOnly();return;}}
+  if(MODE==='dry'){await sleep(500);if(!(await ready())){log('popup did not load the Add/Drop page');return;}const o=isOpen();
+    if(!o.open){log('adds are closed right now ('+o.reason+') — validating the list instead');await validateOnly();return;}}
   if(MODE==='arm'&&wait>0){
     /* timing plan (all on the SERVER clock): 45s out, measure the clock offset and reload so the
-       page and its 1,200-row list are warm; then start the real reload ~0.4s BEFORE the bell so
-       the request reaches the server just as it unlocks and the page lands open ~2.5s later. */
+       page and its 1,200-row list are warm; then start the real reload 0.15s AFTER the bell (a request that
+       reaches the server early renders a closed page and costs a whole extra 2.5s load). */
     const pre=goAt-45000; if(Date.now()<pre)await sleep(pre-Date.now());
     const off=await serverOffset(); const goLocal=goAt-off; log('bell on the server clock = '+new Date(goLocal).toLocaleTimeString()+'.'+String(goLocal%1000|0).padStart(3,'0')+' local');
-    w.location.reload();await ready();log('page pre-warmed');
-    await spinUntil(goLocal-400);log('GO — reloading into the open window');w.location.reload();await sleep(150);
-    if(await ready()){const e=elig(T[0].id);if(e&&(e.enabled||/roster|already/i.test(e.reason||''))){log('page landed open '+((Date.now()-goLocal)/1000).toFixed(2)+'s after the bell');}else{log('landed early ('+(e&&e.reason)+') — retrying');if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;}}}
+    await freshLoad();log('page pre-warmed');
+    await spinUntil(goLocal+150);log('GO — reloading into the open window');
+    if(await freshLoad()){const o=isOpen();if(o.open){log('page landed open '+((Date.now()-goLocal)/1000).toFixed(2)+'s after the bell');}else{log('landed early ('+o.reason+') — retrying');if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;}}}
     else if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;}
   }else{ if(wait>0)await sleep(wait); log('GO — reloading the add page'); if(!(await reloadUntilOpen())){log('never unlocked; do it by hand NOW');return;} }
   for(const t of T){
