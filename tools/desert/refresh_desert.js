@@ -14,7 +14,7 @@
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
-const { execSync } = require('child_process');
+const { execSync, execFileSync } = require('child_process');
 
 const NM = '/Users/jerryasencio/.npm/_npx/e41f203b7505f1fb/node_modules';
 const { chromium } = require(path.join(NM, 'playwright'));
@@ -28,7 +28,22 @@ const LOGIN = process.argv.includes('--login');
 const PUSH = !process.argv.includes('--no-push');
 const log = (m) => console.log(new Date().toLocaleTimeString() + '  ' + m);
 
-function sh(cmd, opts = {}) { return execSync(cmd, { stdio: 'pipe', encoding: 'utf8', cwd: opts.cwd || HERE }).trim(); }
+// A run with no deadline can wait forever, and the scheduler starts no new run
+// while one is open: one hung run on 2026-10-29 blocked this task for 11 days.
+const TIME_LIMIT_MS = Number(process.env.DESERT_TIME_LIMIT_MS) || 5 * 60 * 1000;
+const STEP_LIMIT_MS = 2 * 60 * 1000;   // execSync blocks the timer below, so each command gets its own
+
+function sh(cmd, opts = {}) {
+  return execSync(cmd, { stdio: 'pipe', encoding: 'utf8', cwd: opts.cwd || HERE, timeout: STEP_LIMIT_MS, env: { ...process.env, GIT_TERMINAL_PROMPT: '0' } }).trim();
+}
+
+function giveUp() {
+  console.error(`REFRESH FAILED: hit the ${Math.round(TIME_LIMIT_MS / 1000)} second limit`);
+  // Chrome holds the profile lock; left running, it would fail the next run too.
+  try { execFileSync('pkill', ['-f', `user-data-dir=${PROFILE}`]); } catch { /* already gone */ }
+  process.exit(1);
+}
+if (!LOGIN) setTimeout(giveUp, TIME_LIMIT_MS).unref();
 
 (async () => {
   fs.mkdirSync(PROFILE, { recursive: true });
