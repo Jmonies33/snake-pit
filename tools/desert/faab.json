@@ -1,486 +1,512 @@
 {
-  "budget": 300,
-  "note": "Blind bids run by the commissioner (Dave Garvey) outside rtsports every Wednesday (due 8 PM CT, winners posted in the group text by Jennifer Garvey ~8:50 PM, entered on rtsports ~9:30 PM). Bids are to the CENT \u2014 owners bid odd amounts to win ties. rtsports shows no amounts, so winners are recorded here from Jerry's screenshots of the group text. BUY-BACK: once an owner has spent ALL their FAAB, they may buy back in (+$150 buy-in = +$300 FAAB); record it as a negative 'FAAB buy-back' row only after it happens.",
-  "history": [
-    {
-      "week": 2,
-      "team": "Team Huevos",
-      "player": "Dalton Kincaid",
-      "pos": "TE",
-      "amount": 64.48,
-      "dropped": "Greg Dulcich"
-    },
-    {
-      "week": 2,
-      "team": "Ceedeez Nutz",
-      "player": "Bryce Young",
-      "pos": "QB",
-      "amount": 17.11,
-      "dropped": "Kyler Murray"
-    },
-    {
-      "week": 2,
-      "team": "Team Huevos",
-      "player": "Deebo Samuel",
-      "pos": "WR",
-      "amount": 50.99,
-      "dropped": "Denzel Boston"
-    },
-    {
-      "week": 2,
-      "team": "Team Huevos",
-      "player": "T.J. Hockenson",
-      "pos": "TE",
-      "amount": 20.17,
-      "dropped": "Oronde Gadsden II"
-    },
-    {
-      "week": 2,
-      "team": "Bitch Mittens",
-      "player": "Aaron Jones",
-      "pos": "RB",
-      "amount": 27.89,
-      "dropped": "Jordan Mason"
-    },
-    {
-      "week": 2,
-      "team": "LONE STARR",
-      "player": "Chuba Hubbard",
-      "pos": "RB",
-      "amount": 111.11,
-      "dropped": "Jaylen Warren"
-    },
-    {
-      "week": 2,
-      "team": "Two T's Matt",
-      "player": "Kaelon Black",
-      "pos": "RB",
-      "amount": 91.7,
-      "dropped": "TreVeyon Henderson"
-    },
-    {
-      "week": 3,
-      "team": "ELEVE11s",
-      "player": "Stefon Diggs",
-      "pos": "WR",
-      "amount": 23.33,
-      "dropped": "Mikey Giseki"
-    },
-    {
-      "week": 3,
-      "team": "ELEVE11s",
-      "player": "Denzel Boston",
-      "pos": "WR",
-      "amount": 18.2,
-      "dropped": "Terry McLaurin"
-    },
-    {
-      "week": 3,
-      "team": "Ceedeez Nutz",
-      "player": "Las Vegas Raiders",
-      "pos": "DST",
-      "amount": 4.11,
-      "dropped": "New Orleans Saints"
-    },
-    {
-      "week": 3,
-      "team": "Two T's Matt",
-      "player": "Jameis Winston",
-      "pos": "QB",
-      "amount": 11.3,
-      "dropped": "Jaxon Dart"
-    },
-    {
-      "week": 3,
-      "team": "Two T's Matt",
-      "player": "Kyler Murray",
-      "pos": "QB",
-      "amount": 13.4,
-      "dropped": "Jayden Daniels"
-    },
-    {
-      "week": 3,
-      "team": "Raiders of the Lost Title",
-      "player": "Dalton Schultz",
-      "pos": "TE",
-      "amount": 41.37,
-      "dropped": "Dallas Goedert"
-    },
-    {
-      "week": 3,
-      "team": "Raiders of the Lost Title",
-      "player": "Darren Waller",
-      "pos": "TE",
-      "amount": 12.37,
-      "dropped": "Carnell Tate"
-    },
-    {
-      "week": 4,
-      "team": "Two T's Matt",
-      "player": "Kirk Cousins",
-      "pos": "QB",
-      "amount": 8.6,
-      "dropped": "Jameis Winston"
-    },
-    {
-      "week": 4,
-      "team": "BOSSMAN",
-      "player": "Zach Charbonnet",
-      "pos": "RB",
-      "amount": 22.45,
-      "dropped": "Josh Jacobs"
-    },
-    {
-      "week": 4,
-      "team": "Raiders of the Lost Title",
-      "player": "Matthew Golden",
-      "pos": "WR",
-      "amount": 44.37,
-      "dropped": "Dalton Schultz"
-    },
-    {
-      "week": 4,
-      "team": "Bitch Mittens",
-      "player": "Kenyon Sadiq",
-      "pos": "TE",
-      "amount": 36.89,
-      "dropped": "Terrance Ferguson"
-    },
-    {
-      "week": 4,
-      "team": "Two T's Matt",
-      "player": "Ollie Gordon II",
-      "pos": "RB",
-      "amount": 54.1,
-      "dropped": "Kaelon Black"
-    },
-    {
-      "week": 4,
-      "team": "Raiders of the Lost Title",
-      "player": "Geno Smith",
-      "pos": "QB",
-      "amount": 13.37,
-      "dropped": "Daniel Jones"
-    },
-    {
-      "week": 4,
-      "team": "Raiders of the Lost Title",
-      "player": "Braelon Allen",
-      "pos": "RB",
-      "amount": 14.41,
-      "dropped": "J.K. Dobbins"
-    },
-    {
-      "week": 4,
-      "team": "Raiders of the Lost Title",
-      "player": "New York Jets",
-      "pos": "DST",
-      "amount": 0.03,
-      "dropped": "Green Bay Packers"
-    },
-    {
-      "week": 4,
-      "team": "Raiders of the Lost Title",
-      "player": "Baltimore Ravens",
-      "pos": "DST",
-      "amount": 0.03,
-      "dropped": "New York Giants"
-    },
-    {
-      "week": 4,
-      "team": "Can't stanzus",
-      "player": "Jacoby Brissett",
-      "pos": "QB",
-      "amount": 17.75,
-      "dropped": "C.J. Stroud"
-    },
-    {
-      "week": 5,
-      "team": "Can't stanzus",
-      "player": "Emanuel Wilson",
-      "pos": "RB",
-      "amount": 62.5,
-      "dropped": "TreVeyon Henderson"
-    },
-    {
-      "week": 5,
-      "team": "Raiders of the Lost Title",
-      "player": "Drake Maye",
-      "pos": "QB",
-      "amount": 36.19,
-      "dropped": "Geno Smith"
-    },
-    {
-      "week": 5,
-      "team": "BOSSMAN",
-      "player": "Dallas Goedert",
-      "pos": "TE",
-      "amount": 5.55,
-      "dropped": "Darren Waller"
-    },
-    {
-      "week": 5,
-      "team": "Raiders of the Lost Title",
-      "player": "J.K. Dobbins",
-      "pos": "RB",
-      "amount": 4.23,
-      "dropped": "Jacory Croskey-Merritt"
-    },
-    {
-      "week": 5,
-      "team": "Ceedeez Nutz",
-      "player": "A.J. Brown",
-      "pos": "WR",
-      "amount": 11.28,
-      "dropped": "Jordan Addison"
-    },
-    {
-      "week": 5,
-      "team": "Raiders of the Lost Title",
-      "player": "Tony Pollard",
-      "pos": "RB",
-      "amount": 5.17,
-      "dropped": "Braelon Allen"
-    },
-    {
-      "week": 5,
-      "team": "Can't stanzus",
-      "player": "Cincinnati Bengals",
-      "pos": "DST",
-      "amount": 2.25,
-      "dropped": "Carolina Panthers"
-    },
-    {
-      "week": 5,
-      "team": "Raiders of the Lost Title",
-      "player": "Washington Commanders",
-      "pos": "DST",
-      "amount": 1.03,
-      "dropped": "Baltimore Ravens"
-    },
-    {
-      "week": 6,
-      "team": "Drunk at the Draft",
-      "player": "Hunter Henry",
-      "pos": "TE",
-      "amount": 31.5,
-      "dropped": "Tyler Higbee"
-    },
-    {
-      "week": 6,
-      "team": "BOSSMAN",
-      "player": "Brenton Strange",
-      "pos": "TE",
-      "amount": 21.66,
-      "dropped": "Josh Downs"
-    },
-    {
-      "week": 6,
-      "team": "ELEVE11s",
-      "player": "Marvin Harrison Jr.",
-      "pos": "WR",
-      "amount": 28.1,
-      "dropped": "Jameson Williams"
-    },
-    {
-      "week": 6,
-      "team": "Drunk at the Draft",
-      "player": "Pat Freiermuth",
-      "pos": "TE",
-      "amount": 12.5,
-      "dropped": "Jaylen Waddle"
-    },
-    {
-      "week": 6,
-      "team": "ELEVE11s",
-      "player": "Atlanta Falcons",
-      "pos": "DST",
-      "amount": 10.01,
-      "dropped": "Detroit Lions"
-    },
-    {
-      "week": 6,
-      "team": "Drunk at the Draft",
-      "player": "Carolina Panthers",
-      "pos": "DST",
-      "amount": 5.0,
-      "dropped": "New York Giants"
-    },
-    {
-      "week": 6,
-      "team": "ELEVE11s",
-      "player": "Aaron Rodgers",
-      "pos": "QB",
-      "amount": 15.5,
-      "dropped": "Jalon Daniels"
-    },
-    {
-      "week": 6,
-      "team": "BOSSMAN",
-      "player": "Blake Grupe",
-      "pos": "K",
-      "amount": 7.55,
-      "dropped": "Chad Ryland"
-    },
-    {
-      "week": 6,
-      "team": "Drunk at the Draft",
-      "player": "Ryan Fitzgerald",
-      "pos": "K",
-      "amount": 7.0,
-      "dropped": "Cairo Santos"
-    },
-    {
-      "week": 6,
-      "team": "Raiders of the Lost Title",
-      "player": "Jalen Coker",
-      "pos": "WR",
-      "amount": 38.03,
-      "dropped": "Juwan Johnson"
-    },
-    {
-      "week": 6,
-      "team": "Raiders of the Lost Title",
-      "player": "MarShawn Lloyd",
-      "pos": "RB",
-      "amount": 31.03,
-      "dropped": "Braelon Allen"
-    },
-    {
-      "week": 7,
-      "team": "Drunk at the Draft",
-      "player": "Josh Jacobs",
-      "pos": "RB",
-      "amount": 244.0,
-      "dropped": "Aaron Jones"
-    },
-    {
-      "week": 7,
-      "team": "Raiders of the Lost Title",
-      "player": "J.K. Dobbins",
-      "pos": "RB",
-      "amount": 3.41,
-      "dropped": "MarShawn Lloyd"
-    },
-    {
-      "week": 7,
-      "team": "Ceedeez Nutz",
-      "player": "Chase McLaughlin",
-      "pos": "K",
-      "amount": 11.22,
-      "dropped": "Tyler Bass"
-    },
-    {
-      "week": 7,
-      "team": "Can't stanzus",
-      "player": "Quinshon Judkins",
-      "pos": "RB",
-      "amount": 12.75,
-      "dropped": "Emanuel Wilson"
-    },
-    {
-      "week": 7,
-      "team": "Ceedeez Nutz",
-      "player": "Cairo Santos",
-      "pos": "K",
-      "amount": 1.22,
-      "dropped": "Cam Little"
-    },
-    {
-      "week": 7,
-      "team": "Bitch Mittens",
-      "player": "Jordan Mason",
-      "pos": "RB",
-      "amount": 15.78,
-      "dropped": "Braelon Allen"
-    },
-    {
-      "week": 7,
-      "team": "Raiders of the Lost Title",
-      "player": "Stefon Diggs",
-      "pos": "WR",
-      "amount": 4.17,
-      "dropped": "Davante Adams"
-    },
-    {
-      "week": 7,
-      "team": "Raiders of the Lost Title",
-      "player": "New York Jets",
-      "pos": "DST",
-      "amount": 0.03,
-      "dropped": "Indianapolis Colts"
-    },
-    {
-      "week": 7,
-      "team": "BOSSMAN",
-      "player": "Brandon McManus",
-      "pos": "K",
-      "amount": 6.55,
-      "dropped": "Blake Grupe"
-    },
-    {
-      "week": 7,
-      "team": "BOSSMAN",
-      "player": "Jameson Williams",
-      "pos": "WR",
-      "amount": 16.45,
-      "dropped": "Brenton Strange"
-    },
-    {
-      "week": 7,
-      "team": "Raiders of the Lost Title",
-      "player": "Kyler Murray",
-      "pos": "QB",
-      "amount": 26.04,
-      "dropped": "Jayden Daniels"
-    },
-    {
-      "week": 8,
-      "team": "LONE STARR",
-      "player": "Jayden Daniels",
-      "pos": "QB",
-      "amount": 188.89,
-      "dropped": "Bo Nix"
-    },
-    {
-      "week": 8,
-      "team": "Raiders of the Lost Title",
-      "player": "Rachaad White",
-      "pos": "RB",
-      "amount": 13.51,
-      "dropped": "Aaron Jones"
-    },
-    {
-      "week": 8,
-      "team": "Can't stanzus",
-      "player": "Stefon Diggs",
-      "pos": "WR",
-      "amount": 22.5,
-      "dropped": "Tyler Higbee"
-    },
-    {
-      "week": 8,
-      "team": "Raiders of the Lost Title",
-      "player": "Jacksonville Jaguars",
-      "pos": "DST",
-      "amount": 6.03,
-      "dropped": "Carolina Panthers"
-    },
-    {
-      "week": 8,
-      "team": "BOSSMAN",
-      "player": "Tyler Bass",
-      "pos": "K",
-      "amount": 12.55,
-      "dropped": "Brandon McManus"
-    },
-    {
-      "week": 8,
-      "team": "BOSSMAN",
-      "player": "Chig Okonkwo",
-      "pos": "TE",
-      "amount": 17.55,
-      "dropped": "Demario Douglas"
-    }
-  ]
+ "budget": 300,
+ "note": "Blind bids run by the commissioner (Dave Garvey) outside rtsports every Wednesday (due 8 PM CT, winners posted in the group text by Jennifer Garvey ~8:50 PM, entered on rtsports ~9:30 PM). Bids are to the CENT \u2014 owners bid odd amounts to win ties. rtsports shows no amounts, so winners are recorded here from Jerry's screenshots of the group text. BUY-BACK: once an owner has spent ALL their FAAB, they may buy back in (+$150 buy-in = +$300 FAAB); record it as a negative 'FAAB buy-back' row only after it happens.",
+ "history": [
+  {
+   "week": 2,
+   "team": "Team Huevos",
+   "player": "Dalton Kincaid",
+   "pos": "TE",
+   "amount": 64.48,
+   "dropped": "Greg Dulcich"
+  },
+  {
+   "week": 2,
+   "team": "Ceedeez Nutz",
+   "player": "Bryce Young",
+   "pos": "QB",
+   "amount": 17.11,
+   "dropped": "Kyler Murray"
+  },
+  {
+   "week": 2,
+   "team": "Team Huevos",
+   "player": "Deebo Samuel",
+   "pos": "WR",
+   "amount": 50.99,
+   "dropped": "Denzel Boston"
+  },
+  {
+   "week": 2,
+   "team": "Team Huevos",
+   "player": "T.J. Hockenson",
+   "pos": "TE",
+   "amount": 20.17,
+   "dropped": "Oronde Gadsden II"
+  },
+  {
+   "week": 2,
+   "team": "Bitch Mittens",
+   "player": "Aaron Jones",
+   "pos": "RB",
+   "amount": 27.89,
+   "dropped": "Jordan Mason"
+  },
+  {
+   "week": 2,
+   "team": "LONE STARR",
+   "player": "Chuba Hubbard",
+   "pos": "RB",
+   "amount": 111.11,
+   "dropped": "Jaylen Warren"
+  },
+  {
+   "week": 2,
+   "team": "Two T's Matt",
+   "player": "Kaelon Black",
+   "pos": "RB",
+   "amount": 91.7,
+   "dropped": "TreVeyon Henderson"
+  },
+  {
+   "week": 3,
+   "team": "ELEVE11s",
+   "player": "Stefon Diggs",
+   "pos": "WR",
+   "amount": 23.33,
+   "dropped": "Mikey Giseki"
+  },
+  {
+   "week": 3,
+   "team": "ELEVE11s",
+   "player": "Denzel Boston",
+   "pos": "WR",
+   "amount": 18.2,
+   "dropped": "Terry McLaurin"
+  },
+  {
+   "week": 3,
+   "team": "Ceedeez Nutz",
+   "player": "Las Vegas Raiders",
+   "pos": "DST",
+   "amount": 4.11,
+   "dropped": "New Orleans Saints"
+  },
+  {
+   "week": 3,
+   "team": "Two T's Matt",
+   "player": "Jameis Winston",
+   "pos": "QB",
+   "amount": 11.3,
+   "dropped": "Jaxon Dart"
+  },
+  {
+   "week": 3,
+   "team": "Two T's Matt",
+   "player": "Kyler Murray",
+   "pos": "QB",
+   "amount": 13.4,
+   "dropped": "Jayden Daniels"
+  },
+  {
+   "week": 3,
+   "team": "Raiders of the Lost Title",
+   "player": "Dalton Schultz",
+   "pos": "TE",
+   "amount": 41.37,
+   "dropped": "Dallas Goedert"
+  },
+  {
+   "week": 3,
+   "team": "Raiders of the Lost Title",
+   "player": "Darren Waller",
+   "pos": "TE",
+   "amount": 12.37,
+   "dropped": "Carnell Tate"
+  },
+  {
+   "week": 4,
+   "team": "Two T's Matt",
+   "player": "Kirk Cousins",
+   "pos": "QB",
+   "amount": 8.6,
+   "dropped": "Jameis Winston"
+  },
+  {
+   "week": 4,
+   "team": "BOSSMAN",
+   "player": "Zach Charbonnet",
+   "pos": "RB",
+   "amount": 22.45,
+   "dropped": "Josh Jacobs"
+  },
+  {
+   "week": 4,
+   "team": "Raiders of the Lost Title",
+   "player": "Matthew Golden",
+   "pos": "WR",
+   "amount": 44.37,
+   "dropped": "Dalton Schultz"
+  },
+  {
+   "week": 4,
+   "team": "Bitch Mittens",
+   "player": "Kenyon Sadiq",
+   "pos": "TE",
+   "amount": 36.89,
+   "dropped": "Terrance Ferguson"
+  },
+  {
+   "week": 4,
+   "team": "Two T's Matt",
+   "player": "Ollie Gordon II",
+   "pos": "RB",
+   "amount": 54.1,
+   "dropped": "Kaelon Black"
+  },
+  {
+   "week": 4,
+   "team": "Raiders of the Lost Title",
+   "player": "Geno Smith",
+   "pos": "QB",
+   "amount": 13.37,
+   "dropped": "Daniel Jones"
+  },
+  {
+   "week": 4,
+   "team": "Raiders of the Lost Title",
+   "player": "Braelon Allen",
+   "pos": "RB",
+   "amount": 14.41,
+   "dropped": "J.K. Dobbins"
+  },
+  {
+   "week": 4,
+   "team": "Raiders of the Lost Title",
+   "player": "New York Jets",
+   "pos": "DST",
+   "amount": 0.03,
+   "dropped": "Green Bay Packers"
+  },
+  {
+   "week": 4,
+   "team": "Raiders of the Lost Title",
+   "player": "Baltimore Ravens",
+   "pos": "DST",
+   "amount": 0.03,
+   "dropped": "New York Giants"
+  },
+  {
+   "week": 4,
+   "team": "Can't stanzus",
+   "player": "Jacoby Brissett",
+   "pos": "QB",
+   "amount": 17.75,
+   "dropped": "C.J. Stroud"
+  },
+  {
+   "week": 5,
+   "team": "Can't stanzus",
+   "player": "Emanuel Wilson",
+   "pos": "RB",
+   "amount": 62.5,
+   "dropped": "TreVeyon Henderson"
+  },
+  {
+   "week": 5,
+   "team": "Raiders of the Lost Title",
+   "player": "Drake Maye",
+   "pos": "QB",
+   "amount": 36.19,
+   "dropped": "Geno Smith"
+  },
+  {
+   "week": 5,
+   "team": "BOSSMAN",
+   "player": "Dallas Goedert",
+   "pos": "TE",
+   "amount": 5.55,
+   "dropped": "Darren Waller"
+  },
+  {
+   "week": 5,
+   "team": "Raiders of the Lost Title",
+   "player": "J.K. Dobbins",
+   "pos": "RB",
+   "amount": 4.23,
+   "dropped": "Jacory Croskey-Merritt"
+  },
+  {
+   "week": 5,
+   "team": "Ceedeez Nutz",
+   "player": "A.J. Brown",
+   "pos": "WR",
+   "amount": 11.28,
+   "dropped": "Jordan Addison"
+  },
+  {
+   "week": 5,
+   "team": "Raiders of the Lost Title",
+   "player": "Tony Pollard",
+   "pos": "RB",
+   "amount": 5.17,
+   "dropped": "Braelon Allen"
+  },
+  {
+   "week": 5,
+   "team": "Can't stanzus",
+   "player": "Cincinnati Bengals",
+   "pos": "DST",
+   "amount": 2.25,
+   "dropped": "Carolina Panthers"
+  },
+  {
+   "week": 5,
+   "team": "Raiders of the Lost Title",
+   "player": "Washington Commanders",
+   "pos": "DST",
+   "amount": 1.03,
+   "dropped": "Baltimore Ravens"
+  },
+  {
+   "week": 6,
+   "team": "Drunk at the Draft",
+   "player": "Hunter Henry",
+   "pos": "TE",
+   "amount": 31.5,
+   "dropped": "Tyler Higbee"
+  },
+  {
+   "week": 6,
+   "team": "BOSSMAN",
+   "player": "Brenton Strange",
+   "pos": "TE",
+   "amount": 21.66,
+   "dropped": "Josh Downs"
+  },
+  {
+   "week": 6,
+   "team": "ELEVE11s",
+   "player": "Marvin Harrison Jr.",
+   "pos": "WR",
+   "amount": 28.1,
+   "dropped": "Jameson Williams"
+  },
+  {
+   "week": 6,
+   "team": "Drunk at the Draft",
+   "player": "Pat Freiermuth",
+   "pos": "TE",
+   "amount": 12.5,
+   "dropped": "Jaylen Waddle"
+  },
+  {
+   "week": 6,
+   "team": "ELEVE11s",
+   "player": "Atlanta Falcons",
+   "pos": "DST",
+   "amount": 10.01,
+   "dropped": "Detroit Lions"
+  },
+  {
+   "week": 6,
+   "team": "Drunk at the Draft",
+   "player": "Carolina Panthers",
+   "pos": "DST",
+   "amount": 5.0,
+   "dropped": "New York Giants"
+  },
+  {
+   "week": 6,
+   "team": "ELEVE11s",
+   "player": "Aaron Rodgers",
+   "pos": "QB",
+   "amount": 15.5,
+   "dropped": "Jalon Daniels"
+  },
+  {
+   "week": 6,
+   "team": "BOSSMAN",
+   "player": "Blake Grupe",
+   "pos": "K",
+   "amount": 7.55,
+   "dropped": "Chad Ryland"
+  },
+  {
+   "week": 6,
+   "team": "Drunk at the Draft",
+   "player": "Ryan Fitzgerald",
+   "pos": "K",
+   "amount": 7.0,
+   "dropped": "Cairo Santos"
+  },
+  {
+   "week": 6,
+   "team": "Raiders of the Lost Title",
+   "player": "Jalen Coker",
+   "pos": "WR",
+   "amount": 38.03,
+   "dropped": "Juwan Johnson"
+  },
+  {
+   "week": 6,
+   "team": "Raiders of the Lost Title",
+   "player": "MarShawn Lloyd",
+   "pos": "RB",
+   "amount": 31.03,
+   "dropped": "Braelon Allen"
+  },
+  {
+   "week": 7,
+   "team": "Drunk at the Draft",
+   "player": "Josh Jacobs",
+   "pos": "RB",
+   "amount": 244.0,
+   "dropped": "Aaron Jones"
+  },
+  {
+   "week": 7,
+   "team": "Raiders of the Lost Title",
+   "player": "J.K. Dobbins",
+   "pos": "RB",
+   "amount": 3.41,
+   "dropped": "MarShawn Lloyd"
+  },
+  {
+   "week": 7,
+   "team": "Ceedeez Nutz",
+   "player": "Chase McLaughlin",
+   "pos": "K",
+   "amount": 11.22,
+   "dropped": "Tyler Bass"
+  },
+  {
+   "week": 7,
+   "team": "Can't stanzus",
+   "player": "Quinshon Judkins",
+   "pos": "RB",
+   "amount": 12.75,
+   "dropped": "Emanuel Wilson"
+  },
+  {
+   "week": 7,
+   "team": "Ceedeez Nutz",
+   "player": "Cairo Santos",
+   "pos": "K",
+   "amount": 1.22,
+   "dropped": "Cam Little"
+  },
+  {
+   "week": 7,
+   "team": "Bitch Mittens",
+   "player": "Jordan Mason",
+   "pos": "RB",
+   "amount": 15.78,
+   "dropped": "Braelon Allen"
+  },
+  {
+   "week": 7,
+   "team": "Raiders of the Lost Title",
+   "player": "Stefon Diggs",
+   "pos": "WR",
+   "amount": 4.17,
+   "dropped": "Davante Adams"
+  },
+  {
+   "week": 7,
+   "team": "Raiders of the Lost Title",
+   "player": "New York Jets",
+   "pos": "DST",
+   "amount": 0.03,
+   "dropped": "Indianapolis Colts"
+  },
+  {
+   "week": 7,
+   "team": "BOSSMAN",
+   "player": "Brandon McManus",
+   "pos": "K",
+   "amount": 6.55,
+   "dropped": "Blake Grupe"
+  },
+  {
+   "week": 7,
+   "team": "BOSSMAN",
+   "player": "Jameson Williams",
+   "pos": "WR",
+   "amount": 16.45,
+   "dropped": "Brenton Strange"
+  },
+  {
+   "week": 7,
+   "team": "Raiders of the Lost Title",
+   "player": "Kyler Murray",
+   "pos": "QB",
+   "amount": 26.04,
+   "dropped": "Jayden Daniels"
+  },
+  {
+   "week": 8,
+   "team": "LONE STARR",
+   "player": "Jayden Daniels",
+   "pos": "QB",
+   "amount": 188.89,
+   "dropped": "Bo Nix"
+  },
+  {
+   "week": 8,
+   "team": "Raiders of the Lost Title",
+   "player": "Rachaad White",
+   "pos": "RB",
+   "amount": 13.51,
+   "dropped": "Aaron Jones"
+  },
+  {
+   "week": 8,
+   "team": "Can't stanzus",
+   "player": "Stefon Diggs",
+   "pos": "WR",
+   "amount": 22.5,
+   "dropped": "Tyler Higbee"
+  },
+  {
+   "week": 8,
+   "team": "Raiders of the Lost Title",
+   "player": "Jacksonville Jaguars",
+   "pos": "DST",
+   "amount": 6.03,
+   "dropped": "Carolina Panthers"
+  },
+  {
+   "week": 8,
+   "team": "BOSSMAN",
+   "player": "Tyler Bass",
+   "pos": "K",
+   "amount": 12.55,
+   "dropped": "Brandon McManus"
+  },
+  {
+   "week": 8,
+   "team": "BOSSMAN",
+   "player": "Chig Okonkwo",
+   "pos": "TE",
+   "amount": 17.55,
+   "dropped": "Demario Douglas"
+  },
+  {
+   "week": 9,
+   "team": "Raiders of the Lost Title",
+   "player": "Jason Sanders",
+   "pos": "K",
+   "amount": 5.18,
+   "dropped": "Trey Smack"
+  },
+  {
+   "week": 9,
+   "team": "Raiders of the Lost Title",
+   "player": "FAAB buy-back",
+   "pos": "BUYBACK",
+   "amount": -300,
+   "dropped": "",
+   "note": "+$150 buy-in after spending to $0; balance back to $300 (Jerry, 2026-11-11)"
+  },
+  {
+   "week": 9,
+   "team": "Can't stanzus",
+   "player": "Jonah Coleman",
+   "pos": "RB",
+   "amount": 32,
+   "dropped": "",
+   "note": "per Jerry's memory (~$32), confirm from Jennifer's week-9 screenshot"
+  }
+ ]
 }
