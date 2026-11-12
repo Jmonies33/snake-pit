@@ -507,6 +507,94 @@
    "amount": 32,
    "dropped": "",
    "note": "per Jerry's memory (~$32), confirm from Jennifer's week-9 screenshot"
+  },
+  {
+   "week": 10,
+   "team": "Bitch Mittens",
+   "player": "Jordan Addison",
+   "pos": "WR",
+   "amount": 3.76,
+   "dropped": "Jaylen Waddle"
+  },
+  {
+   "week": 10,
+   "team": "Raiders of the Lost Title",
+   "player": "Jacoby Brissett",
+   "pos": "QB",
+   "amount": 2.02,
+   "dropped": "Carson Wentz"
+  },
+  {
+   "week": 10,
+   "team": "Ceedeez Nutz",
+   "player": "Cam Skattebo",
+   "pos": "RB",
+   "amount": 82.2,
+   "dropped": "Braelon Allen"
+  },
+  {
+   "week": 10,
+   "team": "Ceedeez Nutz",
+   "player": "Chris Boswell",
+   "pos": "K",
+   "amount": 24.96,
+   "dropped": "Cairo Santos"
+  },
+  {
+   "week": 10,
+   "team": "BOSSMAN",
+   "player": "Germie Bernard",
+   "pos": "WR",
+   "amount": 5.46,
+   "dropped": "Malik Washington"
+  },
+  {
+   "week": 10,
+   "team": "Raiders of the Lost Title",
+   "player": "Zach Charbonnet",
+   "pos": "RB",
+   "amount": 27.03,
+   "dropped": "Rachaad White"
+  },
+  {
+   "week": 10,
+   "team": "Can't stanzus",
+   "player": "Fernando Mendoza",
+   "pos": "QB",
+   "amount": 12.75,
+   "dropped": "Malik Willis"
+  },
+  {
+   "week": 10,
+   "team": "Ceedeez Nutz",
+   "player": "A.J. Brown",
+   "pos": "WR",
+   "amount": 42.76,
+   "dropped": "Michael Wilson"
+  },
+  {
+   "week": 10,
+   "team": "Two T's Matt",
+   "player": "DK Metcalf",
+   "pos": "WR",
+   "amount": 16.12,
+   "dropped": "Tre Tucker"
+  },
+  {
+   "week": 10,
+   "team": "Can't stanzus",
+   "player": "Washington Commanders",
+   "pos": "DST",
+   "amount": 5.25,
+   "dropped": "New England Patriots"
+  },
+  {
+   "week": 10,
+   "team": "Two T's Matt",
+   "player": "Baltimore Ravens",
+   "pos": "DST",
+   "amount": 5.11,
+   "dropped": "Detroit Lions"
   }
  ]
 }
