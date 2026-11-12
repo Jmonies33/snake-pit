@@ -39,7 +39,7 @@ AVG ROSTER
 12.8
 Players per team
 AVG PROJ
-148.07
+150.04
 Starting lineup
 Bitch Mittens
 Mat Karr 0-0
@@ -48,9 +48,9 @@ Email
 Trade
 140.08
 PROJ LINEUP
-14
+13
 STARTERS
-0
+1
 BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
@@ -110,13 +110,6 @@ Bye 8
 CAR
 	Starter	-	Sun 12:00pm CT	16.47
 
-WR
-Jaylen Waddle
-DEN
-Bye 10
-bye
-	Starter	-	Bye	--
-
 TE
 George Kittle
 SF
@@ -151,12 +144,19 @@ LAR
 Bye 11
 @ARI
 	Starter	-	Sun 3:05pm CT	5.85
+
+WR
+Jordan Addison
+MIN
+Bye 6
+@GB
+	Bench	-	Sun 12:00pm CT	9.40
 BOSSMAN
 David Garvey 0-0
 Capsule
 Email
 Trade
-162.05
+162.28
 PROJ LINEUP
 14
 STARTERS
@@ -201,10 +201,17 @@ MIA
 
 WR
 Keenan Allen
-IND
-Bye 13
-MIA
-	Starter	-	Sun 12:00pm CT	7.41
+SF
+Bye 8
+@DAL
+	Starter	-	Sun 3:25pm CT	7.41
+
+WR
+Germie Bernard
+PIT
+Bye 9
+@CIN
+	Starter	-	Sun 7:20pm CT	9.81
 
 WR
 Drake London
@@ -212,13 +219,6 @@ ATL
 Bye 11
 KC
 	Starter	-	Sun 12:00pm CT	14.88
-
-WR
-Malik Washington
-MIA
-Bye 6
-@IND
-	Starter	-	Sun 12:00pm CT	9.58
 
 WR
 Jameson Williams
@@ -265,7 +265,7 @@ Can't stanzus
 Andy Midkiff 0-0
 Capsule
 Trade
-161.52
+183.83
 PROJ LINEUP
 14
 STARTERS
@@ -281,11 +281,11 @@ MIN
 	Starter	-	Sun 12:00pm CT	26.46
 
 QB
-Malik Willis
-MIA
-Bye 6
-@IND
-	Starter	IR	Sun 12:00pm CT	0.00
+Fernando Mendoza
+LV
+Bye 13
+SEA
+	Starter	-	Sun 3:05pm CT	21.23
 
 RB
 Jonah Coleman
@@ -365,20 +365,20 @@ PIT
 	Starter	-	Sun 7:20pm CT	5.69
 
 D/ST
-New England Patriots
-NE
-Bye 11
-@DET
-	Starter	-	Sun 8:30am CT	4.79
+Washington Commanders
+WAS
+Bye 7
+@NYG
+	Starter	-	Thu 7:15pm CT	5.87
 Ceedeez Nutz
 Dylan 0-0
 Capsule
 Trade
-161.44
+153.06
 PROJ LINEUP
-14
+11
 STARTERS
-0
+3
 BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
@@ -395,13 +395,6 @@ CAR
 Bye 5
 @NO
 	Starter	-	Sun 12:00pm CT	27.78
-
-RB
-Braelon Allen
-NYJ
-Bye 13
-BUF
-	Starter	-	Sun 12:00pm CT	8.38
 
 RB
 Omarion Hampton
@@ -445,23 +438,9 @@ Bye 7
 @BAL
 	Starter	-	Mon 7:15pm CT	10.23
 
-WR
-Michael Wilson
-ARI
-Bye 14
-LAR
-	Starter	IR	Sun 3:05pm CT	0.00
-
 K
 Chase McLaughlin
 TB
-Bye 10
-bye
-	Starter	-	Bye	--
-
-K
-Cairo Santos
-CHI
 Bye 10
 bye
 	Starter	-	Bye	--
@@ -479,6 +458,27 @@ HOU
 Bye 8
 @CLE
 	Starter	-	Sun 12:00pm CT	6.94
+
+RB
+Cam Skattebo
+NYG
+Bye 8
+WAS
+	Bench	P	Thu 7:15pm CT	13.12
+
+WR
+A.J. Brown
+NE
+Bye 11
+@DET
+	Bench	Q	Sun 8:30am CT	10.87
+
+K
+Chris Boswell
+PIT
+Bye 9
+@CIN
+	Bench	-	Sun 7:20pm CT	8.23
 Drunk at the Draft
 jason twede 0-0
 Capsule
@@ -936,7 +936,7 @@ Add/Drop
 Capsule
 Email
 Trade
-171.57
+195.05
 PROJ LINEUP
 14
 STARTERS
@@ -945,18 +945,25 @@ BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
 QB
+Jacoby Brissett
+BAL
+Bye 13
+LAC
+	Starter	-	Mon 7:15pm CT	20.80
+
+QB
 Drake Maye
 NE
 Bye 11
 @DET
 	Starter	-	Sun 8:30am CT	33.59
 
-QB
-Carson Wentz
-MIN
-Bye 6
-@GB
-	Starter	-	Sun 12:00pm CT	0.00
+RB
+Zach Charbonnet
+SEA
+Bye 11
+@LV
+	Starter	-	Sun 3:05pm CT	13.78
 
 RB
 Tony Pollard
@@ -964,13 +971,6 @@ TEN
 Bye 9
 JAX
 	Starter	-	Sun 12:00pm CT	13.06
-
-RB
-Rachaad White
-WAS
-Bye 7
-@NYG
-	Starter	-	Thu 7:15pm CT	11.10
 
 RB
 Javonte Williams
@@ -1155,11 +1155,11 @@ Two T's Matt
 Matt Silva 0-0
 Capsule
 Trade
-171.73
+157.80
 PROJ LINEUP
-14
+12
 STARTERS
-0
+2
 BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
@@ -1197,13 +1197,6 @@ PIT
 Bye 9
 @CIN
 	Starter	-	Sun 7:20pm CT	17.64
-
-WR
-Tre Tucker
-LV
-Bye 13
-SEA
-	Starter	-	Sun 3:05pm CT	8.57
 
 WR
 Garrett Wilson
@@ -1248,15 +1241,22 @@ HOU
 	Starter	-	Sun 12:00pm CT	7.33
 
 D/ST
-Detroit Lions
-DET
-Bye 6
-NE
-	Starter	-	Sun 8:30am CT	5.36
-
-D/ST
 New Orleans Saints
 NO
 Bye 8
 CAR
 	Starter	-	Sun 12:00pm CT	5.42
+
+WR
+D.K. Metcalf
+PIT
+Bye 9
+@CIN
+	Bench	-	Sun 7:20pm CT	11.91
+
+D/ST
+Baltimore Ravens
+BAL
+Bye 13
+LAC
+	Bench	-	Mon 7:15pm CT	6.38

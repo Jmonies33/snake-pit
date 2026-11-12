@@ -69,14 +69,6 @@
 "wk1": 16.47
 },
 {
-"pos": "WR",
-"name": "Jaylen Waddle",
-"team": "DEN",
-"bye": 10,
-"inj": "",
-"wk1": null
-},
-{
 "pos": "TE",
 "name": "George Kittle",
 "team": "SF",
@@ -115,6 +107,14 @@
 "bye": 11,
 "inj": "",
 "wk1": 5.85
+},
+{
+"pos": "WR",
+"name": "Jordan Addison",
+"team": "MIN",
+"bye": 6,
+"inj": "",
+"wk1": 9.4
 }
 ]
 },
@@ -165,10 +165,18 @@
 {
 "pos": "WR",
 "name": "Keenan Allen",
-"team": "IND",
-"bye": 13,
+"team": "SF",
+"bye": 8,
 "inj": "",
 "wk1": 7.41
+},
+{
+"pos": "WR",
+"name": "Germie Bernard",
+"team": "PIT",
+"bye": 9,
+"inj": "",
+"wk1": 9.81
 },
 {
 "pos": "WR",
@@ -177,14 +185,6 @@
 "bye": 11,
 "inj": "",
 "wk1": 14.88
-},
-{
-"pos": "WR",
-"name": "Malik Washington",
-"team": "MIA",
-"bye": 6,
-"inj": "",
-"wk1": 9.58
 },
 {
 "pos": "WR",
@@ -250,11 +250,11 @@
 },
 {
 "pos": "QB",
-"name": "Malik Willis",
-"team": "MIA",
-"bye": 6,
-"inj": "IR",
-"wk1": 0.0
+"name": "Fernando Mendoza",
+"team": "LV",
+"bye": 13,
+"inj": "",
+"wk1": 21.23
 },
 {
 "pos": "RB",
@@ -346,11 +346,11 @@
 },
 {
 "pos": "DST",
-"name": "New England Patriots",
-"team": "NE",
-"bye": 11,
+"name": "Washington Commanders",
+"team": "WAS",
+"bye": 7,
 "inj": "",
-"wk1": 4.79
+"wk1": 5.87
 }
 ]
 },
@@ -373,14 +373,6 @@
 "bye": 5,
 "inj": "",
 "wk1": 27.78
-},
-{
-"pos": "RB",
-"name": "Braelon Allen",
-"team": "NYJ",
-"bye": 13,
-"inj": "",
-"wk1": 8.38
 },
 {
 "pos": "RB",
@@ -431,25 +423,9 @@
 "wk1": 10.23
 },
 {
-"pos": "WR",
-"name": "Michael Wilson",
-"team": "ARI",
-"bye": 14,
-"inj": "IR",
-"wk1": 0.0
-},
-{
 "pos": "K",
 "name": "Chase McLaughlin",
 "team": "TB",
-"bye": 10,
-"inj": "",
-"wk1": null
-},
-{
-"pos": "K",
-"name": "Cairo Santos",
-"team": "CHI",
 "bye": 10,
 "inj": "",
 "wk1": null
@@ -469,6 +445,30 @@
 "bye": 8,
 "inj": "",
 "wk1": 6.94
+},
+{
+"pos": "RB",
+"name": "Cam Skattebo",
+"team": "NYG",
+"bye": 8,
+"inj": "P",
+"wk1": 13.12
+},
+{
+"pos": "WR",
+"name": "A.J. Brown",
+"team": "NE",
+"bye": 11,
+"inj": "Q",
+"wk1": 10.87
+},
+{
+"pos": "K",
+"name": "Chris Boswell",
+"team": "PIT",
+"bye": 9,
+"inj": "",
+"wk1": 8.23
 }
 ]
 },
@@ -950,6 +950,14 @@
 "players": [
 {
 "pos": "QB",
+"name": "Jacoby Brissett",
+"team": "BAL",
+"bye": 13,
+"inj": "",
+"wk1": 20.8
+},
+{
+"pos": "QB",
 "name": "Drake Maye",
 "team": "NE",
 "bye": 11,
@@ -957,12 +965,12 @@
 "wk1": 33.59
 },
 {
-"pos": "QB",
-"name": "Carson Wentz",
-"team": "MIN",
-"bye": 6,
+"pos": "RB",
+"name": "Zach Charbonnet",
+"team": "SEA",
+"bye": 11,
 "inj": "",
-"wk1": 0.0
+"wk1": 13.78
 },
 {
 "pos": "RB",
@@ -971,14 +979,6 @@
 "bye": 9,
 "inj": "",
 "wk1": 13.06
-},
-{
-"pos": "RB",
-"name": "Rachaad White",
-"team": "WAS",
-"bye": 7,
-"inj": "",
-"wk1": 11.1
 },
 {
 "pos": "RB",
@@ -1226,14 +1226,6 @@
 },
 {
 "pos": "WR",
-"name": "Tre Tucker",
-"team": "LV",
-"bye": 13,
-"inj": "",
-"wk1": 8.57
-},
-{
-"pos": "WR",
 "name": "Garrett Wilson",
 "team": "NYJ",
 "bye": 13,
@@ -1282,19 +1274,27 @@
 },
 {
 "pos": "DST",
-"name": "Detroit Lions",
-"team": "DET",
-"bye": 6,
-"inj": "",
-"wk1": 5.36
-},
-{
-"pos": "DST",
 "name": "New Orleans Saints",
 "team": "NO",
 "bye": 8,
 "inj": "",
 "wk1": 5.42
+},
+{
+"pos": "WR",
+"name": "D.K. Metcalf",
+"team": "PIT",
+"bye": 9,
+"inj": "",
+"wk1": 11.91
+},
+{
+"pos": "DST",
+"name": "Baltimore Ravens",
+"team": "BAL",
+"bye": 13,
+"inj": "",
+"wk1": 6.38
 }
 ]
 }
