@@ -945,9 +945,9 @@ Email
 Trade
 176.80
 PROJ LINEUP
-14
+13
 STARTERS
-0
+1
 BENCH
 PLAYER	STATUS	INJ	GAME	PROJ
 
@@ -957,13 +957,6 @@ NE
 Bye 11
 @DET
 	Starter	-	Sun 8:30am CT	33.49
-
-QB
-Bo Nix
-DEN
-Bye 10
-bye
-	Starter	-	Bye	--
 
 RB
 Zach Charbonnet
@@ -1048,6 +1041,13 @@ JAX
 Bye 7
 @TEN
 	Starter	-	Sun 12:00pm CT	6.53
+
+QB
+Jacoby Brissett
+BAL
+Bye 13
+LAC
+	Bench	-	Mon 7:15pm CT	20.80
 TEAM NATRON
 jon karr 0-0
 Capsule

@@ -965,14 +965,6 @@
 "wk1": 33.49
 },
 {
-"pos": "QB",
-"name": "Bo Nix",
-"team": "DEN",
-"bye": 10,
-"inj": "",
-"wk1": null
-},
-{
 "pos": "RB",
 "name": "Zach Charbonnet",
 "team": "SEA",
@@ -1067,6 +1059,14 @@
 "bye": 7,
 "inj": "",
 "wk1": 6.53
+},
+{
+"pos": "QB",
+"name": "Jacoby Brissett",
+"team": "BAL",
+"bye": 13,
+"inj": "",
+"wk1": 20.8
 }
 ]
 },
