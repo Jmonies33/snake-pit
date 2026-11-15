@@ -21,6 +21,8 @@ h2{font-size:30px;margin:8px 0 4px}h3{font-size:20px;margin:26px 0 10px;color:va
 .card .yr{font-family:Georgia,serif;font-size:28px;color:var(--gold);line-height:1}
 .card .who{font-size:19px;font-weight:600;margin-top:6px}.card .tn{color:var(--mute);font-size:14px;overflow-wrap:anywhere}
 .shame .yr{color:var(--red)}
+.lg{width:54px;height:54px;border-radius:10px;object-fit:cover;background:#0d130f;border:1px solid var(--line);flex:none}.lg.s{width:26px;height:26px;border-radius:6px;vertical-align:middle;margin-right:8px}.lg.x{visibility:hidden}.cardrow{display:flex;gap:12px;align-items:center}.cardrow>div{min-width:0}
+.tr{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:640px){.tr{grid-template-columns:1fr}}.tr h4{margin:0 0 6px;font-size:15px}.tr ul{margin:0;padding-left:18px;font-size:14px}.tag{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:var(--mute);margin-left:8px}.tag.au{border-color:var(--gold)}
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
 table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
 th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
@@ -43,6 +45,7 @@ ol.rec{margin:0;padding-left:22px}ol.rec li{margin:4px 0}
 <script>
 const D = window.SNAKES, ST = window.STORIES || {seasons:{},punishments:{},lore:[]};
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const lg = (t, c) => t && t.logo ? `<img class="lg ${c || ''}" src="${esc(t.logo)}" alt="" loading="lazy">` : (c ? '' : '<span class="lg x"></span>');
 const on = k => esc(D.owners[k] ? D.owners[k].name : '—');
 const f1 = n => n.toFixed(1), pct = (w, l, t) => (w + l + t) ? ((w + t / 2) / (w + l + t)) : 0, p3 = x => x.toFixed(3).replace(/^0/, '');
 const done = D.seasons.filter(s => s.done), keys = Object.keys(D.owners);
@@ -69,7 +72,7 @@ const V = {};
 V.home = () => {
   const tc = Object.values(C).filter(c => c.titles.length).sort((a, b) => b.titles.length - a.titles.length || a.titles[0] - b.titles[0]);
   return `<h2>Ring of Honor</h2><p class="sub">Every champion since ${D.est}.</p><div class="grid">${done.slice().reverse().map(s => { const c = champ(s);
-    return `<a class="card" href="#season/${s.y}" style="text-decoration:none"><div class="yr">${s.y}</div><div class="who">${on(c.o)}</div><div class="tn">${esc(c.name)} · ${c.w}-${c.l}</div></a>`; }).join('')}</div>
+    return `<a class="card" href="#season/${s.y}" style="text-decoration:none"><div class="cardrow">${lg(c)}<div><div class="yr">${s.y}</div><div class="who">${on(c.o)}</div><div class="tn">${esc(c.name)} · ${c.w}-${c.l}</div></div></div></a>`; }).join('')}</div>
   <h3>Titles</h3>${table([['Owner', 1], 'Titles', ['Years', 1]], tc.map(c => [L(on(c.k)), `<b class="au">${c.titles.length}</b>`, L(c.titles.join(', '))]))}`;
 };
 V.season = (y) => {
@@ -80,13 +83,13 @@ V.season = (y) => {
   return `<div class="row"><h2>Season</h2><select onchange="location.hash='season/'+this.value">${D.seasons.slice().reverse().map(x => `<option${x.y === y ? ' selected' : ''}>${x.y}</option>`).join('')}</select></div>
   ${s.done ? `<div class="stat"><div><span>Champion</span><b class="au">${on(c.o)}</b></div><div><span>Title game</span>${fin ? `${on(fin.as > fin.bs ? fin.a : fin.b)} ${f1(Math.max(fin.as, fin.bs))} – ${f1(Math.min(fin.as, fin.bs))} ${on(fin.as > fin.bs ? fin.b : fin.a)}` : '—'}</div><div><span>Most points</span>${on(top.o)} (${f1(top.pf)})</div><div><span>Last place</span><b class="r">${on(l.o)}</b></div></div>` : `<p class="sub">Season in progress.</p>`}
   ${story ? `<div class="story">${esc(story)}</div>` : `<div class="empty">The story of ${y} hasn't been written yet.</div>`}
-  ${table(['#', ['Owner', 1], ['Team', 1], 'W-L', 'PF', 'PA'], ord.map((t, i) => [s.done ? t.rank : i + 1, L(on(t.o)), L(esc(t.name)), `${t.w}-${t.l}${t.t ? '-' + t.t : ''}`, f1(t.pf), f1(t.pa)]))}`;
+  ${table(['#', ['Owner', 1], ['Team', 1], 'W-L', 'PF', 'PA'], ord.map((t, i) => [s.done ? t.rank : i + 1, L(on(t.o)), L(lg(t, 's') + esc(t.name)), `${t.w}-${t.l}${t.t ? '-' + t.t : ''}`, f1(t.pf), f1(t.pa)]))}`;
 };
 V.shame = () => {
   const sc = Object.values(C).filter(c => c.lasts.length).sort((a, b) => b.lasts.length - a.lasts.length);
   const never = Object.values(C).filter(c => !c.lasts.length && c.seasons >= 5).map(c => on(c.k));
   return `<h2>Wall of Shame</h2><p class="sub">Last place, every year.</p><div class="grid">${done.slice().reverse().map(s => { const l = last(s), p = ST.punishments && ST.punishments[s.y];
-    return `<div class="card shame"><div class="yr">${s.y}</div><div class="who">${on(l.o)}</div><div class="tn">${esc(l.name)} · ${l.w}-${l.l}</div>${p ? `<div class="story">${esc(p.text || '')}</div>${p.photo ? `<img class="ph" src="photos/${esc(p.photo)}" alt="">` : ''}` : ''}</div>`; }).join('')}</div>
+    return `<div class="card shame"><div class="cardrow">${lg(l)}<div><div class="yr">${s.y}</div><div class="who">${on(l.o)}</div><div class="tn">${esc(l.name)} · ${l.w}-${l.l}</div></div></div>${p ? `<div class="story">${esc(p.text || '')}</div>${p.photo ? `<img class="ph" src="photos/${esc(p.photo)}" alt="">` : ''}` : ''}</div>`; }).join('')}</div>
   <h3>Repeat offenders</h3>${table([['Owner', 1], 'Last places', ['Years', 1]], sc.map(c => [L(on(c.k)), `<b class="r">${c.lasts.length}</b>`, L(c.lasts.join(', '))]))}
   <p class="sub" style="margin-top:14px">Never finished last (5+ seasons): ${never.join(', ') || 'nobody'}.</p>`;
 };
@@ -155,14 +158,30 @@ V.draft = (y) => {
   <h3>Every first overall pick</h3>${table(['Year', ['Owner', 1], ['Player', 1], ['How it ended', 1]], ys.slice().reverse().map(yy => { const p = D.drafts[yy][0], s = D.seasons.find(x => x.y === yy), t = s.teams.find(x => x.o === p.o); return [yy, L(on(p.o)), L(esc(p.p)), L(s.done && t ? (t.rank === 1 ? '<b class="au">Champion</b>' : 'Finished ' + t.rank) : '<span class="m">in progress</span>')]; }))}
   <h3>Can't quit him</h3><p class="sub">The player each owner has drafted the most times.</p>${table([['Owner', 1], ['Player', 1], 'Times', ['Years', 1]], fav.map(f => [L(on(f.k)), L(esc(f.p)), f.ys.length, L(f.ys.join(', '))]))}`;
 };
+V.trades = () => {
+  const fin = (y, o) => { const s = D.seasons.find(x => x.y === y), t = s.teams.find(x => x.o === o); return s.done && t ? t.rank : 0; };
+  const sum = (L, f) => L.reduce((a, i) => a + (i[f] || 0), 0);
+  const side = (t, o, got) => { const r = fin(t.y, o); return `<div><h4>${on(o)} got ${r === 1 ? '<span class="tag au">won the title</span>' : r ? `<span class="tag">finished ${r}</span>` : ''}</h4><ul>${got.map(i => `<li><b>${esc(i.n)}</b>${i.started !== undefined ? ` <span class="m">— ${f1(i.started)} pts in ${i.starts} start${i.starts === 1 ? '' : 's'}${i.playoff ? `, ${f1(i.playoff)} in the playoffs` : ''}</span>` : ` <span class="m">— drafted round ${i.rd}</span>`}</li>`).join('')}</ul></div>`; };
+  const card = t => { const key = Object.keys(ST.trades || {}).find(k => k.startsWith(t.y + ' ') && [...t.ag, ...t.bg].some(i => k.includes(i.n))); const story = key && ST.trades[key];
+    return `<div class="card" style="margin-bottom:12px"><div class="m" style="font-size:13px;margin-bottom:8px">${t.y}${t.wk ? ' · before week ' + t.wk : ''}${t.wk && !t.ok ? ' · not in ESPN\'s trade log' : ''}</div><div class="tr">${side(t, t.a, t.ag)}${side(t, t.b, t.bg)}</div>${story ? `<div class="story">${esc(story)}</div>` : ''}</div>`; };
+  const sure = D.trades.filter(t => t.wk), old = D.trades.filter(t => !t.wk);
+  const champ = sure.filter(t => (fin(t.y, t.a) === 1 && sum(t.ag, 'started') >= 20) || (fin(t.y, t.b) === 1 && sum(t.bg, 'started') >= 20)).sort((x, y) => { const v = t => fin(t.y, t.a) === 1 ? sum(t.ag, 'started') : sum(t.bg, 'started'); return v(y) - v(x); });
+  const gap = t => Math.abs(sum(t.ag, 'started') - sum(t.bg, 'started'));
+  const lop = sure.filter(t => !champ.includes(t) && D.seasons.find(s => s.y === t.y).done).sort((x, y) => gap(y) - gap(x));
+  return `<h2>Trades</h2><p class="sub">Points are what each player scored in the new owner's starting lineup after the deal.</p>
+  <h3>Trades that helped win a title</h3>${champ.map(card).join('') || '<div class="empty">None found.</div>'}
+  <h3>Every other trade, most lopsided first</h3><p class="sub">${D.trades.filter(t => t.wk).length} trades since 2018, rebuilt from weekly rosters.</p>${lop.map(card).join('')}
+  ${sure.filter(t => !D.seasons.find(s => s.y === t.y).done).length ? `<h3>This season</h3>${sure.filter(t => !D.seasons.find(s => s.y === t.y).done).map(card).join('')}` : ''}
+  <h3>2011–2017: probably trades</h3><p class="sub">ESPN kept no trade log for these years. These are players who were drafted by one owner and finished the season on another's roster, in both directions. Some may have been drops and pickups.</p>${old.slice().sort((a, b) => b.y - a.y).map(card).join('')}`;
+};
 V.owners = () => `<h2>Owners</h2><p class="sub">Everyone who has ever held a team, and every name they have played under.</p><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(310px,1fr))">${Object.values(C).sort((a, b) => b.seasons - a.seasons || b.titles.length - a.titles.length).map(c => {
-    const names = []; D.seasons.forEach(s => { const t = s.teams.find(x => x.o === c.k); if (t && (!names.length || names[names.length - 1][0] !== t.name)) names.push([t.name, s.y]); });
+    const names = []; D.seasons.forEach(s => { const t = s.teams.find(x => x.o === c.k); if (t && (!names.length || names[names.length - 1][0] !== t.name || (t.logo && names[names.length - 1][2].logo !== t.logo))) names.push([t.name, s.y, t]); });
     const fin = done.map(s => s.teams.find(x => x.o === c.k)).filter(Boolean).map(t => t.rank), ys = D.owners[c.k].seasons;
     return `<div class="card"><div class="who">${on(c.k)} ${c.titles.map(() => '<span class="au">★</span>').join('')}</div><div class="tn">${ys[0]}–${ys[ys.length - 1] === D.seasons[D.seasons.length - 1].y ? 'now' : ys[ys.length - 1]} · ${c.w}-${c.l} · ${fin.length ? 'best finish ' + Math.min(...fin) + ', worst ' + Math.max(...fin) : 'first season'}</div>
-    <div style="margin-top:8px;font-size:14px">${names.map(n => `<div><span class="m">${n[1]}</span> ${esc(n[0])}</div>`).join('')}</div></div>`; }).join('')}</div>`;
+    <div style="margin-top:8px;font-size:14px">${names.map(n => `<div style="margin:3px 0">${lg(n[2], 's')}<span class="m">${n[1]}</span> ${esc(n[0])}</div>`).join('')}</div></div>`; }).join('')}</div>`;
 V.lore = () => `<h2>Lore</h2><p class="sub">The stories the numbers can't tell.</p>${(ST.lore || []).length ? ST.lore.map(s => `<div class="card" style="margin-bottom:12px"><div class="who">${esc(s.title)} ${s.year ? `<span class="m">· ${esc(s.year)}</span>` : ''}</div><div class="story">${esc(s.body)}</div>${s.photo ? `<img class="ph" src="photos/${esc(s.photo)}" alt="">` : ''}</div>`).join('') : `<div class="empty">Nothing here yet. This page is waiting on the league: the origin story, the worst trade, the draft-day disasters, the punishments, the photos.</div>`}`;
 
-const TABS = [['home', 'Champions'], ['season', 'Seasons'], ['shame', 'Wall of Shame'], ['alltime', 'All-Time'], ['rivals', 'Rivalries'], ['records', 'Record Book'], ['luck', 'Luck'], ['draft', 'Draft Vault'], ['owners', 'Owners'], ['lore', 'Lore']];
+const TABS = [['home', 'Champions'], ['season', 'Seasons'], ['shame', 'Wall of Shame'], ['alltime', 'All-Time'], ['rivals', 'Rivalries'], ['records', 'Record Book'], ['luck', 'Luck'], ['trades', 'Trades'], ['draft', 'Draft Vault'], ['owners', 'Owners'], ['lore', 'Lore']];
 document.getElementById('tag').textContent = `Est. ${D.est} · ${D.seasons.length} seasons · ${keys.length} owners · ${real.length} games`;
 function go() { const [v, ...a] = (location.hash.slice(1) || 'home').split('/'); const view = V[v] ? v : 'home';
   document.getElementById('nav').innerHTML = TABS.map(t => `<a href="#${t[0]}" class="${t[0] === view ? 'on' : ''}">${t[1]}</a>`).join('');

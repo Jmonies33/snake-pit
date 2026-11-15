@@ -7,6 +7,10 @@ window.STORIES = {
   punishments: {
     // 2025: { text: "What the last-place finisher had to do.", photo: "2025-punishment.jpg" },
   },
+  // key = year + a player in the deal
+  trades: {
+    "2019 Michael Thomas": "Jerry: \"When Joey traded me Michael Thomas, he pretty much won me the league.\"",
+  },
   lore: [
     // { title: "The trade that broke the league", year: 2016, body: "…", photo: "" },
   ],
