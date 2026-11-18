@@ -39,14 +39,14 @@ AVG ROSTER
 12.9
 Players per team
 AVG PROJ
-141.15
+141.29
 Starting lineup
 Bitch Mittens
 Mat Karr 0-0
 Capsule
 Email
 Trade
-108.52
+108.55
 PROJ LINEUP
 14
 STARTERS
@@ -129,7 +129,7 @@ Ka'imi Fairbairn
 HOU
 Bye 8
 IND
-	Starter	-	Thu 7:15pm CT	9.69
+	Starter	-	Thu 7:15pm CT	9.72
 
 K
 Jason Myers
@@ -265,7 +265,7 @@ Can't stanzus
 Andy Midkiff 0-0
 Capsule
 Trade
-155.91
+155.65
 PROJ LINEUP
 14
 STARTERS
@@ -285,7 +285,7 @@ Fernando Mendoza
 LV
 Bye 13
 @DEN
-	Starter	-	Sun 3:25pm CT	22.98
+	Starter	-	Sun 3:25pm CT	22.80
 
 RB
 Jonah Coleman
@@ -320,7 +320,7 @@ Jordyn Tyson
 NO
 Bye 8
 @CHI
-	Starter	-	Sun 12:00pm CT	11.00
+	Starter	-	Sun 12:00pm CT	10.96
 
 WR
 Parker Washington
@@ -355,7 +355,7 @@ Spencer Shrader
 IND
 Bye 13
 @HOU
-	Starter	-	Thu 7:15pm CT	7.85
+	Starter	-	Thu 7:15pm CT	7.81
 
 D/ST
 Cincinnati Bengals
@@ -721,7 +721,7 @@ Anthony Ovalle 0-0
 Capsule
 Email
 Trade
-146.71
+147.36
 PROJ LINEUP
 14
 STARTERS
@@ -734,7 +734,7 @@ Jayden Daniels
 WAS
 Bye 7
 CIN
-	Starter	-	Mon 7:15pm CT	29.02
+	Starter	-	Mon 7:15pm CT	29.41
 
 QB
 J.J. McCarthy
@@ -755,7 +755,7 @@ Chuba Hubbard
 CAR
 Bye 5
 BAL
-	Starter	-	Sun 12:00pm CT	17.16
+	Starter	-	Sun 12:00pm CT	17.34
 
 RB
 Quinshon Judkins
@@ -769,7 +769,7 @@ Rashee Rice
 KC
 Bye 5
 ARI
-	Starter	-	Sun 12:00pm CT	13.54
+	Starter	-	Sun 12:00pm CT	13.57
 
 WR
 Jaxon Smith-Njigba
@@ -790,7 +790,7 @@ Isaiah Likely
 NYG
 Bye 8
 JAX
-	Starter	-	Sun 3:25pm CT	15.46
+	Starter	-	Sun 3:25pm CT	15.50
 
 TE
 Kyle Pitts
@@ -831,7 +831,7 @@ Damien Gallardo 0-0
 Capsule
 Email
 Trade
-140.10
+140.29
 PROJ LINEUP
 14
 STARTERS
@@ -900,7 +900,7 @@ T.J. Hockenson
 MIN
 Bye 6
 @SF
-	Starter	Q	Sun 7:20pm CT	12.31
+	Starter	Q	Sun 7:20pm CT	12.36
 
 TE
 Dalton Kincaid
@@ -935,7 +935,7 @@ Tennessee Titans
 TEN
 Bye 9
 @DAL
-	Starter	-	Sun 12:00pm CT	4.00
+	Starter	-	Sun 12:00pm CT	4.15
 Raiders of the Lost Title
 Jerry Asencio 0-0
 Lineup
@@ -943,7 +943,7 @@ Add/Drop
 Capsule
 Email
 Trade
-144.20
+144.17
 PROJ LINEUP
 14
 STARTERS
@@ -1005,7 +1005,7 @@ Justin Jefferson
 MIN
 Bye 6
 @SF
-	Starter	-	Sun 7:20pm CT	17.76
+	Starter	-	Sun 7:20pm CT	17.73
 
 WR
 Amon-Ra St. Brown
@@ -1053,7 +1053,7 @@ jon karr 0-0
 Capsule
 Email
 Trade
-188.70
+189.82
 PROJ LINEUP
 14
 STARTERS
@@ -1073,7 +1073,7 @@ Patrick Mahomes
 KC
 Bye 5
 ARI
-	Starter	-	Sun 12:00pm CT	32.83
+	Starter	-	Sun 12:00pm CT	32.98
 
 RB
 Jahmyr Gibbs
@@ -1108,7 +1108,7 @@ Tee Higgins
 CIN
 Bye 6
 @WAS
-	Starter	-	Mon 7:15pm CT	15.91
+	Starter	-	Mon 7:15pm CT	16.91
 
 WR
 Tetairoa McMillan
@@ -1136,14 +1136,14 @@ Harrison Butker
 KC
 Bye 5
 ARI
-	Starter	-	Sun 12:00pm CT	8.22
+	Starter	-	Sun 12:00pm CT	8.10
 
 K
 Evan McPherson
 CIN
 Bye 6
 @WAS
-	Starter	-	Mon 7:15pm CT	7.65
+	Starter	-	Mon 7:15pm CT	7.74
 
 D/ST
 Los Angeles Chargers
