@@ -597,6 +597,60 @@
    "dropped": "Detroit Lions"
   },
   {
+   "week": 9,
+   "team": "ELEVE11s",
+   "player": "Unlogged bids (reconciliation)",
+   "pos": "ADJ",
+   "amount": 55.1,
+   "dropped": "",
+   "note": "Reconciled to Jennifer's official budget list of 2026-11-18 3:12 PM; covers week-9 bids never logged (no screenshot)"
+  },
+  {
+   "week": 9,
+   "team": "BOSSMAN",
+   "player": "Unlogged bids (reconciliation)",
+   "pos": "ADJ",
+   "amount": 3.55,
+   "dropped": "",
+   "note": "Reconciled to Jennifer's official budget list of 2026-11-18 3:12 PM; covers week-9 bids never logged (no screenshot)"
+  },
+  {
+   "week": 9,
+   "team": "Ceedeez Nutz",
+   "player": "Unlogged bids (reconciliation)",
+   "pos": "ADJ",
+   "amount": 72.99,
+   "dropped": "",
+   "note": "Reconciled to Jennifer's official budget list of 2026-11-18 3:12 PM; covers week-9 bids never logged (no screenshot)"
+  },
+  {
+   "week": 9,
+   "team": "Bitch Mittens",
+   "player": "Unlogged bids (reconciliation)",
+   "pos": "ADJ",
+   "amount": 47.89,
+   "dropped": "",
+   "note": "Reconciled to Jennifer's official budget list of 2026-11-18 3:12 PM; covers week-9 bids never logged (no screenshot)"
+  },
+  {
+   "week": 9,
+   "team": "Can't stanzus",
+   "player": "Unlogged bids (reconciliation)",
+   "pos": "ADJ",
+   "amount": 26.25,
+   "dropped": "",
+   "note": "Reconciled to Jennifer's official budget list of 2026-11-18 3:12 PM; covers week-9 bids never logged (no screenshot)"
+  },
+  {
+   "week": 10,
+   "team": "Drunk at the Draft",
+   "player": "FAAB buy-back",
+   "pos": "BUYBACK",
+   "amount": -300,
+   "dropped": "",
+   "note": "Jennifer's 2026-11-18 budget list shows Jason Twede at $300.00, so he bought back after spending to $0"
+  },
+  {
    "week": 11,
    "team": "Bitch Mittens",
    "player": "Chase McLaughlin",
