@@ -11,9 +11,9 @@
 15111	Stefon Diggs	WAS	WR
 17372	Jaylen Waddle	DEN	WR
 19480	Jalon Daniels	TB	QB
+16178	Baker Mayfield	TB	QB
 16226	Dallas Goedert	PHI	TE
 18623	Rome Odunze	CHI	WR
-16178	Baker Mayfield	TB	QB
 18163	Jordan Mason	MIN	RB
 19122	Emeka Egbuka	TB	WR
 18344	Brenton Strange	JAX	TE
@@ -34,11 +34,11 @@
 15464	Laquon Treadwell	IND	WR
 15284	Darren Waller	CAR	TE
 19547	Antonio Williams	WAS	WR
-19145	Mason Taylor	NYJ	TE
 18272	Michael Mayer	LV	TE
+19145	Mason Taylor	NYJ	TE
 17932	Cade Otton	TB	TE
-18651	Malik Washington	MIA	WR
 17480	Tommy Tremble	CAR	TE
+18651	Malik Washington	MIA	WR
 19143	Gunnar Helm	TEN	TE
 18205	Cameron Dicker	LAC	K
 18670	Brevyn Spann-Ford	DAL	TE
@@ -91,16 +91,16 @@
 64	Carolina Panthers	CAR	Defense/Sp Team
 16624	Dawson Knox	BUF	TE
 94	Detroit Lions	DET	Defense/Sp Team
-18589	Spencer Rattler	NO	QB
 15868	David Njoku	LAC	TE
+18589	Spencer Rattler	NO	QB
 19566	Reggie Virgil	ARI	WR
 18241	Tyjae Spears	TEN	RB
 18269	Elijah Higgins	ARI	TE
 16566	Justice Hill	BAL	RB
 18600	Audric Estime	NO	RB
 17546	Noah Gray	KC	TE
-17398	Charlie Kolar	LAC	TE
 18095	Jalen Nailor	LV	WR
+17398	Charlie Kolar	LAC	TE
 16569	Devin Singletary	NYG	RB
 19604	Nate Boerkircher	JAX	TE
 154	Philadelphia Eagles	PHI	Defense/Sp Team
@@ -116,16 +116,16 @@
 19557	Kevin Coleman Jr.	MIA	WR
 19596	Josh Cuevas	BAL	TE
 139	New York Giants	NYG	Defense/Sp Team
-16582	Noah Fant	NO	TE
 19562	Josh Cameron	JAX	WR
-18293	Keaton Mitchell	LAC	RB
+16582	Noah Fant	NO	TE
+16108	Austin Ekeler	WAS	RB
 18786	Sione Vaki	DET	RB
 16775	Ty Johnson	BUF	RB
-16108	Austin Ekeler	WAS	RB
+18293	Keaton Mitchell	LAC	RB
 119	Miami Dolphins	MIA	Defense/Sp Team
+18630	Xavier Legette	CAR	WR
 17184	Darnell Mooney	NYG	WR
 19546	Deion Burks	IND	WR
-18630	Xavier Legette	CAR	WR
 19537	Chris Bell	MIA	WR
 18684	Anthony Gould	IND	WR
 17023	Devin Duvernay	ARI	WR
@@ -136,8 +136,8 @@
 17898	John Metchie III	CAR	WR
 19129	Tai Felton	MIN	WR
 17934	Daniel Bellinger	TEN	TE
-44	Arizona Cardinals	ARI	Defense/Sp Team
 104	Indianapolis Colts	IND	Defense/Sp Team
+44	Arizona Cardinals	ARI	Defense/Sp Team
 19034	Nate Adkins	DEN	TE
 18227	Aidan O'Connell	LV	QB
 18603	Jaylen Wright	MIA	RB
@@ -160,43 +160,42 @@
 19589	Eli Stowers	PHI	TE
 19591	Jack Endries	CIN	TE
 19553	Ted Hurst	TB	WR
+19511	Jaydn Ott	KC	RB
 18297	Evan Hull	ARI	RB
 15068	Ameer Abdullah	JAX	RB
-19511	Jaydn Ott	KC	RB
 18506	Hunter Luepke	DAL	RB
-19119	DJ Giddens	IND	RB
 16977	Trevor Etienne	CAR	RB
-18237	Roschon Johnson	CHI	RB
 18601	Ray Davis	BUF	RB
+19119	DJ Giddens	IND	RB
+18237	Roschon Johnson	CHI	RB
 19555	Zavion Thomas	CHI	WR
 18159	Andrew Ogletree	IND	TE
 18169	KaVontae Turpin	DAL	WR
 19200	Jackson Hawes	BUF	TE
 17514	John Bates	WAS	TE
+16516	Tim Patrick	NYJ	WR
 17627	Ben Skowronek	PIT	WR
 15488	Demarcus Robinson	SF	WR
-16516	Tim Patrick	NYJ	WR
 19413	Darius Cooper	PHI	WR
 19762	Cyrus Allen	KC	WR
+17888	Jalen Tolbert	MIA	WR
 16364	Tyler Conklin	DET	TE
 19303	Jordan Watkins	SF	WR
-17888	Jalen Tolbert	MIA	WR
-19424	Brycen Tremayne	CAR	WR
-19178	KeAndre Lambert-Smith	LAC	WR
-17817	Nick Westbrook-Ikhine	IND	WR
-14705	Brandin Cooks	SF	WR
-19021	Tyrell Shavers	BUF	WR
-19551	Bryce Lance	NO	WR
 19853	Keleki Latu	BUF	TE
+19178	KeAndre Lambert-Smith	LAC	WR
+19424	Brycen Tremayne	CAR	WR
+19021	Tyrell Shavers	BUF	WR
+14705	Brandin Cooks	SF	WR
+19551	Bryce Lance	NO	WR
+17817	Nick Westbrook-Ikhine	IND	WR
 18627	Devontez Walker	BAL	WR
 14415	Kyle Juszczyk	SF	RB
 18660	Cade Stover	HOU	TE
 19603	Oscar Delp	NO	TE
-18668	Jared Wiley	KC	TE
 17532	Luke Farrell	SF	TE
 17943	Grant Calcaterra	PHI	TE
-19754	Tanner Koziol	JAX	TE
 18108	Connor Heyward	LV	TE
+19754	Tanner Koziol	JAX	TE
 19199	Jake Briningstool	KC	TE
 17639	Quintin Morris	JAX	TE
 19750	Max Bredeson	MIN	TE
@@ -207,1009 +206,1010 @@
 19611	Seydou Traore	MIA	TE
 18431	Payne Durham	TB	TE
 15892	Pharaoh Brown	IND	TE
-19181	Dont'e Thornton Jr.	LV	WR
-17400	Elijah Moore	PHI	WR
 19574	Colbie Young	CIN	WR
+17400	Elijah Moore	PHI	WR
+19181	Dont'e Thornton Jr.	LV	WR
+18395	Derius Davis	LAC	WR
 16868	Greg Dortch	BUF	WR
 19854	Cody White	LV	WR
 17912	Jelani Woods	NYJ	TE
-19070	David Martin-Robinson	TEN	TE
 15049	Chris Manhertz	NYG	TE
+19070	David Martin-Robinson	TEN	TE
 19593	Justin Joly	MIA	TE
 18550	Mitchell Tinsley	CIN	WR
 19556	Brenen Thompson	LAC	WR
 18646	Luke McCaffrey	WAS	WR
-18395	Derius Davis	LAC	WR
 19124	Jalen Royals	KC	WR
 19758	Riley Nowakowski	PIT	TE
 18659	Ja'Tavion Sanders	CAR	TE
-19544	Skyler Bell	BUF	WR
 18513	Nikko Remigio	HOU	WR
+19544	Skyler Bell	BUF	WR
 19840	Camden Brown	DAL	WR
 19612	Bauer Sharp	TB	TE
 17516	Kylen Granson	TEN	TE
-19576	Barion Brown	NO	WR
 19422	Jahdae Walker	CHI	WR
+19576	Barion Brown	NO	WR
 19852	Tay Martin	DET	WR
 18642	Jacob Cowing	SF	WR
 19846	Andrew Armstrong	KC	WR
 18254	Jalin Hyatt	NYG	WR
 19536	Elijah Sarratt	BAL	WR
 19047	Kameron Johnson	TB	WR
-18132	Dareke Young	LV	WR
-19183	LaJohntay Wester	BAL	WR
-19185	Theo Wease Jr.	LAC	WR
-19773	Malik Benson	LV	WR
 15343	DeAndre Carter	DET	WR
+18132	Dareke Young	LV	WR
+19773	Malik Benson	LV	WR
+19185	Theo Wease Jr.	LAC	WR
+19183	LaJohntay Wester	BAL	WR
 16545	Robert Tonyan	PIT	TE
 18118	Ko Kieft	TB	TE
-18228	Jake Haener	NYG	QB
-13146	Brian Hoyer		?
-17005	Jalen Hurts	PHI	QB
-15828	Mitchell Trubisky	TEN	QB
-11182	Philip Rivers	IND	QB
-16421	Danny Etling	GB	QB
-19482	Luke Altmyer	DET	QB
-14202	Case Keenum	CHI	QB
-19481	Diego Pavia	BAL	QB
-16768	Gardner Minshew II	ARI	QB
-16847	Jake Browning	LAC	QB
-19478	Cade Klubnik	NYJ	QB
-19496	Blake Shapen		?
-18592	Taulia Tagovailoa	ARI	QB
-17349	Zach Wilson	NO	QB
-16788	Trace McSorley	WAS	QB
-17302	Chris Streveler	NYJ	QB
-19483	Sawyer Robertson	LV	QB
-12682	Josh Johnson	ARI	QB
-16559	Drew Lock	SEA	QB
+19161	Brady Cook	MIA	QB
+19165	DJ Uiagalelei	LAC	QB
+19490	Athan Kaliakmanis	WAS	QB
+16180	Logan Woodside	ARI	QB
 15062	Sean Mannion	SEA	QB
+19836	Jack Strand	ATL	QB
+18289	Chase Garbers	LV	QB
+18224	Anthony Richardson	IND	QB
+17343	Tyler Huntley	BAL	QB
+17851	Bailey Zappe	NYJ	QB
+19052	Jason Bean	IND	QB
+19159	Graham Mertz	HOU	QB
+19098	Will Howard	PIT	QB
+11182	Philip Rivers	IND	QB
 19487	Miller Moss	CHI	QB
-17287	John Wolford	MIN	QB
+19095	Jaxson Dart	NYG	QB
+15893	Joshua Dobbs	DET	QB
+15894	C.J. Beathard	DET	QB
+14673	Teddy Bridgewater	DET	QB
+19829	Haynes King	CAR	QB
+17357	Kellen Mond	NO	QB
+15828	Mitchell Trubisky	TEN	QB
+18590	Jordan Travis	NYJ	QB
+16505	Taylor Heinicke	LAC	QB
+17853	Skylar Thompson	BAL	QB
+19100	Kurtis Rourke	SF	QB
+18518	Dion Golatt Jr.		?
+19830	Brendan Sorsby		?
+18593	Sam Hartman	WAS	QB
+16119	Cooper Rush	TB	QB
+19496	Blake Shapen		?
+16757	Easton Stick	TB	QB
+19465	Kedon Slovis	BAL	QB
+18585	Michael Penix Jr.	ATL	QB
+12682	Josh Johnson	ARI	QB
+15326	Trevor Siemian	ATL	QB
+15652	Nate Sudfeld		?
+16376	Mike White	CAR	QB
+18186	Anthony Brown	BUF	QB
+17352	Kyle Trask	DAL	QB
+15058	Marcus Mariota	WAS	QB
+19029	Tanner Mordecai	SF	QB
+19094	Jalen Milroe	SEA	QB
+16561	Will Grier	CAR	QB
+17005	Jalen Hurts	PHI	QB
+16174	Mason Rudolph	PIT	QB
+19489	Kyron Drones	GB	QB
+19099	Dillon Gabriel	CLE	QB
+17236	Ben DiNucci	DEN	QB
+19360	Cam Miller	GB	QB
+18397	Stetson Bennett	LAR	QB
+19492	Grayson James		?
+18226	Hendon Hooker	TEN	QB
 17705	Shane Buechele	BUF	QB
+18595	Carter Bradley	JAX	QB
+19475	Garrett Nussmeier	KC	QB
+17598	Sam Ehlinger	DEN	QB
+18483	Max Duggan	LAC	QB
+17302	Chris Streveler	NYJ	QB
+19164	KJ Jefferson		?
+17348	Justin Fields	KC	QB
+16559	Drew Lock	SEA	QB
+18411	Sean Clifford	CIN	QB
+14678	A.J. McCarron		?
+17848	Sam Howell	DAL	QB
+13586	Andy Dalton	ATL	QB
+7042	Tom Brady		?
+18592	Taulia Tagovailoa	ARI	QB
+17852	EJ Perry	JAX	QB
+16422	Alex McGough	GB	QB
+19483	Sawyer Robertson	LV	QB
+17199	Jake Luton	LV	QB
+18588	Michael Pratt	TB	QB
+19101	Riley Leonard	IND	QB
+18229	Clayton Tune	HOU	QB
+17350	Trey Lance	LAC	QB
+19097	Quinn Ewers	JAX	QB
+15831	Nate Peterman	DEN	QB
+19861	Austin Reed	BAL	QB
+19485	Cole Payton	PHI	QB
+19025	Jack Plummer	CAR	QB
+19157	Max Brosmer	MIN	QB
 19486	Tommy Castellanos		?
+19478	Cade Klubnik	NYJ	QB
+13146	Brian Hoyer		?
+15664	Brandon Allen	NYG	QB
+13731	Tyrod Taylor	GB	QB
+14202	Case Keenum	CHI	QB
+17844	Kenny Pickett	CAR	QB
 19033	Adrian Martinez	SEA	QB
 15670	Jeff Driskel	WAS	QB
-17056	P.J. Walker	SEA	QB
-17412	Davis Mills	HOU	QB
-19489	Kyron Drones	GB	QB
-19165	DJ Uiagalelei	LAC	QB
-18503	Tyson Bagent	CHI	QB
-19836	Jack Strand	ATL	QB
-17598	Sam Ehlinger	DEN	QB
-7042	Tom Brady		?
-13992	Russell Wilson	NYG	QB
-19052	Jason Bean	IND	QB
-19491	Behren Morton	NE	QB
-16525	Tim Boyle	TEN	QB
-18186	Anthony Brown	BUF	QB
-15893	Joshua Dobbs	DET	QB
 17845	Malik Willis	MIA	QB
-17001	Jake Fromm		?
-17520	Ian Book	PHI	QB
-17848	Sam Howell	DAL	QB
-19475	Garrett Nussmeier	KC	QB
-19162	Will Rogers		?
-19492	Grayson James		?
-18593	Sam Hartman	WAS	QB
-16376	Mike White	CAR	QB
-17844	Kenny Pickett	CAR	QB
-19100	Kurtis Rourke	SF	QB
-18535	Nathan Rourke		?
-13586	Andy Dalton	ATL	QB
-14383	Matt Barkley		?
-18140	Chris Oladokun	KC	QB
-19159	Graham Mertz	HOU	QB
-17351	Mac Jones	SF	QB
-19161	Brady Cook	MIA	QB
-16505	Taylor Heinicke	LAC	QB
-17852	EJ Perry	JAX	QB
-19160	Seth Henigan	IND	QB
-19861	Austin Reed	BAL	QB
-18289	Chase Garbers	LV	QB
-15831	Nate Peterman	DEN	QB
-19473	Ty Simpson	LAR	QB
-19490	Athan Kaliakmanis	WAS	QB
-17352	Kyle Trask	DAL	QB
-14678	A.J. McCarron		?
-19164	KJ Jefferson		?
-17343	Tyler Huntley	BAL	QB
-15058	Marcus Mariota	WAS	QB
-16556	Kyle Allen	BUF	QB
-19093	Shedeur Sanders	CLE	QB
-16563	Kyler Murray	MIN	QB
-17849	Desmond Ridder	GB	QB
-15326	Trevor Siemian	ATL	QB
-17348	Justin Fields	KC	QB
-19101	Riley Leonard	IND	QB
-18411	Sean Clifford	CIN	QB
-18483	Max Duggan	LAC	QB
-17003	Jacob Eason	GB	QB
-18405	Dorian Thompson-Robinson	PHI	QB
-19829	Haynes King	CAR	QB
-15894	C.J. Beathard	DET	QB
-16119	Cooper Rush	TB	QB
-13731	Tyrod Taylor	GB	QB
-18585	Michael Penix Jr.	ATL	QB
-15664	Brandon Allen	NYG	QB
-18588	Michael Pratt	TB	QB
-18224	Anthony Richardson	IND	QB
-18221	Will Levis	NYJ	QB
 16902	David Blough	DET	QB
-18518	Dion Golatt Jr.		?
-16422	Alex McGough	GB	QB
-17199	Jake Luton	LV	QB
-12540	Joe Flacco	CIN	QB
-19094	Jalen Milroe	SEA	QB
-19360	Cam Miller	GB	QB
-19099	Dillon Gabriel	CLE	QB
-16757	Easton Stick	TB	QB
-16526	Nick Mullens	JAX	QB
-19494	Walker Eget		?
-15652	Nate Sudfeld		?
-19479	Drew Allar	PIT	QB
-19029	Tanner Mordecai	SF	QB
-18562	Tommy DeVito	NE	QB
-15825	Deshaun Watson	CLE	QB
-16174	Mason Rudolph	PIT	QB
-19495	Maverick McIvor		?
-13561	Blaine Gabbert		?
-19025	Jack Plummer	CAR	QB
-17356	Tanner Morgan	MIN	QB
-19847	Joe Fagnano	BAL	QB
-18226	Hendon Hooker	TEN	QB
-15057	Jameis Winston	NYG	QB
-17350	Trey Lance	LAC	QB
-19465	Kedon Slovis	BAL	QB
-18590	Jordan Travis	NYJ	QB
-19493	Mark Gronowski	HOU	QB
-19098	Will Howard	PIT	QB
-16587	Brett Rypien	LV	QB
-17357	Kellen Mond	NO	QB
-16725	Jarrett Stidham	DEN	QB
-18595	Carter Bradley	JAX	QB
-19830	Brendan Sorsby		?
-17853	Skylar Thompson	BAL	QB
-18229	Clayton Tune	HOU	QB
-14673	Teddy Bridgewater	DET	QB
-19163	Donovan Smith		?
-16180	Logan Woodside	ARI	QB
-19095	Jaxson Dart	NYG	QB
-19485	Cole Payton	PHI	QB
-17236	Ben DiNucci	DEN	QB
-14677	Jimmy Garoppolo		?
-19157	Max Brosmer	MIN	QB
-18594	Devin Leary	BAL	QB
-17843	Matt Corral		?
-17851	Bailey Zappe	NYJ	QB
-19484	Taylen Green	CLE	QB
-19097	Quinn Ewers	JAX	QB
-16985	Tua Tagovailoa	ATL	QB
+18140	Chris Oladokun	KC	QB
 18424	Jaren Hall		?
-18397	Stetson Bennett	LAR	QB
-16561	Will Grier	CAR	QB
-19488	Jake Retzlaff	SEA	QB
+19495	Maverick McIvor		?
+18562	Tommy DeVito	NE	QB
+18228	Jake Haener	NYG	QB
+18503	Tyson Bagent	CHI	QB
+17001	Jake Fromm		?
+17849	Desmond Ridder	GB	QB
+16526	Nick Mullens	JAX	QB
+17520	Ian Book	PHI	QB
+17349	Zach Wilson	NO	QB
+13992	Russell Wilson	NYG	QB
+17287	John Wolford	MIN	QB
+17351	Mac Jones	SF	QB
+19093	Shedeur Sanders	CLE	QB
+19847	Joe Fagnano	BAL	QB
+16985	Tua Tagovailoa	ATL	QB
+19163	Donovan Smith		?
+19479	Drew Allar	PIT	QB
+16587	Brett Rypien	LV	QB
+16525	Tim Boyle	TEN	QB
+17056	P.J. Walker	SEA	QB
+14383	Matt Barkley		?
+19482	Luke Altmyer	DET	QB
+18535	Nathan Rourke		?
+17003	Jacob Eason	GB	QB
+16768	Gardner Minshew II	ARI	QB
+18221	Will Levis	NYJ	QB
+19494	Walker Eget		?
+16788	Trace McSorley	WAS	QB
+16556	Kyle Allen	BUF	QB
+19484	Taylen Green	CLE	QB
+19162	Will Rogers		?
+15057	Jameis Winston	NYG	QB
+14677	Jimmy Garoppolo		?
+19491	Behren Morton	NE	QB
+19493	Mark Gronowski	HOU	QB
+17412	Davis Mills	HOU	QB
+16847	Jake Browning	LAC	QB
+13561	Blaine Gabbert		?
+16563	Kyler Murray	MIN	QB
+17356	Tanner Morgan	MIN	QB
+18405	Dorian Thompson-Robinson	PHI	QB
+12540	Joe Flacco	CIN	QB
+16421	Danny Etling	GB	QB
+19473	Ty Simpson	LAR	QB
+17843	Matt Corral		?
+18594	Devin Leary	BAL	QB
+16725	Jarrett Stidham	DEN	QB
+19160	Seth Henigan	IND	QB
 16175	Lamar Jackson	BAL	QB
-18244	Camerun Peoples	CAR	RB
-18611	Jase McClellan	TB	RB
-17611	Jake Funk	JAX	RB
-19504	Demond Claiborne	MIN	RB
-16189	Nick Chubb	HOU	RB
-17867	Jerome Ford	ARI	RB
-19155	LeQuint Allen	JAX	RB
-19514	Dean Connors	LAR	RB
-18530	Emanuel Wilson	SEA	RB
-18682	Dillon Johnson	CAR	RB
-18245	Mohamed Ibrahim	MIN	RB
-16199	John Kelly		?
-15886	Jeremy McNichols	WAS	RB
-19507	J'Mari Taylor	JAX	RB
-16853	Khari Blasingame	PHI	RB
-17668	Deon Jackson	DET	RB
-17810	Derrick Gore	WAS	RB
-17404	Jermar Jefferson	ARI	RB
-15450	Jonathan Williams	WAS	RB
-17925	Julius Chestnut	TEN	RB
-19843	Jaden Nixon	GB	RB
-17296	Ty'Son Williams	ARI	RB
-19114	Donovan Edwards	MIA	RB
+19488	Jake Retzlaff	SEA	QB
+19481	Diego Pavia	BAL	QB
+15825	Deshaun Watson	CLE	QB
+19855	Anthony Tyus III	CAR	RB
+17417	Larry Rountree III	HOU	RB
 19516	Chip Trayanum	NYJ	RB
-17012	Clyde Edwards-Helaire		?
-18233	Devon Achane	MIA	RB
-19499	Jadarian Price	SEA	RB
-17917	Kevin Harris	JAX	RB
-18618	Blake Watson	TEN	RB
-17825	Godwin Igwebuike	PIT	RB
-19845	Gregory Desrosiers	NYG	RB
-18243	Deuce Vaughn	HOU	RB
-19515	Jam Miller	ATL	RB
-15845	Jamaal Williams		?
-18290	Israel Abanikanda	DAL	RB
-18886	Daijun Edwards	PIT	RB
-17017	La'Mical Perine	PIT	RB
-15885	Corey Clement	ARI	RB
-17568	Ben Mason	LAC	RB
-17866	Hassan Haskins	CLE	RB
-16404	Boston Scott	PIT	RB
-17264	Patrick Taylor	SF	RB
-17684	Adam Prentice	DEN	RB
-15843	Kareem Hunt		?
-19421	Nathan Carter	KC	RB
-18194	Raheem Blackshear	DET	RB
-18157	Zander Horvath	MIA	RB
-19375	Phil Mafah	NYG	RB
-19167	Brashard Smith	KC	RB
-17579	Gary Brightwell	CIN	RB
-19633	Robert Henry Jr.	WAS	RB
-19028	Jabari Small	DET	RB
-17015	Darrynton Evans		?
-17365	Trey Sermon	ATL	RB
-18620	Josh Williams	TB	RB
-17018	A.J. Dillon	CAR	RB
-18207	Ronnie Rivers	LAR	RB
-18168	Bryant Koback	SEA	RB
-19827	Roman Hemby	LV	RB
-18103	Trestan Ebner	CHI	RB
-17013	Eno Benjamin		?
-19512	Rahsul Faison		?
-15391	Raheem Mostert	LV	RB
-17622	Gerrid Doaks	HOU	RB
-18885	Kendall Milton	CIN	RB
-16891	Patrick Laird	TB	RB
-16699	Alexander Mattison	MIA	RB
-13676	Taiwan Jones	NYG	RB
-17872	Pierre Strong Jr.	GB	RB
-18596	Jonathon Brooks	CAR	RB
-19115	Ja'Quinden Jackson	PHI	RB
-19171	Jordan James	SF	RB
-19394	Lan Larison	NE	RB
-19331	Robbie Ouzts	SEA	RB
-19497	Jeremiyah Love	ARI	RB
-15847	James Conner	ARI	RB
-16042	Alex Armah	WAS	RB
-14314	Cordarrelle Patterson	PIT	RB
-18149	Isiah Pacheco	DET	RB
-18075	Ty Chandler	NO	RB
-18683	Isaac Guerendo	SF	RB
-17804	Tony Jones Jr.	ARI	RB
-19048	British Brooks	HOU	RB
-19041	Jacob Kibodi	CLE	RB
-19509	Desmond Reid	BUF	RB
-15105	Ty Montgomery	NE	RB
-17159	DeeJay Dallas	MIN	RB
-18524	Hassan Hall	ARI	RB
+15886	Jeremy McNichols	WAS	RB
 16474	Jeff Wilson	MIA	RB
-19418	Lawrance Toafili	NYJ	RB
-19026	Ian Wheeler	PHI	RB
-16169	Patrick Ricard	NYG	RB
-19521	Logan Diggs		?
-18891	Nathaniel Peat	DAL	RB
+19587	Eli Heidenreich	PIT	RB
+19523	Devin Mockobee		?
+17055	Joshua Kelley		?
+17275	JaMycal Hasty	NE	RB
+18451	Scott Matlock	LAC	RB
+17925	Julius Chestnut	TEN	RB
+17183	Jason Huntley	IND	RB
+18884	Emani Bailey	CAR	RB
+16437	Nick Bawden	HOU	RB
+17018	A.J. Dillon	CAR	RB
+19168	Jacory Croskey-Merritt	WAS	RB
+17804	Tony Jones Jr.	ARI	RB
+16042	Alex Armah	WAS	RB
+16197	Nyheim Hines	NO	RB
+16186	Ronald Jones II		?
+18604	Will Shipley	PHI	RB
+19518	Noah Whittington	HOU	RB
+17510	Kene Nwangwu	NYJ	RB
+19843	Jaden Nixon	GB	RB
+17866	Hassan Haskins	CLE	RB
+15450	Jonathan Williams	WAS	RB
+16699	Alexander Mattison	MIA	RB
+19515	Jam Miller	ATL	RB
+18596	Jonathon Brooks	CAR	RB
+17579	Gary Brightwell	CIN	RB
+18233	Devon Achane	MIA	RB
+19170	Marcus Yarns	NO	RB
 17865	Brian Robinson Jr.	ATL	RB
-19118	Raheim Sanders	CLE	RB
+15694	Dwayne Washington	DEN	RB
+18618	Blake Watson	TEN	RB
+18194	Raheem Blackshear	DET	RB
+19113	Kalel Mullings	TEN	RB
+18292	Xazavian Valladay	MIN	RB
+15839	Joe Mixon		?
+17684	Adam Prentice	DEN	RB
+18619	Jawhar Jordan	HOU	RB
+19073	Terrell Jennings	NE	RB
+18524	Hassan Hall	ARI	RB
+15391	Raheem Mostert	LV	RB
+15840	D'Onta Foreman		?
+19117	Woody Marks	HOU	RB
+19171	Jordan James	SF	RB
+19156	Dylan Sampson	CLE	RB
+16601	Trayveon Williams	DET	RB
+17359	Najee Harris	NYG	RB
+17611	Jake Funk	JAX	RB
+19444	Brady Russell	SEA	RB
+17810	Derrick Gore	WAS	RB
+17363	Michael Carter	TEN	RB
+17316	Keith Smith	ATL	RB
+18606	Dylan Laube	LV	RB
+19211	Jaydon Blue	PHI	RB
+19517	Jamal Haynes	CIN	RB
+18062	Snoop Conner	DAL	RB
+19530	Cash Jones	ATL	RB
+18690	Keilan Robinson	NYJ	RB
+14952	Damien Williams	ARI	RB
+18620	Josh Williams	TB	RB
+18236	Zach Evans		?
+19447	Jacob Saylors	DET	RB
+18611	Jase McClellan	TB	RB
+19507	J'Mari Taylor	JAX	RB
+18288	Kendre Miller	DAL	RB
+18597	Trey Benson	ARI	RB
+15847	James Conner	ARI	RB
+19823	Myles Montgomery	NE	RB
+18893	Dante Miller		?
+17405	Khalil Herbert	ATL	RB
+16840	Devine Ozigbo	DET	RB
+18299	Deneric Prince	NE	RB
+18891	Nathaniel Peat	DAL	RB
+17825	Godwin Igwebuike	PIT	RB
+16853	Khari Blasingame	PHI	RB
+17010	Ke'Shawn Vaughn		?
 16988	Cam Akers		?
 16795	Travis Homer	PIT	RB
-17811	Nate McCrary	GB	RB
-16927	Alec Ingold	LAC	RB
-16481	Gus Edwards		?
-17417	Larry Rountree III	HOU	RB
-19166	Damien Martinez	GB	RB
-19156	Dylan Sampson	CLE	RB
-19444	Brady Russell	SEA	RB
-17850	Isaiah Spiller	LV	RB
-17271	Jonathan Ward	BAL	RB
-17878	Tyler Goodson	DAL	RB
-16343	Chase Edmonds	WAS	RB
-19420	Zavier Scott	CHI	RB
-19529	Jaquez Moore		?
-16186	Ronald Jones II		?
-18609	Cody Schrader	DEN	RB
-19503	Kaytron Allen	MIA	RB
-16374	Jordan Wilkins	CLE	RB
-18026	Tyrion Davis-Price	GB	RB
-18610	Frank Gore Jr.	BUF	RB
-17510	Kene Nwangwu	NYJ	RB
-17359	Najee Harris	NYG	RB
-18555	Jason Cabinda	DET	RB
-16840	Devine Ozigbo	DET	RB
-18617	Carson Steele	PHI	RB
-19170	Marcus Yarns	NO	RB
-18525	Jordan Mims	PHI	RB
-18690	Keilan Robinson	NYJ	RB
-19397	Deion Hankins	CHI	RB
-17918	Keaontay Ingram		?
-17057	Antonio Gibson		?
-17324	Reggie Gilliam	NE	RB
-19522	Al-Jay Henderson	NYJ	RB
-16882	Craig Reynolds	WAS	RB
-18299	Deneric Prince	NE	RB
-19073	Terrell Jennings	NE	RB
-19530	Cash Jones	ATL	RB
-18515	Khalan Laborn	SF	RB
-18160	Jashaun Corbin	DAL	RB
-18884	Emani Bailey	CAR	RB
-18510	Jaleel McLaughlin	CLE	RB
-19513	Adam Randall	BAL	RB
-19105	TreVeyon Henderson	NE	RB
-17871	Sincere McCormick	SF	RB
-19168	Jacory Croskey-Merritt	WAS	RB
-18531	Chris Brooks	GB	RB
-16437	Nick Bawden	HOU	RB
-18480	Lew Nichols III	PIT	RB
-19042	Aidan Robbins	CLE	RB
-19061	Aaron Shampklin	MIA	RB
-18523	Elijah Dotson	ATL	RB
-16482	Mike Boone		?
-17567	Avery Williams	NYJ	RB
-19587	Eli Heidenreich	PIT	RB
-19518	Noah Whittington	HOU	RB
-18692	Tyrone Tracy Jr.	NYG	RB
-15835	Dalvin Cook	DAL	RB
-18619	Jawhar Jordan	HOU	RB
-16122	Dare Ogunbowale	HOU	RB
-18234	Tank Bigsby	PHI	RB
-18517	Tyler Hoosman	LAC	RB
-19447	Jacob Saylors	DET	RB
-19823	Myles Montgomery	NE	RB
-17316	Keith Smith	ATL	RB
-16568	Josh Jacobs	GB	RB
-15694	Dwayne Washington	DEN	RB
-18691	Jaden Shirden	CAR	RB
-16570	Miles Sanders		?
-19520	CJ Donaldson	NO	RB
-18239	DeWayne McBride	MIN	RB
-18604	Will Shipley	PHI	RB
-18694	George Holani	SEA	RB
-18693	Michael Wiley	TB	RB
-19117	Woody Marks	HOU	RB
-16743	Qadree Ollison	PIT	RB
-17877	Eric Gray	NYG	RB
-19524	Roydell Williams	DET	RB
-19528	Kentrel Bullock	CIN	RB
-17269	J.J. Taylor		?
-16871	D'Ernest Johnson	TEN	RB
-14952	Damien Williams	ARI	RB
-19172	Montrell Johnson Jr.	CAR	RB
-18606	Dylan Laube	LV	RB
-19104	Kaleb Johnson	GB	RB
-18602	MarShawn Lloyd	GB	RB
-18246	Tiyon Evans	CAR	RB
-17727	Jaret Patterson	DEN	RB
-19526	Angel Johnson		?
-15252	Michael Burton	CLE	RB
-16589	Myles Gaskin		?
-19855	Anthony Tyus III	CAR	RB
-18612	Miyan Williams		?
-17011	Anthony McFarland Jr.		?
-17055	Joshua Kelley		?
-17766	Spencer Brown	ATL	RB
-18236	Zach Evans		?
-19110	RJ Harvey	DEN	RB
-18148	Brittain Brown	CHI	RB
-19434	Ulysses Bentley IV	NO	RB
-19399	Tre Stewart	ARI	RB
-16907	Andrew Beck	NYJ	RB
-18062	Snoop Conner	DAL	RB
-18190	Malik Davis	DAL	RB
-16601	Trayveon Williams	DET	RB
-16989	Zack Moss		?
-18288	Kendre Miller	DAL	RB
-18613	Tahj Brooks	CIN	RB
-19116	Devin Neal	WAS	RB
-17876	Travis Dye	NYJ	RB
+18682	Dillon Johnson	CAR	RB
+18168	Bryant Koback	SEA	RB
+16404	Boston Scott	PIT	RB
+17015	Darrynton Evans		?
+18886	Daijun Edwards	PIT	RB
 15444	Ezekiel Elliott		?
-14175	Brandon Bolden	LV	RB
-17014	Salvon Ahmed	CHI	RB
-15839	Joe Mixon		?
-19502	Nicholas Singleton	TEN	RB
-19519	Mel Brown		?
-18695	Louis Rees-Zammit	JAX	RB
-17010	Ke'Shawn Vaughn		?
-17919	Dameon Pierce		?
+18613	Tahj Brooks	CIN	RB
+19503	Kaytron Allen	MIA	RB
+17264	Patrick Taylor	SF	RB
+17917	Kevin Harris	JAX	RB
+17324	Reggie Gilliam	NE	RB
+17271	Jonathan Ward	BAL	RB
+16481	Gus Edwards		?
 19111	Jarquez Hunter	NO	RB
-17275	JaMycal Hasty	NE	RB
-19508	Le'Veon Moss	MIA	RB
-15840	D'Onta Foreman		?
-19460	Amar Johnson	LAC	RB
-17405	Khalil Herbert	ATL	RB
-19527	Davon Booth	IND	RB
-18242	Kenny McIntosh		?
-19824	E.J. Smith	KC	RB
-18451	Scott Matlock	LAC	RB
-19523	Devin Mockobee		?
-17879	Tyler Badie	DEN	RB
-19517	Jamal Haynes	CIN	RB
-17183	Jason Huntley	IND	RB
+18885	Kendall Milton	CIN	RB
+19110	RJ Harvey	DEN	RB
+16891	Patrick Laird	TB	RB
+18160	Jashaun Corbin	DAL	RB
+18555	Jason Cabinda	DET	RB
+19155	LeQuint Allen	JAX	RB
+19497	Jeremiyah Love	ARI	RB
+16743	Qadree Ollison	PIT	RB
 19510	Terion Stewart	KC	RB
-18893	Dante Miller		?
-16197	Nyheim Hines	NO	RB
-15849	Marlon Mack		?
-17363	Michael Carter	TEN	RB
-17916	Zamir White	NO	RB
-19525	Anthony Hankerson	SEA	RB
-19211	Jaydon Blue	PHI	RB
+18609	Cody Schrader	DEN	RB
+16169	Patrick Ricard	NYG	RB
+17867	Jerome Ford	ARI	RB
+17876	Travis Dye	NYJ	RB
+19028	Jabari Small	DET	RB
+16907	Andrew Beck	NYJ	RB
+17871	Sincere McCormick	SF	RB
+18531	Chris Brooks	GB	RB
+16871	D'Ernest Johnson	TEN	RB
+18480	Lew Nichols III	PIT	RB
+16589	Myles Gaskin		?
+19519	Mel Brown		?
+19827	Roman Hemby	LV	RB
+17918	Keaontay Ingram		?
+19524	Roydell Williams	DET	RB
+18523	Elijah Dotson	ATL	RB
+18515	Khalan Laborn	SF	RB
+19114	Donovan Edwards	MIA	RB
+19824	E.J. Smith	KC	RB
+17879	Tyler Badie	DEN	RB
+19521	Logan Diggs		?
+19633	Robert Henry Jr.	WAS	RB
+18517	Tyler Hoosman	LAC	RB
+17013	Eno Benjamin		?
 16148	C.J. Ham	MIN	RB
-16919	Austin Walter	LV	RB
-16937	Jakob Johnson	HOU	RB
-18615	Rasheen Ali	BAL	RB
-17585	Chris Evans		?
+19331	Robbie Ouzts	SEA	RB
+19502	Nicholas Singleton	TEN	RB
+17877	Eric Gray	NYG	RB
+18692	Tyrone Tracy Jr.	NYG	RB
+18510	Jaleel McLaughlin	CLE	RB
 19459	Jacardia Wright	SEA	RB
-17367	Demetric Felton		?
-18292	Xazavian Valladay	MIN	RB
-19113	Kalel Mullings	TEN	RB
-18597	Trey Benson	ARI	RB
+18103	Trestan Ebner	CHI	RB
+15835	Dalvin Cook	DAL	RB
+19514	Dean Connors	LAR	RB
+19421	Nathan Carter	KC	RB
+19118	Raheim Sanders	CLE	RB
+19041	Jacob Kibodi	CLE	RB
+18695	Louis Rees-Zammit	JAX	RB
+17585	Chris Evans		?
+19845	Gregory Desrosiers	NYG	RB
+18239	DeWayne McBride	MIN	RB
+17014	Salvon Ahmed	CHI	RB
+17916	Zamir White	NO	RB
+18190	Malik Davis	DAL	RB
+16189	Nick Chubb	HOU	RB
+19527	Davon Booth	IND	RB
 15986	Tarik Cohen	NYJ	RB
-16765	KeeSean Johnson	BUF	WR
-19542	Nic Anderson		?
-19844	Brennan Presley	LAR	WR
-17263	Easop Winston Jr.	NYJ	WR
-19470	Dylan Drummond	ATL	WR
+19522	Al-Jay Henderson	NYJ	RB
+17057	Antonio Gibson		?
+13676	Taiwan Jones	NYG	RB
+16199	John Kelly		?
+18683	Isaac Guerendo	SF	RB
+17567	Avery Williams	NYJ	RB
+19048	British Brooks	HOU	RB
+19375	Phil Mafah	NYG	RB
+16374	Jordan Wilkins	CLE	RB
+17622	Gerrid Doaks	HOU	RB
+19513	Adam Randall	BAL	RB
+18207	Ronnie Rivers	LAR	RB
+19172	Montrell Johnson Jr.	CAR	RB
+16568	Josh Jacobs	GB	RB
+19026	Ian Wheeler	PHI	RB
+17017	La'Mical Perine	PIT	RB
+16989	Zack Moss		?
+18694	George Holani	SEA	RB
+19104	Kaleb Johnson	GB	RB
+19525	Anthony Hankerson	SEA	RB
+16927	Alec Ingold	LAC	RB
+15252	Michael Burton	CLE	RB
+17919	Dameon Pierce		?
+19418	Lawrance Toafili	NYJ	RB
+17011	Anthony McFarland Jr.		?
+19528	Kentrel Bullock	CIN	RB
+18610	Frank Gore Jr.	BUF	RB
+19460	Amar Johnson	LAC	RB
+18612	Miyan Williams		?
+17269	J.J. Taylor		?
+19504	Demond Claiborne	MIN	RB
+18602	MarShawn Lloyd	GB	RB
+16343	Chase Edmonds	WAS	RB
+16882	Craig Reynolds	WAS	RB
+18615	Rasheen Ali	BAL	RB
+18693	Michael Wiley	TB	RB
+17872	Pierre Strong Jr.	GB	RB
+17878	Tyler Goodson	DAL	RB
+15845	Jamaal Williams		?
+19499	Jadarian Price	SEA	RB
+19394	Lan Larison	NE	RB
+17727	Jaret Patterson	DEN	RB
+19115	Ja'Quinden Jackson	PHI	RB
+14314	Cordarrelle Patterson	PIT	RB
+19512	Rahsul Faison		?
+18244	Camerun Peoples	CAR	RB
+19520	CJ Donaldson	NO	RB
+15105	Ty Montgomery	NE	RB
+18246	Tiyon Evans	CAR	RB
+18075	Ty Chandler	NO	RB
+18234	Tank Bigsby	PHI	RB
+17568	Ben Mason	LAC	RB
+18243	Deuce Vaughn	HOU	RB
+16919	Austin Walter	LV	RB
+17404	Jermar Jefferson	ARI	RB
+18245	Mohamed Ibrahim	MIN	RB
+19529	Jaquez Moore		?
+17668	Deon Jackson	DET	RB
+15843	Kareem Hunt		?
+18026	Tyrion Davis-Price	GB	RB
+14175	Brandon Bolden	LV	RB
+19061	Aaron Shampklin	MIA	RB
+17811	Nate McCrary	GB	RB
+17367	Demetric Felton		?
+19116	Devin Neal	WAS	RB
+18290	Israel Abanikanda	DAL	RB
+19105	TreVeyon Henderson	NE	RB
+19509	Desmond Reid	BUF	RB
+19166	Damien Martinez	GB	RB
+17296	Ty'Son Williams	ARI	RB
+16570	Miles Sanders		?
+19526	Angel Johnson		?
+19508	Le'Veon Moss	MIA	RB
+19042	Aidan Robbins	CLE	RB
+18691	Jaden Shirden	CAR	RB
+19434	Ulysses Bentley IV	NO	RB
+17012	Clyde Edwards-Helaire		?
+19420	Zavier Scott	CHI	RB
+19397	Deion Hankins	CHI	RB
+18530	Emanuel Wilson	SEA	RB
+18242	Kenny McIntosh		?
+18149	Isiah Pacheco	DET	RB
+17365	Trey Sermon	ATL	RB
+16937	Jakob Johnson	HOU	RB
+17850	Isaiah Spiller	LV	RB
+16482	Mike Boone		?
+19399	Tre Stewart	ARI	RB
+18617	Carson Steele	PHI	RB
+18525	Jordan Mims	PHI	RB
+17159	DeeJay Dallas	MIN	RB
+19167	Brashard Smith	KC	RB
+16122	Dare Ogunbowale	HOU	RB
+17766	Spencer Brown	ATL	RB
+15885	Corey Clement	ARI	RB
+18148	Brittain Brown	CHI	RB
+15849	Marlon Mack		?
+18157	Zander Horvath	MIA	RB
+15466	Michael Thomas		?
+19563	De'Zhaun Stribling	SF	WR
+18551	Elijah Cooks	CAR	WR
+19134	Savion Williams	GB	WR
+17948	Velus Jones Jr.	SEA	WR
+17620	Tre Nixon	NE	WR
+19390	Isaiah Neyor	GB	WR
+15595	Chris Moore	BAL	WR
+16798	Scott Miller	CHI	WR
+19190	Da'Quan Felton	NYJ	WR
+19560	Noah Thomas	CIN	WR
+18521	Jason Brownlee	TEN	WR
+18649	Bru McCoy		?
+16024	Isaiah McKenzie	MIA	WR
+16740	Hunter Renfrow	CAR	WR
+18171	Lance McCutcheon	TEN	WR
+16848	Cody Thompson	TB	WR
+17033	Quintez Cephus	HOU	WR
+18172	Irvin Charles	SEA	WR
+19398	Tru Edwards	LAR	WR
+16613	Terry McLaurin	WAS	WR
+19040	Xavier Weaver	ARI	WR
+16923	Deonte Harty		?
+18645	Marcus Rosemy-Jacksaint	PHI	WR
+17633	Kawaan Baker	GB	WR
+17674	Tim Jones	JAX	WR
+18827	Tejhaun Palmer	LAC	WR
+15669	Mike Thomas	BAL	WR
+19191	Joey Hobert		?
+19022	Mason Tipton	NO	WR
+18568	Trishton Jackson	ARI	WR
+17221	Dezmon Patmon	CAR	WR
+18257	Andrei Iosivas	CIN	WR
+17903	Kevin Austin Jr.	NO	WR
+19580	Jalen Walthall	NYJ	WR
+19189	Elijhah Badger	KC	WR
+15086	Amari Cooper		?
+16215	Christian Kirk	SF	WR
+18621	Marvin Harrison Jr.	HOU	WR
+17331	River Cracraft	WAS	WR
+17927	Erik Ezukanma	PHI	WR
+19564	Trebor Pena	JAX	WR
+17949	Danny Gray		?
+16622	Miles Boykin	CHI	WR
+17928	Calvin Austin III	NYG	WR
+18488	Jalen Brooks	ARI	WR
+16981	Jerry Jeudy	CLE	WR
+16551	Trent Sherfield	BUF	WR
+16964	Greg Ward		?
+17794	Austin Watkins	PHI	WR
+19841	Wesley Grimes	SF	WR
+19543	Chris Brazzell II	CAR	WR
+18655	Robert Lewis	MIN	WR
+14710	Martavis Bryant		?
+19582	Vinny Anthony II	ATL	WR
+19856	KeShawn Williams	CIN	WR
 18173	Tom Kennedy	DET	WR
+17384	Seth Williams	LV	WR
+16668	Mecole Hardman	IND	WR
+14980	Adam Thielen	PIT	WR
+15851	Mike Williams		?
+18685	Jha'Quan Jackson	TB	WR
+17945	Bo Melton	GB	WR
+18650	Dominic Lovett	DET	WR
+18640	Jamari Thrash	TEN	WR
+17952	Skyy Moore	GB	WR
+16997	KJ Hamler		?
+19631	Jeff Caldwell	KC	WR
+18255	Trey Palmer	NO	WR
+18528	Brandon Johnson	PIT	WR
+16886	Antoine Wesley	LV	WR
+18654	Jordan Whittington	LAR	WR
+19412	Luke Floriea	CLE	WR
+16204	Marcell Ateman	BUF	WR
+17314	Jeff Smith	ARI	WR
+17025	Denzel Mims	DAL	WR
+19174	Kyle Williams	NE	WR
+19193	Beaux Collins	ATL	WR
+16018	Jamal Agnew	WAS	WR
+18647	De'Corian Clark		?
+19136	Jimmy Horn Jr.	CLE	WR
+17421	Jaelon Darden	SEA	WR
+16211	Tre'Quan Smith	DET	WR
+17382	Ihmir Smith-Marsette	CAR	WR
+18638	Roman Wilson	PIT	WR
+19416	Shedrick Jackson	ARI	WR
+18512	Dontay Demus Jr.	BAL	WR
+19150	Travis Hunter	JAX	WR
+16996	Tyler Johnson	NYJ	WR
+16216	Trey Quinn	DET	WR
+18499	Grant DuBose	BUF	WR
+17280	Marquez Callaway	LV	WR
+17022	Donovan Peoples-Jones		?
+18176	Alex Bachman	LAR	WR
+17338	Kendall Hinton	DEN	WR
+15108	Chris Conley		?
+16379	Marquez Valdes-Scantling	PIT	WR
+18534	Chase Cota	CLE	WR
+19068	Ryan Miller	NE	WR
+16440	Richie James		?
+19176	Kaden Prather	GB	WR
+19569	Harrison Wallace III	ARI	WR
+18686	Bub Means	ARI	WR
+15097	Tyler Lockett	LV	WR
+16524	Byron Pringle	WAS	WR
+17301	Austin Mack	ATL	WR
+17223	Freddie Swain	CHI	WR
+17571	Frank Darby	SF	WR
+18267	Rakim Jarrett	PIT	WR
+19849	Jeshaun Jones	MIN	WR
+19400	Jamaal Pritchett	NYJ	WR
+19570	Caullin Lacy	NYJ	WR
+19542	Nic Anderson		?
+19383	Junior Bergen	NYJ	WR
+19719	Kaden Wetjen	PIT	WR
+16541	Keith Kirkwood	BAL	WR
+18687	Lideatrick Griffin	GB	WR
+19470	Dylan Drummond	ATL	WR
+16217	Dante Pettis	SF	WR
+19358	Tommy Mellott	NO	WR
+18868	Tahj Washington	PHI	WR
+18301	Jonathan Mingo	DAL	WR
+18504	Matt Landers	TEN	WR
+15850	Corey Davis		?
+18892	John Jiles	NE	WR
+17026	James Proche	ARI	WR
+15363	Willie Snead		?
+19583	Max Tomczak	BUF	WR
+15759	Alex Erickson	HOU	WR
+19552	Aaron Anderson	CLE	WR
 19195	Jaylin Lane	WAS	WR
-18300	A.T. Perry	PIT	WR
-19081	Jermaine Jackson	NO	WR
-15634	Tyreek Hill		?
+19757	Kendrick Law	DET	WR
+18248	Jordan Addison	MIN	WR
+16954	Diontae Spencer	NYJ	WR
+19196	Konata Mumpfield	LAR	WR
+17901	Joseph Ngata	PHI	WR
+15985	Mack Hollins	NE	WR
+15738	Robbie Chosen	WAS	WR
+17402	Josh Palmer	BUF	WR
+19793	Anthony Smith	DAL	WR
+17399	Marquez Stevenson	CAR	WR
+17378	Terrace Marshall Jr.	MIA	WR
+17216	Isaiah Hodgins	PIT	WR
+17586	Shi Smith	KC	WR
+15854	Cooper Kupp	SEA	WR
+19567	Squirrel White	CHI	WR
+17263	Easop Winston Jr.	NYJ	WR
+16514	Zach Pascal		?
+19403	Joaquin Davis	PIT	WR
+16842	Steven Sims	ARI	WR
+14703	Odell Beckham Jr.	MIN	WR
+19074	Tyreik McAllister	LV	WR
+15852	John Ross	PHI	WR
+17276	Kirk Merritt	NO	WR
+19579	Kobe Prentice	NYG	WR
+18539	Malik Heath	ATL	WR
+16918	Malik Turner	SF	WR
+19573	Chris Hilton Jr.	GB	WR
+15853	JuJu Smith-Schuster		?
+18546	Britain Covey	PHI	WR
+16858	Penny Hart	ATL	WR
+15651	Jakeem Grant	ATL	WR
+19024	Ty James	MIN	WR
+16995	Brandon Aiyuk	SF	WR
+19132	Jayden Higgins	HOU	WR
+18270	Jalen Wayne	GB	WR
+17330	Nsimba Webster		?
+15858	Josh Reynolds	NYJ	WR
+15857	Zay Jones	ARI	WR
+18637	Johnny Wilson	PHI	WR
+19850	Montorie Foster Jr.	SEA	WR
+17893	Wan'Dale Robinson	TEN	WR
+18209	DJ Turner	HOU	WR
+14708	Davante Adams	LAR	WR
+19838	Dalen Cambre	NYG	WR
 16213	Deon Cain	BUF	WR
 18527	Aron Cruickshank	PIT	WR
-16212	Cedrick Wilson	DET	WR
-18271	Charlie Jones	NYG	WR
-16029	Trent Taylor	SF	WR
-16843	Jalen Guyton	LV	WR
-19572	Donavon Greene		?
-19848	Chris Blair	ATL	WR
-19631	Jeff Caldwell	KC	WR
-16990	Laviska Shenault Jr.	BUF	WR
-15097	Tyler Lockett	LV	WR
-17794	Austin Watkins	PHI	WR
-16954	Diontae Spencer	NYJ	WR
-19585	Ja'Mori Maclin	BUF	WR
-17756	Austin Trammell	JAX	WR
-17033	Quintez Cephus	HOU	WR
-19535	KC Concepcion	CLE	WR
-19570	Caullin Lacy	NYJ	WR
-18209	DJ Turner	HOU	WR
-16204	Marcell Ateman	BUF	WR
-16514	Zach Pascal		?
-19176	Kaden Prather	GB	WR
-19040	Xavier Weaver	ARI	WR
-17221	Dezmon Patmon	CAR	WR
-18267	Rakim Jarrett	PIT	WR
-19074	Tyreik McAllister	LV	WR
-19136	Jimmy Horn Jr.	CLE	WR
-19390	Isaiah Neyor	GB	WR
-18641	Malachi Corley	CLE	WR
-18541	Xavier Gipson	NYG	WR
-19182	Will Sheppard	MIA	WR
-18643	Ainias Smith		?
-19828	Jordan Hudson	DAL	WR
-19180	Samuel Brown		?
-19395	Kelly Akharaiyi	ARI	WR
-18827	Tejhaun Palmer	LAC	WR
-16964	Greg Ward		?
-19849	Jeshaun Jones	MIN	WR
-15882	Noah Brown	LV	WR
-19580	Jalen Walthall	NYJ	WR
-18262	Jalen Moreno-Cropper	NO	WR
-16018	Jamal Agnew	WAS	WR
-19842	E.J. Williams Jr.	CAR	WR
-15852	John Ross	PHI	WR
-17950	Tyquan Thornton	KC	WR
-19561	J. Michael Sturdivant	GB	WR
-17026	James Proche	ARI	WR
-17797	Cade Johnson	SEA	WR
-16440	Richie James		?
-15850	Corey Davis		?
-17571	Frank Darby	SF	WR
-18654	Jordan Whittington	LAR	WR
-19020	Ramel Keyton	TEN	WR
-17378	Terrace Marshall Jr.	MIA	WR
-17947	Samori Toure	IND	WR
-17312	Isaiah Zuber	LV	WR
-18366	Michael Wilson	ARI	WR
-17587	Racey McMath	DAL	WR
-15356	Damiere Byrd		?
-19554	Chase Roberts	LV	WR
-18412	Justin Shorter	LV	WR
-16493	Cam Sims	CAR	WR
-16981	Jerry Jeudy	CLE	WR
-19403	Joaquin Davis	PIT	WR
-16848	Cody Thompson	TB	WR
-16353	Justin Watson	KC	WR
-15856	Isaiah Ford	CHI	WR
-19560	Noah Thomas	CIN	WR
-19543	Chris Brazzell II	CAR	WR
-19024	Ty James	MIN	WR
-19412	Luke Floriea	CLE	WR
-17028	Chase Claypool		?
-16798	Scott Miller	CHI	WR
-19860	Coleman Owen	GB	WR
-17893	Wan'Dale Robinson	TEN	WR
-19550	Eric Rivers	TB	WR
-18648	Moose Muhammad III	CAR	WR
-16858	Penny Hart	ATL	WR
-17633	Kawaan Baker	GB	WR
-16205	Anthony Miller	BAL	WR
-15595	Chris Moore	BAL	WR
-18650	Dominic Lovett	DET	WR
-17387	Dyami Brown	WAS	WR
-19400	Jamaal Pritchett	NYJ	WR
-16524	Byron Pringle	WAS	WR
-16886	Antoine Wesley	LV	WR
-17216	Isaiah Hodgins	PIT	WR
-16854	Keelan Doss		?
-16366	Daurice Fountain	DET	WR
-19022	Mason Tipton	NO	WR
-19575	Devonte Ross	LAC	WR
-19568	Hank Beatty	TEN	WR
-18657	Hayden Hatten	SEA	WR
-16211	Tre'Quan Smith	DET	WR
-19584	Romello Brinson	DAL	WR
-19558	Dane Key	DEN	WR
-15651	Jakeem Grant	ATL	WR
-19563	De'Zhaun Stribling	SF	WR
-16762	Darius Slayton	IND	WR
-19579	Kobe Prentice	NYG	WR
-16956	Olamide Zaccheaus	ATL	WR
-14704	Allen Robinson		?
-19150	Travis Hunter	JAX	WR
-16575	Marquise Brown		?
-15858	Josh Reynolds	NYJ	WR
-14708	Davante Adams	LAR	WR
-19191	Joey Hobert		?
-19419	Gage Larvadain	BAL	WR
-19189	Elijhah Badger	KC	WR
-18264	Cedric Tillman	NO	WR
-19175	Antwane Wells Jr.	ATL	WR
-16557	Marcus Kemp	WAS	WR
-19577	Jahmal Edrine		?
-16995	Brandon Aiyuk	SF	WR
-16551	Trent Sherfield	BUF	WR
-14212	Cole Beasley	NYG	WR
-16279	D.J. Chark		?
-15470	Tyler Boyd		?
-18170	Dennis Houston	TB	WR
-16996	Tyler Johnson	NYJ	WR
-19549	Eric McAlister		?
-18549	Josh Ali		?
-16535	KhaDarel Hodge	SF	WR
-18507	Justin Marshall	SEA	WR
-18521	Jason Brownlee	TEN	WR
-17928	Calvin Austin III	NYG	WR
-18179	Deven Thompkins	LV	WR
-18577	D.J. Montgomery	IND	WR
-19582	Vinny Anthony II	ATL	WR
-18102	Michael Woods II	DEN	WR
-18652	Zakhari Franklin	LV	WR
-16410	Equanimeous St. Brown		?
-16203	James Washington	ATL	WR
-19564	Trebor Pena	JAX	WR
-19128	Tory Horton	SEA	WR
-19417	Lucky Jackson	DET	WR
-15098	Phillip Dorsett	ARI	WR
-17379	Dazz Newsome	SF	WR
-17330	Nsimba Webster		?
-19137	Kobe Hudson	CAR	WR
-17634	Dax Milne		?
-16215	Christian Kirk	SF	WR
-19038	Kazmeir Allen	WAS	WR
-18504	Matt Landers	TEN	WR
-17952	Skyy Moore	GB	WR
-19193	Beaux Collins	ATL	WR
-18633	Ja'Lynn Polk	NO	WR
-17314	Jeff Smith	ARI	WR
-18488	Jalen Brooks	ARI	WR
-18511	Jacob Copeland	PIT	WR
-19793	Anthony Smith	DAL	WR
-17315	Tyron Johnson	DAL	WR
-18534	Chase Cota	CLE	WR
-18512	Dontay Demus Jr.	BAL	WR
-16842	Steven Sims	ARI	WR
-17565	Cornell Powell	PIT	WR
-17331	River Cracraft	WAS	WR
-18568	Trishton Jackson	ARI	WR
-19414	Xavier Smith	LAR	WR
-15759	Alex Erickson	HOU	WR
-18258	Tyler Scott	LAR	WR
-17280	Marquez Callaway	LV	WR
-18069	Montrell Washington	HOU	WR
-19857	Kolbe Katsis	DEN	WR
-19125	Isaiah Bond	CLE	WR
-18298	Jayden Reed	GB	WR
-18551	Elijah Cooks	CAR	WR
-19179	Efton Chism III	NE	WR
-19838	Dalen Cambre	NYG	WR
-17210	Quez Watkins	IND	WR
-19410	Traeshon Holden	DAL	WR
-19825	Tyren Montgomery	TEN	WR
-18621	Marvin Harrison Jr.	HOU	WR
-18823	Casey Washington	CAR	WR
-19416	Shedrick Jackson	ARI	WR
-18255	Trey Palmer	NO	WR
-19138	Nick Nash	WAS	WR
-18171	Lance McCutcheon	TEN	WR
-17375	Justyn Ross	KC	WR
-19083	Bryce Oliver	HOU	WR
-16455	Allen Lazard	NYJ	WR
-16923	Deonte Harty		?
-18892	John Jiles	NE	WR
-19573	Chris Hilton Jr.	GB	WR
-19565	Dillon Bell	MIN	WR
-16216	Trey Quinn	DET	WR
-17945	Bo Melton	GB	WR
-15985	Mack Hollins	NE	WR
-16997	KJ Hamler		?
-16618	Stanley Morgan	TEN	WR
-18172	Irvin Charles	SEA	WR
-17276	Kirk Merritt	NO	WR
-16024	Isaiah McKenzie	MIA	WR
-18686	Bub Means	ARI	WR
-17927	Erik Ezukanma	PHI	WR
-17112	Lynn Bowden Jr.		?
-18528	Brandon Johnson	PIT	WR
-15086	Amari Cooper		?
-19578	Malik Rutherford	ATL	WR
-14710	Martavis Bryant		?
-16918	Malik Turner	SF	WR
-19835	Cameron Dorner	NE	WR
-15669	Mike Thomas	BAL	WR
-18635	Ricky Pearsall	SF	WR
-17311	Malik Taylor	DET	WR
-16622	Miles Boykin	CHI	WR
-17901	Joseph Ngata	PHI	WR
-18212	Trenton Irwin	SF	WR
-18514	Jake Bobo	SEA	WR
-16073	David Moore	CAR	WR
-15108	Chris Conley		?
-16598	Parris Campbell	DAL	WR
-17949	Danny Gray		?
-17385	Amari Rodgers	IND	WR
-18649	Bru McCoy		?
-17389	Kadarius Toney		?
-17674	Tim Jones	JAX	WR
-18687	Lideatrick Griffin	GB	WR
-16541	Keith Kirkwood	BAL	WR
-18257	Andrei Iosivas	CIN	WR
-17383	Tutu Atwell	LAR	WR
-18631	Jermaine Burton		?
-18868	Tahj Washington	PHI	WR
-14312	DeAndre Hopkins	BAL	WR
-14980	Adam Thielen	PIT	WR
-17807	Kristian Wilkerson	ATL	WR
-19398	Tru Edwards	LAR	WR
-18545	Kearis Jackson	HOU	WR
-19586	DT Sheffield	NYJ	WR
-17896	Romeo Doubs	NE	WR
-19190	Da'Quan Felton	NYJ	WR
-19139	Ricky White III	SEA	WR
-18645	Marcus Rosemy-Jacksaint	PHI	WR
-17187	K.J. Osborn	TEN	WR
-18520	Pokey Wilson	NYJ	WR
-18261	Bryce Ford-Wheaton	NYG	WR
-18634	Brenden Rice		?
-19571	Lewis Bond	HOU	WR
-16613	Terry McLaurin	WAS	WR
-16616	David Sills	TB	WR
-15738	Robbie Chosen	WAS	WR
-19406	Joshua Cephus	JAX	WR
-19581	Jordan Mosley		?
-16397	Russell Gage	SF	WR
-19841	Wesley Grimes	SF	WR
-19545	Zachariah Branch	ATL	WR
-19132	Jayden Higgins	HOU	WR
-16994	Gabriel Davis	BUF	WR
-15851	Mike Williams		?
-14326	Robert Woods	PIT	WR
-16124	Kendrick Bourne	ARI	WR
-18248	Jordan Addison	MIN	WR
-17022	Donovan Peoples-Jones		?
-18539	Malik Heath	ATL	WR
-18180	Michael Bandy	DEN	WR
-16917	Gunner Olszewski	NYG	WR
-19091	Jared Wayne	MIA	WR
-19358	Tommy Mellott	NO	WR
-17182	Isaiah Coulter	BUF	WR
-19186	Kyren Lacy		?
-16217	Dante Pettis	SF	WR
-18688	Cornelius Johnson	BAL	WR
-15473	Sterling Shepard	NYJ	WR
-16412	Braxton Berrios	NYG	WR
-16574	N'Keal Harry	SEA	WR
-19779	CJ Williams	JAX	WR
-17377	Tylan Wallace	CLE	WR
-17669	Tarik Black	DET	WR
-17884	Jahan Dotson	ATL	WR
-19192	Julian Fleming	GB	WR
-19552	Aaron Anderson	CLE	WR
-18546	Britain Covey	PHI	WR
-18270	Jalen Wayne	GB	WR
-18637	Johnny Wilson	PHI	WR
-12675	Matt Slater	NE	WR
-15466	Michael Thomas		?
-17607	Mike Strachan	WAS	WR
-18496	Ronnie Bell	ARI	WR
-17421	Jaelon Darden	SEA	WR
-17591	Jalen Camp	CLE	WR
-16602	Andy Isabella	SF	WR
-14703	Odell Beckham Jr.	MIN	WR
-18640	Jamari Thrash	TEN	WR
-16740	Hunter Renfrow	CAR	WR
-19197	Arian Smith	NYJ	WR
-19383	Junior Bergen	NYJ	WR
-18883	Terique Owens	SF	WR
-17399	Marquez Stevenson	CAR	WR
-17501	Dez Fitzpatrick	LAC	WR
-19174	Kyle Williams	NE	WR
-15094	Nelson Agholor		?
-17402	Josh Palmer	BUF	WR
-16577	Hakeem Butler	DEN	WR
-19757	Kendrick Law	DET	WR
-18208	Rashid Shaheed	SEA	WR
-18647	De'Corian Clark		?
-19130	Xavier Restrepo	TEN	WR
-17620	Tre Nixon	NE	WR
-15103	Jamison Crowder		?
-16674	Diontae Johnson	CLE	WR
-15857	Zay Jones	ARI	WR
-18473	Colton Dowell	PIT	WR
-19541	CJ Daniels	LAR	WR
-16993	Jalen Reagor	MIA	WR
-18176	Alex Bachman	LAR	WR
-19134	Savion Williams	GB	WR
-17903	Kevin Austin Jr.	NO	WR
-17025	Denzel Mims	DAL	WR
-17392	Anthony Schwartz	MIA	WR
-15363	Willie Snead		?
-18685	Jha'Quan Jackson	TB	WR
-17401	D'Wayne Eskridge	MIN	WR
-16118	Keelan Cole	LV	WR
-18505	Malik Cunningham	DET	WR
-15854	Cooper Kupp	SEA	WR
-19719	Kaden Wetjen	PIT	WR
 16778	Juwann Winfree	HOU	WR
-18638	Roman Wilson	PIT	WR
-19194	Ja'Corey Brooks	WAS	WR
-19196	Konata Mumpfield	LAR	WR
-19068	Ryan Miller	NE	WR
-17948	Velus Jones Jr.	SEA	WR
-19856	KeShawn Williams	CIN	WR
-19775	Emmanuel Henderson Jr.	SEA	WR
-19187	Roc Taylor	CAR	WR
-19173	Jaylin Noel	HOU	WR
-14363	Marquise Goodwin		?
-17257	Tyrie Cleveland	IND	WR
-18644	Javon Baker	SF	WR
-18655	Robert Lewis	MIN	WR
-17384	Seth Williams	LV	WR
-17301	Austin Mack	ATL	WR
-19567	Squirrel White	CHI	WR
-16509	Brandon Powell		?
-17021	Michael Pittman Jr.	PIT	WR
-17382	Ihmir Smith-Marsette	CAR	WR
-16876	Trinity Benson	CLE	WR
-15853	JuJu Smith-Schuster		?
+18688	Cornelius Johnson	BAL	WR
+16124	Kendrick Bourne	ARI	WR
 17891	Alec Pierce	IND	WR
-16668	Mecole Hardman	IND	WR
-18070	Kyle Philips	LV	WR
-19569	Harrison Wallace III	ARI	WR
-18499	Grant DuBose	BUF	WR
-16379	Marquez Valdes-Scantling	PIT	WR
-17586	Shi Smith	KC	WR
-18301	Jonathan Mingo	DAL	WR
-19583	Max Tomczak	BUF	WR
-17030	Collin Johnson	LV	WR
-18175	Jalen Virgil	BUF	WR
-18636	Jalen McMillan	TB	WR
-19850	Montorie Foster Jr.	SEA	WR
-18178	Devon Allen	PHI	WR
-17338	Kendall Hinton	DEN	WR
-17223	Freddie Swain	CHI	WR
+19561	J. Michael Sturdivant	GB	WR
+17377	Tylan Wallace	CLE	WR
+16203	James Washington	ATL	WR
+19550	Eric Rivers	TB	WR
+18631	Jermaine Burton		?
+15856	Isaiah Ford	CHI	WR
+16397	Russell Gage	SF	WR
+16956	Olamide Zaccheaus	ATL	WR
+18505	Malik Cunningham	DET	WR
+17383	Tutu Atwell	LAR	WR
+17112	Lynn Bowden Jr.		?
+16509	Brandon Powell		?
+18069	Montrell Washington	HOU	WR
+16843	Jalen Guyton	LV	WR
+19581	Jordan Mosley		?
+16993	Jalen Reagor	MIA	WR
+18644	Javon Baker	SF	WR
+16455	Allen Lazard	NYJ	WR
+17028	Chase Claypool		?
+18545	Kearis Jackson	HOU	WR
+16990	Laviska Shenault Jr.	BUF	WR
+18652	Zakhari Franklin	LV	WR
+18473	Colton Dowell	PIT	WR
+19577	Jahmal Edrine		?
+12675	Matt Slater	NE	WR
+17021	Michael Pittman Jr.	PIT	WR
+14704	Allen Robinson		?
+18541	Xavier Gipson	NYG	WR
+14326	Robert Woods	PIT	WR
+19137	Kobe Hudson	CAR	WR
+16029	Trent Taylor	SF	WR
+15470	Tyler Boyd		?
+17591	Jalen Camp	CLE	WR
+17387	Dyami Brown	WAS	WR
+16557	Marcus Kemp	WAS	WR
+19857	Kolbe Katsis	DEN	WR
+19180	Samuel Brown		?
+17634	Dax Milne		?
+16876	Trinity Benson	CLE	WR
+16493	Cam Sims	CAR	WR
+18170	Dennis Houston	TB	WR
+19575	Devonte Ross	LAC	WR
+19179	Efton Chism III	NE	WR
+18496	Ronnie Bell	ARI	WR
 16390	Ray-Ray McCloud	CHI	WR
+17896	Romeo Doubs	NE	WR
+16205	Anthony Miller	BAL	WR
+17884	Jahan Dotson	ATL	WR
+18643	Ainias Smith		?
+18635	Ricky Pearsall	SF	WR
+19182	Will Sheppard	MIA	WR
+17389	Kadarius Toney		?
+19585	Ja'Mori Maclin	BUF	WR
+18657	Hayden Hatten	SEA	WR
+16535	KhaDarel Hodge	SF	WR
+16917	Gunner Olszewski	NYG	WR
+18298	Jayden Reed	GB	WR
+16366	Daurice Fountain	DET	WR
+17950	Tyquan Thornton	KC	WR
+19125	Isaiah Bond	CLE	WR
+18823	Casey Washington	CAR	WR
+19173	Jaylin Noel	HOU	WR
+16410	Equanimeous St. Brown		?
+19578	Malik Rutherford	ATL	WR
+16575	Marquise Brown		?
+19194	Ja'Corey Brooks	WAS	WR
 18466	Antoine Green	DET	WR
+17607	Mike Strachan	WAS	WR
+19835	Cameron Dorner	NE	WR
+19572	Donavon Greene		?
+16574	N'Keal Harry	SEA	WR
+18636	Jalen McMillan	TB	WR
+18258	Tyler Scott	LAR	WR
+19568	Hank Beatty	TEN	WR
+19549	Eric McAlister		?
+17375	Justyn Ross	KC	WR
+17756	Austin Trammell	JAX	WR
+18212	Trenton Irwin	SF	WR
+17315	Tyron Johnson	DAL	WR
+16577	Hakeem Butler	DEN	WR
+18208	Rashid Shaheed	SEA	WR
+18511	Jacob Copeland	PIT	WR
+17807	Kristian Wilkerson	ATL	WR
+14312	DeAndre Hopkins	BAL	WR
+15356	Damiere Byrd		?
+18641	Malachi Corley	CLE	WR
+18070	Kyle Philips	LV	WR
+17565	Cornell Powell	PIT	WR
+19038	Kazmeir Allen	WAS	WR
+19558	Dane Key	DEN	WR
+19083	Bryce Oliver	HOU	WR
+17587	Racey McMath	DAL	WR
+16212	Cedrick Wilson	DET	WR
+19414	Xavier Smith	LAR	WR
+19586	DT Sheffield	NYJ	WR
+18633	Ja'Lynn Polk	NO	WR
+18261	Bryce Ford-Wheaton	NYG	WR
+17797	Cade Johnson	SEA	WR
+16616	David Sills	TB	WR
+16994	Gabriel Davis	BUF	WR
+18412	Justin Shorter	LV	WR
+19545	Zachariah Branch	ATL	WR
+19175	Antwane Wells Jr.	ATL	WR
+19848	Chris Blair	ATL	WR
+16279	D.J. Chark		?
+16598	Parris Campbell	DAL	WR
+18262	Jalen Moreno-Cropper	NO	WR
+19842	E.J. Williams Jr.	CAR	WR
+19091	Jared Wayne	MIA	WR
+18634	Brenden Rice		?
+18648	Moose Muhammad III	CAR	WR
+16618	Stanley Morgan	TEN	WR
+19020	Ramel Keyton	TEN	WR
+16353	Justin Watson	KC	WR
+19081	Jermaine Jackson	NO	WR
+17385	Amari Rodgers	IND	WR
+18178	Devon Allen	PHI	WR
+17187	K.J. Osborn	TEN	WR
+16765	KeeSean Johnson	BUF	WR
+15473	Sterling Shepard	NYJ	WR
+19844	Brennan Presley	LAR	WR
+16602	Andy Isabella	SF	WR
+18520	Pokey Wilson	NYJ	WR
+19410	Traeshon Holden	DAL	WR
+19571	Lewis Bond	HOU	WR
+18883	Terique Owens	SF	WR
+15103	Jamison Crowder		?
+18514	Jake Bobo	SEA	WR
+16674	Diontae Johnson	CLE	WR
+15634	Tyreek Hill		?
+18264	Cedric Tillman	NO	WR
+19192	Julian Fleming	GB	WR
+18180	Michael Bandy	DEN	WR
+16073	David Moore	CAR	WR
+19187	Roc Taylor	CAR	WR
+18366	Michael Wilson	ARI	WR
+19584	Romello Brinson	DAL	WR
+19535	KC Concepcion	CLE	WR
+16854	Keelan Doss		?
+17210	Quez Watkins	IND	WR
 15855	Curtis Samuel	BUF	WR
-19606	Jaren Kanak	TEN	TE
-18532	Cole Fotheringham	NE	TE
-19610	Jeremiah Franklin	MIA	TE
-16315	Jordan Akins	JAX	TE
-17396	Brevin Jordan	HOU	TE
-19206	Rivaldo Fairweather	ARI	TE
-19602	Lawson Luckie		?
-18519	Christian Trahan	CIN	TE
-18576	Ben Sims	SEA	TE
-17397	Jake Ferguson	DAL	TE
-17826	Sean McKeon	IND	TE
-18278	Josh Whyle	GB	TE
-19600	Dae'Quan Wright	CLE	TE
-16144	Jacob Hollister		?
-19202	Caden Prieskorn	CIN	TE
-19402	Joel Wilson	TEN	TE
-16229	Troy Fumagalli	MIN	TE
-16959	Jesper Horsted		?
-16103	Taysom Hill	NO	TE
-18569	Stone Smartt	NO	TE
-19816	Carsen Ryan	CLE	TE
-18671	Erick All	CIN	TE
-17696	Matt Bushman	KC	TE
-16849	Tyree Jackson	WAS	TE
-15496	Tyler Higbee	LAR	TE
-16231	Hayden Hurst		?
-19618	Chamon Metayer	CAR	TE
+19825	Tyren Montgomery	TEN	WR
+19828	Jordan Hudson	DAL	WR
+17392	Anthony Schwartz	MIA	WR
+18175	Jalen Virgil	BUF	WR
+19565	Dillon Bell	MIN	WR
+19186	Kyren Lacy		?
+19541	CJ Daniels	LAR	WR
+17379	Dazz Newsome	SF	WR
+19775	Emmanuel Henderson Jr.	SEA	WR
+17947	Samori Toure	IND	WR
+18179	Deven Thompkins	LV	WR
+17312	Isaiah Zuber	LV	WR
+18271	Charlie Jones	NYG	WR
+18102	Michael Woods II	DEN	WR
+18507	Justin Marshall	SEA	WR
+19138	Nick Nash	WAS	WR
+17311	Malik Taylor	DET	WR
+19139	Ricky White III	SEA	WR
+19395	Kelly Akharaiyi	ARI	WR
+19779	CJ Williams	JAX	WR
+17030	Collin Johnson	LV	WR
+17182	Isaiah Coulter	BUF	WR
+16118	Keelan Cole	LV	WR
+15098	Phillip Dorsett	ARI	WR
+16412	Braxton Berrios	NYG	WR
+15094	Nelson Agholor		?
+18549	Josh Ali		?
+14212	Cole Beasley	NYG	WR
+17501	Dez Fitzpatrick	LAC	WR
+17257	Tyrie Cleveland	IND	WR
+19406	Joshua Cephus	JAX	WR
+17669	Tarik Black	DET	WR
+19130	Xavier Restrepo	TEN	WR
+17401	D'Wayne Eskridge	MIN	WR
+18577	D.J. Montgomery	IND	WR
+15882	Noah Brown	LV	WR
+19554	Chase Roberts	LV	WR
+16762	Darius Slayton	IND	WR
+14363	Marquise Goodwin		?
+18300	A.T. Perry	PIT	WR
+19417	Lucky Jackson	DET	WR
+19197	Arian Smith	NYJ	WR
+19128	Tory Horton	SEA	WR
+19419	Gage Larvadain	BAL	WR
+19860	Coleman Owen	GB	WR
 19376	Caleb Lohner	DEN	TE
-18666	Tanner McLachlan	SF	TE
-18661	AJ Barner	SEA	TE
-16732	Zach Gentry	LV	TE
-19148	Moliki Matavao	NO	TE
-16123	Ricky Seals-Jones	IND	TE
-18127	Nick Muse	ATL	TE
-17802	Shane Zylstra	NE	TE
-18667	Trey Knox	MIN	TE
-15322	Geoff Swaim		?
-19065	Blake Whiteheart	CLE	TE
-15123	MyCole Pruitt		?
+16315	Jordan Akins	JAX	TE
+19601	John Michael Gyllenborg	KC	TE
 19090	Tucker Fisk	LAC	TE
-19198	Benjamin Yurosek		?
-17937	Cameron Latu	NE	TE
-17678	Miller Forristall	LAR	TE
-14706	Jordan Matthews		?
-19616	Amari Niblack		?
-18669	Brant Kuithe		?
-18663	Dallin Holker	NO	TE
-19144	Elijah Arroyo	SEA	TE
+17045	Harrison Bryant	IND	TE
+17050	Josiah Deguara	SEA	TE
+18273	Luke Musgrave	GB	TE
+15322	Geoff Swaim		?
 15710	Stephen Anderson	LAC	TE
-17200	Charlie Woerner	ATL	TE
+18672	Marshel Martin IV		?
+17941	Noah Gindorff	PIT	TE
+18278	Josh Whyle	GB	TE
+16144	Jacob Hollister		?
+19598	Eli Raridon	NE	TE
+18665	Jaheim Bell	PIT	TE
+16593	Josh Oliver	MIN	TE
+19402	Joel Wilson	TEN	TE
+17306	Noah Togiai	PHI	TE
+18569	Stone Smartt	NO	TE
+18755	Tip Reiman	ARI	TE
+19613	Tanner Arkin	NE	TE
+18656	Bryson Nesbit	MIN	TE
+19023	John Stephens Jr.	DAL	TE
+19592	Michael Trigg	DAL	TE
+16123	Ricky Seals-Jones	IND	TE
+15123	MyCole Pruitt		?
+19469	Hayden Rucci	PHI	TE
+19616	Amari Niblack		?
+16536	Mo Alie-Cox	IND	TE
+18563	Rodney Williams	PIT	TE
+18177	Tanner Conner	NE	TE
+16999	Brycen Hopkins	LAR	TE
+18281	Will Mallory	IND	TE
+19201	Thomas Fidone II	NYG	TE
+17914	James Mitchell	DAL	TE
+19614	Rohan Jones	LAR	TE
+19597	Joe Royer	CLE	TE
+16026	Eric Saubert	SEA	TE
+18544	Giovanni Ricci	DET	TE
+17256	Stephen Sullivan	CAR	TE
+19206	Rivaldo Fairweather	ARI	TE
 19599	Miles Kitselman	DET	TE
+19204	Luke Lachey	GB	TE
+17490	Tre' McKitty	WAS	TE
+19625	Jack Westover	WAS	TE
+19046	Brenden Bates	JAX	TE
+17915	Cole Turner	MIA	TE
+15495	Nick Vannett	BAL	TE
+17802	Shane Zylstra	NE	TE
+15494	Austin Hooper	ATL	TE
+16335	Durham Smythe	BAL	TE
+17040	Cole Kmet	CHI	TE
+18661	AJ Barner	SEA	TE
+17552	Zach Davidson	NYG	TE
+19147	Terrance Ferguson	LAR	TE
+17397	Jake Ferguson	DAL	TE
+19620	Luke Hasz		?
+19816	Carsen Ryan	CLE	TE
+19609	Jack Velling	ATL	TE
+19590	Max Klare	LAR	TE
+16732	Zach Gentry	LV	TE
+18668	Jared Wiley	KC	TE
+19407	JJ Galbreath	IND	TE
+18181	Sal Cannella	CLE	TE
+16959	Jesper Horsted		?
+18113	John FitzPatrick	KC	TE
+14706	Jordan Matthews		?
+17678	Miller Forristall	LAR	TE
+16229	Troy Fumagalli	MIN	TE
+16965	J.P. Holtz	NO	TE
+17396	Brevin Jordan	HOU	TE
+19148	Moliki Matavao	NO	TE
+19202	Caden Prieskorn	CIN	TE
+18663	Dallin Holker	NO	TE
+18434	Davis Allen	LAR	TE
+17696	Matt Bushman	KC	TE
+17046	Devin Asiasi	TEN	TE
+16585	Kaden Smith	WAS	TE
+19409	Gee Scott Jr.	NYJ	TE
+18556	David Wells	TB	TE
+19621	Caleb Fauria		?
+19401	Joshua Simon	CAR	TE
+19618	Chamon Metayer	CAR	TE
+18671	Erick All	CIN	TE
+17913	Lucas Krull	DEN	TE
+18666	Tanner McLachlan	SF	TE
+15973	Jonnu Smith	GB	TE
+16138	Eric Tomlinson	LAC	TE
+19600	Dae'Quan Wright	CLE	TE
+17043	Albert Okwuegbunam	LV	TE
+17346	Dominique Dafney	CAR	TE
+17289	Jody Fortson		?
+16900	Tanner Hudson	CIN	TE
+17418	Sammis Reyes	MIN	TE
+16413	Jordan Thomas	ATL	TE
+18667	Trey Knox	MIN	TE
+18669	Brant Kuithe		?
+15126	Blake Bell		?
 19608	RJ Maryland	GB	TE
 19396	Kole Taylor	CIN	TE
-17278	Lawrence Cager	WAS	TE
-19613	Tanner Arkin	NE	TE
-19614	Rohan Jones	LAR	TE
-18665	Jaheim Bell	PIT	TE
-18273	Luke Musgrave	GB	TE
-19450	Patrick Murtagh	DEN	TE
-18755	Tip Reiman	ARI	TE
-19598	Eli Raridon	NE	TE
-19617	Ethan Conner	MIA	TE
-11901	Marcedes Lewis	DEN	TE
-15126	Blake Bell		?
-19607	Dallen Bentley	DEN	TE
-16713	Trevon Wesco	LV	TE
-18113	John FitzPatrick	KC	TE
-16999	Brycen Hopkins	LAR	TE
-17049	Mitchell Wilcox	MIA	TE
-17753	Feleipe Franks	CAR	TE
-19601	John Michael Gyllenborg	KC	TE
-16881	Parker Hesse	DET	TE
-18656	Bryson Nesbit	MIN	TE
-17041	Jared Pinkney	CHI	TE
-18177	Tanner Conner	NE	TE
-16332	Will Dissly	LAC	TE
-17490	Tre' McKitty	WAS	TE
-18284	Zack Kuntz	DAL	TE
-17940	Brayden Willis	SF	TE
-17701	Hunter Kampmoyer	DEN	TE
-17046	Devin Asiasi	TEN	TE
-19201	Thomas Fidone II	NYG	TE
-19204	Luke Lachey	GB	TE
-17724	Jack Stoll	SF	TE
-19619	Matt Lauter	NO	TE
-16515	Anthony Firkser	DET	TE
-19401	Joshua Simon	CAR	TE
-15889	Gerald Everett		?
-18544	Giovanni Ricci	DET	TE
-17418	Sammis Reyes	MIN	TE
-19621	Caleb Fauria		?
-14822	Logan Thomas	SF	TE
-19147	Terrance Ferguson	LAR	TE
 15118	Jesse James	LV	TE
-17552	Zach Davidson	NYG	TE
-19203	Jalin Conyers	MIA	TE
-15120	Tyler Kroft		?
-19409	Gee Scott Jr.	NYJ	TE
-15973	Jonnu Smith	GB	TE
-18181	Sal Cannella	CLE	TE
-19590	Max Klare	LAR	TE
-17827	Chris Myarick	LV	TE
-17915	Cole Turner	MIA	TE
-17642	Kenny Yeboah	ARI	TE
-17913	Lucas Krull	DEN	TE
-15495	Nick Vannett	BAL	TE
-16900	Tanner Hudson	CIN	TE
-18563	Rodney Williams	PIT	TE
-19405	Colson Yankoff	WAS	TE
-17040	Cole Kmet	CHI	TE
-17256	Stephen Sullivan	CAR	TE
-14320	Zach Ertz	PHI	TE
-17050	Josiah Deguara	SEA	TE
-17318	Darrell Daniels	DET	TE
-16413	Jordan Thomas	ATL	TE
-16585	Kaden Smith	WAS	TE
-17289	Jody Fortson		?
-17914	James Mitchell	DAL	TE
-16335	Durham Smythe	BAL	TE
-19205	CJ Dippre	TB	TE
-18542	Julian Hill	NE	TE
-16026	Eric Saubert	SEA	TE
-16892	Ross Dwelley	CAR	TE
-19188	Jackson Meeks	DET	TE
-19597	Joe Royer	CLE	TE
-18434	Davis Allen	LAR	TE
-17528	Jacob Harris	TB	TE
-18872	Devin Culp	MIN	TE
-18201	Peyton Hendershot		?
-18672	Marshel Martin IV		?
-19046	Brenden Bates	JAX	TE
-17939	Austin Allen	GB	TE
+16231	Hayden Hurst		?
+16849	Tyree Jackson	WAS	TE
+16515	Anthony Firkser	DET	TE
+15496	Tyler Higbee	LAR	TE
+16103	Taysom Hill	NO	TE
 18174	Armani Rogers	BUF	TE
-15494	Austin Hooper	ATL	TE
-15244	C.J. Uzomah		?
-16593	Josh Oliver	MIN	TE
-19407	JJ Galbreath	IND	TE
-16813	Tommy Sweeney		?
-19609	Jack Velling	ATL	TE
+19617	Ethan Conner	MIA	TE
 16863	Donald Parham	PIT	TE
-17215	Tyler Davis	NE	TE
-19592	Michael Trigg	DAL	TE
-16965	J.P. Holtz	NO	TE
-17346	Dominique Dafney	CAR	TE
-18281	Will Mallory	IND	TE
-17127	Dalton Keene	HOU	TE
-17941	Noah Gindorff	PIT	TE
-16138	Eric Tomlinson	LAC	TE
-18556	David Wells	TB	TE
-19605	Lake McRee	PIT	TE
-17043	Albert Okwuegbunam	LV	TE
-19469	Hayden Rucci	PHI	TE
-19023	John Stephens Jr.	DAL	TE
-16536	Mo Alie-Cox	IND	TE
+17278	Lawrence Cager	WAS	TE
+19619	Matt Lauter	NO	TE
+17318	Darrell Daniels	DET	TE
+19602	Lawson Luckie		?
+19198	Benjamin Yurosek		?
+17753	Feleipe Franks	CAR	TE
+16813	Tommy Sweeney		?
+15244	C.J. Uzomah		?
+19606	Jaren Kanak	TEN	TE
 16966	Stephen Carlson	CHI	TE
-16583	Irv Smith Jr.	HOU	TE
-19625	Jack Westover	WAS	TE
-17306	Noah Togiai	PHI	TE
+18519	Christian Trahan	CIN	TE
+15889	Gerald Everett		?
+19450	Patrick Murtagh	DEN	TE
+16332	Will Dissly	LAC	TE
+19405	Colson Yankoff	WAS	TE
+18576	Ben Sims	SEA	TE
+18201	Peyton Hendershot		?
+17528	Jacob Harris	TB	TE
+18284	Zack Kuntz	DAL	TE
+19610	Jeremiah Franklin	MIA	TE
+19205	CJ Dippre	TB	TE
+17127	Dalton Keene	HOU	TE
+19607	Dallen Bentley	DEN	TE
+17939	Austin Allen	GB	TE
+16881	Parker Hesse	DET	TE
+18872	Devin Culp	MIN	TE
+19188	Jackson Meeks	DET	TE
+17215	Tyler Davis	NE	TE
+17642	Kenny Yeboah	ARI	TE
+17041	Jared Pinkney	CHI	TE
+16713	Trevon Wesco	LV	TE
 19039	Jake Tonges	SF	TE
-19620	Luke Hasz		?
-17045	Harrison Bryant	IND	TE
-18509	Tanner Brown	NO	K
-19408	Lenny Krieg	GB	K
-16522	Matt McCrane	DET	K
-14990	Brandon McManus	LAR	K
-18673	Harrison Mevis	BAL	K
-14463	Dustin Hopkins		?
-18841	Joshua Karty	LAR	K
-18192	Lucas Havrisik	GB	K
-16531	Michael Badgley	BUF	K
-16106	Younghoe Koo	NYG	K
-16875	Elliott Fry	DEN	K
-12385	Nick Folk		?
-19209	Ben Sauls	NYG	K
-17415	Matt Ammendola		?
-17267	Rodrigo Blankenship		?
-16705	Mitch Wishnowsky	NE	K
-16903	Matthew Wright	BUF	K
-19208	Caden Davis	BUF	K
-19043	Brayden Narveson	TEN	K
-18696	John Parker Romo	ATL	K
-19076	Jude McAtamney	NYG	K
-16071	Zane Gonzalez		?
-16761	Austin Seibert		?
-18184	Caleb Shudak	TEN	K
-18456	Anders Carlson	NYJ	K
-12503	Matt Prater	BUF	K
-18508	Christopher Dunn	LAR	K
+17701	Hunter Kampmoyer	DEN	TE
+16892	Ross Dwelley	CAR	TE
+17049	Mitchell Wilcox	MIA	TE
+19203	Jalin Conyers	MIA	TE
+19605	Lake McRee	PIT	TE
+17724	Jack Stoll	SF	TE
+19144	Elijah Arroyo	SEA	TE
+17937	Cameron Latu	NE	TE
+16583	Irv Smith Jr.	HOU	TE
+18127	Nick Muse	ATL	TE
+17200	Charlie Woerner	ATL	TE
+15120	Tyler Kroft		?
+18542	Julian Hill	NE	TE
+17940	Brayden Willis	SF	TE
+18532	Cole Fotheringham	NE	TE
+17826	Sean McKeon	IND	TE
+14822	Logan Thomas	SF	TE
+17827	Chris Myarick	LV	TE
+14320	Zach Ertz	PHI	TE
+11901	Marcedes Lewis	DEN	TE
+19065	Blake Whiteheart	CLE	TE
 19337	Tyler Loop	BAL	K
-16517	Greg Joseph	LV	K
-18468	Ethan Evans	LAR	K
-18183	James McCourt	LV	K
-14078	Randy Bullock		?
-19389	Maddux Trujillo	BUF	K
-18047	Cade York	NYJ	K
-14088	Greg Zuerlein		?
+18456	Anders Carlson	NYJ	K
+16705	Mitch Wishnowsky	NE	K
+16522	Matt McCrane	DET	K
+12503	Matt Prater	BUF	K
+14463	Dustin Hopkins		?
+18371	Jake Moody	ATL	K
+19209	Ben Sauls	NYG	K
 18185	Ramiz Ahmed	WAS	K
 17344	Tristan Vizcaino	DAL	K
-18371	Jake Moody	ATL	K
-18537	Blake Grupe	LAR	K
-19622	Will Ferrin	NYJ	K
-16502	Brett Maher		?
-19826	Mason Shipley	NO	K
+19208	Caden Davis	BUF	K
+12385	Nick Folk		?
+19043	Brayden Narveson	TEN	K
+16106	Younghoe Koo	NYG	K
+16531	Michael Badgley	BUF	K
 13142	Graham Gano	NYG	K
+19389	Maddux Trujillo	BUF	K
+18184	Caleb Shudak	TEN	K
+19622	Will Ferrin	NYJ	K
+18468	Ethan Evans	LAR	K
+17415	Matt Ammendola		?
+16071	Zane Gonzalez		?
+18509	Tanner Brown	NO	K
+16761	Austin Seibert		?
 14207	Justin Tucker	KC	K
+18508	Christopher Dunn	LAR	K
+16875	Elliott Fry	DEN	K
+18047	Cade York	NYJ	K
+16903	Matthew Wright	BUF	K
+14078	Randy Bullock		?
+19076	Jude McAtamney	NYG	K
+18696	John Parker Romo	ATL	K
+18192	Lucas Havrisik	GB	K
+19408	Lenny Krieg	GB	K
+19826	Mason Shipley	NO	K
+14088	Greg Zuerlein		?
+18673	Harrison Mevis	BAL	K
+16517	Greg Joseph	LV	K
+17267	Rodrigo Blankenship		?
+18183	James McCourt	LV	K
+14990	Brandon McManus	LAR	K
+18841	Joshua Karty	LAR	K
+18537	Blake Grupe	LAR	K
+16502	Brett Maher		?
 134	New England Patriots	NE	Defense/Sp Team
 15441	Jacoby Brissett	BAL	QB
 17366	Javonte Williams	DAL	RB

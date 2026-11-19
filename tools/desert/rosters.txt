@@ -39,14 +39,14 @@ AVG ROSTER
 12.9
 Players per team
 AVG PROJ
-141.21
+141.01
 Starting lineup
 Bitch Mittens
 Mat Karr 0-0
 Capsule
 Email
 Trade
-107.95
+108.02
 PROJ LINEUP
 14
 STARTERS
@@ -94,7 +94,7 @@ Omar Cooper Jr.
 NYJ
 Bye 13
 @LAC
-	Starter	Q	Sun 3:05pm CT	8.05
+	Starter	Q	Sun 3:05pm CT	8.00
 
 WR
 Puka Nacua
@@ -108,7 +108,7 @@ Chris Olave
 NO
 Bye 8
 @CHI
-	Starter	-	Sun 12:00pm CT	14.23
+	Starter	-	Sun 12:00pm CT	14.20
 
 TE
 George Kittle
@@ -143,7 +143,7 @@ San Francisco 49ers
 SF
 Bye 8
 MIN
-	Starter	-	Sun 7:20pm CT	6.05
+	Starter	-	Sun 7:20pm CT	6.20
 
 D/ST
 Los Angeles Rams
@@ -156,7 +156,7 @@ David Garvey 0-0
 Capsule
 Email
 Trade
-148.87
+148.73
 PROJ LINEUP
 14
 STARTERS
@@ -211,7 +211,7 @@ Germie Bernard
 PIT
 Bye 9
 @PHI
-	Starter	-	Sun 12:00pm CT	6.49
+	Starter	-	Sun 12:00pm CT	6.45
 
 WR
 Drake London
@@ -246,7 +246,7 @@ Matt Gay
 LV
 Bye 13
 @DEN
-	Starter	Q	Sun 3:25pm CT	6.78
+	Starter	Q	Sun 3:25pm CT	6.68
 
 D/ST
 Chicago Bears
@@ -265,7 +265,7 @@ Can't stanzus
 Andy Midkiff 0-0
 Capsule
 Trade
-156.72
+156.51
 PROJ LINEUP
 14
 STARTERS
@@ -306,7 +306,7 @@ Bhayshul Tuten
 JAX
 Bye 7
 @NYG
-	Starter	Q	Sun 3:25pm CT	17.04
+	Starter	Q	Sun 3:25pm CT	16.86
 
 WR
 Malik Nabers
@@ -327,7 +327,7 @@ Parker Washington
 JAX
 Bye 7
 @NYG
-	Starter	-	Sun 3:25pm CT	15.05
+	Starter	-	Sun 3:25pm CT	15.02
 
 TE
 Brock Bowers
@@ -374,7 +374,7 @@ Ceedeez Nutz
 Dylan 0-0
 Capsule
 Trade
-164.04
+164.21
 PROJ LINEUP
 14
 STARTERS
@@ -394,7 +394,7 @@ Bryce Young
 CAR
 Bye 5
 BAL
-	Starter	P	Sun 12:00pm CT	27.48
+	Starter	P	Sun 12:00pm CT	27.68
 
 RB
 Omarion Hampton
@@ -457,7 +457,7 @@ Chris Boswell
 PIT
 Bye 9
 @PHI
-	Starter	-	Sun 12:00pm CT	8.41
+	Starter	-	Sun 12:00pm CT	8.38
 
 K
 Trey Smack
@@ -484,7 +484,7 @@ jason twede 0-0
 Capsule
 Email
 Trade
-165.89
+165.68
 PROJ LINEUP
 14
 STARTERS
@@ -504,7 +504,7 @@ C.J. Stroud
 HOU
 Bye 8
 IND
-	Starter	-	Thu 7:15pm CT	28.65
+	Starter	-	Thu 7:15pm CT	28.45
 
 RB
 Saquon Barkley
@@ -532,7 +532,7 @@ Nico Collins
 HOU
 Bye 8
 IND
-	Starter	-	Thu 7:15pm CT	15.20
+	Starter	-	Thu 7:15pm CT	15.16
 
 WR
 Zay Flowers
@@ -546,7 +546,7 @@ D.J. Moore
 BUF
 Bye 7
 MIA
-	Starter	-	Sun 12:00pm CT	12.78
+	Starter	-	Sun 12:00pm CT	12.81
 
 WR
 Christian Watson
@@ -604,7 +604,7 @@ ELEVE11s
 Jason Lucas 0-0
 Capsule
 Trade
-168.27
+168.18
 PROJ LINEUP
 14
 STARTERS
@@ -694,7 +694,7 @@ Ryan Fitzgerald
 CAR
 Bye 5
 BAL
-	Starter	-	Sun 12:00pm CT	7.32
+	Starter	-	Sun 12:00pm CT	7.23
 
 D/ST
 Dallas Cowboys
@@ -721,7 +721,7 @@ Anthony Ovalle 0-0
 Capsule
 Email
 Trade
-148.01
+146.01
 PROJ LINEUP
 14
 STARTERS
@@ -755,7 +755,7 @@ Chuba Hubbard
 CAR
 Bye 5
 BAL
-	Starter	-	Sun 12:00pm CT	19.34
+	Starter	-	Sun 12:00pm CT	17.34
 
 RB
 Quinshon Judkins
@@ -831,7 +831,7 @@ Damien Gallardo 0-0
 Capsule
 Email
 Trade
-139.79
+139.82
 PROJ LINEUP
 14
 STARTERS
@@ -900,7 +900,7 @@ T.J. Hockenson
 MIN
 Bye 6
 @SF
-	Starter	Q	Sun 7:20pm CT	12.40
+	Starter	Q	Sun 7:20pm CT	12.46
 
 TE
 Dalton Kincaid
@@ -921,7 +921,7 @@ Jake Elliott
 PHI
 Bye 10
 PIT
-	Starter	-	Sun 12:00pm CT	5.62
+	Starter	-	Sun 12:00pm CT	5.59
 
 D/ST
 Cleveland Browns
@@ -943,7 +943,7 @@ Add/Drop
 Capsule
 Email
 Trade
-144.31
+144.34
 PROJ LINEUP
 14
 STARTERS
@@ -991,7 +991,7 @@ Jalen Coker
 CAR
 Bye 5
 BAL
-	Starter	-	Sun 12:00pm CT	10.26
+	Starter	-	Sun 12:00pm CT	10.32
 
 WR
 Matthew Golden
@@ -1033,7 +1033,7 @@ Drew Stevens
 WAS
 Bye 7
 CIN
-	Starter	-	Mon 7:15pm CT	7.24
+	Starter	-	Mon 7:15pm CT	7.21
 
 D/ST
 Buffalo Bills
@@ -1053,7 +1053,7 @@ jon karr 0-0
 Capsule
 Email
 Trade
-188.56
+188.53
 PROJ LINEUP
 14
 STARTERS
@@ -1115,7 +1115,7 @@ Tetairoa McMillan
 CAR
 Bye 5
 BAL
-	Starter	-	Sun 12:00pm CT	13.94
+	Starter	-	Sun 12:00pm CT	14.00
 
 WR
 Courtland Sutton
@@ -1143,7 +1143,7 @@ Evan McPherson
 CIN
 Bye 6
 @WAS
-	Starter	-	Mon 7:15pm CT	7.74
+	Starter	-	Mon 7:15pm CT	7.65
 
 D/ST
 Los Angeles Chargers
@@ -1162,7 +1162,7 @@ Two T's Matt
 Matt Silva 0-0
 Capsule
 Trade
-162.09
+162.06
 PROJ LINEUP
 14
 STARTERS
@@ -1245,7 +1245,7 @@ Chad Ryland
 ARI
 Bye 14
 @KC
-	Starter	-	Sun 12:00pm CT	6.72
+	Starter	-	Sun 12:00pm CT	6.69
 
 K
 Andre Szmyt
