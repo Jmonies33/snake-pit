@@ -1,0 +1,11285 @@
+Raiders of the Lost Title
+Desert League
+WEEK 12 · NFL WEEK 12
+TEAM MANAGEMENT
+Add / Drop Players Week 12
+How it works
+Free agent acquisition unavailable.
+You may not begin freely acquiring players for this fantasy week until Thu Nov 26 11:00am CT.
+ROSTER OVERVIEW
+Lineup Details
+QB
+2
+Min 0 / Max 4
+RB
+3
+Min 0 / Max 6
+WR
+4
+Min 0 / Max 9
+TE
+1
+Min 0 / Max 9
+K
+2
+Min 0 / Max 3
+D/ST
+2
+Min 0 / Max 3
+14 / 20 Active Roster Spots Used
+ROSTER SIZE
+14 / 20
+Max 20 active players
+TRANSACTION MODE
+Open
+Drops only
+Transaction Queue
+0 Queued
+No transactions queued
+ADD a free agent or DROP a roster player to get started.
+Free Agents, Watch List, and Protected FAs
+Free Agents
+Watch List
+Protected FAs
+Search free agents by player or NFL team
+ALL
+QB
+RB
+WR
+TE
+K
+D/ST
+SORT
+Roster %
+Total Pts
+Wk 12 Proj
+NFL
+Player
+Total Pts
+Wk 12 Proj
+Roster %
+Action
+QB
+Deshaun Watson
+CLE
+Bye 11
+Sun 7:20pm vs LV
+214.00
+27.41
+43.0%
+No Adds
+QB
+Drew Lock
+SEA
+Bye 11
+Sun 3:25pm @ SF
+95.00
+24.25
+19.9%
+No Adds
+QB
+Geno Smith
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+243.00
+24.00
+46.6%
+No Adds
+QB
+Baker Mayfield
+Q
+TB
+Bye 10
+Mon 7:15pm vs CAR
+119.00
+23.14
+46.2%
+No Adds
+QB
+Fernando Mendoza
+LV
+Bye 13
+Sun 7:20pm @ CLE
+57.00
+23.03
+53.9%
+No Adds
+QB
+Carson Beck
+Q
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+8.00
+22.95
+14.5%
+No Adds
+QB
+Joe Milton III
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+30.00
+22.05
+21.9%
+No Adds
+QB
+Anthony Richardson
+IND
+Bye 13
+Sun 12:00pm vs NYG
+2.00
+22.04
+4.0%
+No Adds
+QB
+Tommy DeVito
+NE
+Bye 11
+Sun 3:05pm @ LAC
+16.00
+21.50
+5.2%
+No Adds
+QB
+Kyle McCord
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+27.00
+19.42
+13.8%
+No Adds
+QB
+Michael Penix Jr.
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+181.00
+19.25
+47.8%
+No Adds
+WR
+Ladd McConkey
+Q
+LAC
+Bye 7
+Sun 3:05pm vs NE
+69.00
+12.47
+89.3%
+No Adds
+RB
+Jordan Mason
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+48.00
+12.40
+90.8%
+No Adds
+TE
+Tucker Kraft
+GB
+Bye 11
+Wed 7:00pm @ LAR
+108.50
+11.56
+93.5%
+No Adds
+TE
+Dallas Goedert
+P
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+92.00
+11.29
+84.3%
+No Adds
+RB
+Jacory Croskey-Merritt
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+68.00
+11.28
+76.9%
+No Adds
+TE
+Brenton Strange
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+97.50
+11.19
+75.7%
+No Adds
+RB
+Aaron Jones
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+116.00
+10.98
+96.2%
+No Adds
+WR
+KC Concepcion
+CLE
+Bye 11
+Sun 7:20pm vs LV
+100.00
+10.95
+88.9%
+No Adds
+WR
+Denzel Boston
+Q
+CLE
+Bye 11
+Sun 7:20pm vs LV
+99.00
+10.82
+88.4%
+No Adds
+WR
+Jakobi Meyers
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+91.00
+10.64
+85.4%
+No Adds
+WR
+Antonio Williams
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+91.00
+10.56
+70.0%
+No Adds
+TE
+Dalton Schultz
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+97.50
+10.47
+42.9%
+No Adds
+RB
+Braelon Allen
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+130.00
+10.32
+93.0%
+No Adds
+QB
+Josh Johnson
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+16.00
+10.25
+6.3%
+No Adds
+TE
+Hunter Henry
+NE
+Bye 11
+Sun 3:05pm @ LAC
+98.00
+10.11
+56.4%
+No Adds
+WR
+Caleb Douglas
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+74.00
+9.87
+81.1%
+No Adds
+WR
+Malik Washington
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+100.00
+9.79
+69.7%
+No Adds
+WR
+Khalil Shakir
+BUF
+Bye 7
+Thu 7:20pm vs KC
+98.00
+9.73
+80.9%
+No Adds
+RB
+Chris Rodriguez Jr.
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+67.00
+9.64
+68.7%
+No Adds
+TE
+Kyle Pitts
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+91.50
+9.51
+78.2%
+No Adds
+QB
+Jalon Daniels
+TB
+Bye 10
+Mon 7:15pm vs CAR
+60.00
+9.50
+7.8%
+No Adds
+TE
+Tyler Higbee
+LAR
+Bye 11
+Wed 7:00pm vs GB
+85.50
+9.44
+28.2%
+No Adds
+TE
+Mike Gesicki
+CIN
+Bye 6
+Sun 12:00pm vs NO
+102.50
+9.44
+73.0%
+No Adds
+RB
+Tyler Allgeier
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+88.00
+9.26
+88.3%
+No Adds
+QB
+Shedeur Sanders
+CLE
+Bye 11
+Sun 7:20pm vs LV
+32.00
+9.00
+9.9%
+No Adds
+WR
+Konata Mumpfield
+LAR
+Bye 11
+Wed 7:00pm vs GB
+42.00
+8.92
+47.6%
+No Adds
+WR
+Omar Cooper Jr.
+Q
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+61.00
+8.89
+65.2%
+No Adds
+TE
+AJ Barner
+SEA
+Bye 11
+Sun 3:25pm @ SF
+78.00
+8.66
+11.5%
+No Adds
+TE
+Mason Taylor
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+67.00
+8.64
+11.8%
+No Adds
+WR
+Demario Douglas
+NE
+Bye 11
+Sun 3:05pm @ LAC
+95.00
+8.60
+65.0%
+No Adds
+TE
+Darren Waller
+Q
+CAR
+Bye 5
+Mon 7:15pm @ TB
+100.00
+8.59
+44.1%
+No Adds
+RB
+Woody Marks
+Q
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+80.00
+8.44
+86.4%
+No Adds
+TE
+Juwan Johnson
+Q
+NO
+Bye 8
+Sun 12:00pm @ CIN
+96.00
+8.34
+66.7%
+No Adds
+TE
+Greg Dulcich
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+65.00
+8.30
+8.9%
+No Adds
+WR
+Xavier Hutchinson
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+82.00
+8.19
+53.0%
+No Adds
+K
+Andre Szmyt
+CLE
+Bye 11
+Sun 7:20pm vs LV
+78.00
+8.16
+7.7%
+No Adds
+RB
+Corey Kiner
+NE
+Bye 11
+Sun 3:05pm @ LAC
+48.00
+8.02
+39.0%
+No Adds
+RB
+Rico Dowdle
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+47.00
+8.02
+88.4%
+No Adds
+RB
+Kenneth Gainwell
+TB
+Bye 10
+Mon 7:15pm vs CAR
+71.00
+7.96
+82.3%
+No Adds
+TE
+Cade Otton
+TB
+Bye 10
+Mon 7:15pm vs CAR
+53.00
+7.92
+11.6%
+No Adds
+RB
+Dylan Sampson
+CLE
+Bye 11
+Sun 7:20pm vs LV
+26.00
+7.80
+54.3%
+No Adds
+TE
+Darnell Washington
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+75.50
+7.79
+11.0%
+No Adds
+TE
+Colby Parkinson
+LAR
+Bye 11
+Wed 7:00pm vs GB
+46.00
+7.69
+5.2%
+No Adds
+RB
+Samaje Perine
+CIN
+Bye 6
+Sun 12:00pm vs NO
+67.00
+7.68
+56.9%
+No Adds
+K
+Jason Myers
+SEA
+Bye 11
+Sun 3:25pm @ SF
+69.00
+7.60
+46.3%
+No Adds
+WR
+Quentin Johnston
+LAC
+Bye 7
+Sun 3:05pm vs NE
+46.00
+7.59
+29.2%
+No Adds
+WR
+Makai Lemon
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+71.00
+7.59
+74.0%
+No Adds
+K
+Daniel Carlson
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+49.00
+7.31
+3.6%
+No Adds
+WR
+Devaughn Vele
+NO
+Bye 8
+Sun 12:00pm @ CIN
+102.00
+7.20
+52.8%
+No Adds
+D/ST
+New England Patriots
+NE
+Bye 11
+Sun 3:05pm @ LAC
+66.00
+7.20
+35.9%
+No Adds
+WR
+Malachi Fields
+NYG
+Bye 8
+Sun 12:00pm @ IND
+64.00
+7.15
+37.1%
+No Adds
+RB
+Elijah Mitchell
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+12.00
+7.08
+10.4%
+No Adds
+K
+Brandon McManus
+LAR
+Bye 11
+Wed 7:00pm vs GB
+29.00
+7.08
+4.1%
+No Adds
+RB
+Zonovan Knight
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+39.00
+7.02
+32.6%
+No Adds
+TE
+Evan Engram
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+61.50
+6.98
+5.5%
+No Adds
+WR
+Chris Godwin
+TB
+Bye 10
+Mon 7:15pm vs CAR
+61.00
+6.96
+52.3%
+No Adds
+WR
+Germie Bernard
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+76.00
+6.95
+61.4%
+No Adds
+RB
+Jadarian Price
+SEA
+Bye 11
+Sun 3:25pm @ SF
+45.00
+6.90
+90.3%
+No Adds
+K
+Matt Gay
+Q
+LV
+Bye 13
+Sun 7:20pm @ CLE
+91.00
+6.90
+44.9%
+No Adds
+WR
+Laquon Treadwell
+IND
+Bye 13
+Sun 12:00pm vs NYG
+46.00
+6.82
+20.1%
+No Adds
+WR
+Kalif Raymond
+CHI
+Bye 10
+Thu 12:00pm @ DET
+70.00
+6.80
+18.0%
+No Adds
+TE
+Tommy Tremble
+Q
+CAR
+Bye 5
+Mon 7:15pm @ TB
+76.00
+6.79
+3.3%
+No Adds
+K
+Charlie Smyth
+NO
+Bye 8
+Sun 12:00pm @ CIN
+23.00
+6.76
+4.9%
+No Adds
+WR
+Chimere Dike
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+44.00
+6.72
+8.4%
+No Adds
+WR
+Simi Fehoko
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+13.00
+6.70
+0.5%
+No Adds
+WR
+Pat Bryant
+P
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+52.00
+6.69
+40.0%
+No Adds
+WR
+Brian Thomas Jr.
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+45.00
+6.65
+42.7%
+No Adds
+K
+Trey Smack
+GB
+Bye 11
+Wed 7:00pm @ LAR
+66.00
+6.63
+13.4%
+No Adds
+WR
+Keenan Allen
+SF
+Bye 8
+Sun 3:25pm vs SEA
+95.00
+6.57
+84.7%
+No Adds
+WR
+Cooper Kupp
+SEA
+Bye 11
+Sun 3:25pm @ SF
+65.00
+6.56
+14.5%
+No Adds
+D/ST
+New York Giants
+NYG
+Bye 8
+Sun 12:00pm @ IND
+71.00
+6.56
+26.0%
+No Adds
+WR
+Mack Hollins
+NE
+Bye 11
+Sun 3:05pm @ LAC
+55.00
+6.55
+16.8%
+No Adds
+WR
+Treylon Burks
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+54.00
+6.49
+13.7%
+No Adds
+WR
+Xavier Worthy
+KC
+Bye 5
+Thu 7:20pm @ BUF
+75.00
+6.41
+60.1%
+No Adds
+D/ST
+Washington Commanders
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+72.00
+6.38
+11.8%
+No Adds
+WR
+Jauan Jennings
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+15.00
+6.36
+18.0%
+No Adds
+K
+Riley Patterson
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+41.00
+6.27
+2.0%
+No Adds
+RB
+Kaelon Black
+SF
+Bye 8
+Sun 3:25pm vs SEA
+69.00
+6.26
+90.2%
+No Adds
+TE
+Elijah Higgins
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+47.50
+6.20
+0.7%
+No Adds
+WR
+Kayshon Boutte
+Q
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+71.00
+6.16
+21.1%
+No Adds
+WR
+Keon Coleman
+BUF
+Bye 7
+Thu 7:20pm vs KC
+72.00
+6.15
+51.4%
+No Adds
+WR
+Rashod Bateman
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+73.00
+6.12
+14.7%
+No Adds
+TE
+Gunnar Helm
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+54.50
+6.11
+8.0%
+No Adds
+WR
+Tai Felton
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+22.00
+6.08
+1.2%
+No Adds
+WR
+Tez Johnson
+TB
+Bye 10
+Mon 7:15pm vs CAR
+44.00
+6.06
+2.5%
+No Adds
+WR
+Darius Cooper
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+62.00
+5.98
+11.4%
+No Adds
+TE
+Eli Raridon
+NE
+Bye 11
+Sun 3:05pm @ LAC
+57.50
+5.93
+5.7%
+No Adds
+RB
+Justice Hill
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+74.00
+5.90
+61.4%
+No Adds
+TE
+Kenyon Sadiq
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+73.50
+5.89
+26.1%
+No Adds
+WR
+Jahan Dotson
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+68.00
+5.88
+11.2%
+No Adds
+WR
+Tutu Atwell
+LAR
+Bye 11
+Wed 7:00pm vs GB
+18.00
+5.86
+9.9%
+No Adds
+TE
+Noah Fant
+NO
+Bye 8
+Sun 12:00pm @ CIN
+48.00
+5.81
+1.7%
+No Adds
+WR
+Ja'Kobi Lane
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+26.00
+5.79
+39.8%
+No Adds
+RB
+Kaleb Johnson
+GB
+Bye 11
+Wed 7:00pm @ LAR
+39.00
+5.78
+38.5%
+No Adds
+QB
+Carson Wentz
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+41.00
+5.75
+2.8%
+No Adds
+WR
+Deion Burks
+IND
+Bye 13
+Sun 12:00pm vs NYG
+14.00
+5.72
+1.0%
+No Adds
+D/ST
+Atlanta Falcons
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+55.00
+5.63
+7.8%
+No Adds
+TE
+David Njoku
+LAC
+Bye 7
+Sun 3:05pm vs NE
+19.00
+5.62
+6.9%
+No Adds
+K
+Jake Moody
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+11.00
+5.61
+0.9%
+No Adds
+D/ST
+Carolina Panthers
+CAR
+Bye 5
+Mon 7:15pm @ TB
+73.00
+5.60
+28.4%
+No Adds
+WR
+Tre Harris
+LAC
+Bye 7
+Sun 3:05pm vs NE
+62.00
+5.55
+33.1%
+No Adds
+RB
+Kimani Vidal
+LAC
+Bye 7
+Sun 3:05pm vs NE
+49.00
+5.38
+34.5%
+No Adds
+TE
+Oronde Gadsden II
+LAC
+Bye 7
+Sun 3:05pm vs NE
+51.00
+5.36
+6.6%
+No Adds
+D/ST
+Indianapolis Colts
+IND
+Bye 13
+Sun 12:00pm vs NYG
+54.00
+5.36
+11.6%
+No Adds
+D/ST
+Miami Dolphins
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+55.00
+5.33
+3.6%
+No Adds
+QB
+Spencer Rattler
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+5.25
+0.9%
+No Adds
+WR
+Rashid Shaheed
+SEA
+Bye 11
+Sun 3:25pm @ SF
+45.00
+5.24
+25.0%
+No Adds
+WR
+Jerry Jeudy
+CLE
+Bye 11
+Sun 7:20pm vs LV
+44.00
+5.17
+11.6%
+No Adds
+RB
+Devin Singletary
+NYG
+Bye 8
+Sun 12:00pm @ IND
+36.00
+5.08
+36.0%
+No Adds
+WR
+Anthony Gould
+Q
+IND
+Bye 13
+Sun 12:00pm vs NYG
+12.00
+5.06
+0.1%
+No Adds
+WR
+Marvin Harrison Jr.
+Q
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+36.00
+5.05
+51.3%
+No Adds
+WR
+Josh Cameron
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+54.00
+4.91
+3.2%
+No Adds
+WR
+Roman Wilson
+Q
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+50.00
+4.83
+19.2%
+No Adds
+WR
+CJ Daniels
+LAR
+Bye 11
+Wed 7:00pm vs GB
+3.00
+4.82
+3.6%
+No Adds
+RB
+MarShawn Lloyd
+GB
+Bye 11
+Wed 7:00pm @ LAR
+50.00
+4.78
+46.6%
+No Adds
+RB
+Will Shipley
+Q
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+19.00
+4.78
+5.2%
+No Adds
+RB
+Rachaad White
+Q
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+71.00
+4.66
+87.6%
+No Adds
+RB
+Jaylen Wright
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+11.00
+4.66
+11.6%
+No Adds
+WR
+Jack Bech
+LV
+Bye 13
+Sun 7:20pm @ CLE
+41.00
+4.63
+2.9%
+No Adds
+TE
+Theo Johnson
+NYG
+Bye 8
+Sun 12:00pm @ IND
+20.00
+4.60
+1.0%
+No Adds
+D/ST
+Arizona Cardinals
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+50.00
+4.55
+1.7%
+No Adds
+WR
+Ashton Dulin
+IND
+Bye 13
+Sun 12:00pm vs NYG
+28.00
+4.51
+1.9%
+No Adds
+TE
+Charlie Kolar
+Q
+LAC
+Bye 7
+Sun 3:05pm vs NE
+38.00
+4.51
+0.5%
+No Adds
+WR
+Efton Chism III
+NE
+Bye 11
+Sun 3:05pm @ LAC
+51.00
+4.37
+2.8%
+No Adds
+WR
+Calvin Ridley
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+31.00
+4.35
+7.9%
+No Adds
+WR
+Isaac TeSlaa
+DET
+Bye 6
+Thu 12:00pm vs CHI
+38.00
+4.34
+5.9%
+No Adds
+WR
+Jalen Nailor
+LV
+Bye 13
+Sun 7:20pm @ CLE
+30.00
+4.32
+6.5%
+No Adds
+TE
+Drew Sample
+CIN
+Bye 6
+Sun 12:00pm vs NO
+32.50
+4.24
+0.4%
+No Adds
+WR
+Ted Hurst
+TB
+Bye 10
+Mon 7:15pm vs CAR
+54.00
+4.23
+6.2%
+No Adds
+RB
+Josh Jacobs
+Q
+GB
+Bye 11
+Wed 7:00pm @ LAR
+37.00
+4.20
+97.0%
+No Adds
+TE
+Mitchell Evans
+CAR
+Bye 5
+Mon 7:15pm @ TB
+47.50
+4.18
+0.2%
+No Adds
+WR
+Savion Williams
+GB
+Bye 11
+Wed 7:00pm @ LAR
+36.00
+4.13
+3.1%
+No Adds
+TE
+Davis Allen
+Q
+LAR
+Bye 11
+Wed 7:00pm vs GB
+44.50
+4.07
+0.3%
+No Adds
+RB
+Khalil Herbert
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+6.00
+4.00
+1.7%
+No Adds
+RB
+Sione Vaki
+Q
+DET
+Bye 6
+Thu 12:00pm vs CHI
+30.00
+4.00
+18.1%
+No Adds
+RB
+Ty Johnson
+BUF
+Bye 7
+Thu 7:20pm vs KC
+28.00
+4.00
+15.5%
+No Adds
+RB
+Austin Ekeler
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+32.00
+4.00
+26.4%
+No Adds
+RB
+Keaton Mitchell
+LAC
+Bye 7
+Sun 3:05pm vs NE
+44.00
+4.00
+29.7%
+No Adds
+TE
+Dawson Knox
+BUF
+Bye 7
+Thu 7:20pm vs KC
+37.00
+3.91
+7.2%
+No Adds
+WR
+Harrison Wallace III
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+10.00
+3.78
+0.0%
+No Adds
+WR
+Chris Bell
+Q
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+29.00
+3.75
+9.3%
+No Adds
+TE
+Foster Moreau
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+40.00
+3.75
+0.3%
+No Adds
+D/ST
+Baltimore Ravens
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+61.00
+3.70
+44.4%
+No Adds
+WR
+Kyle Williams
+NE
+Bye 11
+Sun 3:05pm @ LAC
+37.00
+3.60
+3.6%
+No Adds
+D/ST
+Philadelphia Eagles
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+37.00
+3.60
+24.2%
+No Adds
+TE
+Nate Boerkircher
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+40.00
+3.59
+1.1%
+No Adds
+WR
+Reggie Virgil
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+7.00
+3.51
+7.0%
+No Adds
+WR
+Marvin Mims Jr.
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+29.00
+3.51
+1.5%
+No Adds
+TE
+Jake Ferguson
+Q
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+63.50
+3.47
+27.5%
+No Adds
+WR
+Darnell Mooney
+NYG
+Bye 8
+Sun 12:00pm @ IND
+32.00
+3.38
+2.0%
+No Adds
+TE
+Brevyn Spann-Ford
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+46.00
+3.30
+2.3%
+No Adds
+WR
+Xavier Smith
+LAR
+Bye 11
+Wed 7:00pm vs GB
+12.00
+3.20
+0.2%
+No Adds
+TE
+Noah Gray
+P
+KC
+Bye 5
+Thu 7:20pm @ BUF
+51.50
+3.18
+1.0%
+No Adds
+WR
+Kevin Coleman Jr.
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+30.00
+3.12
+1.5%
+No Adds
+RB
+Sean Tucker
+TB
+Bye 10
+Mon 7:15pm vs CAR
+25.00
+3.02
+6.9%
+No Adds
+QB
+Aidan O'Connell
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+3.00
+0.2%
+No Adds
+RB
+CJ Donaldson
+NO
+Bye 8
+Sun 12:00pm @ CIN
+16.00
+3.00
+0.6%
+No Adds
+RB
+Chris Brooks
+Q
+GB
+Bye 11
+Wed 7:00pm @ LAR
+14.00
+3.00
+2.4%
+No Adds
+RB
+Michael Carter
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+3.00
+3.00
+0.6%
+No Adds
+RB
+DJ Giddens
+IND
+Bye 13
+Sun 12:00pm vs NYG
+9.00
+3.00
+1.5%
+No Adds
+TE
+Josh Cuevas
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+41.00
+2.95
+0.5%
+No Adds
+TE
+Daniel Bellinger
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+28.00
+2.94
+0.2%
+No Adds
+TE
+Nate Adkins
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+32.50
+2.74
+0.1%
+No Adds
+WR
+Tory Horton
+SEA
+Bye 11
+Sun 3:25pm @ SF
+27.00
+2.72
+2.2%
+No Adds
+TE
+Austin Hooper
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+26.00
+2.71
+0.3%
+No Adds
+TE
+Zach Ertz
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+5.50
+2.64
+0.8%
+No Adds
+TE
+Sam Roush
+CHI
+Bye 10
+Thu 12:00pm @ DET
+13.00
+2.64
+0.3%
+No Adds
+TE
+Adam Trautman
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+21.50
+2.58
+0.1%
+No Adds
+TE
+Jack Endries
+CIN
+Bye 6
+Sun 12:00pm vs NO
+19.50
+2.53
+0.2%
+No Adds
+TE
+Brock Wright
+DET
+Bye 6
+Thu 12:00pm vs CHI
+19.50
+2.47
+0.1%
+No Adds
+TE
+Gavin Bartholomew
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+29.50
+2.44
+0.7%
+No Adds
+TE
+Matthew Hibner
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+25.00
+2.37
+1.1%
+No Adds
+WR
+Dohnte Meyers
+CIN
+Bye 6
+Sun 12:00pm vs NO
+51.00
+2.30
+5.9%
+No Adds
+TE
+Luke Schoonmaker
+Q
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+9.50
+2.29
+0.2%
+No Adds
+TE
+Ben Sinnott
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+17.50
+2.22
+0.7%
+No Adds
+WR
+Troy Franklin
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+18.00
+2.21
+2.1%
+No Adds
+TE
+John Bates
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+8.50
+2.20
+0.1%
+No Adds
+TE
+Jonnu Smith
+GB
+Bye 11
+Wed 7:00pm @ LAR
+16.00
+2.19
+0.7%
+No Adds
+WR
+John Metchie III
+CAR
+Bye 5
+Mon 7:15pm @ TB
+36.00
+2.17
+0.6%
+No Adds
+WR
+Olamide Zaccheaus
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+9.00
+2.16
+0.4%
+No Adds
+TE
+Blake Whiteheart
+CLE
+Bye 11
+Sun 7:20pm vs LV
+14.00
+2.16
+0.1%
+No Adds
+WR
+Zavion Thomas
+Q
+CHI
+Bye 10
+Thu 12:00pm @ DET
+23.00
+2.15
+1.4%
+No Adds
+TE
+Jeremy Ruckert
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+21.00
+2.14
+0.1%
+No Adds
+WR
+Samori Toure
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+2.10
+0.0%
+No Adds
+TE
+Oscar Delp
+NO
+Bye 8
+Sun 12:00pm @ CIN
+8.50
+2.09
+1.3%
+No Adds
+TE
+Will Kacmarek
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+8.50
+2.08
+0.1%
+No Adds
+TE
+Eli Stowers
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+9.50
+2.08
+4.6%
+No Adds
+TE
+Teagan Quitoriano
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+17.50
+2.02
+0.0%
+No Adds
+WR
+Devin Duvernay
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+10.00
+2.01
+0.2%
+No Adds
+WR
+Xavier Legette
+CAR
+Bye 5
+Mon 7:15pm @ TB
+8.00
+2.01
+1.9%
+No Adds
+RB
+Nicholas Singleton
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+3.00
+2.00
+9.0%
+No Adds
+RB
+Audric Estime
+NO
+Bye 8
+Sun 12:00pm @ CIN
+27.00
+2.00
+33.0%
+No Adds
+RB
+Hunter Luepke
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+6.00
+2.00
+0.1%
+No Adds
+RB
+Jaleel McLaughlin
+CLE
+Bye 11
+Sun 7:20pm vs LV
+18.00
+2.00
+4.0%
+No Adds
+RB
+Emanuel Wilson
+SEA
+Bye 11
+Sun 3:25pm @ SF
+90.00
+2.00
+24.3%
+No Adds
+RB
+Emari Demercado
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+14.00
+2.00
+11.9%
+No Adds
+RB
+Ray Davis
+BUF
+Bye 7
+Thu 7:20pm vs KC
+16.00
+2.00
+15.9%
+No Adds
+RB
+Jaydn Ott
+KC
+Bye 5
+Thu 7:20pm @ BUF
+5.00
+2.00
+0.5%
+No Adds
+RB
+Kaytron Allen
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+12.00
+2.00
+4.4%
+No Adds
+WR
+Xavier Restrepo
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+7.00
+1.99
+0.5%
+No Adds
+WR
+Zachariah Branch
+Q
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+16.00
+1.98
+4.4%
+No Adds
+WR
+Myles Price
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+29.00
+1.98
+9.6%
+No Adds
+WR
+Van Jefferson
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+16.00
+1.96
+0.4%
+No Adds
+TE
+Hunter Long
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+8.00
+1.89
+0.0%
+No Adds
+WR
+Cyrus Allen
+KC
+Bye 5
+Thu 7:20pm @ BUF
+28.00
+1.86
+7.1%
+No Adds
+TE
+Ian Thomas
+LV
+Bye 13
+Sun 7:20pm @ CLE
+28.50
+1.86
+0.0%
+No Adds
+TE
+Andrew Ogletree
+IND
+Bye 13
+Sun 12:00pm vs NYG
+7.00
+1.84
+0.0%
+No Adds
+TE
+Tanner Koziol
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+7.00
+1.83
+0.2%
+No Adds
+WR
+KaVontae Turpin
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+28.00
+1.75
+0.8%
+No Adds
+WR
+Tyrell Shavers
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+1.72
+0.2%
+No Adds
+WR
+J. Michael Sturdivant
+GB
+Bye 11
+Wed 7:00pm @ LAR
+18.00
+1.68
+0.1%
+No Adds
+WR
+KeAndre Lambert-Smith
+LAC
+Bye 7
+Sun 3:05pm vs NE
+14.00
+1.66
+0.5%
+No Adds
+QB
+DJ Uiagalelei
+LAC
+Bye 7
+Sun 3:05pm vs NE
+6.00
+1.65
+0.2%
+No Adds
+WR
+Brycen Tremayne
+CAR
+Bye 5
+Mon 7:15pm @ TB
+20.00
+1.65
+0.3%
+No Adds
+WR
+Jalen Tolbert
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+18.00
+1.64
+1.0%
+No Adds
+WR
+Elijah Moore
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+5.00
+1.62
+0.2%
+No Adds
+WR
+Isaiah Bond
+CLE
+Bye 11
+Sun 7:20pm vs LV
+13.00
+1.61
+0.7%
+No Adds
+WR
+Tylan Wallace
+CLE
+Bye 11
+Sun 7:20pm vs LV
+6.00
+1.59
+0.0%
+No Adds
+WR
+Demarcus Robinson
+SF
+Bye 8
+Sun 3:25pm vs SEA
+24.00
+1.57
+6.6%
+No Adds
+WR
+Jordan Watkins
+SF
+Bye 8
+Sun 3:25pm vs SEA
+45.00
+1.57
+11.6%
+No Adds
+WR
+Isaiah Williams
+Q
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+49.00
+1.56
+1.1%
+No Adds
+WR
+Quez Watkins
+IND
+Bye 13
+Sun 12:00pm vs NYG
+3.00
+1.54
+0.0%
+No Adds
+WR
+Devontez Walker
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+25.00
+1.52
+0.5%
+No Adds
+WR
+Jeshaun Jones
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+5.00
+1.52
+0.0%
+No Adds
+RB
+Kyle Juszczyk
+SF
+Bye 8
+Sun 3:25pm vs SEA
+20.00
+1.00
+1.2%
+No Adds
+TE
+Luke Farrell
+SF
+Bye 8
+Sun 3:25pm vs SEA
+8.00
+0.93
+0.1%
+No Adds
+TE
+Charlie Woerner
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+12.50
+0.86
+0.0%
+No Adds
+TE
+Eric Saubert
+SEA
+Bye 11
+Sun 3:25pm @ SF
+12.50
+0.84
+0.0%
+No Adds
+TE
+Cade Stover
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+9.50
+0.78
+0.1%
+No Adds
+TE
+Marlin Klein
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+16.50
+0.69
+0.4%
+No Adds
+TE
+Quintin Morris
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+1.50
+0.66
+0.0%
+No Adds
+TE
+James Mitchell
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+7.00
+0.65
+0.0%
+No Adds
+TE
+Grant Calcaterra
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.65
+0.1%
+No Adds
+TE
+Jackson Hawes
+Q
+BUF
+Bye 7
+Thu 7:20pm vs KC
+3.00
+0.63
+0.1%
+No Adds
+TE
+Tyler Conklin
+DET
+Bye 6
+Thu 12:00pm vs CHI
+5.50
+0.60
+0.2%
+No Adds
+TE
+Harrison Bryant
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.60
+0.0%
+No Adds
+TE
+Jake Briningstool
+KC
+Bye 5
+Thu 7:20pm @ BUF
+8.00
+0.59
+0.1%
+No Adds
+TE
+Johnny Mundt
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+6.00
+0.57
+0.1%
+No Adds
+TE
+Connor Heyward
+LV
+Bye 13
+Sun 7:20pm @ CLE
+9.00
+0.57
+0.0%
+No Adds
+WR
+Colbie Young
+CIN
+Bye 6
+Sun 12:00pm vs NO
+9.00
+0.52
+0.7%
+No Adds
+TE
+Keleki Latu
+BUF
+Bye 7
+Thu 7:20pm vs KC
+14.00
+0.50
+0.1%
+No Adds
+TE
+Max Bredeson
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.48
+0.0%
+No Adds
+TE
+Dallen Bentley
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.45
+0.0%
+No Adds
+WR
+Bryce Lance
+NO
+Bye 8
+Sun 12:00pm @ CIN
+20.00
+0.44
+1.9%
+No Adds
+WR
+Dont'e Thornton Jr.
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.40
+0.9%
+No Adds
+TE
+Pharaoh Brown
+IND
+Bye 13
+Sun 12:00pm vs NYG
+1.50
+0.38
+0.0%
+No Adds
+WR
+Lil'Jordan Humphrey
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+4.00
+0.37
+0.1%
+No Adds
+WR
+Skyy Moore
+Q
+GB
+Bye 11
+Wed 7:00pm @ LAR
+10.00
+0.36
+0.3%
+No Adds
+TE
+Cameron Latu
+Q
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.36
+0.0%
+No Adds
+WR
+Chris Blair
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+6.00
+0.35
+0.0%
+No Adds
+TE
+Hayden Rucci
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+7.50
+0.35
+0.0%
+No Adds
+TE
+Chris Manhertz
+NYG
+Bye 8
+Sun 12:00pm @ IND
+2.50
+0.35
+0.0%
+No Adds
+WR
+Ben Skowronek
+Q
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+12.00
+0.33
+0.1%
+No Adds
+TE
+Payne Durham
+TB
+Bye 10
+Mon 7:15pm vs CAR
+1.50
+0.33
+0.0%
+No Adds
+WR
+Greg Dortch
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.32
+0.2%
+No Adds
+TE
+Ja'Tavion Sanders
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.32
+0.5%
+No Adds
+TE
+Max Klare
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.32
+1.6%
+No Adds
+WR
+Malachi Corley
+CLE
+Bye 11
+Sun 7:20pm vs LV
+6.00
+0.31
+0.2%
+No Adds
+WR
+Nick Westbrook-Ikhine
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.31
+0.2%
+No Adds
+WR
+Derius Davis
+LAC
+Bye 7
+Sun 3:05pm vs NE
+10.00
+0.29
+0.0%
+No Adds
+WR
+Cody White
+LV
+Bye 13
+Sun 7:20pm @ CLE
+40.00
+0.29
+1.9%
+No Adds
+WR
+Luke McCaffrey
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+1.00
+0.28
+0.6%
+No Adds
+TE
+Brevin Jordan
+Q
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+4.00
+0.27
+0.0%
+No Adds
+TE
+Riley Nowakowski
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.27
+0.0%
+No Adds
+WR
+Bo Melton
+Q
+GB
+Bye 11
+Wed 7:00pm @ LAR
+8.00
+0.26
+0.0%
+No Adds
+TE
+Jelani Woods
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+9.00
+0.26
+0.1%
+No Adds
+WR
+Brenen Thompson
+D
+LAC
+Bye 7
+Sun 3:05pm vs NE
+2.00
+0.25
+1.5%
+No Adds
+WR
+Mitchell Tinsley
+CIN
+Bye 6
+Sun 12:00pm vs NO
+9.00
+0.24
+0.1%
+No Adds
+TE
+David Martin-Robinson
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.22
+0.0%
+No Adds
+TE
+Justin Joly
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.22
+0.4%
+No Adds
+TE
+Thomas Fidone II
+NYG
+Bye 8
+Sun 12:00pm @ IND
+3.50
+0.22
+0.0%
+No Adds
+WR
+Barion Brown
+NO
+Bye 8
+Sun 12:00pm @ CIN
+16.00
+0.22
+0.6%
+No Adds
+TE
+Seydou Traore
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.21
+0.1%
+No Adds
+WR
+Theo Wease Jr.
+LAC
+Bye 7
+Sun 3:05pm vs NE
+6.00
+0.20
+0.0%
+No Adds
+WR
+Jalin Hyatt
+NYG
+Bye 8
+Sun 12:00pm @ IND
+1.00
+0.20
+0.2%
+No Adds
+WR
+Elijah Sarratt
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+2.00
+0.20
+1.6%
+No Adds
+TE
+Nick Muse
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+9.00
+0.20
+0.0%
+No Adds
+TE
+Colson Yankoff
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+5.50
+0.20
+0.0%
+No Adds
+WR
+Jalen Royals
+KC
+Bye 5
+Thu 7:20pm @ BUF
+18.00
+0.18
+1.3%
+No Adds
+WR
+Tim Patrick
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+7.00
+0.18
+0.1%
+No Adds
+WR
+Skyler Bell
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.17
+2.0%
+No Adds
+TE
+Robert Tonyan
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+1.50
+0.17
+0.0%
+No Adds
+TE
+Bauer Sharp
+TB
+Bye 10
+Mon 7:15pm vs CAR
+3.50
+0.17
+0.0%
+No Adds
+WR
+Jahdae Walker
+CHI
+Bye 10
+Thu 12:00pm @ DET
+7.00
+0.16
+0.1%
+No Adds
+WR
+Kameron Johnson
+TB
+Bye 10
+Mon 7:15pm vs CAR
+1.00
+0.15
+0.1%
+No Adds
+WR
+Tay Martin
+DET
+Bye 6
+Thu 12:00pm vs CHI
+2.00
+0.14
+0.0%
+No Adds
+WR
+Andrew Armstrong
+KC
+Bye 5
+Thu 7:20pm @ BUF
+14.00
+0.14
+0.1%
+No Adds
+TE
+Stephen Carlson
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.14
+0.0%
+No Adds
+WR
+Dareke Young
+LV
+Bye 13
+Sun 7:20pm @ CLE
+4.00
+0.13
+0.0%
+No Adds
+WR
+DeAndre Carter
+DET
+Bye 6
+Thu 12:00pm vs CHI
+1.00
+0.11
+0.0%
+No Adds
+WR
+Malik Benson
+LV
+Bye 13
+Sun 7:20pm @ CLE
+2.00
+0.10
+0.6%
+No Adds
+WR
+Nikko Remigio
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.09
+0.0%
+No Adds
+TE
+Kylen Granson
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.09
+0.0%
+No Adds
+WR
+Xavier Gipson
+NYG
+Bye 8
+Sun 12:00pm @ IND
+1.00
+0.07
+0.0%
+No Adds
+WR
+Beaux Collins
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.07
+0.0%
+No Adds
+WR
+Camden Brown
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.06
+0.2%
+No Adds
+WR
+Britain Covey
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.02
+0.0%
+No Adds
+WR
+Kaden Wetjen
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.02
+0.3%
+No Adds
+TE
+Feleipe Franks
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.02
+0.0%
+No Adds
+TE
+Ko Kieft
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.02
+0.0%
+No Adds
+TE
+Brayden Willis
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.02
+0.0%
+No Adds
+WR
+Irvin Charles
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.01
+0.0%
+No Adds
+WR
+Jacob Cowing
+SF
+Bye 8
+Sun 3:25pm vs SEA
+10.00
+0.01
+0.4%
+No Adds
+QB
+Luke Altmyer
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+QB
+Tyler Huntley
+IR
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+82.00
+0.00
+2.5%
+No Adds
+QB
+Donovan Smith
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Jaxson Dart
+IR
+NYG
+Bye 8
+Sun 12:00pm @ IND
+37.00
+0.00
+14.6%
+No Adds
+QB
+Sam Howell
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.7%
+No Adds
+QB
+Kyle Allen
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.7%
+No Adds
+QB
+Riley Leonard
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.4%
+No Adds
+QB
+Max Brosmer
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+3.00
+0.00
+0.0%
+No Adds
+QB
+Athan Kaliakmanis
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+19.00
+0.00
+0.2%
+No Adds
+QB
+P.J. Walker
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+QB
+Kellen Mond
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+QB
+Jordan Travis
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+QB
+Tanner Morgan
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+QB
+Malik Willis
+IR
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+167.00
+0.00
+20.5%
+No Adds
+QB
+Kedon Slovis
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+QB
+Tyrod Taylor
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.6%
+No Adds
+QB
+Easton Stick
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+QB
+Carter Bradley
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+QB
+Zach Wilson
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.1%
+No Adds
+QB
+Kyler Murray
+Q
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+113.00
+0.00
+24.9%
+No Adds
+QB
+Ben DiNucci
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+QB
+Cade Klubnik
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+12.00
+0.00
+2.3%
+No Adds
+QB
+Brady Cook
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.1%
+No Adds
+QB
+Clayton Tune
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+QB
+Tanner Mordecai
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+QB
+Sawyer Robertson
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+QB
+Walker Eget
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+C.J. Beathard
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+QB
+Trace McSorley
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+QB
+KJ Jefferson
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Sam Hartman
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+QB
+Tanner McKee
+P
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+56.00
+0.00
+3.6%
+No Adds
+QB
+A.J. McCarron
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Miller Moss
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.0%
+No Adds
+QB
+Jake Luton
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+QB
+Tyson Bagent
+CHI
+Bye 10
+Thu 12:00pm @ DET
+28.00
+0.00
+1.6%
+No Adds
+QB
+Gardner Minshew II
+IR
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+39.00
+0.00
+3.3%
+No Adds
+QB
+Jimmy Garoppolo
+---
+Bye -
+Bye
+0.00
+0.00
+0.3%
+No Adds
+QB
+Grayson James
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Sam Ehlinger
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+QB
+Mac Jones
+Q
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+3.5%
+No Adds
+QB
+Brett Rypien
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+QB
+Jeff Driskel
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+QB
+Drew Allar
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+2.4%
+No Adds
+QB
+Will Levis
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.1%
+No Adds
+QB
+Danny Etling
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+QB
+Devin Leary
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+QB
+Will Grier
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+QB
+Shane Buechele
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+QB
+Dorian Thompson-Robinson
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+QB
+Chase Garbers
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+QB
+EJ Perry
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+QB
+Justin Fields
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+2.0%
+No Adds
+QB
+Jack Strand
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+5.00
+0.00
+0.3%
+No Adds
+QB
+Chris Streveler
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+QB
+Sean Mannion
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+QB
+Cam Miller
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+QB
+Skylar Thompson
+IR
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+QB
+Logan Woodside
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+QB
+Jalen Milroe
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+1.3%
+No Adds
+QB
+Drake Maye
+O
+NE
+Bye 11
+Sun 3:05pm @ LAC
+287.00
+0.00
+68.2%
+No Adds
+QB
+Will Rogers
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Bailey Zappe
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+QB
+Tua Tagovailoa
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+2.00
+0.00
+2.8%
+No Adds
+QB
+Brandon Allen
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+QB
+Jake Retzlaff
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+QB
+Daniel Jones
+IND
+Bye 13
+Sun 12:00pm vs NYG
+183.00
+0.00
+26.5%
+No Adds
+QB
+Kenny Pickett
+CAR
+Bye 5
+Mon 7:15pm @ TB
+8.00
+0.00
+0.4%
+No Adds
+QB
+Jake Fromm
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Alex McGough
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+QB
+Chris Oladokun
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.0%
+No Adds
+QB
+Anthony Brown
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+QB
+Dion Golatt Jr.
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Joshua Dobbs
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.4%
+No Adds
+QB
+Jack Plummer
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+QB
+Tommy Castellanos
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Jaren Hall
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Garrett Nussmeier
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.3%
+No Adds
+QB
+Jarrett Stidham
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.4%
+No Adds
+QB
+Joe Fagnano
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+13.00
+0.00
+0.9%
+No Adds
+QB
+Quinn Ewers
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.9%
+No Adds
+QB
+Ian Book
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+QB
+Graham Mertz
+IR
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+QB
+Will Howard
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.7%
+No Adds
+QB
+Sean Clifford
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+0.0%
+No Adds
+QB
+Kurtis Rourke
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+QB
+Nate Sudfeld
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Desmond Ridder
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+QB
+Taylen Green
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.6%
+No Adds
+QB
+Jalen Hurts
+IR
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+119.00
+0.00
+19.2%
+No Adds
+QB
+Cole Payton
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.7%
+No Adds
+QB
+Nate Peterman
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+QB
+Mitchell Trubisky
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.3%
+No Adds
+QB
+Kyron Drones
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+QB
+Dillon Gabriel
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.5%
+No Adds
+QB
+John Wolford
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+QB
+Matt Corral
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Behren Morton
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.1%
+No Adds
+QB
+Brian Hoyer
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Tim Boyle
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+QB
+Jake Haener
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+QB
+Marcus Mariota
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+49.00
+0.00
+2.6%
+No Adds
+QB
+Trevor Siemian
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+QB
+Mark Gronowski
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+QB
+Jason Bean
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+QB
+Jake Browning
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.1%
+No Adds
+QB
+Stetson Bennett
+LAR
+Bye 11
+Wed 7:00pm vs GB
+1.00
+0.00
+0.5%
+No Adds
+QB
+Haynes King
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.2%
+No Adds
+QB
+Blaine Gabbert
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Nick Mullens
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+QB
+Max Duggan
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+QB
+Seth Henigan
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+QB
+Ty Simpson
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+5.0%
+No Adds
+QB
+Lamar Jackson
+IR
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+113.00
+0.00
+57.8%
+No Adds
+QB
+Adrian Martinez
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+QB
+Philip Rivers
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+QB
+Joe Flacco
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+2.5%
+No Adds
+QB
+Brendan Sorsby
+---
+Bye -
+Bye
+0.00
+0.00
+0.2%
+No Adds
+QB
+Jameis Winston
+NYG
+Bye 8
+Sun 12:00pm @ IND
+129.00
+0.00
+6.0%
+No Adds
+QB
+Maverick McIvor
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Michael Pratt
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+QB
+Teddy Bridgewater
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+QB
+Blake Shapen
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Taylor Heinicke
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+QB
+Matt Barkley
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+QB
+Russell Wilson
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+QB
+Taulia Tagovailoa
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+QB
+Kyle Trask
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+QB
+Mike White
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+QB
+Austin Reed
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+QB
+Hendon Hooker
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.1%
+No Adds
+QB
+David Blough
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+QB
+Cooper Rush
+TB
+Bye 10
+Mon 7:15pm vs CAR
+21.00
+0.00
+0.1%
+No Adds
+QB
+Diego Pavia
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+QB
+Case Keenum
+CHI
+Bye 10
+Thu 12:00pm @ DET
+41.00
+0.00
+0.6%
+No Adds
+QB
+Mason Rudolph
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+2.00
+0.00
+0.5%
+No Adds
+QB
+Tom Brady
+---
+Bye -
+Bye
+0.00
+0.00
+0.1%
+No Adds
+QB
+Trey Lance
+IR
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.5%
+No Adds
+QB
+Andy Dalton
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.2%
+No Adds
+QB
+Davis Mills
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.7%
+No Adds
+QB
+Jacob Eason
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+QB
+Nathan Rourke
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Trayveon Williams
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Tyrion Davis-Price
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+RB
+Robert Henry Jr.
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+1.00
+0.00
+0.3%
+No Adds
+RB
+Dare Ogunbowale
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+2.00
+0.00
+0.1%
+No Adds
+RB
+Dean Connors
+IR
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+0.1%
+No Adds
+RB
+Daijun Edwards
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jacardia Wright
+IR
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+RB
+Raheem Blackshear
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jerome Ford
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.5%
+No Adds
+RB
+E.J. Smith
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.1%
+No Adds
+RB
+Anthony Hankerson
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jacob Saylors
+DET
+Bye 6
+Thu 12:00pm vs CHI
+2.00
+0.00
+0.9%
+No Adds
+RB
+Jase McClellan
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jordan Mims
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+RB
+DeeJay Dallas
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+8.00
+0.00
+0.3%
+No Adds
+RB
+Tarik Cohen
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+RB
+Cordarrelle Patterson
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Tank Bigsby
+IR
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+20.00
+0.00
+16.7%
+No Adds
+RB
+Zander Horvath
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+RB
+Trevor Etienne
+CAR
+Bye 5
+Mon 7:15pm @ TB
+11.00
+0.00
+1.7%
+No Adds
+RB
+JaMycal Hasty
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+RB
+Deuce Vaughn
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Ronnie Rivers
+LAR
+Bye 11
+Wed 7:00pm vs GB
+15.00
+0.00
+0.2%
+No Adds
+RB
+Mohamed Ibrahim
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Le'Veon Moss
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+RB
+Cash Jones
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jaret Patterson
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+RB
+Nyheim Hines
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Brandon Bolden
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+RB
+Damien Williams
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jonathan Ward
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+RB
+Roschon Johnson
+Q
+CHI
+Bye 10
+Thu 12:00pm @ DET
+30.00
+0.00
+7.5%
+No Adds
+RB
+Aidan Robbins
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jacob Kibodi
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+RB
+Tre Stewart
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+RB
+Larry Rountree III
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Donovan Edwards
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+RB
+Hassan Haskins
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.1%
+No Adds
+RB
+Robbie Ouzts
+IR
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+RB
+Nick Bawden
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Xazavian Valladay
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jakob Johnson
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Mel Brown
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Patrick Ricard
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+RB
+Demetric Felton
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Raheim Sanders
+IR
+CLE
+Bye 11
+Sun 7:20pm vs LV
+14.00
+0.00
+1.9%
+No Adds
+RB
+Jashaun Corbin
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+5.00
+0.00
+0.1%
+No Adds
+RB
+Tyrone Tracy Jr.
+IR
+NYG
+Bye 8
+Sun 12:00pm @ IND
+32.00
+0.00
+18.2%
+No Adds
+RB
+Ty'Son Williams
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+RB
+Miyan Williams
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Malik Davis
+IR
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+2.2%
+No Adds
+RB
+D'Onta Foreman
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Davon Booth
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jamaal Williams
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Ja'Quinden Jackson
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Montrell Johnson Jr.
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+RB
+Anthony Tyus III
+CAR
+Bye 5
+Mon 7:15pm @ TB
+10.00
+0.00
+0.1%
+No Adds
+RB
+Raheem Mostert
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.2%
+No Adds
+RB
+Reggie Gilliam
+Q
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+RB
+Lew Nichols III
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+8.00
+0.00
+0.0%
+No Adds
+RB
+Antonio Gibson
+---
+Bye -
+Bye
+0.00
+0.00
+0.2%
+No Adds
+RB
+Eli Heidenreich
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.9%
+No Adds
+RB
+Kenny McIntosh
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Marcus Yarns
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Adam Randall
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+4.2%
+No Adds
+RB
+Myles Montgomery
+IR
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+RB
+Trestan Ebner
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.0%
+No Adds
+RB
+Blake Watson
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jeremy McNichols
+IR
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+5.00
+0.00
+0.5%
+No Adds
+RB
+George Holani
+O
+SEA
+Bye 11
+Sun 3:25pm @ SF
+33.00
+0.00
+7.7%
+No Adds
+RB
+Trey Benson
+IR
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+1.5%
+No Adds
+RB
+Sincere McCormick
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jaydon Blue
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+2.7%
+No Adds
+RB
+Frank Gore Jr.
+BUF
+Bye 7
+Thu 7:20pm vs KC
+1.00
+0.00
+0.0%
+No Adds
+RB
+Rasheen Ali
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+4.00
+0.00
+0.3%
+No Adds
+RB
+Chip Trayanum
+IR
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+RB
+Patrick Laird
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+RB
+Amar Johnson
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+RB
+Kendall Milton
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+0.0%
+No Adds
+RB
+Isaiah Spiller
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+RB
+Dylan Laube
+LV
+Bye 13
+Sun 7:20pm @ CLE
+15.00
+0.00
+0.4%
+No Adds
+RB
+Eric Gray
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+RB
+La'Mical Perine
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Devin Neal
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.5%
+No Adds
+RB
+Brian Robinson Jr.
+IR
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+59.00
+0.00
+38.5%
+No Adds
+RB
+Jabari Small
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+RB
+J.K. Dobbins
+O
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+69.00
+0.00
+79.8%
+No Adds
+RB
+Qadree Ollison
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Evan Hull
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+RB
+Dante Miller
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Isaac Guerendo
+PUP
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.8%
+No Adds
+RB
+Taiwan Jones
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+RB
+Israel Abanikanda
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+2.00
+0.00
+1.7%
+No Adds
+RB
+Tiyon Evans
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+RB
+Gerrid Doaks
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Pierre Strong Jr.
+GB
+Bye 11
+Wed 7:00pm @ LAR
+15.00
+0.00
+1.8%
+No Adds
+RB
+Louis Rees-Zammit
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jawhar Jordan
+IR
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+13.00
+0.00
+0.4%
+No Adds
+RB
+Nathan Carter
+KC
+Bye 5
+Thu 7:20pm @ BUF
+2.00
+0.00
+0.0%
+No Adds
+RB
+Terion Stewart
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.0%
+No Adds
+RB
+Dwayne Washington
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+RB
+Khari Blasingame
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Zavier Scott
+IR
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.1%
+No Adds
+RB
+Elijah Dotson
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Lawrance Toafili
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+RB
+Devin Mockobee
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Tyler Hoosman
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+RB
+Keaontay Ingram
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Zamir White
+NO
+Bye 8
+Sun 12:00pm @ CIN
+1.00
+0.00
+0.1%
+No Adds
+RB
+Roydell Williams
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Trey Sermon
+IR
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jeff Wilson
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+RB
+Boston Scott
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Angel Johnson
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Nathaniel Peat
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Ameer Abdullah
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+15.00
+0.00
+0.2%
+No Adds
+RB
+Spencer Brown
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Joe Mixon
+---
+Bye -
+Bye
+0.00
+0.00
+0.5%
+No Adds
+RB
+Jordan James
+Q
+SF
+Bye 8
+Sun 3:25pm vs SEA
+8.00
+0.00
+2.3%
+No Adds
+RB
+Jonathon Brooks
+IR
+CAR
+Bye 5
+Mon 7:15pm @ TB
+9.00
+0.00
+40.6%
+No Adds
+RB
+Ian Wheeler
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+RB
+Brittain Brown
+IR
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.0%
+No Adds
+RB
+Eno Benjamin
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+TreVeyon Henderson
+IR
+NE
+Bye 11
+Sun 3:05pm @ LAC
+40.00
+0.00
+53.7%
+No Adds
+RB
+Mike Boone
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Rahsul Faison
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+J.J. Taylor
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Damien Martinez
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.1%
+No Adds
+RB
+Nate McCrary
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+RB
+Deon Jackson
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+RB
+C.J. Ham
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Isiah Pacheco
+IR
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+9.4%
+No Adds
+RB
+Darrynton Evans
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Phil Mafah
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.1%
+No Adds
+RB
+Zach Evans
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+John Kelly
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Brashard Smith
+IR
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.9%
+No Adds
+RB
+DeWayne McBride
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Dameon Pierce
+---
+Bye -
+Bye
+27.00
+0.00
+7.8%
+No Adds
+RB
+Travis Dye
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+RB
+Bryant Koback
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+RB
+Camerun Peoples
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+RB
+RJ Harvey
+IR
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+46.00
+0.00
+63.7%
+No Adds
+RB
+Chris Evans
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Chase Edmonds
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Keilan Robinson
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+RB
+Tyler Goodson
+IR
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+26.00
+0.00
+2.9%
+No Adds
+RB
+Michael Wiley
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+RB
+Demond Claiborne
+IR
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+3.00
+0.00
+3.7%
+No Adds
+RB
+Carson Steele
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.1%
+No Adds
+RB
+Emani Bailey
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+RB
+James Conner
+IR
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+8.7%
+No Adds
+RB
+Dillon Johnson
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+RB
+Keith Smith
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Salvon Ahmed
+CHI
+Bye 10
+Thu 12:00pm @ DET
+9.00
+0.00
+0.1%
+No Adds
+RB
+Alex Armah
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Kareem Hunt
+---
+Bye -
+Bye
+0.00
+0.00
+0.7%
+No Adds
+RB
+Cody Schrader
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+1.00
+0.00
+0.0%
+No Adds
+RB
+Godwin Igwebuike
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Travis Homer
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+3.00
+0.00
+0.1%
+No Adds
+RB
+Jermar Jefferson
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jordan Wilkins
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+RB
+Hassan Hall
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+RB
+Alec Ingold
+IR
+LAC
+Bye 7
+Sun 3:05pm vs NE
+3.00
+0.00
+0.0%
+No Adds
+RB
+Corey Clement
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+RB
+Lan Larison
+NE
+Bye 11
+Sun 3:05pm @ LAC
+10.00
+0.00
+0.7%
+No Adds
+RB
+Jaden Nixon
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+RB
+Anthony McFarland Jr.
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jam Miller
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.1%
+No Adds
+RB
+Patrick Taylor
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+RB
+Zack Moss
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Devine Ozigbo
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Joshua Kelley
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Miles Sanders
+---
+Bye -
+Bye
+0.00
+0.00
+0.1%
+No Adds
+RB
+A.J. Dillon
+CAR
+Bye 5
+Mon 7:15pm @ TB
+8.00
+0.00
+0.6%
+No Adds
+RB
+Noah Whittington
+IR
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Ty Montgomery
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+RB
+Ulysses Bentley IV
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jamal Haynes
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+0.1%
+No Adds
+RB
+Kevin Harris
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Myles Gaskin
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Devon Achane
+IR
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+24.00
+0.00
+21.0%
+No Adds
+RB
+Clyde Edwards-Helaire
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Al-Jay Henderson
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+RB
+British Brooks
+IR
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+RB
+Ty Chandler
+IR
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.1%
+No Adds
+RB
+Dalvin Cook
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Logan Diggs
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Avery Williams
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jeremiyah Love
+IR
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+55.00
+0.00
+78.2%
+No Adds
+RB
+Tahj Brooks
+CIN
+Bye 6
+Sun 12:00pm vs NO
+3.00
+0.00
+0.8%
+No Adds
+RB
+Kene Nwangwu
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jaquez Moore
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Kalel Mullings
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+1.00
+0.00
+0.0%
+No Adds
+RB
+Kentrel Bullock
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+0.0%
+No Adds
+RB
+Kendre Miller
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+40.00
+0.00
+19.1%
+No Adds
+RB
+Deneric Prince
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+RB
+J'Mari Taylor
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.3%
+No Adds
+RB
+LeQuint Allen
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+1.00
+0.00
+0.9%
+No Adds
+RB
+Terrell Jennings
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+RB
+Gregory Desrosiers
+NYG
+Bye 8
+Sun 12:00pm @ IND
+3.00
+0.00
+0.2%
+No Adds
+RB
+Jason Huntley
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+RB
+Roman Hemby
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.1%
+No Adds
+RB
+Isaiah Davis
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+14.00
+0.00
+1.9%
+No Adds
+RB
+Aaron Shampklin
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+RB
+Gary Brightwell
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+0.0%
+No Adds
+RB
+Tyjae Spears
+IR
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+20.00
+0.00
+27.6%
+No Adds
+RB
+Jason Cabinda
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jonathan Williams
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Michael Burton
+IR
+CLE
+Bye 11
+Sun 7:20pm vs LV
+1.00
+0.00
+0.0%
+No Adds
+RB
+Julius Chestnut
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+RB
+Seth McGowan
+O
+IND
+Bye 13
+Sun 12:00pm vs NYG
+57.00
+0.00
+64.3%
+No Adds
+RB
+Ben Mason
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+RB
+Ezekiel Elliott
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Cam Akers
+---
+Bye -
+Bye
+0.00
+0.00
+0.1%
+No Adds
+RB
+Ronald Jones II
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Andrew Beck
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+1.00
+0.00
+0.0%
+No Adds
+RB
+Austin Walter
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+RB
+Nick Chubb
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.1%
+No Adds
+RB
+Desmond Reid
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.1%
+No Adds
+RB
+Ke'Shawn Vaughn
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Josh Williams
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+RB
+D'Ernest Johnson
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jaden Shirden
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+RB
+Tony Jones Jr.
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jake Funk
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+RB
+Najee Harris
+NYG
+Bye 8
+Sun 12:00pm @ IND
+19.00
+0.00
+3.9%
+No Adds
+RB
+Marlon Mack
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Khalan Laborn
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+RB
+Alexander Mattison
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.5%
+No Adds
+RB
+Brady Russell
+SEA
+Bye 11
+Sun 3:25pm @ SF
+4.00
+0.00
+0.0%
+No Adds
+RB
+Snoop Conner
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Derrick Gore
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+RB
+Gus Edwards
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+RB
+Jarquez Hunter
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.4%
+No Adds
+RB
+Tyler Badie
+IR
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+13.00
+0.00
+0.3%
+No Adds
+RB
+Deion Hankins
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.0%
+No Adds
+RB
+Scott Matlock
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+RB
+Adam Prentice
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+3.00
+0.00
+0.0%
+No Adds
+RB
+Craig Reynolds
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+1.00
+0.00
+0.0%
+No Adds
+WR
+Ja'Mori Maclin
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jacob Copeland
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Erik Ezukanma
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Dominic Lovett
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Wesley Grimes
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Kolbe Katsis
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+WR
+Curtis Samuel
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.1%
+No Adds
+WR
+Justin Marshall
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+WR
+Austin Mack
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Michael Pittman Jr.
+IR
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+14.00
+0.00
+29.7%
+No Adds
+WR
+Brandon Aiyuk
+---
+Bye -
+Bye
+0.00
+0.00
+10.1%
+No Adds
+WR
+Max Hurleman
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+18.00
+0.00
+0.0%
+No Adds
+WR
+Trent Sherfield
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Ty James
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jaylin Lane
+IR
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+4.00
+0.00
+0.4%
+No Adds
+WR
+Matt Slater
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Odell Beckham Jr.
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.4%
+No Adds
+WR
+Jaelon Darden
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+WR
+Nelson Agholor
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Grant DuBose
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Easop Winston Jr.
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Zach Pascal
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Noah Thomas
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+0.0%
+No Adds
+WR
+Dontay Demus Jr.
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tarik Black
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Bryce Ford-Wheaton
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+WR
+Michael Bandy
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tyler Boyd
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Emmanuel Henderson Jr.
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+WR
+Justyn Ross
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.0%
+No Adds
+WR
+Damiere Byrd
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Kobe Prentice
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+WR
+Quintez Cephus
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Trey Palmer
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Aron Cruickshank
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+River Cracraft
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Bru McCoy
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Darius Slayton
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.5%
+No Adds
+WR
+Alec Pierce
+IR
+IND
+Bye 13
+Sun 12:00pm vs NYG
+12.00
+0.00
+34.5%
+No Adds
+WR
+Kaden Prather
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Rakim Jarrett
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Malik Rutherford
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Luke Floriea
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jordan Mosley
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Isaiah Zuber
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Austin Trammell
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jonathan Mingo
+O
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+9.00
+0.00
+0.2%
+No Adds
+WR
+Tim Jones
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Josh Reynolds
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Will Sheppard
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+WR
+De'Corian Clark
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Denzel Mims
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Adam Thielen
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.1%
+No Adds
+WR
+Dontayvion Wicks
+IR
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+51.00
+0.00
+21.9%
+No Adds
+WR
+Kyren Lacy
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jordan Addison
+O
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+53.00
+0.00
+61.9%
+No Adds
+WR
+Jalen McMillan
+IR
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+4.9%
+No Adds
+WR
+Marcus Kemp
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Isaiah Hodgins
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Marquise Goodwin
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+James Washington
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Javon Baker
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.1%
+No Adds
+WR
+Jalen Walthall
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Antoine Green
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Cornelius Johnson
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+WR
+Romello Brinson
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Dez Fitzpatrick
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Anthony Miller
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+WR
+Terrace Marshall Jr.
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jake Bobo
+IR
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.1%
+No Adds
+WR
+Elijah Cooks
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Matt Landers
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+WR
+LaJohntay Wester
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+9.00
+0.00
+0.1%
+No Adds
+WR
+Lucky Jackson
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jayden Higgins
+IR
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+4.6%
+No Adds
+WR
+Juwann Winfree
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Kendrick Law
+IR
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.1%
+No Adds
+WR
+Justin Shorter
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Julian Fleming
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tom Kennedy
+IR
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jamaal Pritchett
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Squirrel White
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.0%
+No Adds
+WR
+David Moore
+CAR
+Bye 5
+Mon 7:15pm @ TB
+3.00
+0.00
+0.0%
+No Adds
+WR
+Byron Pringle
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Ja'Lynn Polk
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.1%
+No Adds
+WR
+Daurice Fountain
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Coleman Owen
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Samuel Brown
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jordan Whittington
+IR
+LAR
+Bye 11
+Wed 7:00pm vs GB
+2.00
+0.00
+0.5%
+No Adds
+WR
+Gage Larvadain
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+WR
+Parris Campbell
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jha'Quan Jackson
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Ainias Smith
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jaylin Noel
+IR
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+67.00
+0.00
+7.4%
+No Adds
+WR
+Caullin Lacy
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+DT Sheffield
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Cam Sims
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Mike Thomas
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+WR
+Dazz Newsome
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Austin Watkins
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Lewis Bond
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.1%
+No Adds
+WR
+Casey Washington
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Donavon Greene
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Brandon Powell
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Ronnie Bell
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+WR
+Alex Erickson
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Ricky White III
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+WR
+Dax Milne
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jared Wayne
+O
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+10.00
+0.00
+0.0%
+No Adds
+WR
+Kazmeir Allen
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Phillip Dorsett
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+WR
+Chase Claypool
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Deon Cain
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Trenton Irwin
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Richie James
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jordan Hudson
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jalen Reagor
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+WR
+Antwane Wells Jr.
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Deven Thompkins
+LV
+Bye 13
+Sun 7:20pm @ CLE
+1.00
+0.00
+0.0%
+No Adds
+WR
+Michael Thomas
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Hakeem Butler
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+WR
+A.J. Brown
+O
+NE
+Bye 11
+Sun 3:05pm @ LAC
+21.00
+0.00
+85.3%
+No Adds
+WR
+Zakhari Franklin
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Eric Rivers
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Stanley Morgan
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+WR
+Eric McAlister
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+D.J. Chark
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Allen Lazard
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tre Nixon
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tru Edwards
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+0.0%
+No Adds
+WR
+David Sills
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Alex Bachman
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Antoine Wesley
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Marquez Valdes-Scantling
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+4.00
+0.00
+0.1%
+No Adds
+WR
+Brandin Cooks
+SF
+Bye 8
+Sun 3:25pm vs SEA
+15.00
+0.00
+1.9%
+No Adds
+WR
+Keelan Doss
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Cade Johnson
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+WR
+Kobe Hudson
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jalen Virgil
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Marcell Ateman
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Wan'Dale Robinson
+IR
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+79.00
+0.00
+43.3%
+No Adds
+WR
+Deonte Harty
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Malik Turner
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+WR
+N'Keal Harry
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+WR
+KeeSean Johnson
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Traeshon Holden
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Danny Gray
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Martavis Bryant
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jamison Crowder
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Ramel Keyton
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tyrie Cleveland
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+WR
+Dalen Cambre
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+WR
+Ricky Pearsall
+IR
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+3.7%
+No Adds
+WR
+Ihmir Smith-Marsette
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Braxton Berrios
+IR
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+WR
+Chris Brazzell II
+IR
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+2.1%
+No Adds
+WR
+Kristian Wilkerson
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Equanimeous St. Brown
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Junior Bergen
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Roc Taylor
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Keelan Cole
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Racey McMath
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Kendrick Bourne
+IR
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+49.00
+0.00
+5.4%
+No Adds
+WR
+Hank Beatty
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+WR
+Cedrick Wilson
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Allen Robinson
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tyler Johnson
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Malik Cunningham
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Joshua Cephus
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Marquise Brown
+---
+Bye -
+Bye
+12.00
+0.00
+1.2%
+No Adds
+WR
+Tyquan Thornton
+IR
+KC
+Bye 5
+Thu 7:20pm @ BUF
+44.00
+0.00
+1.8%
+No Adds
+WR
+Kelly Akharaiyi
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+WR
+Trinity Benson
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+WR
+Shedrick Jackson
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+WR
+Freddie Swain
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.0%
+No Adds
+WR
+Collin Johnson
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Kyle Philips
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Devon Allen
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Trishton Jackson
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+WR
+Terique Owens
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Laviska Shenault Jr.
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Justin Watson
+KC
+Bye 5
+Thu 7:20pm @ BUF
+1.00
+0.00
+0.0%
+No Adds
+WR
+Kevin Austin Jr.
+NO
+Bye 8
+Sun 12:00pm @ CIN
+1.00
+0.00
+0.0%
+No Adds
+WR
+Chase Cota
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+WR
+Malik Taylor
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+D.J. Montgomery
+IR
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+WR
+Shi Smith
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tejhaun Palmer
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tyron Johnson
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tyler Lockett
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.2%
+No Adds
+WR
+Pokey Wilson
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Dillon Bell
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Trey Quinn
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Anthony Smith
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Sterling Shepard
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+19.00
+0.00
+0.1%
+No Adds
+WR
+Colton Dowell
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Isaiah McKenzie
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jalen Moreno-Cropper
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Vinny Anthony II
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Montorie Foster Jr.
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+WR
+Dylan Drummond
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Amari Rodgers
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tahj Washington
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+A.T. Perry
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tyler Scott
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jeff Smith
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+WR
+Willie Snead
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Anthony Schwartz
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+WR
+Moose Muhammad III
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Montrell Washington
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+KJ Hamler
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jalen Wayne
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jamal Agnew
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tre'Quan Smith
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Brandon Johnson
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+1.00
+0.00
+0.0%
+No Adds
+WR
+Jahmal Edrine
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Isaiah Neyor
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Mason Tipton
+PUP
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Cornell Powell
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Cedric Tillman
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.3%
+No Adds
+WR
+Jimmy Horn Jr.
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.1%
+No Adds
+WR
+Gunner Olszewski
+IR
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+WR
+Michael Woods II
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+WR
+Dennis Houston
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Nic Anderson
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+James Proche
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+WR
+Michael Wilson
+IR
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+118.00
+0.00
+29.6%
+No Adds
+WR
+Trebor Pena
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Marquez Stevenson
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Johnny Wilson
+IR
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.1%
+No Adds
+WR
+Chris Moore
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+14.00
+0.00
+0.1%
+No Adds
+WR
+Dezmon Patmon
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Chase Roberts
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tyren Montgomery
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+WR
+Charlie Jones
+NYG
+Bye 8
+Sun 12:00pm @ IND
+8.00
+0.00
+0.1%
+No Adds
+WR
+Dane Key
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+WR
+Velus Jones Jr.
+SEA
+Bye 11
+Sun 3:25pm @ SF
+4.00
+0.00
+0.0%
+No Adds
+WR
+JuJu Smith-Schuster
+---
+Bye -
+Bye
+0.00
+0.00
+0.1%
+No Adds
+WR
+Tyreik McAllister
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Cody Thompson
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Da'Quan Felton
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jalen Brooks
+IR
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+12.00
+0.00
+0.2%
+No Adds
+WR
+KeShawn Williams
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+0.0%
+No Adds
+WR
+Kadarius Toney
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Max Tomczak
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Isaiah Coulter
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Puka Nacua
+IR
+LAR
+Bye 11
+Wed 7:00pm vs GB
+174.00
+0.00
+76.6%
+No Adds
+WR
+Mike Strachan
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Bub Means
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.1%
+No Adds
+WR
+Cameron Dorner
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+WR
+Joey Hobert
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tyreek Hill
+---
+Bye -
+Bye
+0.00
+0.00
+15.8%
+No Adds
+WR
+Christian Kirk
+IR
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+4.5%
+No Adds
+WR
+Kawaan Baker
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jermaine Burton
+---
+Bye -
+Bye
+0.00
+0.00
+0.1%
+No Adds
+WR
+Mecole Hardman
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.1%
+No Adds
+WR
+De'Zhaun Stribling
+IR
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+29.9%
+No Adds
+WR
+Hayden Hatten
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+WR
+Robbie Chosen
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jeff Caldwell
+IR
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.2%
+No Adds
+WR
+Ja'Corey Brooks
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Ryan Miller
+NE
+Bye 11
+Sun 3:05pm @ LAC
+17.00
+0.00
+0.1%
+No Adds
+WR
+Dante Pettis
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Arian Smith
+IR
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.1%
+No Adds
+WR
+Andy Isabella
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+WR
+CJ Williams
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Chris Hilton Jr.
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Diontae Johnson
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+WR
+Nsimba Webster
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Lance McCutcheon
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+WR
+Calvin Austin III
+IR
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.7%
+No Adds
+WR
+Steven Sims
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+WR
+Russell Gage
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+WR
+DJ Turner
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Seth Williams
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Devonte Ross
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jamari Thrash
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+WR
+Nick Nash
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Mike Williams
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Robert Lewis
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Lynn Bowden Jr.
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jalen Camp
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+WR
+Marquez Callaway
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Corey Davis
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+E.J. Williams Jr.
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Isaiah Ford
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.0%
+No Adds
+WR
+Chris Conley
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Travis Hunter
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+26.00
+0.00
+7.7%
+No Adds
+WR
+Jayden Reed
+IR
+GB
+Bye 11
+Wed 7:00pm @ LAR
+6.00
+0.00
+10.2%
+No Adds
+WR
+K.J. Osborn
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+WR
+Greg Ward
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+John Ross
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Miles Boykin
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.0%
+No Adds
+WR
+Dyami Brown
+IR
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+17.00
+0.00
+0.3%
+No Adds
+WR
+Diontae Spencer
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Scott Miller
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.0%
+No Adds
+WR
+Trent Taylor
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Aaron Anderson
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+WR
+John Jiles
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+WR
+DeAndre Hopkins
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.3%
+No Adds
+WR
+Brandon Smith
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+7.00
+0.00
+0.0%
+No Adds
+WR
+KhaDarel Hodge
+SF
+Bye 8
+Sun 3:25pm vs SEA
+4.00
+0.00
+0.0%
+No Adds
+WR
+Xavier Weaver
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+WR
+Amari Cooper
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jalen Guyton
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jakeem Grant
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Kirk Merritt
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Noah Brown
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+WR
+Gabriel Davis
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.1%
+No Adds
+WR
+Kearis Jackson
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jason Brownlee
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+WR
+D'Wayne Eskridge
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Brenden Rice
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Hunter Renfrow
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.1%
+No Adds
+WR
+Bryce Oliver
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Lideatrick Griffin
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+WR
+Terry McLaurin
+IR
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+44.00
+0.00
+16.2%
+No Adds
+WR
+Kendall Hinton
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+WR
+Keith Kirkwood
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+WR
+Malik Heath
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+WR
+Romeo Doubs
+IR
+NE
+Bye 11
+Sun 3:05pm @ LAC
+55.00
+0.00
+36.5%
+No Adds
+WR
+Joaquin Davis
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Frank Darby
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+WR
+Tommy Mellott
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Jermaine Jackson
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Marcus Rosemy-Jacksaint
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Ray-Ray McCloud
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.1%
+No Adds
+WR
+Zay Jones
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+3.00
+0.00
+0.1%
+No Adds
+WR
+Cole Beasley
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+WR
+Robert Woods
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Penny Hart
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+WR
+Brennan Presley
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+0.0%
+No Adds
+WR
+Josh Ali
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Joseph Ngata
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+WR
+Andrei Iosivas
+IR
+CIN
+Bye 6
+Sun 12:00pm vs NO
+4.00
+0.00
+0.8%
+No Adds
+WR
+Josh Palmer
+IR
+BUF
+Bye 7
+Thu 7:20pm vs KC
+26.00
+0.00
+2.2%
+No Adds
+WR
+Donovan Peoples-Jones
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+WR
+Elijhah Badger
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.0%
+No Adds
+TE
+Benjamin Yurosek
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Stephen Sullivan
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+TE
+Sammis Reyes
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+TE
+Tre' McKitty
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+TE
+Cole Kmet
+IR
+CHI
+Bye 10
+Thu 12:00pm @ DET
+27.00
+0.00
+1.3%
+No Adds
+TE
+Dallin Holker
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Armani Rogers
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+TE
+Durham Smythe
+IR
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+1.50
+0.00
+0.0%
+No Adds
+TE
+Dae'Quan Wright
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+TE
+Kaden Smith
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+TE
+Marshel Martin IV
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+RJ Maryland
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+TE
+Brenden Bates
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Lucas Krull
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+TE
+Ethan Conner
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+TE
+Blake Bell
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Brycen Hopkins
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+0.0%
+No Adds
+TE
+Dominique Dafney
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+TE
+Julian Hill
+IR
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+TE
+Sal Cannella
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+TE
+Patrick Murtagh
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+TE
+Caden Prieskorn
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+0.0%
+No Adds
+TE
+Chamon Metayer
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+TE
+Donald Parham
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Carsen Ryan
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jordan Akins
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+0.00
+0.00
+0.0%
+No Adds
+TE
+JJ Galbreath
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+TE
+Devin Culp
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+TE
+John FitzPatrick
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.0%
+No Adds
+TE
+David Wells
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+TE
+Marcedes Lewis
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jeremiah Franklin
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+TE
+Bryson Nesbit
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+TE
+Tucker Fisk
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jordan Thomas
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jack Velling
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+TE
+John Michael Gyllenborg
+IR
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.0%
+No Adds
+TE
+MyCole Pruitt
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Mo Alie-Cox
+IR
+IND
+Bye 13
+Sun 12:00pm vs NYG
+14.00
+0.00
+0.1%
+No Adds
+TE
+Lake McRee
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Devin Asiasi
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jaren Kanak
+IR
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+TE
+Miller Forristall
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+0.0%
+No Adds
+TE
+Anthony Firkser
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+TE
+Darrell Daniels
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+TE
+Moliki Matavao
+IR
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Caleb Fauria
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Rodney Williams
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Hunter Kampmoyer
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+TE
+Cole Fotheringham
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+TE
+Joel Wilson
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jesper Horsted
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Trey Knox
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+TE
+Chris Myarick
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jordan Matthews
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Michael Trigg
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.1%
+No Adds
+TE
+Josiah Deguara
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+TE
+Joshua Simon
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+TE
+Will Mallory
+O
+IND
+Bye 13
+Sun 12:00pm vs NYG
+5.00
+0.00
+0.1%
+No Adds
+TE
+Irv Smith Jr.
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+TE
+Gerald Everett
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jesse James
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+TE
+Noah Togiai
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+0.00
+0.00
+0.0%
+No Adds
+TE
+Nick Vannett
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+0.00
+0.00
+0.0%
+No Adds
+TE
+Rohan Jones
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+0.0%
+No Adds
+TE
+Austin Allen
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+TE
+Kenny Yeboah
+IR
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jaheim Bell
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Zach Gentry
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+TE
+Joe Royer
+NFI
+CLE
+Bye 11
+Sun 7:20pm vs LV
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jalin Conyers
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+TE
+Will Dissly
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.1%
+No Adds
+TE
+Noah Gindorff
+PIT
+Bye 9
+Fri 2:00pm vs DEN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Giovanni Ricci
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+TE
+Dalton Keene
+HOU
+Bye 8
+Sun 12:00pm vs BAL
+0.00
+0.00
+0.0%
+No Adds
+TE
+Luke Musgrave
+PUP
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.4%
+No Adds
+TE
+Stephen Anderson
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+TE
+Albert Okwuegbunam
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+TE
+Josh Whyle
+IR
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.1%
+No Adds
+TE
+Brant Kuithe
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Matt Bushman
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.0%
+No Adds
+TE
+Lawrence Cager
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+TE
+Ross Dwelley
+CAR
+Bye 5
+Mon 7:15pm @ TB
+0.00
+0.00
+0.0%
+No Adds
+TE
+Geoff Swaim
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Lawson Luckie
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Sean McKeon
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+TE
+Amari Niblack
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+C.J. Uzomah
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Zach Davidson
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+TE
+Christian Trahan
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jared Pinkney
+CHI
+Bye 10
+Thu 12:00pm @ DET
+0.00
+0.00
+0.0%
+No Adds
+TE
+Rivaldo Fairweather
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jared Wiley
+IR
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+0.2%
+No Adds
+TE
+Jody Fortson
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jack Stoll
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+TE
+Ricky Seals-Jones
+IND
+Bye 13
+Sun 12:00pm vs NYG
+0.00
+0.00
+0.0%
+No Adds
+TE
+Elijah Arroyo
+IR
+SEA
+Bye 11
+Sun 3:25pm @ SF
+2.50
+0.00
+1.4%
+No Adds
+TE
+Shane Zylstra
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jack Westover
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+TE
+Troy Fumagalli
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+0.00
+0.00
+0.0%
+No Adds
+TE
+Luke Hasz
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Peyton Hendershot
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Taysom Hill
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.1%
+No Adds
+TE
+Logan Thomas
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jake Tonges
+IR
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+1.0%
+No Adds
+TE
+Josh Oliver
+IR
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+8.50
+0.00
+0.1%
+No Adds
+TE
+Miles Kitselman
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jackson Meeks
+DET
+Bye 6
+Thu 12:00pm vs CHI
+1.50
+0.00
+0.0%
+No Adds
+TE
+Tanner Conner
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+TE
+Tip Reiman
+PUP
+ARI
+Bye 14
+Sun 3:25pm vs WAS
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jacob Harris
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+TE
+Trevon Wesco
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+TE
+Tommy Sweeney
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Tanner McLachlan
+SF
+Bye 8
+Sun 3:25pm vs SEA
+0.00
+0.00
+0.0%
+No Adds
+TE
+Matt Lauter
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Terrance Ferguson
+IR
+LAR
+Bye 11
+Wed 7:00pm vs GB
+21.50
+0.00
+28.2%
+No Adds
+TE
+Eric Tomlinson
+LAC
+Bye 7
+Sun 3:05pm vs NE
+0.00
+0.00
+0.0%
+No Adds
+TE
+Caleb Lohner
+IR
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+TE
+Luke Lachey
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+TE
+Hayden Hurst
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Ben Sims
+SEA
+Bye 11
+Sun 3:25pm @ SF
+0.00
+0.00
+0.0%
+No Adds
+TE
+Zack Kuntz
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+TE
+CJ Dippre
+TB
+Bye 10
+Mon 7:15pm vs CAR
+0.00
+0.00
+0.0%
+No Adds
+TE
+Tyree Jackson
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+TE
+Jacob Hollister
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Tyler Kroft
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+TE
+Stone Smartt
+IR
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Tanner Hudson
+IR
+CIN
+Bye 6
+Sun 12:00pm vs NO
+18.50
+0.00
+0.0%
+No Adds
+TE
+Gee Scott Jr.
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+TE
+Tanner Arkin
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+TE
+Erick All
+IR
+CIN
+Bye 6
+Sun 12:00pm vs NO
+16.00
+0.00
+0.3%
+No Adds
+TE
+Tyler Davis
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+TE
+J.P. Holtz
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+TE
+Kole Taylor
+CIN
+Bye 6
+Sun 12:00pm vs NO
+0.00
+0.00
+0.0%
+No Adds
+TE
+Cole Turner
+IR
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+TE
+Parker Hesse
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+TE
+John Stephens Jr.
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+TE
+Mitchell Wilcox
+MIA
+Bye 6
+Sun 12:00pm vs NYJ
+0.00
+0.00
+0.0%
+No Adds
+K
+Greg Joseph
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+K
+Anders Carlson
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+K
+Will Ferrin
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.0%
+No Adds
+K
+Christopher Dunn
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+0.0%
+No Adds
+K
+Brayden Narveson
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+K
+Ramiz Ahmed
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+0.00
+0.00
+0.0%
+No Adds
+K
+Tristan Vizcaino
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+0.00
+0.00
+0.0%
+No Adds
+K
+Greg Zuerlein
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+K
+Mitch Wishnowsky
+NE
+Bye 11
+Sun 3:05pm @ LAC
+0.00
+0.00
+0.0%
+No Adds
+K
+Matthew Wright
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+K
+Elliott Fry
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+0.00
+0.00
+0.0%
+No Adds
+K
+Justin Tucker
+KC
+Bye 5
+Thu 7:20pm @ BUF
+0.00
+0.00
+1.1%
+No Adds
+K
+Graham Gano
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.1%
+No Adds
+K
+Lucas Havrisik
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+K
+Younghoe Koo
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.1%
+No Adds
+K
+Caden Davis
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+K
+Mason Shipley
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+K
+Lenny Krieg
+GB
+Bye 11
+Wed 7:00pm @ LAR
+0.00
+0.00
+0.0%
+No Adds
+K
+Joshua Karty
+LAR
+Bye 11
+Wed 7:00pm vs GB
+0.00
+0.00
+0.1%
+No Adds
+K
+Blake Grupe
+IR
+LAR
+Bye 11
+Wed 7:00pm vs GB
+3.00
+0.00
+1.4%
+No Adds
+K
+Zane Gonzalez
+---
+Bye -
+Bye
+24.00
+0.00
+0.3%
+No Adds
+K
+Matt Prater
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.1%
+No Adds
+K
+Rodrigo Blankenship
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+K
+Randy Bullock
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+K
+Ben Sauls
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.1%
+No Adds
+K
+Harrison Mevis
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+29.00
+0.00
+4.4%
+No Adds
+K
+Tanner Brown
+NO
+Bye 8
+Sun 12:00pm @ CIN
+0.00
+0.00
+0.0%
+No Adds
+K
+Maddux Trujillo
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.0%
+No Adds
+K
+Matt Ammendola
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+K
+Jude McAtamney
+NYG
+Bye 8
+Sun 12:00pm @ IND
+0.00
+0.00
+0.0%
+No Adds
+K
+Austin Seibert
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+K
+Michael Badgley
+BUF
+Bye 7
+Thu 7:20pm vs KC
+0.00
+0.00
+0.1%
+No Adds
+K
+Brett Maher
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+K
+Ethan Evans
+LAR
+Bye 11
+Wed 7:00pm vs GB
+1.00
+0.00
+0.0%
+No Adds
+K
+James McCourt
+LV
+Bye 13
+Sun 7:20pm @ CLE
+0.00
+0.00
+0.0%
+No Adds
+K
+Caleb Shudak
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+0.00
+0.00
+0.0%
+No Adds
+K
+Nick Folk
+---
+Bye -
+Bye
+56.00
+0.00
+5.5%
+No Adds
+K
+Cade York
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+0.00
+0.00
+0.1%
+No Adds
+K
+John Parker Romo
+ATL
+Bye 11
+Sun 12:00pm @ MIN
+0.00
+0.00
+0.0%
+No Adds
+K
+Dustin Hopkins
+---
+Bye -
+Bye
+0.00
+0.00
+0.0%
+No Adds
+K
+Tyler Loop
+IR
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+57.00
+0.00
+15.7%
+No Adds
+K
+Matt McCrane
+DET
+Bye 6
+Thu 12:00pm vs CHI
+0.00
+0.00
+0.0%
+No Adds
+My Roster
+Search roster by player or NFL team
+ALL
+QB
+RB
+WR
+TE
+K
+D/ST
+SORT
+Total Pts
+Wk 12 Proj
+Name
+NFL
+Player
+Total Pts
+Wk 12 Proj
+Action
+QB
+Bo Nix
+DEN
+Bye 10
+Fri 2:00pm @ PIT
+Starter
+221.00
+24.56
+DROP
+QB
+Jacoby Brissett
+BAL
+Bye 13
+Sun 12:00pm @ HOU
+Starter
+226.00
+19.95
+DROP
+WR
+Amon-Ra St. Brown
+DET
+Bye 6
+Thu 12:00pm vs CHI
+Starter
+192.00
+19.50
+DROP
+WR
+Justin Jefferson
+MIN
+Bye 6
+Sun 12:00pm vs ATL
+Starter
+125.00
+17.83
+DROP
+RB
+Javonte Williams
+DAL
+Bye 14
+Thu 3:30pm vs PHI
+Starter
+196.00
+17.00
+DROP
+WR
+Matthew Golden
+GB
+Bye 11
+Wed 7:00pm @ LAR
+Starter
+172.00
+15.43
+DROP
+WR
+DeVonta Smith
+PHI
+Bye 10
+Thu 3:30pm @ DAL
+Starter
+76.00
+14.66
+DROP
+RB
+Tony Pollard
+TEN
+Bye 9
+Sun 12:00pm @ JAX
+Starter
+163.00
+12.64
+DROP
+RB
+Zach Charbonnet
+SEA
+Bye 11
+Sun 3:25pm @ SF
+Starter
+29.00
+11.52
+DROP
+TE
+Chigoziem Okonkwo
+WAS
+Bye 7
+Sun 3:25pm @ ARI
+Starter
+75.50
+11.40
+DROP
+K
+Jason Sanders
+NYJ
+Bye 13
+Sun 12:00pm @ MIA
+Starter
+97.00
+8.07
+DROP
+K
+Spencer Shrader
+IND
+Bye 13
+Sun 12:00pm vs NYG
+Starter
+91.00
+7.91
+DROP
+D/ST
+Jacksonville Jaguars
+JAX
+Bye 7
+Sun 12:00pm vs TEN
+Starter
+87.00
+6.47
+DROP
+D/ST
+Buffalo Bills
+BUF
+Bye 7
+Thu 7:20pm vs KC
+Starter
+78.00
+4.48
+DROP

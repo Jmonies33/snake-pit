@@ -95,7 +95,12 @@ def main(out=os.path.join(HERE, 'projections.json')):
     global WEEK_DATES
     WEEK_DATES = ''
     try:
-        sb = fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard', {'User-Agent': 'Mozilla/5.0'})
+        # DESERT_WEEK=N forces the week (ESPN's default scoreboard stays on the old week until
+        # about Wednesday, so a Tuesday-night run otherwise projects the week just finished).
+        forced = os.environ.get('DESERT_WEEK')
+        sb_url = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard'
+        if forced: sb_url += f'?week={int(forced)}&seasontype=2'
+        sb = fetch(sb_url, {'User-Agent': 'Mozilla/5.0'})
         sb_week = int(sb['week']['number'])
         days = sorted({e['date'][:10] for e in sb.get('events', [])})
         WEEK_DATES = f"{days[0]} to {days[-1]}" if days else ''
